@@ -1,0 +1,80 @@
+.offcanvas {
+	#mobile-nav-button {
+		@include at-breakpoint($desktop) {
+			display:none;/* Hide For big screen*/
+		}
+		position:absolute;
+		right:20px;
+		a {
+			display:block;
+			margin:20px 0 0 0;
+			width:46px;
+			height:46px;
+			overflow:hidden;
+			@include border-radius(50%);
+			background: white;
+			@include transition(width 1.1s ease-in-out);
+			z-index:9999;
+			text-indent:-9999px;
+			&:before {
+				content: '';
+				position: relative;
+				background:#fff url('images/menu.png') no-repeat center;
+				width: 44px;
+				height: 44px;
+				float: right;
+			}
+		}
+	}
+	
+	#sidebarMenu {
+		@include transition(0.3s all ease);
+		position: fixed;
+		top: 0;
+		background: #303030;
+		right: -10em;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		width: 10em;
+		z-index: 1;
+		display:block;
+		ul {
+			margin:0;
+			padding:0;
+			li {
+				padding:0;
+				margin:0;
+				list-style:none;
+				a {
+					@include adjust-font-size-to(15px);
+					color: $white;
+					font-family: $open_sansregular;
+					font-weight: bold;
+					text-transform: uppercase;
+					text-decoration: none;
+					display: block;
+					padding:10px 15px;
+					border-bottom: 1px solid #999;
+					&:hover {
+						color: $white;
+						background: #999;
+					}
+				}
+			}
+		}
+		
+	}
+	&.open-right {
+		overflow-x:hidden;
+		.wrapper {
+			@include translateX(-10em);		
+		}
+		header {		
+			@include translateX(-10em);
+		}
+		#sidebarMenu {
+			right:0;
+		}
+	}
+}	

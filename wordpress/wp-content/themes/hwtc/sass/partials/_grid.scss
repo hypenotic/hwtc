@@ -1,0 +1,127 @@
+.container {
+    @include container($total-columns, $desktop);
+    overflow: hidden;
+}
+
+header {
+	width:100%;
+    position: fixed;
+    top: 0;
+    z-index: 300;
+	@include transition(0.3s all ease);
+}
+
+.logo {
+    @include span-columns(4);  
+    @include at-breakpoint($desktop) {
+        @include span-columns(2);
+        margin-top: 1.5em;
+		@include adjust-font-size-to(20px);
+    }
+}
+
+nav {
+    @include span-columns(3 omega);
+    @include at-breakpoint($desktop) {
+        @include span-columns(10 omega);
+    }
+}
+
+aside {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(4);
+        margin-bottom: 4em;
+    }
+}
+
+article {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(10 omega);
+        @include suffix(.9);
+        margin-bottom: 4em;
+    }
+}
+
+section {
+    margin-top: 95px;
+    padding-top: 80px;
+}
+footer {
+	font-family: $nixie_oneregular;
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(15);
+    }
+	.footer-top {
+		background: #38434e;
+		overflow:hidden;
+		padding-top:70px;
+		padding-bottom:70px;
+		.columns-2 {
+			padding-left:50px;	
+		}
+		form {
+			width:80%;
+		}		
+	}
+	.footer-bottom {
+		background: #1f5783;
+		overflow:hidden;
+		.columns-2 {
+			position:relative;
+			&:last-child {		
+				padding-top:50px;
+				padding-left:50px;
+				padding-right:50px;
+			}	
+		}
+	}
+}
+
+.columns-wide {
+    @include span-columns(7);
+    text-align: center;
+    @include at-breakpoint($desktop) {
+        @include span-columns(15);
+        @include pad(.6,.6);
+    }   
+}
+
+.columns-1 {
+    @include span-columns(7);
+    margin: 3em 0 4em 0;
+    @include at-breakpoint($desktop) {
+        @include span-columns(15);
+        @include pad(2.5,2.5);
+    }   
+}
+
+.columns-2 {
+	@include isolate-grid(7);
+    @include at-breakpoint($desktop) {
+    	@include isolate-grid(7.5);
+    }
+}
+
+.columns-3 {
+	@include isolate-grid(7);
+    margin-top: 3em;
+	@include at-breakpoint($desktop) {
+		@include isolate-grid(5);
+        &:nth-child(2) {
+            @include pad(0,1);
+        }
+	}
+}
+
+.box-fifty {
+	width:100%;
+	position:relative;
+	@include at-breakpoint($desktop) {
+		width:50%;
+		float:left;
+		
+	}
+}
