@@ -6,15 +6,7 @@
                 <p>Please also complete our survey to help us identify what training opportunities we can provide in the future</p>
             </div>
             <div class="columns-2">
-                <form action="" method="post">
-                    <fieldset>
-                        <ol>
-                            <li><input type="text" name="name" placeholder="Full Name" /></li>
-                            <li><input type="email" name="email" placeholder="Email" /></li>
-                        </ol>
-                        <div><input type="submit" value="SIGN UP"></div>
-                    </fieldset>
-                </form>
+                <?php echo do_shortcode('[mc4wp_form]');?>
            </div>       	
         </div>   
     </div>
