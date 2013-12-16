@@ -1,0 +1,242 @@
+@include establish-baseline;
+
+$open_sansregular: 'open_sansregular';
+@include font-face("open_sansregular", 
+	font-files("../fonts/opensans-regular.woff", "../fonts/opensans-regular.ttf", "../fonts/opensans-regular.svg#open_sansregular"), "../fonts/opensans-regular.eot", normal, normal);
+
+$open_sansitalic: 'open_sansitalic';
+@include font-face("open_sansitalic", 
+	font-files("../fonts/opensans-italic.woff", "../fonts/opensans-italic.ttf", "../fonts/opensans-italic.svg#open_sansitalic"), "../fonts/opensans-italic.eot", normal, normal);
+
+$open_sanslight: 'open_sanslight';
+@include font-face("open_sanslight", 
+	font-files("../fonts/opensans-light.woff", "../fonts/opensans-light.ttf", "../fonts/opensans-light.svg#open_sanslight"), "../fonts/opensans-light.eot", normal, normal);
+
+$open_sanslight_italic: 'open_sanslight_italic';
+@include font-face("open_sanslight_italic", 
+	font-files("../fonts/opensans-lightitalic.woff", "../fonts/opensans-lightitalic.ttf", "../fonts/opensans-lightitalic.svg#open_sanslight_italic"), "../fonts/opensans-lightitalic.eot", normal, normal);
+
+$open_sansbold: 'open_sansbold';
+@include font-face("open_sansbold", 
+	font-files("../fonts/opensans-bold.woff", "../fonts/opensans-bold.ttf", "../fonts/opensans-bold.svg#open_sansbold"), "../fonts/opensans-bold.eot", normal, normal);
+
+$open_sansbold_italic: 'open_sansbold_italic';
+@include font-face("open_sansbold_italic", 
+	font-files("../fonts/opensans-bolditalic.woff", "../fonts/opensans-bolditalic.ttf", "../fonts/opensans-bolditalic.svg#open_sansbold_italic"), "../fonts/opensans-bolditalic.eot", normal, normal);
+	
+$open_sanssemibold: 'open_sanssemibold';
+@include font-face("open_sanssemibold", 
+	font-files("../fonts/opensans-semibold.woff", "../fonts/opensans-semibold.ttf", "../fonts/opensans-semibold.svg#open_sanssemibold"), "../fonts/opensans-semibold.eot", normal, normal);	
+	
+$open_sanssemibold_italic: 'open_sanssemibold_italic';
+@include font-face("open_sanssemibold_italic", 
+	font-files("../fonts/opensans-semibolditalic.woff", "../fonts/opensans-semibolditalic.ttf", "../fonts/opensans-semibolditalic.svg#open_sanssemibold_italic"), "../fonts/opensans-semibolditalic.eot", normal, normal);
+
+$open_sansextrabold: 'open_sansextrabold';
+@include font-face("open_sansextrabold", 
+	font-files("../fonts/opensans-extrabold.woff", "../fonts/opensans-extrabold.ttf", "../fonts/opensans-extrabold.svg#open_sansextrabold"), "../fonts/opensans-extrabold.eot", normal, normal);
+	
+$open_sansextrabold_italic: 'open_sansextrabold_italic';	
+@include font-face("open_sansextrabold_italic", 
+	font-files("../fonts/opensans-extrabolditalic.woff", "../fonts/opensans-extrabolditalic.ttf", "../fonts/opensans-extrabolditalic.svg#open_sansextrabold_italic"), "../fonts/opensans-extrabolditalic.eot", normal, normal);
+
+$nixie_oneregular: 'nixie_oneregular';
+@include font-face("nixie_oneregular", 
+	font-files("../fonts/nixieone-regular.woff", "../fonts/nixieone-regular.ttf", "../fonts/nixieone-regular.svg#nixie_oneregular"), "../fonts/opensans-nixieone-regular.eot", normal, normal);
+
+// Base
+$base-font-size: 16px;
+$base-line-height: 24px;
+$round-to-nearest-half-line: true;
+
+/*
+@if true {
+$grid-background-baseline-height: $base-line-height;
+body {
+	@include debug-vertical-alignment;
+	}
+}
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $open_sansregular;
+	font-weight:normal;
+	a {
+		text-decoration: none;
+		&:hover {
+		}
+	}
+}
+
+h1 {
+	@include adjust-font-size-to(26px);
+	margin: 0 auto rhythm(1, 26px);
+	@include at-breakpoint($desktop) {
+		@include adjust-font-size-to(63px);
+		margin: 0 auto rhythm(1, 63px);
+	}
+}
+
+h2 {
+	@include adjust-font-size-to(24px);
+	margin: 0 auto rhythm(0, 24px);
+	@include at-breakpoint($desktop) {
+		@include adjust-font-size-to(41px);
+		margin: 0 auto rhythm(0, 41px);
+	}
+}
+
+h3 {
+	@include adjust-font-size-to(22px);
+  	margin: 0 auto rhythm(0, 22px);
+	@include at-breakpoint($desktop) {
+  		@include adjust-font-size-to(38px);
+  		margin: 0 auto rhythm(0, 38px);
+  	}
+}
+
+h4 {
+	@include adjust-font-size-to(20px);
+  	margin: 0 auto rhythm(0, 20px);
+	@include at-breakpoint($desktop) {
+  		@include adjust-font-size-to(32px);
+  		margin: 0 auto rhythm(0, 32px);
+  	}
+}
+
+h5 {
+	@include adjust-font-size-to(18px);
+  	margin: 0 auto rhythm(0, 18px);
+	@include at-breakpoint($desktop) {
+  		@include adjust-font-size-to(26px);
+  		margin: 0 auto rhythm(0, 26px);
+  	}
+}
+
+h6 {
+	@include adjust-font-size-to(16px);
+  	margin: 0 auto rhythm(0.5, 16px);
+	@include at-breakpoint($desktop) {
+  		@include adjust-font-size-to(24px);
+  		margin: 0 auto rhythm(0.5, 24px);
+  	}
+}
+
+p, ul, ol {
+	@include adjust-font-size-to(16px);
+	font-family: $open_sansregular;
+	margin: 0 auto rhythm(1, 16px);
+	@include at-breakpoint($desktop) {
+		@include adjust-font-size-to(16px);
+		margin: 0 auto rhythm(1, 16px);
+	}
+}
+
+ul li {
+	margin: 0 auto rhythm(0.5, 24px);
+}
+
+.columns-1 ol {
+	border-top: 1px solid #c5c9c9;
+	counter-reset: ordered-list;
+	margin: 50px 0 50px 0;
+	padding-left: 0px;
+	& li {
+		list-style: none;
+		border-bottom: 1px solid #c5c9c9;
+		padding: 20px 20px 20px 75px;	
+		color: #323232;
+		&:before {
+			content: counter(ordered-list);
+			counter-increment: ordered-list;
+			display: block;
+			margin-left: -83px;
+			padding: 0 30px;
+			float: left;
+			color: #03a2ca;
+			@include adjust-font-size-to(18px);
+		}
+	}
+}
+
+
+.front-headline {
+	@include adjust-font-size-to(40px);
+	color: $white;
+	text-align: center;
+   	text-shadow: 0 0 8px rgba(0,0,0,.5);
+   	text-transform: uppercase;
+   	width: 80%;
+   	& a {
+   		color: $light-gray;
+   	}
+}
+
+.headline {
+	@include adjust-font-size-to(110px);
+	color: $white;
+	text-align: center;
+   	text-shadow: 0 0 8px rgba(0,0,0,.5);
+   	width: 90%;
+   	
+}
+
+.subhead {
+	@include adjust-font-size-to(41px);
+	color: $white;
+	font-weight: 400;
+	text-align: center;
+   	text-shadow: 0 0 8px rgba(0,0,0,.5);
+   	width: 40%;	
+}
+
+.meta {
+	@include adjust-font-size-to(14px);
+	text-transform: uppercase;
+	font-weight: 400;
+	& a {
+		color: gray;
+		text-decoration: none;	
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.small {
+	@include adjust-font-size-to(14px);
+}
+
+footer {
+	color: $white;
+	& h1, h2, h3, h4, h5, h6 {
+		@include adjust-font-size-to(32px);
+		margin: 0 auto rhythm(1, 42px);
+		text-transform: uppercase;
+		font-weight: normal;
+		font-family: $nixie_oneregular;
+	}
+	& p, ul, input[type="email"] {
+		@include adjust-font-size-to(16px);
+	}
+	& ul {
+		list-style-type: none;
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+	& a {
+		color: $white;
+		text-decoration: underline;
+		&:hover {
+			color: $light_gray;
+			text-decoration: none;
+			border-bottom: none;
+		}
+	}
+}
+hr {
+	border:none; 
+	background: url(images/hr-img.png) repeat-x;
+	height:10px;
+	padding:30px 0;
+}

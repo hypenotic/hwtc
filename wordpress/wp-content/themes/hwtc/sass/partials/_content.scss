@@ -1,0 +1,87 @@
+.content {
+	color:#092148;
+	padding-top:20px;
+	padding-bottom:50px;
+	& h1, h2, h3, h4, h5, h6 {
+		@include adjust-font-size-to(32px);
+		margin: 0 auto rhythm(1, 42px);
+		text-transform: uppercase;
+		font-weight: normal;
+		font-family: $nixie_oneregular;
+		color: #2c65b5;
+		padding:30px 0;
+	}
+	@include at-breakpoint($desktop) {	
+		.columns-2 {
+			&:nth-child(2n + 2) {
+				margin-left:0;
+			}
+			&:nth-child(2n + 1) {
+				margin-left:52.04082%;
+				clear:none;
+			}
+		}
+	}	
+	strong {
+		text-transform: uppercase;
+	}
+	a {
+		color:#2c65b5;		
+		&.button {
+			text-decoration:none;
+			text-transform:uppercase;
+			@include sassy-button("flat", 5px, 10px,#fafafa);    
+			color:#9b59b6;
+			border-top-width:2px;
+			border-bottom-width:1px;
+			border-left-width:1px;
+			border-right-width:2px;
+			border-color:#9b59b6;
+			border-style: solid;
+		}
+	}
+	ul {
+		padding-bottom:40px;
+		list-style: none;
+		li {
+			&:before {
+				content: "\2022";
+				color: #2c65b5;
+				margin: 0 .5em 0 -1em;
+			}
+		}
+		&.our-people {
+			list-style:none;
+			li {
+				overflow:hidden;
+				padding: 30px 0;
+				h3 {
+					@include adjust-font-size-to(26px);
+					margin:0;
+					padding:0;
+					color:#2c65b5;	
+				}
+				&:before {
+					content: "";
+					margin:0;
+				}
+			}
+		}		
+	}
+}
+
+#panel {
+	position: absolute;
+	bottom: 5px;
+	left: 1%;
+	z-index: 5;
+	background: url(images/street-view-icon.jpg) no-repeat;
+	padding: 5px;
+	font-family: $open_sansregular;
+	width:179px;
+	height:96px;
+	border: 1px solid $white;
+	color:$white;
+	text-decoration:none;
+	text-indent:-9999px;
+ }

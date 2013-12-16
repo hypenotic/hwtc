@@ -1,0 +1,63 @@
+fieldset {
+    padding: 0;
+   
+    border: 0;
+    ol {
+        @include no-bullets;
+        li {
+            margin-bottom: 1em;
+            display: block;
+             margin-left:-40px;
+        }
+    }
+}
+
+footer {
+    input[type="text"], input[type="email"] {
+        @include border-radius(5px);
+        width: 100%;
+        padding: 0.66em;
+        border: 1px solid rgb( 202, 203, 193 );
+        background: {
+            color: white;
+            position: 95% -55px;
+        }
+        &:focus {
+            border: 1px solid rgb( 54, 116, 187 );
+            outline: none;
+            background-position: 95.5% 14px;
+            color: rgb( 54, 116, 187 );
+        }  
+        &.error {
+            color: #333333;
+        }
+    }
+
+    input[type="email"] {
+        background-position: 95% -142px + 17px;
+        &:focus {
+            background-position: 95.5% -195px;
+        }
+    }
+
+    input[type="submit"] {
+		font-family: $open_sansregular;
+        @include sassy-button("flat", 5px, 14px, #9b59b6);    
+    }
+            
+    .confirmation {
+        text-align: center;
+        display: none;
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        padding: 0px 0.9375em;
+        &.error {
+            //color: $input-error-text-color;
+            margin-top: -0.8em;
+        }
+        &.valid {
+            color: inherit;
+        }
+    }
+}

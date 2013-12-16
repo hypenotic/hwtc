@@ -1,0 +1,23 @@
+body {
+	font-family: $open_sansregular;
+	color: $body_background;
+	background:#fafafa;
+}
+
+img {
+    max-width: 100%;
+    //width: 100%;
+}
+
+.wrapper {
+	background-color: #FAFAFA;
+	@include transition(0.3s all ease);
+	overflow:hidden;
+}
+em,i {
+	font-family: $open_sansregular;
+	line-height:2.5em;
+}
+i {
+	color:#2c65b5;
+}
