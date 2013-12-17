@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo('name') ?></title>	
 <?php wp_head(); ?>
+
+<script type='text/javascript'>
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=f4bnlx3iejg4y87s4b3cww';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
+</script>
+
 </head>
 <body <?php body_class();?>>
     <div id="sidebarMenu">
