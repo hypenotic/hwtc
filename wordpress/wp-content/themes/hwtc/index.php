@@ -16,7 +16,7 @@
         <div class="banner-bottom">
         	<div class="box-1">
 	          	<div class="container">    
-                    <h6>Build Skills & Knowledge to Succeed</h6>
+                    <h6>Get Skills & Training</h6>
                     <p>The Hospitality Workers Training Centre (HWTC) is a non-profit organization that provides hands-on, relevant training and programs that meet your work and life needs and aligns with the needs of the Hospitality industry.</p>
                  </div>   
             </div>

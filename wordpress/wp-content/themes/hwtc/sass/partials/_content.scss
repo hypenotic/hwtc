@@ -55,6 +55,14 @@
 			li {
 				overflow:hidden;
 				padding: 30px 0;
+				img {
+					position:absolute;
+					width:150px;
+					height:150px;
+					background: #999;
+					float: left;
+					@include border-radius(50%);
+				}
 				h3 {
 					@include adjust-font-size-to(26px);
 					margin:0;
