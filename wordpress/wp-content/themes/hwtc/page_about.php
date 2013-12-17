@@ -25,7 +25,7 @@
 		while(have_posts()):the_post();
 		?>
         <li>
-        	<?php $img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', false, ''); if($img_src[0]) { ?>
+        	<?php $img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(150,150), false, ''); if($img_src[0]) { ?>
         	<aside><img src="<?php echo $img_src[0];?>" /></aside>
             <?php } ?>
             <article>
