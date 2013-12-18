@@ -12,69 +12,73 @@
 		display:table;
 		width:100%;
 		color:$white;
-		.box-1 {
+		a {
 			position: relative;
 			z-index:1;
 			padding:2.291666em 2.5em 1.5em;
-			cursor:pointer;
+			cursor:pointer;	
+			color:$white;
+			text-decoration:none;
 			@include at-breakpoint($desktop) {
 				padding:2.5em 3.5em 1.5em;
 				display:table-cell;
 				width:50%;
-			}		
-			&:before {			
-				z-index:-1;
-				position:absolute;
-				width:100%;
-				height:100%;
-				left:0;
-				top:0;
-				content:'';
-				background: #f39c12;
-				@include background(linear-gradient(164deg, #f39c12, #f39c12));
-				@include opacity(0.9);
-				@include transition(opacity 1s linear);
 			}
-			&:hover {
-				color:#f39c12;
-				&:before {
-					background: $white;
-					@include background(linear-gradient(164deg, $white, $white));
+			.box-1 {		
+				&:before {			
+					z-index:-1;
+					position:absolute;
+					width:100%;
+					height:100%;
+					left:0;
+					top:0;
+					content:'';
+					background: #f39c12;
+					@include background(linear-gradient(164deg, #f39c12, #f39c12));
 					@include opacity(0.9);
 					@include transition(opacity 1s linear);
 				}
-				& p:after {
-					background: url(images/box-arrow-hover.png) no-repeat;
+				&:hover {
+					color:#f39c12;
+					&:before {
+						background: $white;
+						@include background(linear-gradient(164deg, $white, $white));
+						@include opacity(0.9);
+						@include transition(opacity 1s linear);
+					}
+					& p:after {
+						background: url(images/box-arrow-hover.png) no-repeat;
+					}
+				}
+				p {
+					width:90%;
+					float:left;
+					&:after {
+						position:absolute;
+						content: '';
+						width:32px;
+						height:41px;
+						background: url(images/box-arrow.png) no-repeat;
+						right:12%;
+						top:42%;
+					}
 				}
 			}
-			p {
-				width:90%;
-				float:left;
-				&:after {
-					position:absolute;
-					content: '';
-					width:32px;
-					height:41px;
-					background: url(images/box-arrow.png) no-repeat;
-					right:12%;
-					top:42%;
+			.box-2 {
+				@extend .box-1;
+				&:before {			
+					background: #f1c40f;
+					@include background(linear-gradient(164deg, #f1c40f, #f1c40f));
+				}
+				&:hover {
+					color:#f1c40f;
+					& p:after {
+						background: url(images/box-arrow-hover.png) no-repeat;
+						background-position: -32px 0;
+					}
 				}
 			}
-		}
-		.box-2 {
-			@extend .box-1;
-			&:before {			
-				background: #f1c40f;
-				@include background(linear-gradient(164deg, #f1c40f, #f1c40f));
-			}
-			&:hover {
-				color:#f1c40f;
-				& p:after {
-					background: url(images/box-arrow-hover.png) no-repeat;
-					background-position: -32px 0;
-				}
-			}
-		}
+		}	
 	}
 	
 	&:before{
