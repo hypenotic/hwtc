@@ -43,15 +43,15 @@ a {
 <table width="717" height="430" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
 	<tr>
 		<td width="717" height="238" align="left" valign="top">
-			<img src="images/index_06.png" alt="" width="718" height="238" border="0" usemap="#Map"></td>
+			<img src="wordpress/wp-content/images/index_06.png" alt="" width="718" height="238" border="0" usemap="#Map"></td>
 	</tr>
 	<tr>
 		<td height="76" align="left" valign="top">
-			<img src="images/index_09.png" width="718" height="76" alt=""></td>
+			<img src="wordpress/wp-content/images/index_09.png" width="718" height="76" alt=""></td>
 	</tr>
 	<tr>
 		<td height="76" align="left" valign="top">
-			<img src="images/index_12.png" width="718" height="76" alt=""></td>
+			<img src="wordpress/wp-content/images/index_12.png" width="718" height="76" alt=""></td>
 	</tr>
 	<tr>
 		<td height="40" align="left" valign="bottom" style="color: #135A84; text-align: center; font-size: 9px; font-family: Verdana, Geneva, sans-serif">&copy;2013 Hospitality Workers Training Centre. All rights reserved.</td>
