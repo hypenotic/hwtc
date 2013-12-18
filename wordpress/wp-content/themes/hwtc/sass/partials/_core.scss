@@ -1,7 +1,8 @@
 body {
-	font-family: $open_sansregular;
+	font-family: $latolight;
 	color: $body_background;
 	background:#fafafa;
+	color:#092148;
 }
 
 img {
@@ -15,9 +16,15 @@ img {
 	overflow:hidden;
 }
 em,i {
-	font-family: $open_sansregular;
+	font-family: $latoitalic;
 	line-height:2.5em;
 }
 i {
 	color:#2c65b5;
+}
+strong {
+	font-family: $latobold;
+	text-transform: uppercase;
+	padding-top:40px;
+	display:block;
 }

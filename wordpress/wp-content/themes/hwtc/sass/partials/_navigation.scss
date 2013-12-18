@@ -1,6 +1,6 @@
 #box {
 	margin:20px 0 0 0;
-	width:80%;
+	width:50%;
 	height:46px;
 	overflow:hidden;
 	display:none;
@@ -17,19 +17,25 @@ nav ul {
 	white-space: nowrap;
 	& li {
 		display: inline;
-		margin-left: 4px;
-	}
-	& a:hover {
-		color: $light-gray;
+		margin-left: 20px;		
+		&.current-menu-item {
+			a {	
+				text-decoration:underline;
+			}	
+		}
 	}
 }
 
 nav ul li a {
 	@include adjust-font-size-to(14px);
 	color: $white;
-	font-family: $open_sansregular;
+	font-family: $latoregular;
 	text-transform: uppercase;
 	text-decoration: none;
+	&:hover {
+		text-decoration:underline;
+		color: $white;
+	}
 	&:after {
 		content: '';
 		margin-left: 10px;
