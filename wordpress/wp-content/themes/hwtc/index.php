@@ -24,18 +24,23 @@
             </div>
         </div>
         <div class="banner-bottom">
-        	<div class="box-1">
-	          	<div class="container">    
-                    <h6>Get Skills & Training</h6>
-                    <p>The Hospitality Workers Training Centre (HWTC) is a non-profit organization that provides hands-on, relevant training and programs that meet your work and life needs and aligns with the needs of the Hospitality industry.</p>
-                 </div>   
+        	<a href="<?php echo get_permalink(16);?>"> 	                        
+            <div class="box-1">
+                    <div class="container">                            
+                            <h6>Get Skills & Training</h6>
+                            <p>The Hospitality Workers Training Centre (HWTC) is a non-profit organization that provides hands-on, relevant training and programs that meet your work and life needs and aligns with the needs of the Hospitality industry.</p>
+                 	</div>   
             </div>
+             </a>
+                
+            <a href="<?php echo get_permalink(18);?>">
             <div class="box-2">
             	<div class="container">
-                    <h6>Find Skilled Workers</h6>
+			        <h6>Find Skilled Workers</h6>
                     <p>Connect with job-ready, engaged team members and develop the skills needed for them to thrive in the Hospitality workplace.</p>
                  </div>
             </div>
+           </a> 
             
         </div>
 </div>
