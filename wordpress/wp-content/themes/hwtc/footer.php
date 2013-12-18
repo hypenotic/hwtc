@@ -2,8 +2,7 @@
 	<div class="footer-top">
     	<div class="container">
             <div class="columns-2">
-                <h4>Join our mailing list to finding out about upcoming training opportunities</h4>
-                <p>Please also complete our survey to help us identify what training opportunities we can provide in the future</p>
+                <h4>Sign up to get the latest news from HWTC</h4>
             </div>
             <div class="columns-2">
                 <?php echo do_shortcode('[mc4wp_form]');?>
@@ -12,10 +11,8 @@
     </div>
     <div class="footer-bottom">
         <div class="columns-2">
-	            <a href="javascript:void(0)" onclick="return toggleStreetView();"  id="panel">Street View</a>
-        	<div id="map-canvas" style="width:100%; height:350px;">
-
-            </div>
+            <a href="javascript:void(0)" onclick="return toggleStreetView();" id="panel">Street View</a>
+        	<div id="map-canvas" style="width:100%; height:350px;"></div>
         </div>
         
         <div class="columns-2">
@@ -26,6 +23,16 @@
             60 Richmond Street East<br />
             Toronto, Ontario, Canada M5C 1N8</p>
         </div>
+    </div>
+    <div class="footer-copyright">
+    	<div class="container">
+            <div class="columns-2">
+                <p>Copyright © 2014. All Rights Reserved.</p>
+            </div>
+            <div class="columns-2">
+                <p class="text-right">Made with purpose by B Corp Certified <a href="http://www.hypenotic.com" target="_blank">Hypenotic</a></p>
+            </div>
+         </div>   
     </div>
 </footer>
 </div>

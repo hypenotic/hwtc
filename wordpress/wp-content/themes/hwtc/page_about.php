@@ -2,8 +2,16 @@
 /* Template Name: About Page Template */
 ?>
 <?php get_header();?>
-<?php if(have_posts()):while(have_posts()):the_post(); ?>
-<div class="banner" style="background-image: url('<?php bloginfo('template_url');?>/images/banner.jpg'); background-size:cover;">
+<?php if(have_posts()):while(have_posts()):the_post(); 
+
+	$img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', false, ''); 
+	if($img_src!='') { 	
+		$img=$img_src[0];
+	}else {
+		$img= get_bloginfo('template_url').'/images/banner.jpg';
+	}
+?>
+<div class="banner" style="background-image: url('<?php echo $img;?>'); background-size:cover;">
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big"><?php the_title();?></div>

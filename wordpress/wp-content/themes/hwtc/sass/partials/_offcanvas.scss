@@ -49,8 +49,6 @@
 				a {
 					@include adjust-font-size-to(15px);
 					color: $white;
-					font-family: $open_sansregular;
-					font-weight: bold;
 					text-transform: uppercase;
 					text-decoration: none;
 					display: block;

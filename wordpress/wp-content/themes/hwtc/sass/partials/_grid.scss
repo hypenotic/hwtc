@@ -9,17 +9,38 @@ header {
     top: 0;
     z-index: 300;
 	@include transition(0.3s all ease);
+	&.active-header {
+		&:before {
+			content: '';
+			width:100%;
+			height:70px;
+			position:absolute;
+			background:#2c65b5;
+			z-index:-1;
+			@include opacity(0.65);
+			@include transition(opacity 1s linear);
+		}	
+	}
 }
 
 .logo {
-    @include span-columns(4);  
+	display:none;
+    @include span-columns(6);  
     @include at-breakpoint($desktop) {
-        @include span-columns(2);
+		display:block;
+        @include span-columns(6);
         margin-top: 1.5em;
 		@include adjust-font-size-to(20px);
     }
 }
-
+.second-nav {
+	display:none;
+	margin-top: 1.3em;
+	a {
+		color:$white;
+		text-decoration:none;
+	}
+}
 nav {
     @include span-columns(3 omega);
     @include at-breakpoint($desktop) {
@@ -49,8 +70,7 @@ section {
     padding-top: 80px;
 }
 footer {
-	font-family: $nixie_oneregular;
-    @include span-columns(7);
+   @include span-columns(7);
     @include at-breakpoint($desktop) {
         @include span-columns(15);
     }
@@ -76,6 +96,25 @@ footer {
 				padding-left:50px;
 				padding-right:50px;
 			}	
+		}
+	}
+	.footer-copyright {
+		font-family: $latoregular;
+		color:#555555;	
+		background:#eeeeee;
+		padding: 10px 0;
+		overflow: hidden;
+		p {
+			margin-bottom:0px;
+		}
+		.text-right{
+			text-align:left;
+			@include at-breakpoint($desktop) {
+				text-align:right;
+			}	
+		}		
+		a {
+			color:#2c65b5;
 		}
 	}
 }
@@ -124,4 +163,8 @@ footer {
 		float:left;
 		
 	}
+}
+.full-width {
+	position:relative;
+	overflow:hidden;
 }

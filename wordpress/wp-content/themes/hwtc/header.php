@@ -26,6 +26,9 @@
         <div class="logo nav">
             <a href="<?php bloginfo('url' ); ?>"><img src="<?php bloginfo('template_url');?>/images/logo.png" /></a>
         </div>
+        <div class="logo second-nav">
+            <a href="<?php bloginfo('url' ); ?>">HOSPITALITY WORKERS TRAINING CENTRE</a>
+        </div>
         <nav id="box">
         	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
         </nav>

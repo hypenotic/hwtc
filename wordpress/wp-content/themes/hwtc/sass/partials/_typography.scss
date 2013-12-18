@@ -1,44 +1,49 @@
 @include establish-baseline;
 
-$open_sansregular: 'open_sansregular';
-@include font-face("open_sansregular", 
-	font-files("../fonts/opensans-regular.woff", "../fonts/opensans-regular.ttf", "../fonts/opensans-regular.svg#open_sansregular"), "../fonts/opensans-regular.eot", normal, normal);
+$latoblack: 'latoblack';
+@include font-face("latoblack", 
+	font-files("../fonts/lato-black-webfont.woff", "../fonts/lato-black-webfont.ttf", "../fonts/lato-black-webfont.svg#latoblack"), "../fonts/lato-black-webfont.eot", normal, normal);
 
-$open_sansitalic: 'open_sansitalic';
-@include font-face("open_sansitalic", 
-	font-files("../fonts/opensans-italic.woff", "../fonts/opensans-italic.ttf", "../fonts/opensans-italic.svg#open_sansitalic"), "../fonts/opensans-italic.eot", normal, normal);
 
-$open_sanslight: 'open_sanslight';
-@include font-face("open_sanslight", 
-	font-files("../fonts/opensans-light.woff", "../fonts/opensans-light.ttf", "../fonts/opensans-light.svg#open_sanslight"), "../fonts/opensans-light.eot", normal, normal);
+$latoblack_italic: 'latoblack_italic';
+@include font-face("latoblack_italic", 
+	font-files("../fonts/lato-blackitalic-webfont.woff", "../fonts/lato-blackitalic-webfont.ttf", "../fonts/lato-blackitalic-webfont.svg#latoblack_italic"), "../fonts/lato-blackitalic-webfont.eot", normal, normal);
 
-$open_sanslight_italic: 'open_sanslight_italic';
-@include font-face("open_sanslight_italic", 
-	font-files("../fonts/opensans-lightitalic.woff", "../fonts/opensans-lightitalic.ttf", "../fonts/opensans-lightitalic.svg#open_sanslight_italic"), "../fonts/opensans-lightitalic.eot", normal, normal);
+$latobold: 'latobold';
+@include font-face("latobold", 
+	font-files("../fonts/lato-bold-webfont.woff", "../fonts/lato-bold-webfont.ttf", "../fonts/lato-bold-webfont.svg#latobold"), "../fonts/lato-bold-webfont.eot", normal, normal);
 
-$open_sansbold: 'open_sansbold';
-@include font-face("open_sansbold", 
-	font-files("../fonts/opensans-bold.woff", "../fonts/opensans-bold.ttf", "../fonts/opensans-bold.svg#open_sansbold"), "../fonts/opensans-bold.eot", normal, normal);
-
-$open_sansbold_italic: 'open_sansbold_italic';
-@include font-face("open_sansbold_italic", 
-	font-files("../fonts/opensans-bolditalic.woff", "../fonts/opensans-bolditalic.ttf", "../fonts/opensans-bolditalic.svg#open_sansbold_italic"), "../fonts/opensans-bolditalic.eot", normal, normal);
 	
-$open_sanssemibold: 'open_sanssemibold';
-@include font-face("open_sanssemibold", 
-	font-files("../fonts/opensans-semibold.woff", "../fonts/opensans-semibold.ttf", "../fonts/opensans-semibold.svg#open_sanssemibold"), "../fonts/opensans-semibold.eot", normal, normal);	
-	
-$open_sanssemibold_italic: 'open_sanssemibold_italic';
-@include font-face("open_sanssemibold_italic", 
-	font-files("../fonts/opensans-semibolditalic.woff", "../fonts/opensans-semibolditalic.ttf", "../fonts/opensans-semibolditalic.svg#open_sanssemibold_italic"), "../fonts/opensans-semibolditalic.eot", normal, normal);
+$latobold_italic: 'latobold_italic';
+@include font-face("latobold_italic", 
+	font-files("../fonts/lato-bolditalic-webfont.woff", "../fonts/lato-bolditalic-webfont.ttf", "../fonts/lato-bolditalic-webfont.svg#latobold_italic"), "../fonts/lato-bolditalic-webfont.eot", normal, normal);
 
-$open_sansextrabold: 'open_sansextrabold';
-@include font-face("open_sansextrabold", 
-	font-files("../fonts/opensans-extrabold.woff", "../fonts/opensans-extrabold.ttf", "../fonts/opensans-extrabold.svg#open_sansextrabold"), "../fonts/opensans-extrabold.eot", normal, normal);
+$latohairline: 'latohairline';
+@include font-face("latohairline", 
+	font-files("../fonts/lato-hairline-webfont.woff", "../fonts/lato-hairline-webfont.ttf", "../fonts/lato-hairline-webfont.svg#latohairline"), "../fonts/lato-hairline-webfont.eot", normal, normal);
 	
-$open_sansextrabold_italic: 'open_sansextrabold_italic';	
-@include font-face("open_sansextrabold_italic", 
-	font-files("../fonts/opensans-extrabolditalic.woff", "../fonts/opensans-extrabolditalic.ttf", "../fonts/opensans-extrabolditalic.svg#open_sansextrabold_italic"), "../fonts/opensans-extrabolditalic.eot", normal, normal);
+
+$latohairline_italic: 'latohairline_italic';
+@include font-face("latohairline_italic", 
+	font-files("../fonts/lato-hairlineitalic-webfont.woff", "../fonts/lato-hairlineitalic-webfont.ttf", "../fonts/lato-hairlineitalic-webfont.svg#latohairline_italic"), "../fonts/lato-hairlineitalic-webfont.eot", normal, normal);
+
+$latoitalic: 'latoitalic';
+@include font-face("latoitalic", 
+	font-files("../fonts/lato-italic-webfont.woff", "../fonts/lato-italic-webfont.ttf", "../fonts/lato-italic-webfont.svg#latoitalic"), "../fonts/lato-italic-webfont.eot", normal, normal);
+
+
+$latolight: 'latolight';
+@include font-face("latolight", 
+	font-files("../fonts/lato-light-webfont.woff", "../fonts/lato-light-webfont.ttf", "../fonts/lato-light-webfont.svg#latolight"), "../fonts/lato-light-webfont.eot", normal, normal);
+
+$latolight_italic: 'latolight_italic';
+@include font-face("latolight_italic", 
+	font-files("../fonts/lato-lightitalic-webfont.woff", "../fonts/lato-lightitalic-webfont.ttf", "../fonts/lato-lightitalic-webfont.svg#latolight_italic"), "../fonts/lato-lightitalic-webfont.eot", normal, normal);
+
+$latoregular: 'latoregular';
+@include font-face("latoregular", 
+	font-files("../fonts/lato-regular-webfont.woff", "../fonts/lato-regular-webfont.ttf", "../fonts/lato-regular-webfont.svg#latoregular"), "../fonts/lato-regular-webfont.eot", normal, normal);
+
 
 $nixie_oneregular: 'nixie_oneregular';
 @include font-face("nixie_oneregular", 
@@ -57,9 +62,8 @@ body {
 	}
 }
 */
-
 h1, h2, h3, h4, h5, h6 {
-	font-family: $open_sansregular;
+	font-family: $latoregular;
 	font-weight:normal;
 	a {
 		text-decoration: none;
@@ -124,11 +128,10 @@ h6 {
 
 p, ul, ol {
 	@include adjust-font-size-to(16px);
-	font-family: $open_sansregular;
 	margin: 0 auto rhythm(1, 16px);
 	@include at-breakpoint($desktop) {
-		@include adjust-font-size-to(16px);
-		margin: 0 auto rhythm(1, 16px);
+		@include adjust-font-size-to(18px);
+		margin: 0 auto rhythm(1, 18px);
 	}
 }
 
@@ -172,24 +175,6 @@ ul li {
    	}
 }
 
-.headline {
-	@include adjust-font-size-to(110px);
-	color: $white;
-	text-align: center;
-   	text-shadow: 0 0 8px rgba(0,0,0,.5);
-   	width: 90%;
-   	
-}
-
-.subhead {
-	@include adjust-font-size-to(41px);
-	color: $white;
-	font-weight: 400;
-	text-align: center;
-   	text-shadow: 0 0 8px rgba(0,0,0,.5);
-   	width: 40%;	
-}
-
 .meta {
 	@include adjust-font-size-to(14px);
 	text-transform: uppercase;
@@ -209,12 +194,13 @@ ul li {
 
 footer {
 	color: $white;
+	font-family: $latolight;
 	& h1, h2, h3, h4, h5, h6 {
 		@include adjust-font-size-to(32px);
-		margin: 0 auto rhythm(1, 42px);
-		text-transform: uppercase;
+		margin: 0 auto rhythm(1, 40px);
 		font-weight: normal;
 		font-family: $nixie_oneregular;
+		line-height:1.6em;
 	}
 	& p, ul, input[type="email"] {
 		@include adjust-font-size-to(16px);

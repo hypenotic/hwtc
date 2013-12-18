@@ -41,7 +41,7 @@ footer {
     }
 
     input[type="submit"] {
-		font-family: $open_sansregular;
+		font-family: $latoregular;
         @include sassy-button("flat", 5px, 14px, #9b59b6);    
     }
             
