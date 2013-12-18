@@ -29,7 +29,7 @@
     	<div class="overlay-content">
         <h6>We look forward to discussing your training & hiring needs & to arrange for English or computer classes at your property</h6>
 		<p>Please contact us to arrange a meeting to discuss the opportunity to work together. </p>
-        <p>Email or call for more information training@hospitalitytrainingcentre.com | 647 930 9518</p>
+        <p>Email or call for more information <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a> | 647 930 9518</p>
         </div>
     </div>
 <?php } ?>
