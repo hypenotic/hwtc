@@ -26,7 +26,7 @@
         <div class="logo nav">
             <a href="<?php bloginfo('url' ); ?>"><img src="<?php bloginfo('template_url');?>/images/logo.png" /></a>
         </div>
-        <div class="logo second-nav">
+        <div class="logo second-nav ">
             <a href="<?php bloginfo('url' ); ?>">HOSPITALITY WORKERS TRAINING CENTRE</a>
         </div>
         <nav id="box">
