@@ -21,7 +21,7 @@
 		font-weight: normal;
 		font-family: $nixie_oneregular;
 		color: #2c65b5;
-		text-shadow: 0px 0px 1px rgba(71, 101, 181, 1);
+		@include text-shadow(0px 0px 1px rgba(71, 101, 181, 1));
 		padding:30px 0 30px;
 		line-height:1.73em;
 		a {
