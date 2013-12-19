@@ -145,3 +145,16 @@ function prfx_meta_save( $post_id ) {
  
 }
 add_action( 'save_post', 'prfx_meta_save' );
+
+
+#REGISTER WIDGETS
+
+	if ( function_exists('register_sidebar') )
+
+	register_sidebar(array('name'=>'Find Talent Page Bottom Content',
+		'before_widget' => '<div class="">',
+		'after_widget' => '</div>',
+		'before_title' => '<h5>',
+		'after_title' => '</h5>',
+	));
+	
