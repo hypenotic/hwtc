@@ -12,7 +12,7 @@
 ?>
     
     
-    <div class="banner" style="background-image: url('<?php echo $img;?>'); background-size:cover;">
+    <div class="banner" style="background-image: url('<?php echo $img;?>'); background-size:cover; background-repeat:no-repeat;">
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big"><?php the_title();?></div>
@@ -36,7 +36,7 @@
             <a href="<?php echo get_permalink(18);?>">
             <div class="box-2">
             	<div class="container">
-			        <h6>Find Skilled Workers</h6>
+			        <h6>Find Skilled Talent</h6>
                     <p>Connect with job-ready, engaged team members and develop the skills needed for them to thrive in the Hospitality workplace.</p>
                  </div>
             </div>

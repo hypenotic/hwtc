@@ -7,7 +7,7 @@
 		$img= get_bloginfo('template_url').'/images/banner.jpg';
 	}
 ?>
-<div class="banner" style="background-image: url('<?php echo $img;?>'); background-size:cover;">
+<div class="banner" style="background-image: url('<?php echo $img;?>'); background-size:cover; background-repeat:no-repeat;">
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big"><?php the_title();?></div>

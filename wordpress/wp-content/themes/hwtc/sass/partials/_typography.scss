@@ -128,10 +128,10 @@ h6 {
 
 p, ul, ol {
 	@include adjust-font-size-to(16px);
-	margin: 0 auto rhythm(1, 16px);
+	margin: 0 auto rhythm(1, 20px);
 	@include at-breakpoint($desktop) {
 		@include adjust-font-size-to(18px);
-		margin: 0 auto rhythm(1, 18px);
+		margin: 0 auto rhythm(1, 32px);
 	}
 }
 

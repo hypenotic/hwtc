@@ -9,6 +9,20 @@ header {
     top: 0;
     z-index: 300;
 	@include transition(0.3s all ease);
+	
+	@media only screen and (max-width: 768px) {
+		&:before {
+			content: '';
+			width:100%;
+			height:70px;
+			position:absolute;
+			background:#2c65b5;
+			z-index:-1;
+			@include opacity(0.98);
+			@include transition(opacity 1s linear);
+			padding-bottom:15px;
+		}
+	}
 	&.active-header {
 		&:before {
 			content: '';
@@ -17,15 +31,14 @@ header {
 			position:absolute;
 			background:#2c65b5;
 			z-index:-1;
-			@include opacity(0.65);
+			@include opacity(0.98);
 			@include transition(opacity 1s linear);
 		}	
 	}
 }
 
 .logo {
-	display:none;
-    @include span-columns(6);  
+	@include span-columns(6);  
     @include at-breakpoint($desktop) {
 		display:block;
         @include span-columns(6);
@@ -33,9 +46,18 @@ header {
 		@include adjust-font-size-to(20px);
     }
 }
-.second-nav {
+.nav {
 	display:none;
-	margin-top: 1.3em;
+    @include at-breakpoint($desktop) {
+		display:block;
+	}
+}
+.second-nav {
+	display:block;
+    @include at-breakpoint($desktop) {
+		display:none;
+	}
+	margin-top: 0.8em;
 	a {
 		color:$white;
 		text-decoration:none;
@@ -77,10 +99,13 @@ footer {
 	.footer-top {
 		background: #38434e;
 		overflow:hidden;
-		padding-top:70px;
+		padding-top:100px;
 		padding-bottom:70px;
 		.columns-2 {
-			padding-left:50px;	
+			@include at-breakpoint($desktop) {
+				padding-left:70px;
+			}
+			
 		}
 		form {
 			width:80%;
@@ -92,8 +117,11 @@ footer {
 		.columns-2 {
 			position:relative;
 			&:last-child {		
-				padding-top:50px;
-				padding-left:50px;
+				padding-top:50px;				
+				@include at-breakpoint($desktop) {
+					padding-left:70px;
+				}
+				padding-left:1.5em;
 				padding-right:50px;
 			}	
 		}

@@ -1,7 +1,7 @@
 .content {
 	color:#092148;
 	padding-top:20px;
-	padding-bottom:50px;
+	padding-bottom:30px;
 	.content-img {
 		position:absolute;
 		left:0;
@@ -16,14 +16,20 @@
 		}
 	}		
 	& h1, h2, h3, h4, h5 {
-		@include adjust-font-size-to(56px);
-		margin: 0 auto rhythm(1, 42px);
+		@include adjust-font-size-to(32px);
 		text-transform: uppercase;
 		font-weight: normal;
 		font-family: $nixie_oneregular;
 		color: #80bcde;
-		padding:30px 0;
+		padding:30px 0 30px;
 		line-height:1.73em;
+		a {
+			color: #80bcde;
+		}		
+	}
+	& h1:first-child {
+		padding-top:90px;
+		padding-bottom:0;
 	}
 	h6 {
 		font-family: $latolight;
@@ -53,6 +59,8 @@
 			@include sassy-button("flat", 5px, 10px,#fafafa);    
 			color:#9b59b6;
 			border:2px solid #9b59b6;
+			line-height:1.5em;
+			padding-top:5px;
 			&:hover {
 				background:#9b59b6;
 				color:$white;
@@ -105,6 +113,10 @@
 						}
 					}
 				}
+				
+				& p:first-child {
+					margin-bottom:0;
+				}
 			}
 		}		
 	}
@@ -152,5 +164,9 @@
 			@include background(linear-gradient(164deg, $white, $white));
 			@include opacity(0.9);
 			@include transition(opacity 1s linear);
+		}
+		h6 {
+			color:#555;
+			@include adjust-font-size-to(30px);
 		}
 }

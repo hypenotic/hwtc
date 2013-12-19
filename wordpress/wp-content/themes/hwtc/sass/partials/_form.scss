@@ -43,6 +43,10 @@ footer {
     input[type="submit"] {
 		font-family: $latoregular;
         @include sassy-button("flat", 5px, 14px, #9b59b6);    
+		&:hover {
+			color:#9b59b6;
+			background:$white;
+		}
     }
             
     .confirmation {
@@ -60,4 +64,21 @@ footer {
             color: inherit;
         }
     }
+}
+.gform_wrapper {
+	font-family: $latoregular;
+	.button {
+		@include sassy-button("flat", 5px, 14px, #9b59b6);    
+		&:hover {
+			color:#9b59b6;
+			background:$white;
+		}
+	}
+	select {
+		font-size:1em !important;
+		padding:0;
+		option {
+			padding:5px;
+		}
+	}
 }
