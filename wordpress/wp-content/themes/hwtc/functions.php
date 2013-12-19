@@ -154,7 +154,7 @@ add_action( 'save_post', 'prfx_meta_save' );
 	register_sidebar(array('name'=>'Find Talent Page Bottom Content',
 		'before_widget' => '<div class="">',
 		'after_widget' => '</div>',
-		'before_title' => '<h5>',
-		'after_title' => '</h5>',
+		'before_title' => '<h6>',
+		'after_title' => '</h6>',
 	));
 	
