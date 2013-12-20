@@ -13,7 +13,6 @@ img {
 .wrapper {
 	background-color: #FAFAFA;
 	@include transition(0.3s all ease);
-	overflow:hidden;
 }
 em,i {
 	font-family: $latoitalic;
