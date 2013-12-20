@@ -1,19 +1,24 @@
 .content {
 	color:#092148;
-	padding-top:20px;
-	padding-bottom:30px;
+	padding-top:60px;
+	.home & {
+		padding-top:100px;
+	}
+	padding-bottom:35px;
+	.content-box {
+		padding-top:25px;
+		padding-bottom:50px;
+		&  p:last-child {
+			margin-bottom:0;
+		}
+	}
 	.content-img {
 		position:absolute;
 		left:0;
 		width:100%;
-		padding-bottom: 40px;
+		padding-top: 10px;
+		padding-bottom: 70px;
 		overflow:hidden;
-		img {
-		}
-		&:before {
-			content: '';
-			clear:none;
-		}
 	}		
 	& h1, h2, h3, h4, h5 {
 		@include adjust-font-size-to(32px);
@@ -32,7 +37,7 @@
 		.home & {
 			font-size:2.75em;
 		}
-		padding-top:90px;
+		padding-top:0px;
 		padding-bottom:0;
 	}
 	h6 {
@@ -71,8 +76,14 @@
 			}
 		}
 	}
+	.our-people-title {
+		padding-bottom:50px;
+		h1{ 
+			padding-top:0;
+		}
+	}	
 	ul {
-		padding-bottom:40px;
+		padding-bottom: 0px;
 		list-style: none;
 		li {
 			&:before {
