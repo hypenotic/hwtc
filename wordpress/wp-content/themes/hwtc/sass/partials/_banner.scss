@@ -2,12 +2,16 @@
 	position: relative;
 	z-index:1;
 	overflow:hidden;
-	padding-top:300px;
+	padding-top:300px; 
+	background-size:cover;
+	background-repeat:no-repeat;
 	.box-fifty {
 		color:$white;
 	}
 	.banner-bottom {
-		margin-top: 150px;
+		@include at-breakpoint($desktop) {
+			margin-top: 150px;
+		}
 		display:table;
 		width:100%;
 		color:$white;
@@ -98,7 +102,9 @@
 	width:100%;
 	overflow:hidden;
 	position:relative;
-	margin-bottom:50px;
+	@include at-breakpoint($desktop) {
+		margin-bottom:50px;
+	}
 	.bannertext-content {
 		width:100%;
 		@include at-breakpoint($desktop) {
