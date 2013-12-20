@@ -118,8 +118,11 @@
 					}
 				}
 				
-				& p:first-child {
-					margin-bottom:0;
+				p {
+					font-size: 1em;
+					&:first-child {
+						margin-bottom:0;
+					}
 				}
 			}
 		}		
