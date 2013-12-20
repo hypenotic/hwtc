@@ -12,7 +12,7 @@
 ?>
     
     
-    <div class="banner" style="background-image: url('<?php echo $img;?>'); background-size:cover; background-repeat:no-repeat;">
+    <div class="banner" style="background-image: url('<?php echo $img;?>');">
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big"><?php the_title();?></div>
