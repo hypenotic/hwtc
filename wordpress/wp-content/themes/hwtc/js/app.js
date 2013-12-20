@@ -146,7 +146,6 @@ jQuery(document).ready(function($) {
   var $nav = $('.nav');
   var windowScroll;
 
-
 	// Custom Codes
     $(".columns-1").fitVids();
     $(".front-headline").fitText(2);
@@ -188,8 +187,8 @@ jQuery(document).ready(function($) {
 
   // Window gets large enough, need to recalc all parallaxing title values
   $(window).resize(function() {
-    if(isLargeViewport()) {
-      slidingTitle();
+    if(isLargeViewport() && (!isMobile)) {
+	  slidingTitle();
     }
   });
 
