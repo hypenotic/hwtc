@@ -19,6 +19,7 @@
 		padding-top: 10px;
 		padding-bottom: 70px;
 		overflow:hidden;
+		text-align:center;
 	}		
 	& h1, h2, h3, h4, h5 {
 		@include adjust-font-size-to(32px);
