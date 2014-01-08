@@ -168,7 +168,7 @@ footer {
 .columns-2 {
 	@include isolate-grid(7);
     @include at-breakpoint($desktop) {
-    	@include isolate-grid(7.5);
+    	@include isolate-grid(7);
     }
 }
 
