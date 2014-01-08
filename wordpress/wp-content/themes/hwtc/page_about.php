@@ -11,7 +11,7 @@
 		$img= get_bloginfo('template_url').'/images/banner.jpg';
 	}
 ?>
-<div class="banner" s tyle="background-image: url('<?php echo $img;?>');">
+<div class="banner">
 		<img src="<?php echo $img;?>" />
         <div class="bannertext">
             <div class="bannertext-content">
@@ -47,6 +47,5 @@
 		endif;wp_reset_query();?>
     </div>
 </div>
-
 <?php endwhile; endif; wp_reset_query();?>
 <?php get_footer();?>
