@@ -196,7 +196,7 @@ footer {
 	color: $white;
 	font-family: $latolight;
 	& h1, h2, h3, h4, h5, h6 {
-		@include adjust-font-size-to(28px);
+		@include adjust-font-size-to(32px);
 		margin: 0 auto rhythm(1, 40px);
 		font-weight: normal;
 		font-family: $nixie_oneregular;
