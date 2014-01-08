@@ -7,8 +7,8 @@
 		$img= get_bloginfo('template_url').'/images/banner.jpg';
 	}
 ?>
-<div class="banner" st yle="background-image: url('<?php echo $img;?>');">
- <img src="<?php echo $img;?>" />
+<div class="banner">
+		<img src="<?php echo $img;?>" />
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big"><?php the_title();?></div>
@@ -28,10 +28,7 @@
 <?php if(is_page(18)) {?>
 	<div class="full-width skilled-banner">
     	<div class="overlay-content">
-        <?php dynamic_sidebar('Find Talent Page Bottom Content');?>
-        <!--<h6>We look forward to discussing your training & hiring needs & to arrange for English or computer classes at your property</h6>
-		<p>Please contact us to arrange a meeting to discuss the opportunity to work together. </p>
-        <p>Email or call for more information <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a> | 647 930 9518</p> -->
+        	<?php dynamic_sidebar('Find Talent Page Bottom Content');?>
         </div>
     </div>
 <?php } ?>

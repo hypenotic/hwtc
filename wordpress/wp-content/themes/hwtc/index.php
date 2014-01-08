@@ -12,8 +12,8 @@
 ?>
     
     
-    <div class="banner" s tyle="background-image: url('<?php echo $img;?>');">
-    <img src="<?php echo $img;?>" />
+    <div class="banner">
+	    <img src="<?php echo $img;?>" />
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big"><?php the_title();?></div>
@@ -45,7 +45,6 @@
             
         </div>
 </div>
-
 <div class="container">
     <div class="columns-wide content">
 	    <?php the_content();?>    
