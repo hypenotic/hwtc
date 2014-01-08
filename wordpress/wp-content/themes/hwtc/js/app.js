@@ -149,6 +149,7 @@ jQuery(document).ready(function($) {
 	// Custom Codes
     $(".columns-1").fitVids();
     $(".front-headline").fitText(2);
+	
 	$(window).resize(function() {
 		$(".content-img").each(function(){
 			var img_height = $(this).find('img').height();	
@@ -156,6 +157,7 @@ jQuery(document).ready(function($) {
 			var margin= parseInt(img_height) + parseInt(paddingb);
 			var next =	$(this).next().css('margin-top',margin+'px');		
 		});
+		
 	});
     $(".content-img").each(function(){
 		var img_height = $(this).find('img').height();	
@@ -183,6 +185,14 @@ jQuery(document).ready(function($) {
         slidingTitle();
       }
     });
+  }else {
+		var b_img_height=$('.banner img').height();
+		$('.bannertext').css('padding-top',b_img_height+'px');
+			$(window).resize(function() {
+				var b_img_height=$('.banner img').height();
+				$('.bannertext').css('padding-top',b_img_height+'px');
+			});
+
   }
 
   // Window gets large enough, need to recalc all parallaxing title values
