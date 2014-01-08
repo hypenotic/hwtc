@@ -8,7 +8,10 @@
 	margin-top: 85px;
 	@include at-breakpoint($desktop) {
 		padding-top:250px;
-		padding-bottom:50px;	
+		padding-bottom:10px;	
+		.home & {
+			padding-bottom:0px;	
+		}
 		margin-top: 0px;
 	}
 	.box-fifty {
