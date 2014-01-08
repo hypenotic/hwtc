@@ -196,3 +196,8 @@
 			@include adjust-font-size-to(30px);
 		}
 }
+.textwidget {
+	p {
+		margin-bottom:0em;
+	}
+}
