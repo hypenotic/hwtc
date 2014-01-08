@@ -2,11 +2,21 @@
 	position: relative;
 	z-index:1;
 	overflow:hidden;
-	padding-top:300px; 
+	padding-top:0px; 
 	background-size:100% 100%;
 	background-repeat:no-repeat;
+	margin-top: 85px;
+	@include at-breakpoint($desktop) {
+		padding-top:200px; 
+		margin-top: 0px;
+	}
 	.box-fifty {
 		color:$white;
+	}
+	img {
+		position:absolute;
+		top:0;
+		left:0;
 	}
 	.banner-bottom {
 		@include at-breakpoint($desktop) {
