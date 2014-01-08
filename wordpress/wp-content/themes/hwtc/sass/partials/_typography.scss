@@ -196,13 +196,17 @@ footer {
 	color: $white;
 	font-family: $latolight;
 	& h1, h2, h3, h4, h5, h6 {
-		@include adjust-font-size-to(32px);
+		@include adjust-font-size-to(28px);
 		margin: 0 auto rhythm(1, 40px);
 		font-weight: normal;
 		font-family: $nixie_oneregular;
 		line-height:1.6em;
 	}
-	& p, ul, input[type="email"] {
+	& p {
+		@include adjust-font-size-to(16px);
+		line-height:1.6em;
+	}
+	& ul, input[type="email"] {
 		@include adjust-font-size-to(16px);
 	}
 	& ul {
