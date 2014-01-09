@@ -1,3 +1,6 @@
+.mobile-title {
+	@include adjust-font-size-to(42px);
+}
 .content {
 	color:#092148;
 	padding-top:60px;
@@ -77,6 +80,7 @@
 			color:#9b59b6;
 			border:2px solid #9b59b6;
 			line-height: 1.5em;
+			margin-top:10px;
 			padding-top: 10px;
 			&:hover {
 				background:#9b59b6;
@@ -171,12 +175,16 @@
 	min-height:200px;
 } 
 .overlay-content {
-		width:70%;
+		width:90%;		
+		padding:30px 20px;
+		@include at-breakpoint($desktop) {	
+			width:70%;
+			padding:30px;
+		}
 		margin: 100px auto;
 		z-index:1;
 		position:relative;
 		overflow:hidden;
-		padding:30px;
 		text-align:center;
 		&:before {
 			z-index:-1;
@@ -195,9 +203,12 @@
 			color:#555;
 			@include adjust-font-size-to(30px);
 		}
-}
-.textwidget {
-	p {
-		margin-bottom:0em;
-	}
+		.textwidget {
+			p {
+				margin-bottom:1em;
+				@include at-breakpoint($desktop) {	
+					margin-bottom:0em;	
+				}
+			}
+		}
 }

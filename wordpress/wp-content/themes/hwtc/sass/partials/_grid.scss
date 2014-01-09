@@ -189,10 +189,22 @@ footer {
 	@include at-breakpoint($desktop) {
 		width:50%;
 		float:left;
-		
 	}
 }
 .full-width {
 	position:relative;
 	overflow:hidden;
+}
+.show-for-mobile {
+	display:block;
+	@include at-breakpoint($desktop) {
+		display:none;
+	}
+}
+
+.show-for-desktop {
+	display:none;
+	@include at-breakpoint($desktop) {
+		display:block;
+	}
 }
