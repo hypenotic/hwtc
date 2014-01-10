@@ -134,7 +134,12 @@ p, ul, ol {
 		margin: 0 auto rhythm(1, 32px);
 	}
 }
-
+strong {
+	padding-bottom: 20px;
+	@include at-breakpoint($desktop) {
+		padding-bottom:0px;	
+	}
+}
 ul li {
 	margin: 0 auto rhythm(0.5, 24px);
 }
