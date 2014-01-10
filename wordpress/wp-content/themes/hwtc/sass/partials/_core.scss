@@ -12,7 +12,9 @@ img {
 
 .wrapper {
 	background-color: #FAFAFA;
-	@include transition(0.3s all ease);
+	@include transition(transform 500ms ease);
+	position:relative;
+	z-index:2000;
 }
 em,i {
 	font-family: $latoitalic;

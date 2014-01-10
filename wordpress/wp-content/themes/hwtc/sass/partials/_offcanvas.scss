@@ -1,3 +1,4 @@
+$offcanvas-panel-width: 13em;
 .offcanvas {
 	#mobile-nav-button {
 		@include at-breakpoint($desktop) {
@@ -28,17 +29,23 @@
 	}
 	
 	#sidebarMenu {
-		@include transition(0.3s all ease);
+		@include transition(all 500ms ease-out);
 		position: fixed;
 		top: 0;
+		display: block;
 		background: #303030;
-		right: -10em;
 		height: 100%;
 		overflow-x: hidden;
 		overflow-y: auto;
-		width: 10em;
-		z-index: 1;
-		display:block;
+		width: $offcanvas-panel-width;
+		right: -$offcanvas-panel-width;
+		z-index: 1998;
+		color:#fff;
+		padding:15px;
+		-webkit-overflow-scrolling: touch; 
+		::-webkit-scrollbar {
+			display: none; 
+		}
 		ul {
 			margin:0;
 			padding:0;
@@ -66,10 +73,10 @@
 	&.open-right {
 		overflow-x:hidden;
 		.wrapper {
-			@include translateX(-10em);		
+			@include translateX(-$offcanvas-panel-width);		
 		}
 		header {		
-			@include translateX(-10em);
+			@include translateX(-$offcanvas-panel-width);
 		}
 		#sidebarMenu {
 			right:0;

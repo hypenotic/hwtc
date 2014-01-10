@@ -7,9 +7,8 @@ header {
 	width:100%;
     position: fixed;
     top: 0;
-    z-index: 300;
-	@include transition(0.3s all ease);
-	
+    z-index: 9999;
+	@include transition(transform 500ms ease);
 	@media only screen and (max-width: 768px) {
 		&:before {
 			content: '';
