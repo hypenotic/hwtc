@@ -164,7 +164,6 @@ jQuery(document).ready(function($) {
 		var paddingb = $(this).css('padding-bottom');
 		var margin= parseInt(img_height) + parseInt(paddingb);
 		var next =	$(this).next().css('margin-top',margin+'px');
-
 	});
     
 	
