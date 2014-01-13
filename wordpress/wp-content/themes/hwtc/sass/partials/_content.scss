@@ -172,8 +172,10 @@
 .skilled-banner {
 	width:100%;
 	background: url('images/find-talent-bottom-banner.jpg') no-repeat;
-	background-size:cover;
+	background-size:100% 100%;
 	min-height:200px;
+	margin-top:-70px;
+	margin-bottom:100px;
 } 
 .overlay-content {
 		width:90%;		
@@ -182,7 +184,7 @@
 			width:70%;
 			padding:30px;
 		}
-		margin: 100px auto;
+		margin: 120px auto;
 		z-index:1;
 		position:relative;
 		overflow:hidden;
