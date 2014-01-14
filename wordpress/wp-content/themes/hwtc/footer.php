@@ -1,4 +1,5 @@
 <footer>
+<?php if(!is_page('find-work')) { ?>
 	<div class="footer-top">
     	<div class="container">
             <div class="columns-2">
@@ -9,6 +10,7 @@
            </div>       	
         </div>   
     </div>
+<?php } ?>
     <div class="footer-bottom">
         <div class="columns-2">
             <a href="javascript:void(0)" onclick="return toggleStreetView();" id="panel">Street View</a>
