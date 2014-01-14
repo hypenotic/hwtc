@@ -150,6 +150,8 @@ jQuery(document).ready(function($) {
     $(".columns-1").fitVids();
     $(".front-headline").fitText(2);
 	
+    $(".content ul li").widowFix();
+	
 	$(window).resize(function() {
 		$(".content-img").each(function(){
 			var img_height = $(this).find('img').height();	
