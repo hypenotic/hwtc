@@ -1,5 +1,5 @@
 <footer>
-<?php if(is_page('find-work')==false) { ?>
+<?php if(!is_page('find-work')) { ?>
 	<div class="footer-top">
     	<div class="container">
             <div class="columns-2">
