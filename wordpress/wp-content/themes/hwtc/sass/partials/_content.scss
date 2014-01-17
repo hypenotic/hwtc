@@ -3,9 +3,14 @@
 }
 .content {
 	color:#092148;
-	padding-top:60px;
-	.home & {
-		padding-top:100px;
+	@include at-breakpoint($desktop) {	
+		padding-top:60px;
+	}
+	.home & {		
+		padding-top:40px;
+		@include at-breakpoint($desktop) {	
+			padding-top:100px;
+		}
 	}
 	padding-bottom:35px;
 	.content-box {
@@ -16,25 +21,24 @@
 		}
 	}
 	.content-img {
-		position:absolute;
-		left:0;
 		width:100%;
-		padding-top: 10px;
-		padding-bottom: 70px;
+		padding-top: 20px;
+		padding-bottom: 50px;
 		overflow:hidden;
 		text-align:center;
 	}		
 	& h1, h2, h3, h4, h5 {
 		@include adjust-font-size-to(32px);
 			font-size:1.15em;
+			padding:10px 0 10px;
 			@include at-breakpoint($desktop) {	
+				padding:30px 0 30px;
 				font-size:2em;
 			}
 		text-transform: uppercase;
 		font-weight: normal;
 		font-family: $nixie_oneregular;
 		color: #2c65b5;
-		padding:30px 0 30px;
 		line-height:1.73em;
 		@include text-shadow(0px 0px 1px rgba(71, 101, 181, 1));
 		a {
@@ -175,7 +179,6 @@
 	background-size:100% 100%;
 	min-height:200px;
 	margin-top:-70px;
-	margin-bottom:100px;
 } 
 .overlay-content {
 		width:90%;		

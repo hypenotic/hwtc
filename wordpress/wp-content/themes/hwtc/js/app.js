@@ -152,21 +152,21 @@ jQuery(document).ready(function($) {
 	
     $(".content ul li").widowFix();
 	
-	$(window).resize(function() {
-		$(".content-img").each(function(){
-			var img_height = $(this).find('img').height();	
-			var paddingb = $(this).css('padding-bottom');
-			var margin= parseInt(img_height) + parseInt(paddingb);
-			var next =	$(this).next().css('margin-top',margin+'px');		
-		});
-		
-	});
-    $(".content-img").each(function(){
-		var img_height = $(this).find('img').height();	
-		var paddingb = $(this).css('padding-bottom');
-		var margin= parseInt(img_height) + parseInt(paddingb);
-		var next =	$(this).next().css('margin-top',margin+'px');
-	});
+	//$(window).resize(function() {
+//		$(".content-img").each(function(){
+//			var img_height = $(this).find('img').height();	
+//			var paddingb = $(this).css('padding-bottom');
+//			var margin= parseInt(img_height) + parseInt(paddingb);
+//			var next =	$(this).next().css('margin-top',margin+'px');		
+//		});
+//		
+//	});
+//    $(".content-img").each(function(){
+//		var img_height = $(this).find('img').height();	
+//		var paddingb = $(this).css('padding-bottom');
+//		var margin= parseInt(img_height) + parseInt(paddingb);
+//		var next =	$(this).next().css('margin-top',margin+'px');
+//	});
     
 	
 	
