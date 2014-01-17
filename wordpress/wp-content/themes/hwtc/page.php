@@ -20,7 +20,7 @@
             </div>
         </div>
 </div>
-<div class="container">
+<div class="container" style="max-width:100%;">
     <div class="columns-1 content">
 	    <?php the_content();?>    
     </div>
