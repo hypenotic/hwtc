@@ -32,6 +32,7 @@ nav ul li a {
 	font-family: $latoregular;
 	text-transform: uppercase;
 	text-decoration: none;
+	text-shadow: 1px 0px 1px #403836;
 	&:hover {
 		text-decoration:underline;
 		color: $white;
