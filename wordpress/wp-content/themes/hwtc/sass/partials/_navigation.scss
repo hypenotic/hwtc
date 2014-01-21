@@ -32,7 +32,7 @@ nav ul li a {
 	font-family: $latoregular;
 	text-transform: uppercase;
 	text-decoration: none;
-	text-shadow: 1px 0px 1px #403836;
+	@include text-shadow(1px 0px 1px #000);
 	&:hover {
 		text-decoration:underline;
 		color: $white;
@@ -40,5 +40,10 @@ nav ul li a {
 	&:after {
 		content: '';
 		margin-left: 10px;
+	}
+}
+.active-header {
+	nav ul li a {
+		@include text-shadow(none);
 	}
 }
