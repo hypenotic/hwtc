@@ -93,6 +93,8 @@ function hype_scripts() {
 		wp_enqueue_script( 'map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array('jquery'), '', true);
 		wp_enqueue_script( 'widowFix', get_template_directory_uri() . '/js/jquery.widowFix-1.3.2.js', array('jquery'), '1.3.2', true);
 		wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array('jquery'), '1.0', true);
+		wp_enqueue_script( 'bxslider-script', get_template_directory_uri() . '/js/bxslider.js', array('jquery'), '1.0', true);
+		wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/slider.js', array('jquery'), '1.0', true);
 }
 //Enqueue styles
 function hype_styles() {
@@ -159,3 +161,15 @@ add_action( 'save_post', 'prfx_meta_save' );
 		'after_title' => '</h6>',
 	));
 	
+#CUZTOM HELPER CLASS
+	$cuztom_inc = get_template_directory() . '/includes/wordpress-cuztom-helper-master/cuztom.php';
+	if( file_exists($cuztom_inc) ) {
+		include_once( $cuztom_inc );
+	}
+
+
+#CUSTOM POST TYPE 
+	// Include code for creating slider post type
+	if( file_exists( get_template_directory() . "/includes/cuztom-post-type_slider.php" ) ) {
+		include_once( get_template_directory() . '/includes/cuztom-post-type_slider.php' );
+	}
