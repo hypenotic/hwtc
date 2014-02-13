@@ -2,28 +2,39 @@
 /* Template Name: About Page Template */
 ?>
 <?php get_header();?>
-<?php if(have_posts()):while(have_posts()):the_post(); 
-
-	$img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', false, ''); 
-	if($img_src!='') { 	
-		$img=$img_src[0];
-	}else {
-		$img= get_bloginfo('template_url').'/images/banner.jpg';
-	}
+<?php if(have_posts()):while(have_posts()):the_post(); ?>
+<?php
+$args = array(
+        'post_type' => 'slide',
+        'posts_per_page' => 10
+	);	
+	
+	// The Query
+	$the_query = new WP_Query( $args );
+	
+	// Check if the Query returns any posts
+	if ( $the_query->have_posts() ) {
+	
+	// Start the Slider ?>
+		<ul class="slider">
+			
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
+			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'banner') );
+			?>
+			
+				<li class="slide-container">
+					<img src="<?php echo $url;?>" alt="<?php the_title();?>" />
+                    <div class="bx-caption"><span><?php the_title();?></span></div>
+				</li>
+				
+			<?php endwhile; ?>
+	
+		</ul><!-- .slider-->
+	<?php }
+	
+	// Reset Post Data
+	wp_reset_postdata();
 ?>
-<div class="banner">
-		<img src="<?php echo $img;?>" />
-        <div class="bannertext">
-            <div class="bannertext-content">
-                <div class="banner-title-big"><?php the_title();?></div>
-                <?php $sub_title = get_post_meta(get_the_ID(),'second-title',true); 
-					  if($sub_title) {
-				?>
-                <div class="banner-title-small"><?php echo $sub_title;?></div>
-                <?php } ?>
-            </div>
-        </div>
-</div>
 <div class="container">
     <div class="columns-1 content">
 	    <?php the_content();?>    
