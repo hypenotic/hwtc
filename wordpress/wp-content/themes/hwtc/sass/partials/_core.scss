@@ -1,8 +1,8 @@
 body {
-	font-family: $latolight;
-	color: $body_background;
-	background:#fafafa;
-	color:#092148;
+    background: #fafafa;
+    color: #092148;
+    color: $body_background;
+    font-family: $latolight;
 }
 
 img {
@@ -11,15 +11,17 @@ img {
 }
 
 .wrapper {
-	background-color: #FAFAFA;
-	@include transition(transform 500ms ease);
-	position:relative;
-	z-index:2000;
+    @include transition(transform 500ms ease);
+    background-color: #FAFAFA;
+    position: relative;
+    z-index: 2000;
 }
+
 em,i {
-	font-family: $latoitalic;
-	line-height:2.5em;
+    font-family: $latoitalic;
+    line-height: 2.5em;
 }
+
 i {
-	color:#2c65b5;
+    color: #2c65b5;
 }

@@ -1,152 +1,160 @@
 .bx-wrapper {
+
     *zoom: 1;
     margin: 85px auto 60px;
-	@include at-breakpoint($desktop) {
-		margin: 0 auto 60px;
-	}
     padding: 0;
     position: relative;
-	img {
-		display: block;
-		max-width: 100%;
-	}
-	.bx-viewport {
-		background: #fff;
-	}
-	.bx-loading {
-		background: url(images/slider/bx_loader.gif) center center no-repeat white;
-		height: 100%;
-		left: 0;
-		min-height: 50px;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: 2000;
-	}
-	.bx-pager {
-		color: #666;
-		font-family: Arial;
-		font-size: .85em;
-		font-weight: bold;
-		padding-top: 20px;
-		text-align: center;
-		bottom: -30px;
-		position: absolute;
-		width: 100%;
-		.bx-pager-item {
-			*display: inline;
-			*zoom: 1;
-			display: inline-block;
-		}
-		&.bx-default-pager a {
-			-moz-border-radius: 5px;
-			-webkit-border-radius: 5px;
-			background: #666;
-			border-radius: 5px;
-			display: block;
-			height: 10px;
-			margin: 0 5px;
-			outline: 0;
-			text-indent: -9999px;
-			width: 10px;
-			&:hover,.active {
-				background: #000;
-			}
-		}
-	}
-	.bx-controls-auto {
-		bottom: -30px;
-		position: absolute;
-		width: 100%; 
-		text-align: center;
-		.bx-controls-auto-item {
-			*display: inline;
-			*zoom: 1;
-			display: inline-block;
-		}		
-		.bx-start {
-			background: url(images/slider/controls.png) -86px -11px no-repeat;
-			display: block;
-			height: 11px;
-			margin: 0 3px;
-			outline: 0;
-			text-indent: -9999px;
-			width: 10px;
-			&:hover,.bx-start.active {
-				background-position: -86px 0;
-			}
-		}
-		.bx-stop {
-			background: url(images/slider/controls.png) -86px -44px no-repeat;
-			display: block;
-			height: 11px;
-			margin: 0 3px;
-			outline: 0;
-			text-indent: -9999px;
-			width: 9px;
-			&:hover,.bx-start.active {
-				background-position: -86px -33px;
-			}
-		}
-	}
-	 .bx-prev {
-		background: url(images/slider/controls.png) no-repeat 0 -32px;
-		left: 10px;
-		&:hover {
-			background-position: 0 0;
-		}
-	}
-	.bx-next {
-		background: url(images/slider/controls.png) no-repeat -43px -32px;
-		right: 10px;
-		&:hover {
-			background-position: -43px 0;
-		}
-	}
-	.bx-caption {
-		bottom: 0;
-		position: absolute;
-		width: auto;
-		right: 7%;
-		padding: 20px 1.5em;
-		background: $white;
-		color:#555;
-		text-transform:uppercase;
-		@include opacity(0.9);
-		@include transition(opacity 1s linear);
-		@include at-breakpoint($desktop) {
-			margin-bottom:50px;
-		}
-		span {
-			display: block;
-			font-family: $latobold;
-			@include adjust-font-size-to(30px);
-			@include at-breakpoint($desktop) {
-				@include adjust-font-size-to(40px);
-			}
-		}
-	}
-	& .bx-controls-direction a {
-		height: 32px;
-		margin-top: -16px;
-		outline: 0;
-		position: absolute;
-		text-indent: -9999px;
-		top: 50%;
-		width: 32px;
-		z-index: 9999;
-		&.disabled {
-			display: none;
-		}
-	}
-	& .bx-controls.bx-has-controls-auto.bx-has-pager {
-		.bx-pager {
-			text-align: left;
-			width: 80%;
-		}
-		.bx-controls-auto {
-			right: 0;
-			width: 35px;
-		}
-	}
+    @include at-breakpoint($desktop) {
+        margin: 0 auto 60px;
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        opacity: 0;
+    }
+    li {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .bx-viewport {
+        background: #fff;
+    }
+    .bx-loading {
+        background: url(images/slider/bx_loader.gif) center center no-repeat white;
+        height: 100%;
+        left: 0;
+        min-height: 50px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2000;
+    }
+    .bx-pager {
+        bottom: -30px;
+        color: #666;
+        font-family: Arial;
+        font-size: .85em;
+        font-weight: bold;
+        padding-top: 20px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        .bx-pager-item {
+            *display: inline;
+            *zoom: 1;
+            display: inline-block;
+        }
+        &.bx-default-pager a {
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            background: #666;
+            border-radius: 5px;
+            display: block;
+            height: 10px;
+            margin: 0 5px;
+            outline: 0;
+            text-indent: -9999px;
+            width: 10px;
+            &:hover,.active {
+                background: #000;
+            }
+        }
+    }
+    .bx-controls-auto {
+        bottom: -30px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        .bx-controls-auto-item {
+            *display: inline;
+            *zoom: 1;
+            display: inline-block;
+        }
+        .bx-start {
+            background: url(images/slider/controls.png) -86px -11px no-repeat;
+            display: block;
+            height: 11px;
+            margin: 0 3px;
+            outline: 0;
+            text-indent: -9999px;
+            width: 10px;
+            &:hover,.bx-start.active {
+                background-position: -86px 0;
+            }
+        }
+        .bx-stop {
+            background: url(images/slider/controls.png) -86px -44px no-repeat;
+            display: block;
+            height: 11px;
+            margin: 0 3px;
+            outline: 0;
+            text-indent: -9999px;
+            width: 9px;
+            &:hover,.bx-start.active {
+                background-position: -86px -33px;
+            }
+        }
+    }
+    .bx-prev {
+        background: url(images/slider/controls.png) no-repeat 0 -32px;
+        left: 10px;
+        &:hover {
+            background-position: 0 0;
+        }
+    }
+    .bx-next {
+        background: url(images/slider/controls.png) no-repeat -43px -32px;
+        right: 10px;
+        &:hover {
+            background-position: -43px 0;
+        }
+    }
+    .bx-caption {
+
+        @include opacity(0.9);
+        @include transition(opacity 1s linear);
+        background: $white;
+        bottom: 0;
+        color: #555;
+        display: none;
+        padding: 20px 1.5em;
+        position: absolute;
+        right: 7%;
+        text-transform: uppercase;
+        width: auto;
+        @include at-breakpoint($desktop) {
+            display: block;
+        }
+        span {
+            @include adjust-font-size-to(16px);
+            display: block;
+            font-family: $latobold;
+            @include at-breakpoint($desktop) {
+                @include adjust-font-size-to(25px);
+            }
+        }
+    }
+    & .bx-controls-direction a {
+        height: 32px;
+        margin-top: -16px;
+        outline: 0;
+        position: absolute;
+        text-indent: -9999px;
+        top: 50%;
+        width: 32px;
+        z-index: 9999;
+        &.disabled {
+            display: none;
+        }
+    }
+    & .bx-controls.bx-has-controls-auto.bx-has-pager {
+        .bx-pager {
+            text-align: left;
+            width: 80%;
+        }
+        .bx-controls-auto {
+            right: 0;
+            width: 35px;
+        }
+    }
 }

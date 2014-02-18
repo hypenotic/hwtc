@@ -1,85 +1,86 @@
 $offcanvas-panel-width: 13em;
+
 .offcanvas {
-	#mobile-nav-button {
-		@include at-breakpoint($desktop) {
-			display:none;/* Hide For big screen*/
-		}
-		position:absolute;
-		right:20px;
-		a {
-			display:block;
-			margin:20px 0 0 0;
-			width:46px;
-			height:46px;
-			overflow:hidden;
-			@include border-radius(50%);
-			background: white;
-			@include transition(width 1.1s ease-in-out);
-			z-index:9999;
-			text-indent:-9999px;
-			&:before {
-				content: '';
-				position: relative;
-				background:url('images/menu.png') no-repeat center;
-				width: 44px;
-				height: 44px;
-				float: right;
-			}
-		}
-	}
-	
-	#sidebarMenu {
-		@include transition(all 500ms ease-out);
-		position: fixed;
-		top: 0;
-		display: block;
-		background: #303030;
-		height: 100%;
-		overflow-x: hidden;
-		overflow-y: auto;
-		width: $offcanvas-panel-width;
-		right: -$offcanvas-panel-width;
-		z-index: 1998;
-		color:#fff;
-		padding:15px;
-		-webkit-overflow-scrolling: touch; 
-		::-webkit-scrollbar {
-			display: none; 
-		}
-		ul {
-			margin:0;
-			padding:0;
-			li {
-				padding:0;
-				margin:0;
-				list-style:none;
-				a {
-					@include adjust-font-size-to(15px);
-					color: $white;
-					text-transform: uppercase;
-					text-decoration: none;
-					display: block;
-					padding:10px 15px;
-					border-bottom: 1px solid #999;
-					&:hover {
-						color: $white;
-						background: #999;
-					}
-				}
-			}
-		}
-		
-	}
-	&.open-right {
-		overflow-x:hidden;
-		.wrapper {
-			@include translateX(-$offcanvas-panel-width);		
-		}
-		header {		
-			@include translateX(-$offcanvas-panel-width);
-		}
-		#sidebarMenu {
-			right:0;
-		}
-	}
-}	
+    #mobile-nav-button {
+
+        position: absolute;
+        right: 20px;
+        @include at-breakpoint($desktop) {
+            display: none;
+            /* Hide For big screen*/
+        }
+        a {
+            @include border-radius(50%);
+            @include transition(width 1.1s ease-in-out);
+            background: white;
+            display: block;
+            height: 46px;
+            margin: 20px 0 0 0;
+            overflow: hidden;
+            text-indent: -9999px;
+            width: 46px;
+            z-index: 9999;
+            &:before {
+                background: url("images/menu.png") no-repeat center;
+                content: '';
+                float: right;
+                height: 44px;
+                position: relative;
+                width: 44px;
+            }
+        }
+    }
+    #sidebarMenu {
+        -webkit-overflow-scrolling: touch;
+        @include transition(all 500ms ease-out);
+        background: #303030;
+        color: #fff;
+        display: block;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 15px;
+        position: fixed;
+        right: -$offcanvas-panel-width;
+        top: 0;
+        width: $offcanvas-panel-width;
+        z-index: 1998;
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                a {
+                    @include adjust-font-size-to(15px);
+                    border-bottom: 1px solid #999;
+                    color: $white;
+                    display: block;
+                    padding: 10px 15px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    &:hover {
+                        background: #999;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &.open-right {
+        overflow-x: hidden;
+        .wrapper {
+            @include translateX(-$offcanvas-panel-width);
+        }
+        header {
+            @include translateX(-$offcanvas-panel-width);
+        }
+        #sidebarMenu {
+            right: 0;
+        }
+    }
+}

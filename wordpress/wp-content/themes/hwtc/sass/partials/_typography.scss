@@ -1,53 +1,48 @@
 @include establish-baseline;
 
-$latoblack: 'latoblack';
-@include font-face("latoblack", 
-	font-files("../fonts/lato-black-webfont.woff", "../fonts/lato-black-webfont.ttf", "../fonts/lato-black-webfont.svg#latoblack"), "../fonts/lato-black-webfont.eot", normal, normal);
+$latoblack: "latoblack";
 
+@include font-face("latoblack", font-files("../fonts/lato-black-webfont.woff", "../fonts/lato-black-webfont.ttf", "../fonts/lato-black-webfont.svg#latoblack"), "../fonts/lato-black-webfont.eot", normal, normal);
 
-$latoblack_italic: 'latoblack_italic';
-@include font-face("latoblack_italic", 
-	font-files("../fonts/lato-blackitalic-webfont.woff", "../fonts/lato-blackitalic-webfont.ttf", "../fonts/lato-blackitalic-webfont.svg#latoblack_italic"), "../fonts/lato-blackitalic-webfont.eot", normal, normal);
+$latoblack_italic: "latoblack_italic";
 
-$latobold: 'latobold';
-@include font-face("latobold", 
-	font-files("../fonts/lato-bold-webfont.woff", "../fonts/lato-bold-webfont.ttf", "../fonts/lato-bold-webfont.svg#latobold"), "../fonts/lato-bold-webfont.eot", normal, normal);
+@include font-face("latoblack_italic", font-files("../fonts/lato-blackitalic-webfont.woff", "../fonts/lato-blackitalic-webfont.ttf", "../fonts/lato-blackitalic-webfont.svg#latoblack_italic"), "../fonts/lato-blackitalic-webfont.eot", normal, normal);
 
-	
-$latobold_italic: 'latobold_italic';
-@include font-face("latobold_italic", 
-	font-files("../fonts/lato-bolditalic-webfont.woff", "../fonts/lato-bolditalic-webfont.ttf", "../fonts/lato-bolditalic-webfont.svg#latobold_italic"), "../fonts/lato-bolditalic-webfont.eot", normal, normal);
+$latobold: "latobold";
 
-$latohairline: 'latohairline';
-@include font-face("latohairline", 
-	font-files("../fonts/lato-hairline-webfont.woff", "../fonts/lato-hairline-webfont.ttf", "../fonts/lato-hairline-webfont.svg#latohairline"), "../fonts/lato-hairline-webfont.eot", normal, normal);
-	
+@include font-face("latobold", font-files("../fonts/lato-bold-webfont.woff", "../fonts/lato-bold-webfont.ttf", "../fonts/lato-bold-webfont.svg#latobold"), "../fonts/lato-bold-webfont.eot", normal, normal);
 
-$latohairline_italic: 'latohairline_italic';
-@include font-face("latohairline_italic", 
-	font-files("../fonts/lato-hairlineitalic-webfont.woff", "../fonts/lato-hairlineitalic-webfont.ttf", "../fonts/lato-hairlineitalic-webfont.svg#latohairline_italic"), "../fonts/lato-hairlineitalic-webfont.eot", normal, normal);
+$latobold_italic: "latobold_italic";
 
-$latoitalic: 'latoitalic';
-@include font-face("latoitalic", 
-	font-files("../fonts/lato-italic-webfont.woff", "../fonts/lato-italic-webfont.ttf", "../fonts/lato-italic-webfont.svg#latoitalic"), "../fonts/lato-italic-webfont.eot", normal, normal);
+@include font-face("latobold_italic", font-files("../fonts/lato-bolditalic-webfont.woff", "../fonts/lato-bolditalic-webfont.ttf", "../fonts/lato-bolditalic-webfont.svg#latobold_italic"), "../fonts/lato-bolditalic-webfont.eot", normal, normal);
 
+$latohairline: "latohairline";
 
-$latolight: 'latolight';
-@include font-face("latolight", 
-	font-files("../fonts/lato-light-webfont.woff", "../fonts/lato-light-webfont.ttf", "../fonts/lato-light-webfont.svg#latolight"), "../fonts/lato-light-webfont.eot", normal, normal);
+@include font-face("latohairline", font-files("../fonts/lato-hairline-webfont.woff", "../fonts/lato-hairline-webfont.ttf", "../fonts/lato-hairline-webfont.svg#latohairline"), "../fonts/lato-hairline-webfont.eot", normal, normal);
 
-$latolight_italic: 'latolight_italic';
-@include font-face("latolight_italic", 
-	font-files("../fonts/lato-lightitalic-webfont.woff", "../fonts/lato-lightitalic-webfont.ttf", "../fonts/lato-lightitalic-webfont.svg#latolight_italic"), "../fonts/lato-lightitalic-webfont.eot", normal, normal);
+$latohairline_italic: "latohairline_italic";
 
-$latoregular: 'latoregular';
-@include font-face("latoregular", 
-	font-files("../fonts/lato-regular-webfont.woff", "../fonts/lato-regular-webfont.ttf", "../fonts/lato-regular-webfont.svg#latoregular"), "../fonts/lato-regular-webfont.eot", normal, normal);
+@include font-face("latohairline_italic", font-files("../fonts/lato-hairlineitalic-webfont.woff", "../fonts/lato-hairlineitalic-webfont.ttf", "../fonts/lato-hairlineitalic-webfont.svg#latohairline_italic"), "../fonts/lato-hairlineitalic-webfont.eot", normal, normal);
 
+$latoitalic: "latoitalic";
 
-$nixie_oneregular: 'nixie_oneregular';
-@include font-face("nixie_oneregular", 
-	font-files("../fonts/nixieone-regular.woff", "../fonts/nixieone-regular.ttf", "../fonts/nixieone-regular.svg#nixie_oneregular"), "../fonts/opensans-nixieone-regular.eot", normal, normal);
+@include font-face("latoitalic", font-files("../fonts/lato-italic-webfont.woff", "../fonts/lato-italic-webfont.ttf", "../fonts/lato-italic-webfont.svg#latoitalic"), "../fonts/lato-italic-webfont.eot", normal, normal);
+
+$latolight: "latolight";
+
+@include font-face("latolight", font-files("../fonts/lato-light-webfont.woff", "../fonts/lato-light-webfont.ttf", "../fonts/lato-light-webfont.svg#latolight"), "../fonts/lato-light-webfont.eot", normal, normal);
+
+$latolight_italic: "latolight_italic";
+
+@include font-face("latolight_italic", font-files("../fonts/lato-lightitalic-webfont.woff", "../fonts/lato-lightitalic-webfont.ttf", "../fonts/lato-lightitalic-webfont.svg#latolight_italic"), "../fonts/lato-lightitalic-webfont.eot", normal, normal);
+
+$latoregular: "latoregular";
+
+@include font-face("latoregular", font-files("../fonts/lato-regular-webfont.woff", "../fonts/lato-regular-webfont.ttf", "../fonts/lato-regular-webfont.svg#latoregular"), "../fonts/lato-regular-webfont.eot", normal, normal);
+
+$nixie_oneregular: "nixie_oneregular";
+
+@include font-face("nixie_oneregular", font-files("../fonts/nixieone-regular.woff", "../fonts/nixieone-regular.ttf", "../fonts/nixieone-regular.svg#nixie_oneregular"), "../fonts/opensans-nixieone-regular.eot", normal, normal);
 
 // Base
 $base-font-size: 16px;
@@ -63,175 +58,177 @@ body {
 }
 */
 h1, h2, h3, h4, h5, h6 {
-	font-family: $latoregular;
-	font-weight:normal;
-	a {
-		text-decoration: none;
-		&:hover {
-		}
-	}
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    font-family: $latoregular;
+    font-weight: normal;
+    a {
+        text-decoration: none;
+        &:hover {}
+    }
+}
 h1 {
-	@include adjust-font-size-to(26px);
-	margin: 0 auto rhythm(1, 26px);
-	@include at-breakpoint($desktop) {
-		@include adjust-font-size-to(63px);
-		margin: 0 auto rhythm(1, 63px);
-	}
+    @include adjust-font-size-to(26px);
+    margin: 0 auto rhythm(1, 26px);
+    @include at-breakpoint($desktop) {
+        @include adjust-font-size-to(63px);
+        margin: 0 auto rhythm(1, 63px);
+    }
 }
-
 h2 {
-	@include adjust-font-size-to(24px);
-	margin: 0 auto rhythm(0, 24px);
-	@include at-breakpoint($desktop) {
-		@include adjust-font-size-to(41px);
-		margin: 0 auto rhythm(0, 41px);
-	}
+    @include adjust-font-size-to(24px);
+    margin: 0 auto rhythm(0, 24px);
+    @include at-breakpoint($desktop) {
+        @include adjust-font-size-to(41px);
+        margin: 0 auto rhythm(0, 41px);
+    }
 }
-
 h3 {
-	@include adjust-font-size-to(22px);
-  	margin: 0 auto rhythm(0, 22px);
-	@include at-breakpoint($desktop) {
-  		@include adjust-font-size-to(38px);
-  		margin: 0 auto rhythm(0, 38px);
-  	}
+    @include adjust-font-size-to(22px);
+    margin: 0 auto rhythm(0, 22px);
+    @include at-breakpoint($desktop) {
+        @include adjust-font-size-to(38px);
+        margin: 0 auto rhythm(0, 38px);
+    }
 }
-
 h4 {
-	@include adjust-font-size-to(20px);
-  	margin: 0 auto rhythm(0, 20px);
-	@include at-breakpoint($desktop) {
-  		@include adjust-font-size-to(32px);
-  		margin: 0 auto rhythm(0, 32px);
-  	}
+    @include adjust-font-size-to(20px);
+    margin: 0 auto rhythm(0, 20px);
+    @include at-breakpoint($desktop) {
+        @include adjust-font-size-to(32px);
+        margin: 0 auto rhythm(0, 32px);
+    }
 }
-
 h5 {
-	@include adjust-font-size-to(18px);
-  	margin: 0 auto rhythm(0, 18px);
-	@include at-breakpoint($desktop) {
-  		@include adjust-font-size-to(26px);
-  		margin: 0 auto rhythm(0, 26px);
-  	}
+    @include adjust-font-size-to(18px);
+    margin: 0 auto rhythm(0, 18px);
+    @include at-breakpoint($desktop) {
+        @include adjust-font-size-to(26px);
+        margin: 0 auto rhythm(0, 26px);
+    }
 }
-
 h6 {
-	@include adjust-font-size-to(16px);
-  	margin: 0 auto rhythm(0.5, 16px);
-	@include at-breakpoint($desktop) {
-  		@include adjust-font-size-to(24px);
-  		margin: 0 auto rhythm(0.5, 24px);
-  	}
+    @include adjust-font-size-to(16px);
+    margin: 0 auto rhythm(0.5, 16px);
+    @include at-breakpoint($desktop) {
+        @include adjust-font-size-to(24px);
+        margin: 0 auto rhythm(0.5, 24px);
+    }
 }
-
 p, ul, ol {
-	@include adjust-font-size-to(16px);
-	margin: 0 auto rhythm(1, 20px);
-	@include at-breakpoint($desktop) {
-		@include adjust-font-size-to(18px);
-		margin: 0 auto rhythm(1, 32px);
-	}
+    @include adjust-font-size-to(16px);
+    margin: 0 auto rhythm(1, 20px);
+    @include at-breakpoint($desktop) {
+        @include adjust-font-size-to(18px);
+        margin: 0 auto rhythm(1, 32px);
+    }
 }
 strong {
-	padding-bottom: 20px;
-	@include at-breakpoint($desktop) {
-		padding-bottom:0px;	
-	}
+    padding-bottom: 20px;
+    @include at-breakpoint($desktop) {
+        padding-bottom: 0px;
+    }
 }
 ul li {
-	margin: 0 auto rhythm(0.5, 24px);
+    margin: 0 auto rhythm(0.5, 24px);
 }
-
 .columns-1 ol {
-	border-top: 1px solid #c5c9c9;
-	counter-reset: ordered-list;
-	margin: 50px 0 50px 0;
-	padding-left: 0px;
-	& li {
-		list-style: none;
-		border-bottom: 1px solid #c5c9c9;
-		padding: 20px 20px 20px 75px;	
-		color: #323232;
-		&:before {
-			content: counter(ordered-list);
-			counter-increment: ordered-list;
-			display: block;
-			margin-left: -83px;
-			padding: 0 30px;
-			float: left;
-			color: #03a2ca;
-			@include adjust-font-size-to(18px);
-		}
-	}
+    border-top: 1px solid #c5c9c9;
+    counter-reset: ordered-list;
+    margin: 50px 0 50px 0;
+    padding-left: 0px;
+    & li {
+        border-bottom: 1px solid #c5c9c9;
+        color: #323232;
+        list-style: none;
+        padding: 20px 20px 20px 75px;
+        &:before {
+            @include adjust-font-size-to(18px);
+            color: #03a2ca;
+            content: counter(ordered-list);
+            counter-increment: ordered-list;
+            display: block;
+            float: left;
+            margin-left: -83px;
+            padding: 0 30px;
+        }
+    }
 }
-
-
 .front-headline {
-	@include adjust-font-size-to(40px);
-	color: $white;
-	text-align: center;
-   	text-shadow: 0 0 8px rgba(0,0,0,.5);
-   	text-transform: uppercase;
-   	width: 80%;
-   	& a {
-   		color: $light-gray;
-   	}
+    @include adjust-font-size-to(40px);
+    color: $white;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    width: 80%;
+    & a {
+        color: $light-gray;
+    }
 }
-
 .meta {
-	@include adjust-font-size-to(14px);
-	text-transform: uppercase;
-	font-weight: 400;
-	& a {
-		color: gray;
-		text-decoration: none;	
-		&:hover {
-			text-decoration: underline;
-		}
-	}
+    @include adjust-font-size-to(14px);
+    font-weight: 400;
+    text-transform: uppercase;
+    & a {
+        color: gray;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
-
 .small {
-	@include adjust-font-size-to(14px);
+    @include adjust-font-size-to(14px);
 }
-
 footer {
-	color: $white;
-	font-family: $latolight;
-	& h1, h2, h3, h4, h5, h6 {
-		@include adjust-font-size-to(32px);
-		margin: 0 auto rhythm(1, 40px);
-		font-weight: normal;
-		font-family: $nixie_oneregular;
-		line-height:1.6em;
-	}
-	& p {
-		@include adjust-font-size-to(16px);
-		line-height:1.6em;
-	}
-	& ul, input[type="email"] {
-		@include adjust-font-size-to(16px);
-	}
-	& ul {
-		list-style-type: none;
-		margin-left: 0px;
-		padding-left: 0px;
-	}
-	& a {
-		color: $white;
-		text-decoration: underline;
-		&:hover {
-			color: $light_gray;
-			text-decoration: none;
-			border-bottom: none;
-		}
-	}
+    color: $white;
+    font-family: $latolight;
+    & h1, h2, h3, h4, h5, h6 {
+        @include adjust-font-size-to(32px);
+        font-family: $nixie_oneregular;
+        font-weight: normal;
+        line-height: 1.6em;
+        margin: 0 auto rhythm(1, 40px);
+    }
+    & p {
+        @include adjust-font-size-to(16px);
+        line-height: 1.6em;
+    }
+    & ul, input[type="email"] {
+        @include adjust-font-size-to(16px);
+    }
+    & ul {
+        list-style-type: none;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    & a {
+        color: $white;
+        text-decoration: underline;
+        &:hover {
+            border-bottom: none;
+            color: $light_gray;
+            text-decoration: none;
+        }
+    }
 }
 hr {
-	border:none; 
-	background: url(images/hr-img.png) repeat-x;
-	height:10px;
-	padding:30px 0;
+    background: url(images/hr-img.png) repeat-x;
+    border: none;
+    height: 10px;
+    padding: 30px 0;
 }
