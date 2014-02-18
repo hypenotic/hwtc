@@ -1,13 +1,12 @@
 fieldset {
-    padding: 0;
-   
     border: 0;
+    padding: 0;
     ol {
         @include no-bullets;
         li {
-            margin-bottom: 1em;
             display: block;
-             margin-left:-40px;
+            margin-bottom: 1em;
+            margin-left: -40px;
         }
     }
 }
@@ -15,47 +14,44 @@ fieldset {
 footer {
     input[type="text"], input[type="email"] {
         @include border-radius(5px);
-        width: 100%;
+        border: 1px solid rgb(202, 203, 193);
         padding: 0.66em;
-        border: 1px solid rgb( 202, 203, 193 );
+        width: 100%;
         background: {
             color: white;
             position: 95% -55px;
-        }
+        };
         &:focus {
-            border: 1px solid rgb( 54, 116, 187 );
-            outline: none;
             background-position: 95.5% 14px;
-            color: rgb( 54, 116, 187 );
-        }  
+            border: 1px solid rgb(54, 116, 187);
+            color: rgb(54, 116, 187);
+            outline: none;
+        }
         &.error {
             color: #333333;
         }
     }
-
     input[type="email"] {
         background-position: 95% -142px + 17px;
         &:focus {
             background-position: 95.5% -195px;
         }
     }
-
     input[type="submit"] {
-		font-family: $latoregular;
-        @include sassy-button("flat", 5px, 14px, #9b59b6);    
-		&:hover {
-			color:#9b59b6;
-			background:$white;
-		}
+        @include sassy-button("flat", 5px, 14px, #9b59b6);
+        font-family: $latoregular;
+        &:hover {
+            background: $white;
+            color: #9b59b6;
+        }
     }
-            
     .confirmation {
-        text-align: center;
         display: none;
-        position: absolute;
         left: 0px;
-        width: 100%;
         padding: 0px 0.9375em;
+        position: absolute;
+        text-align: center;
+        width: 100%;
         &.error {
             //color: $input-error-text-color;
             margin-top: -0.8em;
@@ -65,20 +61,21 @@ footer {
         }
     }
 }
+
 .gform_wrapper {
-	font-family: $latoregular;
-	.button {
-		@include sassy-button("flat", 5px, 14px, #9b59b6);    
-		&:hover {
-			color:#9b59b6;
-			background:$white;
-		}
-	}
-	select {
-		font-size:1em !important;
-		padding:0;
-		option {
-			padding:5px;
-		}
-	}
+    font-family: $latoregular;
+    .button {
+        @include sassy-button("flat", 5px, 14px, #9b59b6);
+        &:hover {
+            background: $white;
+            color: #9b59b6;
+        }
+    }
+    select {
+        font-size: 1em !important;
+        padding: 0;
+        option {
+            padding: 5px;
+        }
+    }
 }

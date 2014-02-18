@@ -1,84 +1,88 @@
 %position {
-	position:fixed;
-	top:38%;
-	background-color: #111;
+    background-color: #111;
+    position: fixed;
+    top: 38%;
 }
 
-#pagination{
-	z-index: 1000;
-	font-family: Arial,sans-serif;
-	font-size: .75em;
-	display:none;	
-	@include at-breakpoint($desktop) {
-		display:block;/* Show For big screen*/
-	}
+#pagination {
+    display: none;
+    font-family: Arial,sans-serif;
+    font-size: .75em;
+    z-index: 1000;
+    @include at-breakpoint($desktop) {
+        display: block;
+        /* Show For big screen*/
+    }
 }
+
 .mobile-pagination {
-	display:block;	
-	@include at-breakpoint($desktop) {
-		display:none;/* Hide For big screen*/
-	}
-	span {
-		a {
-			color:$black;
-		}
-		&.prev {
-			float:left;
-		}
-		&.next {
-			float:right;
-		}
-	}
+
+    display: block;
+    @include at-breakpoint($desktop) {
+        display: none;
+        /* Hide For big screen*/
+    }
+    span {
+        a {
+            color: $black;
+        }
+        &.prev {
+            float: left;
+        }
+        &.next {
+            float: right;
+        }
+    }
 }
 
-#pagination a{
-	display:block;
-	padding:15px 20px;
-	width:200px;
-	color:#F5F5F5;
-	text-transform:uppercase;
-	opacity:.25;
-	@include transition(all 0.3s ease-in-out);
+#pagination a {
+    @include transition(all 0.3s ease-in-out);
+    color: #F5F5F5;
+    display: block;
+    opacity: .25;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    width: 200px;
 }
 
 #pagination a.newer {
-	@extend %position;
-	left:0;
-	margin-left:-160px;
-	padding-right:40px;
-	text-align:left;
-	//background:#111 url(../img/icon-arrow-left.png) no-repeat right center;
-	@include border-right-radius(3px); 
+    //background:#111 url(../img/icon-arrow-left.png) no-repeat right center;
+    @include border-right-radius(3px);
+    @extend %position;
+    left: 0;
+    margin-left: -160px;
+    padding-right: 40px;
+    text-align: left;
 }
 
 #pagination a.older {
-	@extend %position;
-	right:0;
-	margin-right:-160px;
-	padding-left:40px;
-	text-align:right;
-	//background:#111 url(../img/icon-arrow-right.png) no-repeat left center;
-	@include border-left-radius(3px); 
+    //background:#111 url(../img/icon-arrow-right.png) no-repeat left center;
+    @include border-left-radius(3px);
+    @extend %position;
+    margin-right: -160px;
+    padding-left: 40px;
+    right: 0;
+    text-align: right;
 }
 
-#pagination a:hover{
-	margin:0;
-	opacity:1;
+#pagination a:hover {
+    margin: 0;
+    opacity: 1;
 }
 
 .pagi {
-	border-top: 1px solid $light_gray;
-	padding: 3em 0 3em 0;
-	@include adjust-font-size-to(16px);
-	& .page-numbers {
-		color: #666;
-		margin: 0 .5em;
-		text-decoration: none;
-		&:hover {
-			color: blue;
-		}
-	}
-	& .current {
-		color: blue;
-	}
+    @include adjust-font-size-to(16px);
+    border-top: 1px solid $light_gray;
+    padding: 3em 0 3em 0;
+    & .page-numbers {
+        color: #666;
+        margin: 0 .5em;
+        text-decoration: none;
+        &:hover {
+            color: blue;
+        }
+    }
+    & .current {
+        color: blue;
+    }
 }

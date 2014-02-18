@@ -1,229 +1,234 @@
 .mobile-title {
-	@include adjust-font-size-to(42px);
+    @include adjust-font-size-to(42px);
 }
+
 .content {
-	color:#092148;
-	@include at-breakpoint($desktop) {	
-		padding-top:60px;
-	}
-	.home & {		
-		padding-top:40px;
-		@include at-breakpoint($desktop) {	
-			padding-top:100px;
-		}
-	}
-	padding-bottom:35px;
-	.content-box {
-		padding-top:25px;
-		padding-bottom:50px;
-		&  p:last-child {
-			margin-bottom:0;
-		}
-	}
-	.content-img {
-		width:100%;
-		padding-top: 20px;
-		padding-bottom: 50px;
-		overflow:hidden;
-		text-align:center;
-	}		
-	& h1, h2, h3, h4 {
-		@include adjust-font-size-to(32px);
-			font-size:1.15em;
-			padding:10px 0 10px;
-			@include at-breakpoint($desktop) {	
-				padding:30px 0 30px;
-				font-size:2em;
-			}
-		text-transform: uppercase;
-		font-weight: normal;
-		font-family: $nixie_oneregular;
-		color: #2c65b5;
-		line-height:1.73em;
-		@include text-shadow(0px 0px 1px rgba(71, 101, 181, 1));
-		a {
-			color: #2c65b5;
-		}		
-	}
-	& h1:first-child {
-		.home & {
-			font-size:1.5em;
-			@include at-breakpoint($desktop) {	
-				font-size:2.75em;
-			}
-		}
-		padding-top:0px;
-		padding-bottom:45px;
-	}
-	h6 {
-		font-family: $latolight;
-		@include adjust-font-size-to(16px);
-		color:#2c65b5;
-		padding:15px 0;
-		@include at-breakpoint($desktop) {	
-			@include adjust-font-size-to(18px);
-		}
-	}
-	h5 {
-		font-family: $latoregular;
-		text-transform: uppercase;
-		color:#092148;		
-		padding:10px 0 10px;
-		@include at-breakpoint($desktop) {	
-			padding:30px 0 30px;
-		}
-	}
-	@include at-breakpoint($desktop) {	
-		.columns-2 {
-			&:nth-child(2n + 2) {
-				margin-left:0;
-			}
-			&:nth-child(2n + 1) {
-				margin-left:52.04082%;
-				clear:none;
-			}
-		}
-	}	
-	a {
-		color:#2c65b5;		
-		&.button {
-			text-decoration:none;
-			text-transform:uppercase;
-			@include sassy-button("flat", 5px, 14px,#fafafa);    
-			color:#9b59b6;
-			border:2px solid #9b59b6;
-			line-height: 1.5em;
-			margin-top:10px;
-			padding-top: 10px;
-			margin-bottom:4em;
-			&:hover {
-				background:#9b59b6;
-				color:$white;
-			}
-		}
-	}
-	.our-people-title {
-		padding-bottom:50px;
-		h1{ 
-			padding-top:0;
-		}
-	}	
-	ul {
-		padding-bottom: 0px;
-		list-style: none;
-		li {
-			&:before {
-				content: "\2022";
-				color: #2c65b5;
-				margin: 0 .5em 0 -1em;
-			}
-		}
-		&.our-people {
-			list-style:none;
-			padding-bottom:0;
-			margin-bottom:0;
-			li {
-				overflow:hidden;
-				img {
-					@include at-breakpoint($desktop) {
-						position:absolute;
-					}
-					margin-bottom:30px;
-					width:150px;
-					height:150px;
-					background: #999;
-					float: left;
-					@include border-radius(50%);
-				}
-				h3 {
-					@include adjust-font-size-to(26px);
-					margin:0;
-					padding:0;
-					color:#2c65b5;	
-				}
-				&:before {
-					content: "";
-					margin:0;
-				}
-				&:last-child {
-					padding-bottom:0;
-					margin-bottom:0;
-					@include at-breakpoint($desktop) {
-						article {
-							margin-bottom:0;
-						}
-					}
-				}
-				
-				p {
-					font-size: 1em;
-					&:first-child {
-						margin-bottom:0;
-					}
-				}
-			}
-		}		
-	}
+
+
+    color: #092148;
+    padding-bottom: 35px;
+    @include at-breakpoint($desktop) {
+        padding-top: 60px;
+    }
+    .home & {
+        padding-top: 40px;
+        @include at-breakpoint($desktop) {
+            padding-top: 100px;
+        }
+    }
+    .content-box {
+        padding-bottom: 50px;
+        padding-top: 25px;
+        & p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .content-img {
+        overflow: hidden;
+        padding-bottom: 50px;
+        padding-top: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    & h1, h2, h3, h4 {
+
+        @include adjust-font-size-to(32px);
+        @include text-shadow(0px 0px 1px rgba(71, 101, 181, 1));
+        color: #2c65b5;
+        font-family: $nixie_oneregular;
+        font-size: 1.15em;
+        font-weight: normal;
+        line-height: 1.73em;
+        padding: 10px 0 10px;
+        text-transform: uppercase;
+        @include at-breakpoint($desktop) {
+            font-size: 2em;
+            padding: 30px 0 30px;
+        }
+        a {
+            color: #2c65b5;
+        }
+    }
+    & h1:first-child {
+        padding-bottom: 45px;
+        padding-top: 0px;
+        .home & {
+            font-size: 1.5em;
+            @include at-breakpoint($desktop) {
+                font-size: 2.75em;
+            }
+        }
+    }
+    h6 {
+        @include adjust-font-size-to(16px);
+        color: #2c65b5;
+        font-family: $latolight;
+        padding: 15px 0;
+        @include at-breakpoint($desktop) {
+            @include adjust-font-size-to(18px);
+        }
+    }
+    h5 {
+        color: #092148;
+        font-family: $latoregular;
+        padding: 10px 0 10px;
+        text-transform: uppercase;
+        @include at-breakpoint($desktop) {
+            padding: 30px 0 30px;
+        }
+    }
+    @include at-breakpoint($desktop) {
+        .columns-2 {
+            &:nth-child(2n + 2) {
+                margin-left: 0;
+            }
+            &:nth-child(2n + 1) {
+                clear: none;
+                margin-left: 52.04082%;
+            }
+        }
+    }
+    a {
+        color: #2c65b5;
+        &.button {
+            @include sassy-button("flat", 5px, 14px, #fafafa);
+            border: 2px solid #9b59b6;
+            color: #9b59b6;
+            line-height: 1.5em;
+            margin-bottom: 4em;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+                background: #9b59b6;
+                color: $white;
+            }
+        }
+    }
+    .our-people-title {
+        padding-bottom: 50px;
+        h1 {
+            padding-top: 0;
+        }
+    }
+    ul {
+        list-style: none;
+        padding-bottom: 0px;
+        li {
+            &:before {
+                color: #2c65b5;
+                content: "\2022";
+                margin: 0 .5em 0 -1em;
+            }
+        }
+        &.our-people {
+            list-style: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            li {
+                overflow: hidden;
+                img {
+                    @include border-radius(50%);
+                    background: #999;
+                    float: left;
+                    height: 150px;
+                    margin-bottom: 30px;
+                    width: 150px;
+                    @include at-breakpoint($desktop) {
+                        position: absolute;
+                    }
+                }
+                h3 {
+                    @include adjust-font-size-to(26px);
+                    color: #2c65b5;
+                    margin: 0;
+                    padding: 0;
+                }
+                &:before {
+                    content: "";
+                    margin: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    @include at-breakpoint($desktop) {
+                        article {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                p {
+                    font-size: 1em;
+                    &:first-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #panel {
-	position: absolute;
-	bottom: 5px;
-	left: 1%;
-	z-index: 5;
-	background: url(images/street-view-icon.jpg) no-repeat;
-	padding: 5px;
-	font-family: $latoregular;
-	width:179px;
-	height:96px;
-	border: 1px solid $white;
-	color:$white;
-	text-decoration:none;
-	text-indent:-9999px;
- }
- 
+    background: url(images/street-view-icon.jpg) no-repeat;
+    border: 1px solid $white;
+    bottom: 5px;
+    color: $white;
+    font-family: $latoregular;
+    height: 96px;
+    left: 1%;
+    padding: 5px;
+    position: absolute;
+    text-decoration: none;
+    text-indent: -9999px;
+    width: 179px;
+    z-index: 5;
+}
+
 .skilled-banner {
-	width:100%;
-	background: url('images/find-talent-bottom-banner.jpg') no-repeat;
-	background-size:100% 100%;
-	min-height:200px;
-	margin-top:-70px;
-} 
+    background-size: 100% 100%;
+    background: url("images/find-talent-bottom-banner.jpg") no-repeat;
+    margin-top: -70px;
+    min-height: 200px;
+    width: 100%;
+}
+
 .overlay-content {
-		width:90%;		
-		padding:30px 20px;
-		@include at-breakpoint($desktop) {	
-			width:70%;
-			padding:30px;
-		}
-		margin: 120px auto;
-		z-index:1;
-		position:relative;
-		overflow:hidden;
-		text-align:center;
-		&:before {
-			z-index:-1;
-			position:absolute;
-			width:100%;
-			height:100%;
-			left:0;
-			top:0;
-			content:'';
-			background: $white;
-			@include background(linear-gradient(164deg, $white, $white));
-			@include opacity(0.9);
-			@include transition(opacity 1s linear);
-		}
-		h6 {
-			color:#555;
-			@include adjust-font-size-to(30px);
-		}
-		.textwidget {
-			p {
-				margin-bottom:1em;
-				@include at-breakpoint($desktop) {	
-					margin-bottom:0em;	
-				}
-			}
-		}
+
+    margin: 120px auto;
+    overflow: hidden;
+    padding: 30px 20px;
+    position: relative;
+    text-align: center;
+    width: 90%;
+    z-index: 1;
+    @include at-breakpoint($desktop) {
+        padding: 30px;
+        width: 70%;
+    }
+    &:before {
+        @include background(linear-gradient(164deg, $white, $white));
+        @include opacity(0.9);
+        @include transition(opacity 1s linear);
+        background: $white;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    h6 {
+        @include adjust-font-size-to(30px);
+        color: #555;
+    }
+    .textwidget {
+        p {
+            margin-bottom: 1em;
+            @include at-breakpoint($desktop) {
+                margin-bottom: 0em;
+            }
+        }
+    }
 }

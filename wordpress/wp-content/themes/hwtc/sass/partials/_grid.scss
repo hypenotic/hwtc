@@ -4,64 +4,68 @@
 }
 
 header {
-	width:100%;
+    @include transition(transform 500ms ease);
     position: fixed;
     top: 0;
+    width: 100%;
     z-index: 9999;
-	@include transition(transform 500ms ease);
-	@media only screen and (max-width: 768px) {
-		&:before {
-			content: '';
-			width:100%;
-			height:70px;
-			position:absolute;
-			background:#2c65b5;
-			z-index:-1;
-			@include opacity(0.98);
-			@include transition(opacity 1s linear);
-			padding-bottom:15px;
-		}
-	}
-	&.active-header {
-		&:before {
-			content: '';
-			width:100%;
-			height:70px;
-			position:absolute;
-			background:#2c65b5;
-			z-index:-1;
-			@include opacity(0.98);
-			@include transition(opacity 1s linear);
-		}	
-	}
+    @media only screen and (max-width: 768px) {
+        &:before {
+            @include opacity(0.98);
+            @include transition(opacity 1s linear);
+            background: #2c65b5;
+            content: '';
+            height: 70px;
+            padding-bottom: 15px;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+    &.active-header {
+        &:before {
+            @include opacity(0.98);
+            @include transition(opacity 1s linear);
+            background: #2c65b5;
+            content: '';
+            height: 70px;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+    }
 }
 
 .logo {
-	@include span-columns(6);  
+    @include span-columns(6);
     @include at-breakpoint($desktop) {
-		display:block;
+        @include adjust-font-size-to(20px);
         @include span-columns(6);
+        display: block;
         margin-top: 1.5em;
-		@include adjust-font-size-to(20px);
     }
 }
+
 .nav {
-	display:none;
+    display: none;
     @include at-breakpoint($desktop) {
-		display:block;
-	}
+        display: block;
+    }
 }
+
 .second-nav {
-	display:block;
+
+    display: block;
+    margin-top: 0.8em;
     @include at-breakpoint($desktop) {
-		display:none;
-	}
-	margin-top: 0.8em;
-	a {
-		color:$white;
-		text-decoration:none;
-	}
+        display: none;
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+    }
 }
+
 nav {
     @include span-columns(3 omega);
     @include at-breakpoint($desktop) {
@@ -81,7 +85,7 @@ article {
     @include span-columns(7);
     @include at-breakpoint($desktop) {
         @include span-columns(10 omega);
-        @include suffix(.9);
+        @include suffix(0.9);
         margin-bottom: 4em;
     }
 }
@@ -90,120 +94,123 @@ section {
     margin-top: 95px;
     padding-top: 80px;
 }
+
 footer {
-   @include span-columns(7);
+
+    @include span-columns(7);
     @include at-breakpoint($desktop) {
         @include span-columns(15);
     }
-	.footer-top {
-		background: #38434e;
-		overflow:hidden;
-		padding-top:120px;
-		padding-bottom:90px;
-		.columns-2 {
-			@include at-breakpoint($desktop) {
-				padding-left:70px;
-			}
-			
-		}
-		form {
-			width:80%;
-		}		
-	}
-	.footer-bottom {
-		background: #1f5783;
-		overflow:hidden;
-		.columns-2 {
-			position:relative;
-			&:last-child {		
-				padding-top:50px;				
-				@include at-breakpoint($desktop) {
-					padding-left:70px;
-				}
-				padding-left:1.5em;
-				padding-right:50px;
-			}	
-		}
-	}
-	.footer-copyright {
-		font-family: $latoregular;
-		color:#555555;	
-		background:#eeeeee;
-		padding: 10px 0;
-		overflow: hidden;
-		p {
-			margin-bottom:0px;
-		}
-		.text-right{
-			text-align:left;
-			@include at-breakpoint($desktop) {
-				text-align:right;
-			}	
-		}		
-		a {
-			color:#2c65b5;
-		}
-	}
+    .footer-top {
+        background: #38434e;
+        overflow: hidden;
+        padding-bottom: 90px;
+        padding-top: 120px;
+        .columns-2 {
+            @include at-breakpoint($desktop) {
+                padding-left: 70px;
+            }
+        }
+        form {
+            width: 80%;
+        }
+    }
+    .footer-bottom {
+        background: #1f5783;
+        overflow: hidden;
+        .columns-2 {
+            position: relative;
+            &:last-child {
+                padding-left: 1.5em;
+                padding-right: 50px;
+                padding-top: 50px;
+                @include at-breakpoint($desktop) {
+                    padding-left: 70px;
+                }
+            }
+        }
+    }
+    .footer-copyright {
+        background: #eeeeee;
+        color: #555555;
+        font-family: $latoregular;
+        overflow: hidden;
+        padding: 10px 0;
+        p {
+            margin-bottom: 0px;
+        }
+        .text-right {
+            text-align: left;
+            @include at-breakpoint($desktop) {
+                text-align: right;
+            }
+        }
+        a {
+            color: #2c65b5;
+        }
+    }
 }
 
 .columns-wide {
     @include span-columns(7);
     text-align: center;
     @include at-breakpoint($desktop) {
+        @include pad(0.6, 0.6);
         @include span-columns(15);
-        @include pad(.6,.6);
-    }   
+    }
 }
 
 .columns-1 {
     @include span-columns(7);
     margin: 3em 0 4em 0;
     @include at-breakpoint($desktop) {
+        @include pad(2.5, 2.5);
         @include span-columns(15);
-        @include pad(2.5,2.5);
-    }   
+    }
 }
 
 .columns-2 {
-	@include isolate-grid(7);
+    @include isolate-grid(7);
     @include at-breakpoint($desktop) {
-    	@include isolate-grid(6.5);
+        @include isolate-grid(6.5);
     }
 }
 
 .columns-3 {
-	@include isolate-grid(7);
+    @include isolate-grid(7);
     margin-top: 3em;
-	@include at-breakpoint($desktop) {
-		@include isolate-grid(5);
+    @include at-breakpoint($desktop) {
+        @include isolate-grid(5);
         &:nth-child(2) {
-            @include pad(0,1);
+            @include pad(0, 1);
         }
-	}
+    }
 }
 
 .box-fifty {
-	width:100%;
-	position:relative;
-	@include at-breakpoint($desktop) {
-		width:50%;
-		float:left;
-	}
+    position: relative;
+    width: 100%;
+    @include at-breakpoint($desktop) {
+        float: left;
+        width: 50%;
+    }
 }
+
 .full-width {
-	position:relative;
-	overflow:hidden;
+    overflow: hidden;
+    position: relative;
 }
+
 .show-for-mobile {
-	display:block;
-	@include at-breakpoint($desktop) {
-		display:none;
-	}
+    display: block;
+    @include at-breakpoint($desktop) {
+        display: none;
+    }
 }
 
 .show-for-desktop {
-	display:none;
-	@include at-breakpoint($desktop) {
-		display:block;
-	}
+    display: none;
+    @include at-breakpoint($desktop) {
+        display: block;
+    }
 }
