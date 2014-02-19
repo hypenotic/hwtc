@@ -24,7 +24,11 @@ $args = array(
 			
 				<li class="slide-container" style="background-image:url(<?php echo $url;?>);">
 					<img src="<?php echo $url;?>" alt="<?php the_title();?>" />
-                    <div class="bx-caption"><span><?php the_title();?></span></div>
+                    <div class="bannertext">
+                        <div class="bannertext-content">
+                        	<div class="banner-title-big"><?php the_title();?></div>
+                        </div>     
+                   </div>
 				</li>
 				
 			<?php endwhile; ?>
