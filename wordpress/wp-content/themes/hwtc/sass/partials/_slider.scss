@@ -14,10 +14,10 @@
     }
     li {
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: 100%;
     }
     .bx-viewport {
-        background: #fff;
+        max-height: 550px;
     }
     .bx-loading {
         background: url(images/slider/bx_loader.gif) center center no-repeat white;
@@ -156,6 +156,15 @@
         .bx-controls-auto {
             right: 0;
             width: 35px;
+        }
+    }
+    .bannertext {
+        bottom: 50px;
+        display: none;
+        margin-bottom: 10px;
+        position: absolute;
+        @include at-breakpoint($desktop) {
+            display: block;
         }
     }
 }
