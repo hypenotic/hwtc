@@ -1,12 +1,8 @@
 .bx-wrapper {
-
     *zoom: 1;
-    margin: 85px auto 60px;
+    margin: 0 auto 0px;
     padding: 0;
     position: relative;
-    @include at-breakpoint($desktop) {
-        margin: 0 auto 60px;
-    }
     img {
         display: block;
         max-width: 100%;
@@ -15,6 +11,10 @@
     li {
         background-repeat: no-repeat;
         background-size: 100%;
+        &:before {
+            content: '';
+            margin: 0;
+        }
     }
     .bx-viewport {
         max-height: 550px;
@@ -159,12 +159,16 @@
         }
     }
     .bannertext {
+
         bottom: 50px;
         display: none;
         margin-bottom: 10px;
         position: absolute;
         @include at-breakpoint($desktop) {
             display: block;
+        }
+        .bannertext-content {
+            margin-right: 6%;
         }
     }
 }

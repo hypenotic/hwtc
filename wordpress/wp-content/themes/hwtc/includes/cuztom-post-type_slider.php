@@ -95,3 +95,55 @@ function my_column_action( $column ) {
 		break;
 	}
 }
+
+
+// Create Slider
+function hype_slider_template() {
+    // Query Arguments
+    $args = array(
+        'post_type' => 'slide',
+        'posts_per_page' => 10
+	);	
+	
+	// The Query
+	$the_query = new WP_Query( $args );
+	
+	// Check if the Query returns any posts
+	if ( $the_query->have_posts() ) {
+	
+	// Start the Slider ?>
+		<ul class="slider">
+			
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post();
+			
+				$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'banner') );
+			?>
+			
+				<li class="slide-container" style="background-image:url(<?php echo $url;?>);">
+					<img src="<?php echo $url;?>" alt="<?php the_title();?>" />
+                    <div class="bannertext">
+                        <div class="bannertext-content">
+                        	<div class="banner-title-big"><?php the_title();?></div>
+                        </div>     
+                   </div>
+				</li>	
+			<?php endwhile; ?>
+	
+		</ul><!-- .slides -->
+	<?php }	
+	// Reset Post Data
+	wp_reset_postdata();
+}
+
+// Slider Shortcode
+function hype_slider_shortcode( $atts, $content = null ) {
+	extract( shortcode_atts( array(
+		'id' => ''
+	), $atts ) );
+
+	ob_start();
+	hype_slider_template();
+	$output = ob_get_clean();
+	return $output;
+}
+add_shortcode( 'slider', 'hype_slider_shortcode' );
