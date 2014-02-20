@@ -1,24 +1,15 @@
 .bx-wrapper {
+
     *zoom: 1;
     margin: 0 auto 0px;
     padding: 0;
     position: relative;
+    width: 400px;
     img {
         display: block;
         max-width: 100%;
-        opacity: 0;
     }
-    li {
-        background-repeat: no-repeat;
-        background-size: 100%;
-        &:before {
-            content: '';
-            margin: 0;
-        }
-    }
-    .bx-viewport {
-        max-height: 550px;
-    }
+    .bx-viewport {}
     .bx-loading {
         background: url(images/slider/bx_loader.gif) center center no-repeat white;
         height: 100%;

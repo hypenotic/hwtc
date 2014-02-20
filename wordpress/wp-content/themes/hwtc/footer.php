@@ -19,6 +19,11 @@
         
         <div class="columns-2">
         	<h4>Contact</h4>
+            
+            <ul class="social-media">
+                <li><a id="facebook" href="https://www.facebook.com/pages/Hospitality-Workers-Training-Centre/152350521594605" target="_blank">Facebook</a></li>
+                <li><a id="twitter" href="https://twitter.com/Hospitalitywrks" target="_blank">Twitter</a></li>
+            </ul>
             <p><a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a></p>
             <p>647 930 9518</p>
 			<p>Hospitality Workers Training Centre<br />

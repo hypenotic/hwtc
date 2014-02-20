@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
     font-family: $latoregular;
     font-weight: normal;
     a {
@@ -236,4 +237,34 @@ hr {
 .content .slider li:before {
     content: '';
     margin: 0;
+}
+.social-media {
+    left: 50%;
+    position: absolute;
+    top: 60px;
+    li {
+        float: left;
+        margin: 5px 5px;
+        a {
+            background: url("images/social-media.png") no-repeat;
+            display: block;
+            height: 23px;
+            text-indent: -9999px;
+            width: 23px;
+            &#facebook {
+                background-position: 0 0;
+                &:hover {
+                    background-position: -25px 0px;
+                }
+            }
+            &#twitter {
+                background-position: 0 -24px;
+                height: 24px;
+                width: 24px;
+                &:hover {
+                    background-position: -24px -24px;
+                }
+            }
+        }
+    }
 }
