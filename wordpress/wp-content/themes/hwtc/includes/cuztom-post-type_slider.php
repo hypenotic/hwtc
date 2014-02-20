@@ -119,7 +119,7 @@ function hype_slider_template() {
 				$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'banner') );
 			?>
 			
-				<li class="slide-container" style="background-image:url(<?php echo $url;?>);">
+				<li class="slide-container">
 					<img src="<?php echo $url;?>" alt="<?php the_title();?>" />
 				</li>	
 			<?php endwhile; ?>
