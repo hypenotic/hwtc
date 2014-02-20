@@ -45,18 +45,19 @@
             display: inline-block;
         }
         &.bx-default-pager a {
-            -moz-border-radius: 5px;
-            -webkit-border-radius: 5px;
-            background: #666;
-            border-radius: 5px;
+            @include border-radius(5px);
+            background: #000;
             display: block;
             height: 10px;
             margin: 0 5px;
             outline: 0;
             text-indent: -9999px;
             width: 10px;
-            &:hover,.active {
-                background: #000;
+            &:hover {
+                background: #666;
+            }
+            &.active {
+                background: #666;
             }
         }
     }

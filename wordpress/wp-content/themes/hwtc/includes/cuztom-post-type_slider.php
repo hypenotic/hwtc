@@ -121,11 +121,6 @@ function hype_slider_template() {
 			
 				<li class="slide-container" style="background-image:url(<?php echo $url;?>);">
 					<img src="<?php echo $url;?>" alt="<?php the_title();?>" />
-                    <div class="bannertext">
-                        <div class="bannertext-content">
-                        	<div class="banner-title-big"><?php the_title();?></div>
-                        </div>     
-                   </div>
 				</li>	
 			<?php endwhile; ?>
 	
