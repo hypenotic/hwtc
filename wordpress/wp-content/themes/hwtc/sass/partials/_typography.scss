@@ -239,9 +239,13 @@ hr {
     margin: 0;
 }
 .social-media {
-    left: 50%;
+
+    left: 165px;
     position: absolute;
     top: 60px;
+    @include at-breakpoint($desktop) {
+        left: 210px;
+    }
     li {
         float: left;
         margin: 5px 5px;
