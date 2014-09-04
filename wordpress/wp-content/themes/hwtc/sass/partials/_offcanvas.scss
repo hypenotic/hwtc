@@ -69,6 +69,13 @@ $offcanvas-panel-width: 13em;
                     }
                 }
             }
+            &.sub-menu {
+                li {
+                    a {
+                        padding-left: 30px;
+                    }
+                }
+            }
         }
     }
     &.open-right {
