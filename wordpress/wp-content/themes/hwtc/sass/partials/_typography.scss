@@ -1,48 +1,125 @@
 @include establish-baseline;
 
+@font-face {
+    font-family: 'latoblack';
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-black-webfont.eot");
+    src: url("sass/fonts/lato-black-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-black-webfont.woff") format("woff"), url("sass/fonts/lato-black-webfont.ttf") format("truetype"), url("sass/fonts/lato-black-webfont.svg#latoblack") format("svg");
+}
+
+
 $latoblack: "latoblack";
 
-@include font-face("latoblack", font-files("../fonts/lato-black-webfont.woff", "../fonts/lato-black-webfont.ttf", "../fonts/lato-black-webfont.svg#latoblack"), "../fonts/lato-black-webfont.eot", normal, normal);
+@font-face {
+    font-family: 'latoblack_italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-blackitalic-webfont.eot");
+    src: url("sass/fonts/lato-blackitalic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-blackitalic-webfont.woff") format("woff"), url("sass/fonts/lato-blackitalic-webfont.ttf") format("truetype"), url("sass/fonts/lato-blackitalic-webfont.svg#latoblack_italic") format("svg");
+}
+
 
 $latoblack_italic: "latoblack_italic";
 
-@include font-face("latoblack_italic", font-files("../fonts/lato-blackitalic-webfont.woff", "../fonts/lato-blackitalic-webfont.ttf", "../fonts/lato-blackitalic-webfont.svg#latoblack_italic"), "../fonts/lato-blackitalic-webfont.eot", normal, normal);
+@font-face {
+    font-family: "latobold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-bold-webfont.eot");
+    src: url("sass/fonts/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-bold-webfont.woff") format("woff"), url("sass/fonts/lato-bold-webfont.ttf") format("truetype"), url("sass/fonts/lato-bold-webfont.svg#latobold") format("svg");
+}
+
 
 $latobold: "latobold";
 
-@include font-face("latobold", font-files("../fonts/lato-bold-webfont.woff", "../fonts/lato-bold-webfont.ttf", "../fonts/lato-bold-webfont.svg#latobold"), "../fonts/lato-bold-webfont.eot", normal, normal);
+@font-face {
+    font-family: "latobold_italic";
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-bolditalic-webfont.eot");
+    src: url("sass/fonts/lato-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-bolditalic-webfont.woff") format("woff"), url("sass/fonts/lato-bolditalic-webfont.ttf") format("truetype"), url("sass/fonts/lato-bolditalic-webfont.svg#latobold_italic") format("svg");
+}
+
 
 $latobold_italic: "latobold_italic";
 
-@include font-face("latobold_italic", font-files("../fonts/lato-bolditalic-webfont.woff", "../fonts/lato-bolditalic-webfont.ttf", "../fonts/lato-bolditalic-webfont.svg#latobold_italic"), "../fonts/lato-bolditalic-webfont.eot", normal, normal);
+@font-face {
+    font-family: "latohairline";
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-hairline-webfont.eot");
+    src: url("sass/fonts/lato-hairline-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-hairline-webfont.woff") format("woff"), url("sass/fonts/lato-hairline-webfont.ttf") format("truetype"), url("sass/fonts/lato-hairline-webfont.svg#latohairline") format("svg");
+}
+
 
 $latohairline: "latohairline";
 
-@include font-face("latohairline", font-files("../fonts/lato-hairline-webfont.woff", "../fonts/lato-hairline-webfont.ttf", "../fonts/lato-hairline-webfont.svg#latohairline"), "../fonts/lato-hairline-webfont.eot", normal, normal);
+@font-face {
+    font-family: "latohairline_italic";
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-hairlineitalic-webfont.eot");
+    src: url("sass/fonts/lato-hairlineitalic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-hairlineitalic-webfont.woff") format("woff"), url("sass/fonts/lato-hairlineitalic-webfont.ttf") format("truetype"), url("sass/fonts/lato-hairlineitalic-webfont.svg#latohairline_italic") format("svg");
+}
+
 
 $latohairline_italic: "latohairline_italic";
 
-@include font-face("latohairline_italic", font-files("../fonts/lato-hairlineitalic-webfont.woff", "../fonts/lato-hairlineitalic-webfont.ttf", "../fonts/lato-hairlineitalic-webfont.svg#latohairline_italic"), "../fonts/lato-hairlineitalic-webfont.eot", normal, normal);
+@font-face {
+    font-family: "latoitalic";
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-italic-webfont.eot");
+    src: url("sass/fonts/lato-italic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-italic-webfont.woff") format("woff"), url("sass/fonts/lato-italic-webfont.ttf") format("truetype"), url("sass/fonts/lato-italic-webfont.svg#latoitalic") format("svg");
+}
+
 
 $latoitalic: "latoitalic";
 
-@include font-face("latoitalic", font-files("../fonts/lato-italic-webfont.woff", "../fonts/lato-italic-webfont.ttf", "../fonts/lato-italic-webfont.svg#latoitalic"), "../fonts/lato-italic-webfont.eot", normal, normal);
+@font-face {
+    font-family: "latolight";
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-light-webfont.eot");
+    src: url("sass/fonts/lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-light-webfont.woff") format("woff"), url("sass/fonts/lato-light-webfont.ttf") format("truetype"), url("sass/fonts/lato-light-webfont.svg#latolight") format("svg");
+}
+
 
 $latolight: "latolight";
 
-@include font-face("latolight", font-files("../fonts/lato-light-webfont.woff", "../fonts/lato-light-webfont.ttf", "../fonts/lato-light-webfont.svg#latolight"), "../fonts/lato-light-webfont.eot", normal, normal);
+@font-face {
+    font-family: "latolight_italic";
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-lightitalic-webfont.eot");
+    src: url("sass/fonts/lato-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-lightitalic-webfont.woff") format("woff"), url("sass/fonts/lato-lightitalic-webfont.ttf") format("truetype"), url("sass/fonts/lato-lightitalic-webfont.svg#latolight_italic") format("svg");
+}
+
 
 $latolight_italic: "latolight_italic";
 
-@include font-face("latolight_italic", font-files("../fonts/lato-lightitalic-webfont.woff", "../fonts/lato-lightitalic-webfont.ttf", "../fonts/lato-lightitalic-webfont.svg#latolight_italic"), "../fonts/lato-lightitalic-webfont.eot", normal, normal);
+@font-face {
+    font-family: "latoregular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/lato-regular-webfont.eot");
+    src: url("sass/fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-regular-webfont.woff") format("woff"), url("sass/fonts/lato-regular-webfont.ttf") format("truetype"), url("sass/fonts/lato-regular-webfont.svg#latoregular") format("svg");
+}
+
 
 $latoregular: "latoregular";
 
-@include font-face("latoregular", font-files("../fonts/lato-regular-webfont.woff", "../fonts/lato-regular-webfont.ttf", "../fonts/lato-regular-webfont.svg#latoregular"), "../fonts/lato-regular-webfont.eot", normal, normal);
+@font-face {
+    font-family: "nixie_oneregular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/opensans-nixieone-regular.eot");
+    src: url("sass/fonts/opensans-nixieone-regular.eot?#iefix") format("embedded-opentype"), url("sass/fonts/nixieone-regular.woff") format("woff"), url("sass/fonts/nixieone-regular.ttf") format("truetype"), url("sass/fonts/nixieone-regular.svg#nixie_oneregular") format("svg");
+}
+
 
 $nixie_oneregular: "nixie_oneregular";
-
-@include font-face("nixie_oneregular", font-files("../fonts/nixieone-regular.woff", "../fonts/nixieone-regular.ttf", "../fonts/nixieone-regular.svg#nixie_oneregular"), "../fonts/opensans-nixieone-regular.eot", normal, normal);
 
 // Base
 $base-font-size: 16px;
