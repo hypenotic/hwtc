@@ -173,3 +173,8 @@ add_action( 'save_post', 'prfx_meta_save' );
 	if( file_exists( get_template_directory() . "/includes/cuztom-post-type_slider.php" ) ) {
 		include_once( get_template_directory() . '/includes/cuztom-post-type_slider.php' );
 	}
+	
+	// Include code for creating course post type
+	if( file_exists( get_template_directory() . "/includes/cuztom-post-type_course.php" ) ) {
+		include_once( get_template_directory() . '/includes/cuztom-post-type_course.php' );
+	}

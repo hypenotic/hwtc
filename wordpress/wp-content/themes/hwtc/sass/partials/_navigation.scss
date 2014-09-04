@@ -3,7 +3,6 @@
     display: none;
     height: 46px;
     margin: 13px 0 0 0;
-    overflow: hidden;
     width: 55%;
     @include at-breakpoint($desktop) {
         display: block;
@@ -18,9 +17,52 @@ nav ul {
     & li {
         display: inline;
         margin-left: 20px;
+        padding-bottom: 30px;
+        position: relative;
         &.current-menu-item {
             a {
                 text-decoration: underline;
+            }
+        }
+    }
+    ul {
+        background: #2C65B5;
+        display: none;
+        left: 0;
+        padding-left: 0;
+        position: absolute;
+        top: 45px;
+        width: 250px;
+        z-index: 9999;
+        li {
+            float: left;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            text-align: left;
+            width: 100%;
+            a {
+                border-bottom: 1px solid;
+                color: white;
+                display: block;
+                font-size: 13px;
+                padding: 10px;
+            }
+            &:first-child {
+                &:before {
+                    border-bottom: 15px solid #2C65B5;
+                    border-left: 15px solid rgba(0, 0, 0, 0);
+                    border-right: 15px solid rgba(0, 0, 0, 0);
+                    content: "";
+                    left: 20px;
+                    position: absolute;
+                    top: -15px;
+                }
+            }
+            &:last-child {
+                a {
+                    border-bottom: none;
+                }
             }
         }
     }
@@ -47,4 +89,11 @@ nav ul li a {
     nav ul li a {
         @include text-shadow(none);
     }
+    nav ul ul {
+        top: 60px;
+    }
+}
+
+ul li:hover ul.sub-menu {
+    display: block;
 }
