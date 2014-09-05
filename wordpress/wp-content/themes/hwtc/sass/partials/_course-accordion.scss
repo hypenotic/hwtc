@@ -1,0 +1,41 @@
+.course-accordion {
+    //background: red;
+    margin-top: 30px;
+    h3 {
+        border-bottom: 2px solid #E5E5E5;
+        padding: .05em 0;
+        &:first-child {
+            border-top: 2px solid #E5E5E5;
+        }
+        a {
+            background-color: #FFF;
+            display: block;
+            opacity: 0.6;
+        }
+    }
+    .course-accodion-content {
+        display: none;
+        padding: 50px 20px;
+        .accordion-item {
+            margin-bottom: 15px;
+            overflow: hidden;
+            position: relative;
+            .title {
+                float: left;
+                font-weight: bold;
+                width: 100%;
+                @include at-breakpoint($desktop) {
+                    margin-right: 5%;
+                    width: 20%;
+                }
+            }
+            .detail {
+                float: left;
+                width: 100%;
+                @include at-breakpoint($desktop) {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
