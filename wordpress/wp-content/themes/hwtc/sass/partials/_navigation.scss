@@ -20,6 +20,9 @@ nav ul {
         padding-bottom: 30px;
         position: relative;
         &.current-menu-item {
+            & ul li a {
+                text-decoration: none;
+            }
             a {
                 text-decoration: underline;
             }
@@ -42,6 +45,7 @@ nav ul {
             text-align: left;
             width: 100%;
             a {
+                @include text-shadow(none);
                 border-bottom: 1px solid;
                 color: white;
                 display: block;
