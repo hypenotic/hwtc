@@ -49,11 +49,8 @@
 						$you_will_need=get_post_meta(get_the_ID(),'_course_details_you_will_need',true);
 						$please_consider=get_post_meta(get_the_ID(),'_course_details_please_consider',true);
 						$contact_to_register=get_post_meta(get_the_ID(),'_course_details_contact_to_register',true);
-						$class_name=get_post_meta(get_the_ID(),'_course_details_class_name',true);
-						$class_description=get_post_meta(get_the_ID(),'_course_details_class_description',true);
-						$class_date=get_post_meta(get_the_ID(),'_course_details_class_date',true);
-						$class_from_time=get_post_meta(get_the_ID(),'_course_details_class_from_time',true);
-						$class_to_time=get_post_meta(get_the_ID(),'_course_details_class_to_time',true);
+						$class_details=get_post_meta(get_the_ID(),'class_details',true);
+						
 						if($assigned[0] == $parent) {
 				?>
 							<h3><a href="<?php the_permalink();?>" id="<?php echo( basename(get_permalink()) );?>"><?php the_title();?></a></h3>
@@ -75,22 +72,24 @@
 									<?php } ?>
 									<?php if($course_from !='') { ?>
 										<div class="accordion-item">		
-											<div class="title">Course Start Date:</div> <div class="detail"><?php echo $course_from; ?> </div>
+											<div class="title">Course Start Date:</div> 
+											<div class="detail"><?php echo $course_from; ?> </div>
 										</div>
 									<?php } ?>
 									<?php if($course_to !='') { ?>
 										<div class="accordion-item">			
-											<div class="title">Course End Date:</div> <div class="detail"><?php echo $course_to; ?> </div>
+											<div class="title">Course End Date:</div> 
+											<div class="detail"><?php echo $course_to; ?> </div>
 										</div>
 									<?php } ?>									
 									<?php if($from_time !='') { ?>
 										<div class="accordion-item">			
-											<div class="title">Course Start Time:</div> <div class="detail"><?php echo $from_time; ?> </div>
+											<div class="title">Course Start Time:</div> <div class="detail"><?php echo date('h:i A', strtotime($from_time)); ?> </div>
 										</div>
 									<?php } ?>
 									<?php if($to_time !='') { ?>
 										<div class="accordion-item">		
-											<div class="title">Course End Time:</div> <div class="detail"><?php echo $to_time; ?> </div>
+											<div class="title">Course End Time:</div> <div class="detail"><?php echo date('h:i A', strtotime($to_time)); ?></div>
 										</div>
 									<?php } ?>									
 									<?php if($you_will_need !='') { ?>
@@ -108,31 +107,40 @@
 											<div class="title">Contact to register:</div> <div class="detail"><?php echo $contact_to_register; ?> </div>
 										</div>
 									<?php } ?>
-									<?php if($class_name !='') { ?>
+									
+									<?php if($class_details!='') {
+											foreach($class_details as $class_detail) {
+									?>
+										<?php if($class_detail['_class_details_class_name'] !='') { ?>
 										<div class="accordion-item">		
-											<div class="title">Class name:</div> <div class="detail"><?php echo $class_name; ?> </div>
+											<div class="title">Class name:</div> <div class="detail"><?php echo $class_detail['_class_details_class_name']; ?> </div>
 										</div>
-									<?php } ?>
-									<?php if($class_description !='') { ?>
+										<?php } ?>	
+										<?php if($class_detail['_class_details_class_description'] !='') { ?>
 										<div class="accordion-item">		
-											<div class="title">Class description:</div> <div class="detail"><?php echo $class_description; ?> </div>
+											<div class="title">Class description:</div> <div class="detail"><?php echo $class_detail['_class_details_class_description']; ?> </div>
 										</div>
-									<?php } ?>
-									<?php if($class_date !='') { ?>
+										<?php } ?>	
+										<?php if($class_detail['_class_details_class_date'] !='') { ?>
 										<div class="accordion-item">		
-											<div class="title">Class date:</div> <div class="detail"><?php echo $class_date; ?> </div>
+											<div class="title">Class date:</div> <div class="detail"><?php echo $class_detail['_class_details_class_date']; ?> </div>
 										</div>
-									<?php } ?>
-									<?php if($class_from_time !='') { ?>
+										<?php } ?>	
+										<?php if($class_detail['_class_details_class_from_time'] !='') { ?>
 										<div class="accordion-item">		
-											<div class="title">Class start time:</div> <div class="detail"><?php echo $class_from_time; ?> </div>
+											<div class="title">Class start time:</div> <div class="detail"><?php echo $class_detail['_class_details_class_from_time']; ?> </div>
 										</div>
-									<?php } ?>
-									<?php if($class_to_time !='') { ?>
+										<?php } ?>		
+										<?php if($class_detail['_class_details_class_to_time'] !='') { ?>
 										<div class="accordion-item">		
-											<div class="title">Class end time:</div> <div class="detail"><?php echo $class_to_time; ?> </div>
+											<div class="title">Class end time:</div> <div class="detail"><?php echo $class_detail['_class_details_class_to_time']; ?> </div>
 										</div>
-									<?php } ?>
+										<?php } ?>				
+									<?php			
+											echo "</br>";
+											}
+										}
+									?>
 							</div>
 				<?php
 						}

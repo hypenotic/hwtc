@@ -40,13 +40,13 @@ $course->add_meta_box(
 			'name'          => 'course_from',
 			'label'         => 'Course From',
 			'description'   => '',
-			'type'          => 'date',
+			'type'          => 'text'
 		),
 		array(
 			'name'          => 'course_to',
 			'label'         => 'Course To',
 			'description'   => '',
-			'type'          => 'date',
+			'type'          => 'text'
 		),
 		array(
 			'name'          => 'from_time',
@@ -77,39 +77,49 @@ $course->add_meta_box(
 			'label'         => 'Contact to Register',
 			'description'   => '',
 			'type'          => 'wysiwyg'
-		),
-		
-		array(
-			'name'          => 'class_name',
-			'label'         => 'Class name',
-			'description'   => '',
-			'type'          => 'text'
-		),
-		
-		array(
-			'name'          => 'class_description',
-			'label'         => 'Class description',
-			'description'   => '',
-			'type'          => 'wysiwyg'
-		),
-		array(
-			'name'          => 'class_date',
-			'label'         => 'Class date',
-			'description'   => '',
-			'type'          => 'date'
-		),
-		array(
-			'name'          => 'class_from_time',
-			'label'         => 'Class From Time',
-			'description'   => '',
-			'type'          => 'time'
-		),
-		array(
-			'name'          => 'class_to_time',
-			'label'         => 'Class To Time',
-			'description'   => '',
-			'type'          => 'time'
 		)
     )
 );
+
+
+$course->add_meta_box(
+    'class_details',
+    'Class Details',
+	array(
+		'bundle',
+		array (
+			array(
+				'name'          => 'class_name',
+				'label'         => 'Class name',
+				'description'   => '',
+				'type'          => 'text'
+			),
+			
+			array(
+				'name'          => 'class_description',
+				'label'         => 'Class description',
+				'description'   => '',
+				'type'          => 'textarea'
+			),
+			array(
+				'name'          => 'class_date',
+				'label'         => 'Class date',
+				'description'   => '',
+				'type'          => 'text'
+			),
+			array(
+				'name'          => 'class_from_time',
+				'label'         => 'Class From Time',
+				'description'   => '',
+				'type'          => 'text'
+			),
+			array(
+				'name'          => 'class_to_time',
+				'label'         => 'Class To Time',
+				'description'   => '',
+				'type'          => 'text'
+			)
+		)	
+	)
+);	
 ?>
