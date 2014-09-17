@@ -54,8 +54,32 @@
 						
 						if($assigned[0] == $parent) {
 				?>
-							<h3><a href="<?php the_permalink();?>" id="<?php echo( basename(get_permalink()) );?>"><?php the_title();?></a></h3>
+					<h3><a href="<?php the_permalink();?>" id="<?php echo( basename(get_permalink()) );?>"><?php the_title();?></a></h3>
 							<div class="<?php echo( basename(get_permalink()) );?> course-accodion-content">
+									<!-- Social Share Starts -->
+										<div class="social-share">
+											<?php
+											$post_title=get_the_title();
+											$post_link= urlencode(get_permalink());
+											$post_description= strip_tags($course_description);
+											$post_img = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );
+											$twitter_url ='http://twitter.com/home?status='.$post_link.'+'.$post_title;
+											$fb_url = 'https://www.facebook.com/sharer.php?s=100&amp;p[title]='.$post_title.'&amp;p[summary]='.$post_description.'&amp;p[url]='.$post_link.'&amp;p[images][0]='.$post_img;
+											$pintrest_url='http://pinterest.com/pin/create/bookmarklet/?media='.$post_img.'&amp;url='.$post_link.'&amp;is_video=false&amp;description='.$post_description;
+											$gplus_url='https://plus.google.com/share?url='.$post_link;
+											$linkedin_url='http://www.linkedin.com/shareArticle?mini=true&amp;url='.$post_link.'&amp;title='.$post_title.'&amp;source='.$post_link;
+											//$mail_url='mailto:?subject='.$post_title.'&amp;body='.$post_description .'-'.$post_link;
+											$mail_url='http://www.sharethis.com/share?url='.$post_link.'&title='.$post_title.'&summary='.$post_description.'&img='.$post_img;
+											?>
+											<ul>
+												<li style="font-size: 16px;">Share this</li>
+												<li><a id="facebook" href="<?php echo $fb_url;?>" rel="nofollow" target="_blank">Facebook</a></li>
+												<li><a id="twitter"  href="<?php echo $twitter_url;?>" rel="nofollow" target="_blank">Twitter</a></li>
+												<li><a id="mail" href="<?php echo $mail_url;?>" rel="nofollow" target="_blank">Email</a></li>
+												<li><a id="pinterest" href="<?php echo $pintrest_url;?>" rel="nofollow" target="_blank">Pinterest</a></li>
+											</ul>
+										</div>
+									<!-- Social Share Ends -->
 									<div class="accordion-item">	
 										<div class="title">Course:</div> 
 										<div class="detail"><b><?php the_title(); ?></b></div>
