@@ -69,7 +69,7 @@ class Cuztom_Bundle
 
 							echo '</table>';
 							echo '</fieldset>';
-							echo count( $meta ) > 1 ? '<div class="cuztom-remove-sortable js-cuztom-remove-sortable"></div>' : '';
+							echo count( $meta ) > 1 ? '<div class="cuztom-remove-sortable js-cuztom-remove-sortable"></div>' : '';						
 						echo '</li>';
 						
 						$i++;
@@ -119,6 +119,9 @@ class Cuztom_Bundle
 					echo '</li>';
 				}
 			echo '</ul>';
+				echo '<a class="button-secondary cuztom-button js-cuztom-add-sortable js-cuztom-add-bundle cuztom-add-sortable" href="#">';
+				echo sprintf( '+ %s', __( 'Add', 'cuztom' ) );
+			echo '</a>';
 		echo '</div>';
 	}
 
