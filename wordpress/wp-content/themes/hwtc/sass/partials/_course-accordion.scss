@@ -39,3 +39,27 @@
         }
     }
 }
+
+.single-course {
+    .accordion-item {
+        margin-bottom: 15px;
+        overflow: hidden;
+        position: relative;
+        .title {
+            float: left;
+            font-weight: bold;
+            width: 100%;
+            @include at-breakpoint($desktop) {
+                margin-right: 5%;
+                width: 20%;
+            }
+        }
+        .detail {
+            float: left;
+            width: 100%;
+            @include at-breakpoint($desktop) {
+                width: 75%;
+            }
+        }
+    }
+}
