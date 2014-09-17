@@ -40,13 +40,13 @@ $course->add_meta_box(
 			'name'          => 'course_from',
 			'label'         => 'Course From',
 			'description'   => '',
-			'type'          => 'text'
+			'type'          => 'date'
 		),
 		array(
 			'name'          => 'course_to',
 			'label'         => 'Course To',
 			'description'   => '',
-			'type'          => 'text'
+			'type'          => 'date'
 		),
 		array(
 			'name'          => 'from_time',
@@ -77,6 +77,12 @@ $course->add_meta_box(
 			'label'         => 'Contact to Register',
 			'description'   => '',
 			'type'          => 'wysiwyg'
+		),
+		array(
+			'name'          => 'message_before_classes',
+			'label'         => 'Message before classes',
+			'description'   => '',
+			'type'          => 'textarea'
 		)
     )
 );
@@ -88,6 +94,13 @@ $course->add_meta_box(
 	array(
 		'bundle',
 		array (
+			
+			array(
+				'name'          => 'class_date',
+				'label'         => 'Class date',
+				'description'   => '',
+				'type'          => 'text'
+			),
 			array(
 				'name'          => 'class_name',
 				'label'         => 'Class name',
@@ -100,25 +113,19 @@ $course->add_meta_box(
 				'label'         => 'Class description',
 				'description'   => '',
 				'type'          => 'textarea'
-			),
-			array(
-				'name'          => 'class_date',
-				'label'         => 'Class date',
-				'description'   => '',
-				'type'          => 'text'
-			),
-			array(
-				'name'          => 'class_from_time',
-				'label'         => 'Class From Time',
-				'description'   => '',
-				'type'          => 'text'
-			),
-			array(
-				'name'          => 'class_to_time',
-				'label'         => 'Class To Time',
-				'description'   => '',
-				'type'          => 'text'
 			)
+			// array(
+				// 'name'          => 'class_from_time',
+				// 'label'         => 'Class From Time',
+				// 'description'   => '',
+				// 'type'          => 'time'
+			// ),
+			// array(
+				// 'name'          => 'class_to_time',
+				// 'label'         => 'Class To Time',
+				// 'description'   => '',
+				// 'type'          => 'time'
+			// )
 		)	
 	)
 );	
