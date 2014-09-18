@@ -25,7 +25,9 @@
 </div>
 <div class="container" style="max-width:100%;">
     <div class="columns-1 content">
-	    <?php the_content();?>    
+		<div class="center-content">
+			<?php the_content();?>    
+		</div>
     </div>
 </div>
 <div class="container" style="max-width:100%;">
