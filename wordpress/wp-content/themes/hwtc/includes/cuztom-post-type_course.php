@@ -94,38 +94,49 @@ $course->add_meta_box(
 	array(
 		'bundle',
 		array (
-			
-			array(
-				'name'          => 'class_date',
-				'label'         => 'Class date',
-				'description'   => '',
-				'type'          => 'text'
-			),
 			array(
 				'name'          => 'class_name',
 				'label'         => 'Class name',
 				'description'   => '',
 				'type'          => 'text'
 			),
-			
 			array(
 				'name'          => 'class_description',
 				'label'         => 'Class description',
 				'description'   => '',
 				'type'          => 'textarea'
+			),
+			array(
+				'name'          => 'class_day_of_the_week',
+				'label'         => 'Class day of the week',
+				'description'   => '',
+				'type'          => 'text'
+			),
+			array(
+				'name'          => 'class_from_date',
+				'label'         => 'Class from date',
+				'description'   => 'Please enter date in this format.(e.g, dd/mm/yy)',
+				'type'          => 'text'
+			),
+			
+			array(
+				'name'          => 'class_to_date',
+				'label'         => 'Class to date',
+				'description'   => 'Please enter date in this format.(e.g, dd/mm/yy)',
+				'type'          => 'text'
+			),
+			array(
+				'name'          => 'class_from_time',
+				'label'         => 'Class From Time',
+				'description'   => 'Please enter time in this format.(e.g, Hour:Minute)',
+				'type'          => 'text'
+			),
+			array(
+				'name'          => 'class_to_time',
+				'label'         => 'Class To Time',
+				'description'   => 'Please enter time in this format.(e.g, Hour:Minute)',
+				'type'          => 'text'
 			)
-			// array(
-				// 'name'          => 'class_from_time',
-				// 'label'         => 'Class From Time',
-				// 'description'   => '',
-				// 'type'          => 'time'
-			// ),
-			// array(
-				// 'name'          => 'class_to_time',
-				// 'label'         => 'Class To Time',
-				// 'description'   => '',
-				// 'type'          => 'time'
-			// )
 		)	
 	)
 );	

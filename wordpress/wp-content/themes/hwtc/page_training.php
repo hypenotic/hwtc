@@ -28,16 +28,13 @@
 		<div class="center-content">
 			<?php the_content();?>    
 		</div>
-    </div>
-</div>
-<div class="container" style="max-width:100%;">
-    	 <div class="columns-1 content">
+    <div class="content">
 			<?php 
 				$parent=get_the_ID();
 				$query=new WP_Query(array('post_type'=>'course','showposts'=> -1));
 				if($query->have_posts()):
 			?>
-			<h5>Courses We Offered:</h5>
+			<h5>Courses:</h5>
 			<div class="course-accordion">
 				<?php while($query->have_posts()):$query->the_post(); 
 						$assigned=get_post_meta(get_the_ID(),'_course_details_assign_page',true);
@@ -74,7 +71,7 @@
 											$mail_url='http://www.sharethis.com/share?url='.$post_link.'&title='.$post_title.'&summary='.$post_description.'&img='.$post_img;
 											?>
 											<ul>
-												<li style="font-size: 16px;">Share this</li>
+												<li><b>Share this: </b></li>
 												<li><a id="facebook" href="<?php echo $fb_url;?>" rel="nofollow" target="_blank">Facebook</a></li>
 												<li><a id="twitter"  href="<?php echo $twitter_url;?>" rel="nofollow" target="_blank">Twitter</a></li>
 												<li><a id="mail" href="<?php echo $mail_url;?>" rel="nofollow" target="_blank">Email</a></li>
@@ -149,19 +146,6 @@
 											foreach($class_details as $class_detail) {
 									?>
 										
-										<?php if($class_detail['_class_details_class_date'] !='') { ?>
-										<div class="accordion-item">		
-											<div class="title">Class date:</div> 
-											<div class="detail">
-											
-												<?php 
-													$class_date=$class_detail['_class_details_class_date'];
-													echo $class_date;
-													//echo date('F d', $class_date); 
-												?> 
-												</div>
-										</div>
-										<?php } ?>	
 										
 										<?php if($class_detail['_class_details_class_name'] !='') { ?>
 										<div class="accordion-item">		
@@ -176,8 +160,26 @@
 										</div>
 										<?php } ?>	
 										
+										<?php if($class_detail['_class_details_class_day_of_the_week']!='') { ?>
+											<div class="accordion-item">			
+												<div class="title">Class day of the week:</div>
+												<div class="detail"><?php echo $class_detail['_class_details_class_day_of_the_week']; ?> </div>
+											</div>
+										<?php } ?>
+										
 										<?php 
-										/*
+											$class_from_date=$class_detail['_class_details_class_from_date'];
+											$class_to_date=$class_detail['_class_details_class_to_date'];
+										if($class_from_date!='' || $class_to_date!='') { ?>
+											<div class="accordion-item">		
+												<div class="title">Course upto:</div> 
+												<div class="detail">
+													<?php echo date('F d', strtotime($class_from_date)); if($class_to_date!='') { echo ' - '.date('F d', strtotime($class_to_date));} ?> 
+												</div>
+											</div>									
+										<?php } ?>
+										<?php 
+										
 											$class_from_time = $class_detail['_class_details_class_from_time'];
 											$class_to_time = $class_detail['_class_details_class_to_time'];
 										
@@ -188,7 +190,7 @@
 												<?php echo date('h:i A ', strtotime($class_from_time)); if($class_to_time!='') { echo ' - '.date('h:i A ', strtotime($class_to_time));} ?> 
 											</div>
 										</div>									
-										<?php } */?>
+										<?php } ?>
 									<?php			
 											echo "</br>";
 											}
@@ -202,14 +204,7 @@
 			</div>
 			<?php endif;wp_reset_query();?>
 		</div>
+	</div>
 </div>
-
-<?php if(is_page(18)) {?>
-	<div class="full-width skilled-banner">
-    	<div class="overlay-content">
-        	<?php dynamic_sidebar('Find Talent Page Bottom Content');?>
-        </div>
-    </div>
-<?php } ?>
 <?php endwhile; endif; wp_reset_query();?>
 <?php get_footer();?>
