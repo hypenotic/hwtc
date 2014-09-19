@@ -4,17 +4,14 @@
     h3 {
 
         @include adjust-font-size-to(22px);
-        border-bottom: 2px solid #E5E5E5;
         border-top: 2px solid #E5E5E5;
-        margin-bottom: 50px;
         padding-bottom: 0;
         padding-top: 0;
         @include at-breakpoint($desktop) {
             @include adjust-font-size-to(40px);
         }
-        &:first-child {
-            //border-top: 2px solid #E5E5E5;
-       
+        &:last-child {
+            border-bottom: 2px solid #E5E5E5;
         }
         a {
             background-color: #FFF;
@@ -24,7 +21,7 @@
         }
     }
     .course-accodion-content {
-        display: none;
+        display: block;
         padding: 50px 20px;
         .accordion-item {
             margin-bottom: 15px;

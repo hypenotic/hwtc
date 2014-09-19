@@ -3,8 +3,8 @@
     ul {
         list-style: none;
         margin-bottom: 0;
-        padding: 10px 5px 10px 5px;
-        text-align: center;
+        padding: 10px 5px 10px 0px;
+        text-align: left;
         li {
             display: inline-block;
             margin-left: 5px;
@@ -12,6 +12,12 @@
             &:before {
                 content: "";
                 margin: 0;
+            }
+            &:first-child {
+                @include adjust-font-size-to(16px);
+                font-family: $latobold;
+                margin-left: 0px;
+                text-transform: uppercase;
             }
             &:last-child {
                 margin-bottom: 0px;
