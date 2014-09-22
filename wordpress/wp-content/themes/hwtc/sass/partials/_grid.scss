@@ -165,11 +165,11 @@ footer {
 
 .columns-1 {
     @include span-columns(7);
-    margin: 1.5em 0 2em 0;
+    margin: 1.5em 0 1.5em 0;
     @include at-breakpoint($desktop) {
         @include pad(2.5, 2.5);
         @include span-columns(15);
-        margin: 3em 0 2em 0;
+        margin: 1.5em 0 2.5em 0;
     }
 }
 
