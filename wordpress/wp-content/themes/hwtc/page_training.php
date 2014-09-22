@@ -92,20 +92,20 @@
 									<?php if($location !='') { ?>
 										<div class="accordion-item">		
 											<div class="title">Location:</div>
-											<div class="detail"><?php echo $location; ?> </div>
+											<div class="detail"><p><?php echo $location; ?></p></div>
 										</div>
 									<?php } ?>
 									<?php if($day_of_the_week !='') { ?>
 										<div class="accordion-item">			
 											<div class="title">Day of the week:</div>
-											<div class="detail"><?php echo $day_of_the_week; ?> </div>
+											<div class="detail"><p><?php echo $day_of_the_week; ?></p></div>
 										</div>
 									<?php } ?>
 									<?php if($course_from !='' || $course_to!='') { ?>
 										<div class="accordion-item">		
 											<div class="title">Course upto:</div> 
 											<div class="detail">
-												<?php echo date('F d', $course_from); if($course_to!='') { echo ' - '.date('F d', $course_to);} ?> 
+												<p><?php echo date('F d', $course_from); if($course_to!='') { echo ' - '.date('F d', $course_to);} ?> </p>
 											</div>
 										</div>									
 									<?php } ?>
@@ -113,7 +113,7 @@
 										<div class="accordion-item">		
 											<div class="title">Course Timing:</div> 
 											<div class="detail">
-												<?php echo date('h:i A ', strtotime($from_time)); if($to_time!='') { echo ' - '.date('h:i A ', strtotime($to_time));} ?> 
+												<p><?php echo date('h:i A ', strtotime($from_time)); if($to_time!='') { echo ' - '.date('h:i A ', strtotime($to_time));} ?> </p>
 											</div>
 										</div>									
 									<?php } ?>
@@ -153,6 +153,12 @@
 											<div class="detail"><b><?php echo $class_detail['_class_details_class_name']; ?></b></div>
 										</div>
 										<?php } ?>	
+										<?php if($class_detail['_class_details_location'] !='') { ?>
+										<div class="accordion-item">		
+											<div class="title">Location:</div>
+											<div class="detail"><p><?php echo $class_detail['_class_details_location']; ?></p></div>
+										</div>
+										<?php } ?>	
 										<?php if($class_detail['_class_details_class_description'] !='') { ?>
 										<div class="accordion-item">		
 											<div class="title">Class description:</div>
@@ -163,7 +169,7 @@
 										<?php if($class_detail['_class_details_class_day_of_the_week']!='') { ?>
 											<div class="accordion-item">			
 												<div class="title">Class day of the week:</div>
-												<div class="detail"><?php echo $class_detail['_class_details_class_day_of_the_week']; ?> </div>
+												<div class="detail"><p><?php echo $class_detail['_class_details_class_day_of_the_week']; ?></p></div>
 											</div>
 										<?php } ?>
 										
@@ -174,7 +180,7 @@
 											<div class="accordion-item">		
 												<div class="title">Course upto:</div> 
 												<div class="detail">
-													<?php echo date('F d', strtotime($class_from_date)); if($class_to_date!='') { echo ' - '.date('F d', strtotime($class_to_date));} ?> 
+													<p><?php echo date('F d', strtotime($class_from_date)); if($class_to_date!='') { echo ' - '.date('F d', strtotime($class_to_date));} ?> </p>
 												</div>
 											</div>									
 										<?php } ?>
@@ -187,7 +193,7 @@
 										<div class="accordion-item">		
 											<div class="title">Class Timing:</div> 
 											<div class="detail">
-												<?php echo date('h:i A ', strtotime($class_from_time)); if($class_to_time!='') { echo ' - '.date('h:i A ', strtotime($class_to_time));} ?> 
+												<p><?php echo date('h:i A ', strtotime($class_from_time)); if($class_to_time!='') { echo ' - '.date('h:i A ', strtotime($class_to_time));} ?> </p>
 											</div>
 										</div>									
 										<?php } ?>

@@ -99,6 +99,12 @@ $course->add_meta_box(
 				'label'         => 'Class name',
 				'description'   => '',
 				'type'          => 'text'
+			),			
+			array(
+				'name'          => 'location',
+				'label'         => 'Location',
+				'description'   => '',
+				'type'          => 'text',
 			),
 			array(
 				'name'          => 'class_description',
