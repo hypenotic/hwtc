@@ -26,20 +26,20 @@
 			<?php if($location !='') { ?>
 				<div class="accordion-item">		
 					<div class="title">Location:</div>
-					<div class="detail"><?php echo $location; ?> </div>
+					<div class="detail"><p><?php echo $location; ?></p></div>
 				</div>
 			<?php } ?>
 			<?php if($day_of_the_week !='') { ?>
 				<div class="accordion-item">			
 					<div class="title">Day of the week:</div>
-					<div class="detail"><?php echo $day_of_the_week; ?> </div>
+					<div class="detail"><p><?php echo $day_of_the_week; ?></p></div>
 				</div>
 			<?php } ?>
 			<?php if($course_from !='' || $course_to!='') { ?>
 				<div class="accordion-item">		
 					<div class="title">Course upto:</div> 
 					<div class="detail">
-						<?php echo date('F d', $course_from); if($course_to!='') { echo ' - '.date('F d', $course_to);} ?> 
+						<p><?php echo date('F d', $course_from); if($course_to!='') { echo ' - '.date('F d', $course_to);} ?> </p>
 					</div>
 				</div>									
 			<?php } ?>
@@ -47,7 +47,7 @@
 				<div class="accordion-item">		
 					<div class="title">Course Timing:</div> 
 					<div class="detail">
-						<?php echo date('h:i A ', strtotime($from_time)); if($to_time!='') { echo ' - '.date('h:i A ', strtotime($to_time));} ?> 
+						<p><?php echo date('h:i A ', strtotime($from_time)); if($to_time!='') { echo ' - '.date('h:i A ', strtotime($to_time));} ?> </p>
 					</div>
 				</div>									
 			<?php } ?>
@@ -72,7 +72,7 @@
 			<?php if($message_before_classes !='') { ?>
 				<div class="accordion-item">		
 					<div class="title">Note:</div> 
-					<div class="detail"><?php echo $message_before_classes; ?> </div>
+					<div class="detail"><?php echo $message_before_classes; ?></div>
 				</div>
 			<?php } ?>
 			
@@ -87,7 +87,7 @@
 					
 						<?php 
 							$class_date=$class_detail['_class_details_class_date'];
-							echo $class_date;
+							echo "<p>".$class_date."</p>";
 						?> 
 						</div>
 				</div>
@@ -99,13 +99,51 @@
 					<div class="detail"><b><?php echo $class_detail['_class_details_class_name']; ?></b></div>
 				</div>
 				<?php } ?>	
+				<?php if($class_detail['_class_details_location'] !='') { ?>
+				<div class="accordion-item">		
+					<div class="title">Location:</div>
+					<div class="detail"><p><?php echo $class_detail['_class_details_location']; ?></p></div>
+				</div>
+				<?php } ?>	
 				<?php if($class_detail['_class_details_class_description'] !='') { ?>
 				<div class="accordion-item">		
 					<div class="title">Class description:</div>
 					<div class="detail"><?php echo $class_detail['_class_details_class_description']; ?> </div>
 				</div>
+				<?php } ?>		
+				<?php if($class_detail['_class_details_class_day_of_the_week']!='') { ?>
+					<div class="accordion-item">			
+						<div class="title">Class day of the week:</div>
+						<div class="detail"><p><?php echo $class_detail['_class_details_class_day_of_the_week']; ?></p></div>
+					</div>
+				<?php } ?>
+				
+				<?php 
+					$class_from_date=$class_detail['_class_details_class_from_date'];
+					$class_to_date=$class_detail['_class_details_class_to_date'];
+				if($class_from_date!='' || $class_to_date!='') { ?>
+					<div class="accordion-item">		
+						<div class="title">Course upto:</div> 
+						<div class="detail">
+							<p><?php echo date('F d', strtotime($class_from_date)); if($class_to_date!='') { echo ' - '.date('F d', strtotime($class_to_date));} ?> </p>
+						</div>
+					</div>									
+				<?php } ?>
+				<?php 
+				
+					$class_from_time = $class_detail['_class_details_class_from_time'];
+					$class_to_time = $class_detail['_class_details_class_to_time'];
+				
+				if($class_from_time !='' || $class_to_time!='') { ?>
+				<div class="accordion-item">		
+					<div class="title">Class Timing:</div> 
+					<div class="detail">
+						<p><?php echo date('h:i A ', strtotime($class_from_time)); if($class_to_time!='') { echo ' - '.date('h:i A ', strtotime($class_to_time));} ?> </p>
+					</div>
+				</div>									
+				<?php } ?>
 				<?php			
-					}
+					
 						echo "</br>";
 						}
 					}
