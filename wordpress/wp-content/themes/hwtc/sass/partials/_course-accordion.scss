@@ -8,7 +8,7 @@
         padding-bottom: 0;
         padding-top: 0;
         @include at-breakpoint($desktop) {
-            @include adjust-font-size-to(40px);
+            @include adjust-font-size-to(38px);
         }
         &:last-child {
             border-bottom: 2px solid #E5E5E5;
@@ -21,7 +21,7 @@
         }
     }
     .course-accodion-content {
-        display: none;
+        display: block;
         padding: 50px 20px;
         .accordion-item {
             margin-bottom: 15px;
@@ -39,12 +39,15 @@
                 }
             }
             .detail {
-                @include adjust-font-size-to(18px);
+                @include adjust-font-size-to(16px);
                 float: left;
                 width: 100%;
                 b {
                     font-family: $latobold;
                     text-transform: uppercase;
+                }
+                & p, ul, ol {
+                    @include adjust-font-size-to(18px);
                 }
                 @include at-breakpoint($desktop) {
                     width: 60%;
