@@ -30,7 +30,7 @@
     <div class="columns-1 content">
 	    <?php the_content();?>    
         
-        <?php query_posts('cat=-3');
+        <?php query_posts('cat=-3&showposts=-1');
 		if(have_posts()):
 		echo "<ul class='our-people'>";
 		while(have_posts()):the_post();
