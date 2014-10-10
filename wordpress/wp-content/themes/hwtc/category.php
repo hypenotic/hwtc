@@ -1,4 +1,6 @@
-<?php get_header();?>
+<?php get_header();
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
+?>
 <?php 
 $img= get_bloginfo('template_url').'/images/banner.jpg';
 ?>
@@ -25,6 +27,9 @@ $img= get_bloginfo('template_url').'/images/banner.jpg';
 			endwhile;
 			echo "</ul>";
 		?>
+		<div class="pagination">            
+			<?php pagination();?>
+		</div>
     </div>
 </div>
 <?php endif;wp_reset_query(); ?>
