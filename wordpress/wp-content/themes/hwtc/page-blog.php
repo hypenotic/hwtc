@@ -1,6 +1,3 @@
-<?php 
-/* Template Name: About Page Template */
-?>
 <?php get_header();?>
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
 		<?php  
@@ -28,12 +25,15 @@
 
 <div class="container">
     <div class="columns-1 content">
-	    <?php the_content();?>    
-        
-        <?php query_posts('cat=-3&showposts=-1');
-		if(have_posts()):
+	    <?php the_content();?>
+			
+        <?php 
+		global $wp_query;	
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
+		$wp_query=new WP_Query(array('cat'=>'-3','post_type'=>'post','paged'=>$paged));
+		if($wp_query->have_posts()):
 		echo "<ul class='our-people'>";
-		while(have_posts()):the_post();
+		while($wp_query->have_posts()):$wp_query->the_post();
 		?>
         <li>
 			<h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
@@ -41,6 +41,11 @@
         </li>
         <?php endwhile;
 		echo "</ul>";
+		?>
+		<div class="pagination">            
+			<?php pagination();?>
+		</div>
+		<?php
 		endif;wp_reset_query();?>
     </div>
 </div>
