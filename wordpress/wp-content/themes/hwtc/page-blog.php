@@ -46,10 +46,15 @@
 		if($wp_query->have_posts()):
 		echo "<ul class='blog-lists'>";
 		while($wp_query->have_posts()):$wp_query->the_post();
+			$feat_image = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );
+			//echo $feat_image;
 		?>
         <li>
-			<div class="blog-icon" style="background-image:url(<?php bloginfo('template_url');?>/images/banner.jpg);">
-				<a href="<?php the_permalink();?>"><img src="<?php bloginfo('template_url');?>/images/banner.jpg"></a>
+			
+			<div class="blog-icon" style="background-image:url(<?php echo $feat_image;?>);">
+				<?php if($feat_image) { ?>
+				<a href="<?php the_permalink();?>"><img src="<?php echo $feat_image;?>"></a>
+				<?php } ?>
 			</div>
 			<div class="blog-content">
 				<h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
