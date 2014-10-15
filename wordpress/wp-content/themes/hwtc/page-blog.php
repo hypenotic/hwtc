@@ -12,7 +12,7 @@
 		<img src="<?php echo $img;?>" />
         <div class="bannertext">
             <div class="bannertext-content">
-                <div class="banner-title-big"><?php the_title();?></div>
+                <div class="banner-title-big">News<?php //the_title();?></div>
                 <?php $sub_title = get_post_meta(get_the_ID(),'second-title',true); 
 					  if($sub_title) {
 				?>
@@ -22,22 +22,43 @@
         </div>
 </div>
 
-
-<div class="container">
-    <div class="columns-1 content">
+ <div class="full-width content">
+	<div class="container">
 	    <?php the_content();?>
-			
+		<h5 class="text-center">Categories</h6>
+		<div class="filters text-center">
+			<?php 
+				$categories=get_categories(array('hide_empty' => 0,'exclude'=>array(1,3)));
+				if($categories) {
+						foreach($categories as $category) {
+			?>
+			<a href="<?php echo get_category_link($category->term_id);?>" class="<?php echo $category->slug;?>"><span class="blog-icon"></span><?php echo $category->name;?></a>
+			<?php 
+						}
+				}
+			?>
+			<a href="javascript:void(0);" class="is-checked all" data-filter="*"><span class="blog-icon"></span> All</a>
+		</div>
         <?php 
 		global $wp_query;	
 		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
 		$wp_query=new WP_Query(array('cat'=>'-3','post_type'=>'post','paged'=>$paged));
 		if($wp_query->have_posts()):
-		echo "<ul class='our-people'>";
+		echo "<ul class='blog-lists'>";
 		while($wp_query->have_posts()):$wp_query->the_post();
 		?>
         <li>
-			<h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
-			<?php the_excerpt();?>
+			<div class="blog-icon" style="background-image:url(<?php bloginfo('template_url');?>/images/banner.jpg);">
+				<a href="<?php the_permalink();?>"><img src="<?php bloginfo('template_url');?>/images/banner.jpg"></a>
+			</div>
+			<div class="blog-content">
+				<h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
+				<p class="meta">
+					<span>Posted <?php the_time('m-d-y');?></span> 
+					<span>by <?php the_author_posts_link();?> <?php echo " In ".get_the_category_list(',');?></span>
+				</p>	
+				<?php the_excerpt();?>
+			</div>
         </li>
         <?php endwhile;
 		echo "</ul>";
