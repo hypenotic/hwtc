@@ -26,12 +26,17 @@
 		<h5 class="text-center">Categories</h6>
 		<div class="filters text-center">
 			<?php 
-				
+				$post_categories = wp_get_post_categories( get_the_ID() );
+				$cats = array();
+				foreach($post_categories as $c){
+					$cat = get_category( $c );
+					$cats[] = array( 'id'=>$cat->term_id,'name' => $cat->name, 'slug' => $cat->slug );
+				}
 				$categories=get_categories(array('hide_empty' => 0,'exclude'=>array(1,3)));
 				if($categories) {
 						foreach($categories as $category) {
 			?>
-			<a href="<?php echo get_category_link($category->term_id);?>" class="<?php echo $category->slug;?> <?php echo $category->slug;?> <?php if($current_category->term_id == $category->term_id) { echo "is-checked";}?>"><span class="blog-icon"></span><?php echo $category->name;?></a>
+			<a href="<?php echo get_category_link($category->term_id);?>" class="<?php echo $category->slug;?> <?php echo $category->slug;?> <?php if($cats[0]['id'] == $category->term_id) { echo "is-checked";}?>"><span class="blog-icon"></span><?php echo $category->name;?></a>
 			<?php 
 						}
 				}
