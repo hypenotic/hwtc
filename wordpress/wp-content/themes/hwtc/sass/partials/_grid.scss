@@ -203,6 +203,9 @@ footer {
 .full-width {
     overflow: hidden;
     position: relative;
+    .author &, .blog &, .category &, .single & {
+        background: #eff5ff;
+    }
 }
 
 .show-for-mobile {

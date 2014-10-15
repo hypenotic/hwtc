@@ -9,7 +9,7 @@ $img= get_bloginfo('template_url').'/images/banner.jpg';
 		<img src="<?php echo $img;?>" />
         <div class="bannertext">
             <div class="bannertext-content">
-                <div class="banner-title-big"><?php single_cat_title();?></div>
+                <div class="banner-title-big"><?php printf( __( 'All posts by %s', 'twentyfourteen' ), get_the_author() );?></div>
             </div>
         </div>
 </div>

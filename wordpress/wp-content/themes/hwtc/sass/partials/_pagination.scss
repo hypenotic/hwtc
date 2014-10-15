@@ -89,7 +89,6 @@
 
 .pagination {
     @include adjust-font-size-to(16px);
-    border-top: 1px solid $light_gray;
     margin-top: 1.5em;
     padding: 1.5em 0 0.5em 0;
     text-align: center;
