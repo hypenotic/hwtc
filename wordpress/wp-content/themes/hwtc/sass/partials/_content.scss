@@ -194,10 +194,11 @@
             }
             .blog-icon {
 
+                background-color: #cecfd1;
                 background-position: center center;
                 background-repeat: no-repeat;
                 border: 1px solid #cecfd1;
-                height: 250px;
+                height: 175px;
                 width: 100%;
                 @include at-breakpoint($desktop) {
                     float: left;
