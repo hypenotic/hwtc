@@ -205,6 +205,9 @@ footer {
     position: relative;
     .author &, .blog &, .category &, .single & {
         background: #eff5ff;
+        &.content {
+            padding-top: 40px;
+        }
     }
 }
 
