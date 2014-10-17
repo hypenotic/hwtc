@@ -25,8 +25,8 @@
  <div class="full-width content">
 	<div class="container">
 	    <?php the_content();?>
-		<h5 class="text-center">Categories</h6>
 		<div class="filters text-center">
+			<h5 class="title">Categories</h5>
 			<?php 
 				$categories=get_categories(array('hide_empty' => 0,'exclude'=>array(1,3)));
 				if($categories) {
