@@ -259,8 +259,8 @@ ul li {
     }
 }
 .meta {
-    @include adjust-font-size-to(14px);
-    font-weight: 400;
+    //@include adjust-font-size-to(14px);
+    font-size: 14px;
     text-transform: uppercase;
     & a {
         color: gray;

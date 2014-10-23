@@ -10,6 +10,12 @@
     @include at-breakpoint($desktop) {
         padding-top: 60px;
     }
+    .author &, .blog &, .category &, .single & {
+        padding-bottom: 35px;
+        @include at-breakpoint($desktop) {
+            padding-top: 50px;
+        }
+    }
     .home & {
         padding-top: 40px;
         @include at-breakpoint($desktop) {
@@ -78,10 +84,14 @@
             padding: 30px 0 30px;
         }
         &.title {
-            @include adjust-font-size-to(18px);
+            @include adjust-font-size-to(26px);
             color: $black;
             font-family: $latoblack;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
+            padding-top: 0px;
+            @include at-breakpoint($desktop) {
+                @include adjust-font-size-to(50px);
+            }
         }
     }
     @include at-breakpoint($desktop) {
@@ -226,7 +236,7 @@
                 }
                 .meta {
                     color: #2d5cb3;
-                    font-family: $latoblack;
+                    font-family: $latobold;
                     text-transform: none;
                     a {
                         text-decoration: underline;
@@ -239,17 +249,33 @@
 }
 
 .single {
+    .content {
+        p {
+            @include adjust-font-size-to(22px);
+            line-height: 1.5em;
+            @include at-breakpoint($desktop) {
+                @include adjust-font-size-to(22px);
+                line-height: 2.2em;
+            }
+        }
+        .meta {
+            @include adjust-font-size-to(14px);
+            color: #2d5cb3;
+            font-family: $latobold;
+            text-transform: none;
+            a {
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+        }
+    }
     & h1.title {
+        @include adjust-font-size-to(30px);
+        margin-bottom: 25px;
         margin: 0;
         padding: 0;
-    }
-    .meta {
-        color: #2d5cb3;
-        font-family: $latoblack;
-        text-transform: none;
-        a {
-            text-decoration: underline;
-            text-transform: uppercase;
+        @include at-breakpoint($desktop) {
+            @include adjust-font-size-to(48px);
         }
     }
 }
@@ -324,6 +350,7 @@
 }
 
 .filters {
+    margin-bottom: 20px;
     text-align: center;
     a {
         @include adjust-font-size-to(21px);
