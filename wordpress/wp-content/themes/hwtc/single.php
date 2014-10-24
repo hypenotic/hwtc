@@ -12,7 +12,14 @@
 		<img src="<?php echo $img;?>" />
         <div class="bannertext">
             <div class="bannertext-content">
-                <div class="banner-title-big"><?php the_title();?></div>
+                <div class="banner-title-big">
+					<?php if($post->post_type =='course'){ ?>
+						<?php the_title();?>
+					<?php } else { ?>	
+						News
+					<?php } ?>	
+				
+				</div>
                 <?php $sub_title = get_post_meta(get_the_ID(),'second-title',true); 
 					  if($sub_title) {
 				?>

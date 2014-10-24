@@ -53,6 +53,10 @@
         }
         a {
             color: #2c65b5;
+            &:hover {
+                border-bottom: 1px solid #6588c9;
+                color: #6588c9;
+            }
         }
     }
     & h1:first-child {
@@ -84,14 +88,11 @@
             padding: 30px 0 30px;
         }
         &.title {
-            @include adjust-font-size-to(26px);
+            @include adjust-font-size-to(18px);
             color: $black;
             font-family: $latoblack;
             margin-bottom: 5px;
             padding-top: 0px;
-            @include at-breakpoint($desktop) {
-                @include adjust-font-size-to(50px);
-            }
         }
     }
     @include at-breakpoint($desktop) {
@@ -239,8 +240,13 @@
                     font-family: $latobold;
                     text-transform: none;
                     a {
-                        text-decoration: underline;
+                        border-bottom: 1px solid #2d5cb3;
+                        text-decoration: none;
                         text-transform: uppercase;
+                        &:hover {
+                            border-bottom: 1px solid #6588c9;
+                            color: #6588c9;
+                        }
                     }
                 }
             }
@@ -264,8 +270,13 @@
             font-family: $latobold;
             text-transform: none;
             a {
-                text-decoration: underline;
+                border-bottom: 1px solid #2d5cb3;
+                text-decoration: none;
                 text-transform: uppercase;
+                &:hover {
+                    border-bottom: 1px solid #6588c9;
+                    color: #6588c9;
+                }
             }
         }
     }
@@ -354,13 +365,15 @@
     text-align: center;
     a {
         @include adjust-font-size-to(21px);
+        border-bottom: 1px solid #eff5ff;
         display: inline-block;
         font-family: $latolight;
         margin-right: 15px;
-        padding-bottom: 10px;
         text-decoration: none;
         text-transform: uppercase;
-        text-transform: uppercase;
+        &:hover {
+            border-bottom: 1px solid;
+        }
         &:last-child {
             margin-right: 0;
         }
