@@ -108,6 +108,7 @@
 .page-navigation {
     @include adjust-font-size-to(24px);
     font-family: $nixie_oneregular;
+    overflow: hidden;
     text-transform: uppercase;
     a {
         border-bottom: none;

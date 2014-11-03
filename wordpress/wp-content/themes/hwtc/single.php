@@ -100,7 +100,10 @@
 				<div class="alignright">
 					<?php next_post('%', '', 'yes'); ?>
 				</div>
-			</div> <!-- end navigation -->		
+			</div> <!-- end navigation -->	
+			<div class="span-8 center">
+				<?php comments_template();?>
+			</div>			
 		</div>
 	</div>
 </div>
