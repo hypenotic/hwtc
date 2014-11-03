@@ -17,25 +17,29 @@
 
 </head>
 <body <?php body_class();?>>
-    <div id="sidebarMenu">
+    <div id="menu" class="menu-panel" role="navigation">
         <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
     </div>
 
-<header>
+<!-- Site Overlay for Pushy offcanvas to work -->
+<div class="site-overlay"></div>
+<header class="wrap push">
 	<div class="container">
-        <div class="logo nav">
+        <?php /*<div class="logo nav">
             <a href="<?php bloginfo('url' ); ?>"><img src="<?php bloginfo('template_url');?>/images/logo.png" /></a>
-        </div>
-        <div class="logo second-nav ">
-            <a href="<?php bloginfo('url' ); ?>" class="show-for-desktop">HOSPITALITY WORKERS TRAINING CENTRE</a>
-            <a href="<?php bloginfo('url' ); ?>" class="mobile-title show-for-mobile">HWTC</a>
+        </div> */?>
+        <div class="logo second-nav show-for-desktop">
+            <a href="<?php bloginfo('url' ); ?>" class="">HOSPITALITY WORKERS TRAINING CENTRE</a>
+		</div>
+		<div class="logo second-nav show-for-mobile">
+            <a href="<?php bloginfo('url' ); ?>" class="mobile-title">HWTC</a>
         </div>
         <nav id="box">
         	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
         </nav>
         <div id="mobile-nav-button">
-				<a href="#">Mobile Menu</a>
+				<a id="nav-toggle" href="#menu">Mobile Menu</a>
         </div>
     </div>
 </header>
-<div class="wrapper">    
+<div class="wrapper wrap push">    

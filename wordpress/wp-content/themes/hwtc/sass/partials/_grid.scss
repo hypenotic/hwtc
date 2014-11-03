@@ -5,24 +5,16 @@
 
 header {
     @include transition(transform 500ms ease);
+    background: rgba(44, 99, 176, 0.95);
+    padding-bottom: 10px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9999;
     .container {
         overflow: visible;
-    }
-    @media only screen and (max-width: 768px) {
-        &:before {
-            @include opacity(0.98);
-            @include transition(opacity 1s linear);
-            background: #2c65b5;
-            content: '';
-            height: 70px;
-            padding-bottom: 15px;
-            position: absolute;
-            width: 100%;
-            z-index: -1;
+        @media (max-width: 879px) {
+            max-width: 100%;
         }
     }
     &.active-header {
@@ -43,8 +35,9 @@ header {
     @include span-columns(6);
     @include at-breakpoint($desktop) {
         @include adjust-font-size-to(20px);
-        @include span-columns(6);
+        @include span-columns(6.5);
         display: block;
+        margin-right: 0;
         margin-top: 1.5em;
     }
 }
@@ -60,12 +53,16 @@ header {
 
     display: block;
     margin-top: 0.8em;
+    padding-top: 4px;
     @include at-breakpoint($desktop) {
-        display: none;
+        //display: none;
     }
     a {
         color: $white;
         text-decoration: none;
+        &:hover {
+            @include text-shadow(1px 0px 1px black);
+        }
     }
 }
 
