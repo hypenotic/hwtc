@@ -3,6 +3,7 @@
     display: none;
     height: 46px;
     margin: 13px 0 0 0;
+    padding-top: 3px;
     width: 55%;
     @include at-breakpoint($desktop) {
         display: block;
@@ -10,62 +11,65 @@
     }
 }
 
-nav ul {
-    list-style-type: none;
-    margin-top: 3px;
-    white-space: nowrap;
-    & li {
-        display: inline;
-        margin-left: 20px;
-        padding-bottom: 30px;
-        position: relative;
-        &.current-menu-item {
-            & ul li a {
-                text-decoration: none;
-            }
-            a {
-                text-decoration: underline;
-            }
-        }
-    }
+nav {
     ul {
-        background: #2C65B5;
-        display: none;
-        left: 0;
+        list-style-type: none;
+        margin-top: 3px;
         padding-left: 0;
-        position: absolute;
-        top: 45px;
-        width: 250px;
-        z-index: 9999;
-        li {
-            float: left;
-            margin: 0;
-            padding: 0;
+        white-space: nowrap;
+        & li {
+            display: inline;
+            margin-left: 20px;
+            padding-bottom: 45px;
             position: relative;
-            text-align: left;
-            width: 100%;
-            a {
-                @include text-shadow(none);
-                border-bottom: 1px solid;
-                color: white;
-                display: block;
-                font-size: 13px;
-                padding: 10px;
-            }
-            &:first-child {
-                &:before {
-                    border-bottom: 15px solid #2C65B5;
-                    border-left: 15px solid rgba(0, 0, 0, 0);
-                    border-right: 15px solid rgba(0, 0, 0, 0);
-                    content: "";
-                    left: 20px;
-                    position: absolute;
-                    top: -15px;
+            &.current-menu-item {
+                & ul li a {
+                    text-decoration: none;
+                }
+                a {
+                    text-decoration: underline;
                 }
             }
-            &:last-child {
+        }
+        ul {
+            background: #2C65B5;
+            display: none;
+            left: 0;
+            padding-left: 0;
+            position: absolute;
+            top: 62px;
+            width: 250px;
+            z-index: 9999;
+            li {
+                float: left;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                text-align: left;
+                width: 100%;
                 a {
-                    border-bottom: none;
+                    @include text-shadow(none);
+                    border-bottom: 1px solid;
+                    color: white;
+                    display: block;
+                    font-size: 13px;
+                    padding: 10px;
+                }
+                &:first-child {
+                    &:before {
+                        border-bottom: 15px solid #2C65B5;
+                        border-left: 15px solid rgba(0, 0, 0, 0);
+                        border-right: 15px solid rgba(0, 0, 0, 0);
+                        content: "";
+                        left: 20px;
+                        position: absolute;
+                        top: -15px;
+                    }
+                }
+                &:last-child {
+                    a {
+                        border-bottom: none;
+                    }
                 }
             }
         }
