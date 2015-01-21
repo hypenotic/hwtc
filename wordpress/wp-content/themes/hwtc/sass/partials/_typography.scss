@@ -213,7 +213,7 @@ p, ul, ol {
     margin: 0 auto rhythm(1, 20px);
     @include at-breakpoint($desktop) {
         @include adjust-font-size-to(18px);
-        margin: 0 auto rhythm(1, 32px);
+        margin: 0 auto rhythm(1, 26px);
     }
 }
 strong {

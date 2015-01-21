@@ -49,7 +49,7 @@
         text-transform: uppercase;
         @include at-breakpoint($desktop) {
             font-size: 2em;
-            padding: 30px 0 30px;
+            padding: 25px 0 10px;
         }
         a {
             color: #2c65b5;
@@ -62,7 +62,7 @@
     h3 {
         font-weight: bold;
         @include at-breakpoint($desktop) {
-            font-size: 1.75em;
+            @include adjust-font-size-to(24px);
         }
     }
     h4 {
@@ -272,7 +272,7 @@
             @include adjust-font-size-to(22px);
             line-height: 1.5em;
             @include at-breakpoint($desktop) {
-                line-height: 1.8em;
+                line-height: 1.6em;
             }
         }
         .wp-caption-text {
