@@ -95,10 +95,10 @@
 			<?php } ?>
 			<div class="page-navigation">
 				<div class="alignleft">
-					<?php previous_post('%', '', 'yes'); ?>
+					<?php previous_post('%', '', 'yes','','','8'); ?>
 				</div>
 				<div class="alignright">
-					<?php next_post('%', '', 'yes'); ?>
+					<?php next_post('%', '', 'yes','','','8'); ?>
 				</div>
 			</div> <!-- end navigation -->	
 			<div class="span-8 center">
