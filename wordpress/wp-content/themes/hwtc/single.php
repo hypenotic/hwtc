@@ -8,8 +8,8 @@
 		$img= get_bloginfo('template_url').'/images/banner.jpg';
 	}
 ?>
-<div class="banner">
-		<img src="<?php echo $img;?>" />
+<div class="banner" style="background-color:#eff5ff;">
+		<?php /*<img src="<?php echo $img;?>" /> */?>
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big">
@@ -95,10 +95,10 @@
 			<?php } ?>
 			<div class="page-navigation">
 				<div class="alignleft">
-					<?php previous_post('%', '', 'yes'); ?>
+					<?php previous_post('%', '', 'yes','','','8'); ?>
 				</div>
 				<div class="alignright">
-					<?php next_post('%', '', 'yes'); ?>
+					<?php next_post('%', '', 'yes','','','8'); ?>
 				</div>
 			</div> <!-- end navigation -->	
 			<div class="span-8 center">
