@@ -8,8 +8,8 @@
 		$img= get_bloginfo('template_url').'/images/banner.jpg';
 	}
 ?>
-<div class="banner">
-		<img src="<?php echo $img;?>" />
+<div class="banner" style="background-color:#eff5ff;">
+		<?php /*<img src="<?php echo $img;?>" /> */?>
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big">
