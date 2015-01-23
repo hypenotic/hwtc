@@ -2,14 +2,15 @@
 
 <?php if(have_posts()):while(have_posts()):the_post(); 
 	$img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', false, ''); 
-	if($img_src!='') { 	
-		$img=$img_src[0];
-	}else {
-		$img= get_bloginfo('template_url').'/images/banner.jpg';
-	}
+	// if($img_src!='') { 	
+		// $img=$img_src[0];
+	// }else {
+		// $img= get_bloginfo('template_url').'/images/banner.jpg';
+	// }
+	$img="http://hospitalitytrainingcentre.com/wordpress/wp-content/uploads/2015/01/Training_030-e1421859852208.jpg";
 ?>
-<div class="banner" style="background-color:#eff5ff;">
-		<?php /*<img src="<?php echo $img;?>" /> */?>
+<div class="banner">
+		<img src="<?php echo $img;?>" />
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big">
