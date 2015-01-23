@@ -96,10 +96,10 @@
 			<?php } ?>
 			<div class="page-navigation">
 				<div class="alignleft">
-					<?php previous_post('<< %', '', 'yes','','','8'); ?>
+					<?php previous_post('&laquo; %', '', 'yes','','','8'); ?>
 				</div>
 				<div class="alignright">
-					<?php next_post('% >>', '', 'yes','','','8'); ?>
+					<?php next_post('% &raquo;', '', 'yes','','','8'); ?>
 				</div>
 			</div> <!-- end navigation -->	
 			<div class="span-8 center">
