@@ -73,9 +73,14 @@ footer {
         }
     }
     input[type="text"], textarea {
+
         @include border-radius(5px);
         border: 1px solid rgb(202, 203, 193);
         padding: 0.66em;
+        width: 100%;
+        @include at-breakpoint($desktop) {
+            width: 60%;
+        }
         background: {
             color: white;
             position: 95% -55px;

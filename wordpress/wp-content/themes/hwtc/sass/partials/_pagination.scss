@@ -106,21 +106,33 @@
 }
 
 .page-navigation {
-    @include adjust-font-size-to(24px);
+
+    @include adjust-font-size-to(20px);
     font-family: $nixie_oneregular;
     overflow: hidden;
     text-transform: uppercase;
+    @include at-breakpoint($desktop) {
+        @include adjust-font-size-to(24px);
+    }
     a {
         border-bottom: none;
         text-decoration: none;
     }
     .alignleft {
         float: left;
-        width: 40%;
+        width: 100%;
+        @include at-breakpoint($desktop) {
+            width: 40%;
+        }
     }
     .alignright {
-        float: right;
-        margin-left: 20%;
-        width: 40%;
+        float: left;
+        margin-left: 0%;
+        width: 100%;
+        @include at-breakpoint($desktop) {
+            float: right;
+            margin-left: 20%;
+            width: 40%;
+        }
     }
 }
