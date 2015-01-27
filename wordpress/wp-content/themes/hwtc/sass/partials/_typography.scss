@@ -218,6 +218,7 @@ p, ul, ol {
     }
 }
 strong {
+    font-family: $latobold;
     padding-bottom: 20px;
     @include at-breakpoint($desktop) {
         padding-bottom: 0px;
