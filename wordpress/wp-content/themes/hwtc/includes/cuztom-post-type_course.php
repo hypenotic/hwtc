@@ -38,13 +38,13 @@ $course->add_meta_box(
 		),
 		array(
 			'name'          => 'course_from',
-			'label'         => 'Course From',
+			'label'         => 'Course start date',
 			'description'   => '',
 			'type'          => 'date'
 		),
 		array(
 			'name'          => 'course_to',
-			'label'         => 'Course To',
+			'label'         => 'Course end date',
 			'description'   => '',
 			'type'          => 'date'
 		),
