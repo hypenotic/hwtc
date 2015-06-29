@@ -32,6 +32,19 @@ function remove_css_attributes_filter($var) {
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'banner', 1400, 800, true );
 
+//Add custom size to media library
+if ( function_exists( 'add_image_size' ) ) {
+add_image_size( 'new-size', 750, 500, true ); //(cropped)
+}
+add_filter('image_size_names_choose', 'my_image_sizes');
+function my_image_sizes($sizes) {
+$addsizes = array(
+"new-size" => __( "Post Size")
+);
+$newsizes = array_merge($sizes, $addsizes);
+return $newsizes;
+}
+
 //Add class to next and previous post_link
 function add_class_next_post_link($html){
     $html = str_replace('<a','<a class="older"',$html);
