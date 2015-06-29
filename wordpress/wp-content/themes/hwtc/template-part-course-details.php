@@ -11,6 +11,7 @@
 	$contact_to_register=get_post_meta(get_the_ID(),'_course_details_contact_to_register',true);
 	$class_details=get_post_meta(get_the_ID(),'class_details',true);
 	$message_before_classes = get_post_meta(get_the_ID(),'_course_details_message_before_classes',true);
+	$file= get_post_meta(get_the_ID(),'_course_details_file',true);
 ?>
 <div class="accordion-item">	
 	<div class="title">Course:</div> 
@@ -72,6 +73,14 @@
 		<div class="accordion-item">		
 			<div class="title">Note:</div> 
 			<div class="detail"><?php echo $message_before_classes; ?> </div>
+		</div>
+		<br>
+	<?php } ?>
+
+	<?php if($file !='') { ?>
+		<div class="accordion-item">		
+			<div class="title">Download:</div> 
+			<div class="detail">Please see the <a href="<?php echo $file; ?>">downloadable PDF</a> for information about this course </div>
 		</div>
 		<br>
 	<?php } ?>

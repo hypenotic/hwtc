@@ -83,6 +83,12 @@ $course->add_meta_box(
 			'label'         => 'Message before classes',
 			'description'   => '',
 			'type'          => 'textarea'
+		),
+		array(
+			'name'          => 'file',
+			'label'         => 'Add file',
+			'description'   => '',
+			'type'          => 'file'
 		)
     )
 );
