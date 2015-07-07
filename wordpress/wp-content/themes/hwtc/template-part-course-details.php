@@ -37,7 +37,7 @@
 	<?php } ?>
 	<?php if($course_from !='' || $course_to!='') { ?>
 		<div class="accordion-item">		
-			<div class="title">Course upto:</div> 
+			<div class="title">Start Date:</div>
 			<div class="detail">
 				<p><?php echo date('F d', $course_from); if($course_to!='') { echo ' - '.date('F d', $course_to);} ?> </p>
 			</div>
