@@ -19,7 +19,7 @@ $img= get_bloginfo('template_url').'/images/banner.jpg';
 		
 			<h5 class="title">Categories</h5>
 			<?php 
-				$categories=get_categories(array('hide_empty' => 0,'exclude'=>array(1,3)));
+				$categories=get_categories(array('hide_empty' => 0,'exclude'=>array(1,3,75)));
 				if($categories) {
 						foreach($categories as $category) {
 			?>

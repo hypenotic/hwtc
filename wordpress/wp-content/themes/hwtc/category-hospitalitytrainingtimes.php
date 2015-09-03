@@ -15,6 +15,7 @@ $img= get_bloginfo('template_url').'/images/banner.jpg';
 </div>
 <div class="full-width content">
 	<div class="container">
+	<!--
 		<div class="filters text-center">
 		
 			<h5 class="title">Categories</h5>
@@ -30,6 +31,7 @@ $img= get_bloginfo('template_url').'/images/banner.jpg';
 			?>
 			<a href="<?php bloginfo('url');?>/blog" class="all" data-filter="*"><span class="blog-icon"></span> All</a>
 		</div>
+		-->
 		<?php 
 		if(have_posts()):
 			echo "<ul class='blog-lists'>";
