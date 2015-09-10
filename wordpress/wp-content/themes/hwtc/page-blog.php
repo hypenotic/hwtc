@@ -42,7 +42,7 @@
         <?php 
 		global $wp_query;	
 		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-		$wp_query=new WP_Query(array('cat'=>'-3','post_type'=>'post','paged'=>$paged));
+		$wp_query=new WP_Query(array('cat'=>'-3,-75','post_type'=>'post','paged'=>$paged));
 		if($wp_query->have_posts()):
 		echo "<ul class='blog-lists'>";
 		while($wp_query->have_posts()):$wp_query->the_post();

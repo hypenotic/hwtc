@@ -31,6 +31,8 @@ $img= get_bloginfo('template_url').'/images/banner.jpg';
 			<a href="<?php bloginfo('url');?>/blog" class="all" data-filter="*"><span class="blog-icon"></span> All</a>
 		</div>
 		<?php 
+			query_posts('cat=-75');
+
 		if(have_posts()):
 			echo "<ul class='blog-lists'>";
 			while(have_posts()):the_post();
