@@ -2,12 +2,12 @@
 
 <?php if(have_posts()):while(have_posts()):the_post(); 
 	$img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', false, ''); 
-	// if($img_src!='') { 	
-		// $img=$img_src[0];
-	// }else {
-		// $img= get_bloginfo('template_url').'/images/banner.jpg';
-	// }
-	$img="http://hospitalitytrainingcentre.com/wordpress/wp-content/uploads/2015/01/Training_030-e1421859852208.jpg";
+	 if($img_src!='') { 	
+		$img=$img_src[0];
+	}else {
+		$img= "http://hospitalitytrainingcentre.com/wordpress/wp-content/uploads/2015/01/Training_030-e1421859852208.jpg";
+	}
+	//$img="http://hospitalitytrainingcentre.com/wordpress/wp-content/uploads/2015/01/Training_030-e1421859852208.jpg";
 ?>
 <div class="banner">
 		<img src="<?php echo $img;?>" />
@@ -16,7 +16,9 @@
                 <div class="banner-title-big">
 					<?php if($post->post_type =='course'){ ?>
 						<?php the_title();?>
-					<?php } else { ?>	
+					<?php } elseif ( in_category( 'hospitalitytrainingtimes' )) { ?>	
+					Worker Newsletter
+					<?php } else { ?>
 						News
 					<?php } ?>	
 				
@@ -31,6 +33,9 @@
 </div>
 <div class="full-width">
 	<div class="container content">
+	<?php if ( in_category( 'hospitalitytrainingtimes' ) ) { 
+
+		} else { ?>
 		<div class="filters text-center">
 			<h5 class="title">Categories</h5>
 			<?php 
@@ -48,9 +53,11 @@
 			<?php 
 						}
 				}
+
 			?>
 			<a href="<?php bloginfo('url');?>/blog" class="all" data-filter="*"><span class="blog-icon"></span> All</a>
 		</div>
+		<?php } ?>
 		<div class="columns-1">
 			<h1 class="title"><?php the_title();?></h1>
 			<div class="social-share">
