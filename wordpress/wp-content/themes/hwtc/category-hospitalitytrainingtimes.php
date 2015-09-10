@@ -3,7 +3,7 @@ $current_category = $wp_query->get_queried_object();
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
 ?>
 <?php 
-$img= get_bloginfo('template_url').'/images/banner.jpg';
+$img= get_bloginfo('template_url').'/images/banner-newsletter.jpg';
 ?>
 <div class="banner">
 		<img src="<?php echo $img;?>" />
@@ -15,23 +15,6 @@ $img= get_bloginfo('template_url').'/images/banner.jpg';
 </div>
 <div class="full-width content">
 	<div class="container">
-	<!--
-		<div class="filters text-center">
-		
-			<h5 class="title">Categories</h5>
-			<?php 
-				$categories=get_categories(array('hide_empty' => 0,'exclude'=>array(1,3)));
-				if($categories) {
-						foreach($categories as $category) {
-			?>
-			<a href="<?php echo get_category_link($category->term_id);?>" class="<?php echo $category->slug;?> <?php echo $category->slug;?> <?php if($current_category->term_id == $category->term_id) { echo "is-checked";}?>"><span class="blog-icon"></span><?php echo $category->name;?></a>
-			<?php 
-						}
-				}
-			?>
-			<a href="<?php bloginfo('url');?>/blog" class="all" data-filter="*"><span class="blog-icon"></span> All</a>
-		</div>
-		-->
 		<?php 
 		if(have_posts()):
 			echo "<ul class='blog-lists'>";
