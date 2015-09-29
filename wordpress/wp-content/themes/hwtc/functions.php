@@ -140,6 +140,16 @@ function prfx_meta_callback( $post ) {
  
     <?php
 }
+// Exclude category from feed.
+function myFeedExcluder($query) {
+ if ($query->is_feed) {
+   $query->set('cat','-75');
+ }
+return $query;
+}
+ 
+add_filter('pre_get_posts','myFeedExcluder');
+
 
 /**
  * Saves the custom Second Title
