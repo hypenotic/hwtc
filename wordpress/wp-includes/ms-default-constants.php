@@ -14,6 +14,8 @@
  * wp-includes/ms-files.php (wp-content/blogs.php in MU).
  *
  * @since 3.0.0
+ *
+ * @global wpdb $wpdb
  */
 function ms_upload_constants() {
 	global $wpdb;
@@ -21,7 +23,7 @@ function ms_upload_constants() {
 	// This filter is attached in ms-default-filters.php but that file is not included during SHORTINIT.
 	add_filter( 'default_site_option_ms_files_rewriting', '__return_true' );
 
-	if ( ! get_site_option( 'ms_files_rewriting' ) )
+	if ( ! get_network_option( 'ms_files_rewriting' ) )
 		return;
 
 	// Base uploads dir relative to ABSPATH
@@ -114,6 +116,9 @@ function ms_file_constants() {
  * we will have translations loaded and can trigger warnings easily.
  *
  * @since 3.0.0
+ *
+ * @staticvar bool $subdomain_error
+ * @staticvar bool $subdomain_error_warn
  */
 function ms_subdomain_constants() {
 	static $subdomain_error = null;
@@ -150,4 +155,3 @@ function ms_subdomain_constants() {
 		define( 'VHOST', 'no' );
 	}
 }
-add_action( 'init', 'ms_subdomain_constants' );

@@ -16,7 +16,7 @@
  * @param int|stdClass $bookmark
  * @param string $output Optional. Either OBJECT, ARRAY_N, or ARRAY_A constant
  * @param string $filter Optional, default is 'raw'.
- * @return array|object Type returned depends on $output value.
+ * @return array|object|null Type returned depends on $output value.
  */
 function get_bookmark($bookmark, $output = OBJECT, $filter = 'raw') {
 	global $wpdb;
@@ -65,7 +65,7 @@ function get_bookmark($bookmark, $output = OBJECT, $filter = 'raw') {
  * @param string $field The name of the data field to return
  * @param int $bookmark The bookmark ID to get field
  * @param string $context Optional. The context of how the field will be used.
- * @return string
+ * @return string|WP_Error
  */
 function get_bookmark_field( $field, $bookmark, $context = 'display' ) {
 	$bookmark = (int) $bookmark;
@@ -378,7 +378,7 @@ function sanitize_bookmark_field($field, $value, $bookmark_id, $context) {
 		return $value;
 
 	if ( 'edit' == $context ) {
-		/** This filter is documented in wp-includes/post.php */
+		/** This filter is documented in wp-includes/post-functions.php */
 		$value = apply_filters( "edit_$field", $value, $bookmark_id );
 
 		if ( 'link_notes' == $field ) {
@@ -386,17 +386,18 @@ function sanitize_bookmark_field($field, $value, $bookmark_id, $context) {
 		} else {
 			$value = esc_attr($value);
 		}
-	} else if ( 'db' == $context ) {
-		/** This filter is documented in wp-includes/post.php */
+	} elseif ( 'db' == $context ) {
+		/** This filter is documented in wp-includes/post-functions.php */
 		$value = apply_filters( "pre_$field", $value );
 	} else {
-		/** This filter is documented in wp-includes/post.php */
+		/** This filter is documented in wp-includes/post-functions.php */
 		$value = apply_filters( $field, $value, $bookmark_id, $context );
 
-		if ( 'attribute' == $context )
-			$value = esc_attr($value);
-		else if ( 'js' == $context )
-			$value = esc_js($value);
+		if ( 'attribute' == $context ) {
+			$value = esc_attr( $value );
+		} elseif ( 'js' == $context ) {
+			$value = esc_js( $value );
+		}
 	}
 
 	return $value;

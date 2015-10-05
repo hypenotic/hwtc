@@ -38,6 +38,8 @@ function got_mod_rewrite() {
  *
  * @since 3.7.0
  *
+ * @global bool $is_nginx
+ *
  * @return bool Whether the server supports URL rewriting.
  */
 function got_url_rewrite() {
@@ -54,7 +56,7 @@ function got_url_rewrite() {
 }
 
 /**
- * {@internal Missing Short Description}}
+ * Extracts strings from between the BEGIN and END markers in the .htaccess file.
  *
  * @since 1.5.0
  *
@@ -86,10 +88,10 @@ function extract_from_markers( $filename, $marker ) {
 }
 
 /**
- * {@internal Missing Short Description}}
- *
  * Inserts an array of strings into a file (.htaccess ), placing it between
- * BEGIN and END markers. Replaces existing marked info. Retains surrounding
+ * BEGIN and END markers.
+ *
+ * Replaces existing marked info. Retains surrounding
  * data. Creates file if none exists.
  *
  * @since 1.5.0
@@ -100,50 +102,68 @@ function extract_from_markers( $filename, $marker ) {
  * @return bool True on write success, false on failure.
  */
 function insert_with_markers( $filename, $marker, $insertion ) {
-	if (!file_exists( $filename ) || is_writeable( $filename ) ) {
-		if (!file_exists( $filename ) ) {
-			$markerdata = '';
-		} else {
-			$markerdata = explode( "\n", implode( '', file( $filename ) ) );
-		}
-
-		if ( !$f = @fopen( $filename, 'w' ) )
-			return false;
-
-		$foundit = false;
-		if ( $markerdata ) {
-			$state = true;
-			foreach ( $markerdata as $n => $markerline ) {
-				if (strpos($markerline, '# BEGIN ' . $marker) !== false)
-					$state = false;
-				if ( $state ) {
-					if ( $n + 1 < count( $markerdata ) )
-						fwrite( $f, "{$markerline}\n" );
-					else
-						fwrite( $f, "{$markerline}" );
-				}
-				if (strpos($markerline, '# END ' . $marker) !== false) {
-					fwrite( $f, "# BEGIN {$marker}\n" );
-					if ( is_array( $insertion ))
-						foreach ( $insertion as $insertline )
-							fwrite( $f, "{$insertline}\n" );
-					fwrite( $f, "# END {$marker}\n" );
-					$state = true;
-					$foundit = true;
-				}
-			}
-		}
-		if (!$foundit) {
-			fwrite( $f, "\n# BEGIN {$marker}\n" );
-			foreach ( $insertion as $insertline )
-				fwrite( $f, "{$insertline}\n" );
-			fwrite( $f, "# END {$marker}\n" );
-		}
-		fclose( $f );
-		return true;
-	} else {
+	if ( ! is_writeable( $filename ) ) {
 		return false;
 	}
+
+	if ( ! is_array( $insertion ) ) {
+		$insertion = array( $insertion );
+	}
+
+	$start_marker = "# BEGIN {$marker}";
+	$end_marker   = "# END {$marker}";
+
+	$fp = fopen( $filename, 'r+' );
+	if ( ! $fp ) {
+		return false;
+	}
+
+	// Attempt to get a lock. If the filesystem supports locking, this will block until the lock is acquired.
+	flock( $fp, LOCK_EX );
+
+	$lines = array();
+	while ( ! feof( $fp ) ) {
+		$lines[] = rtrim( fgets( $fp ), "\r\n" );
+	}
+
+	// Split out the existing file into the preceeding lines, and those that appear after the marker
+	$pre_lines = $post_lines = array();
+	$found_marker = $found_end_marker = false;
+	foreach ( $lines as $line ) {
+		if ( ! $found_marker && false !== strpos( $line, $start_marker ) ) {
+			$found_marker = true;
+			continue;
+		} elseif ( ! $found_end_marker && false !== strpos( $line, $end_marker ) ) {
+			$found_end_marker = true;
+			continue;
+		}
+		if ( ! $found_marker ) {
+			$pre_lines[] = $line;
+		} elseif ( $found_marker && $found_end_marker ) {
+			$post_lines[] = $line;
+		}
+	}
+
+	// Generate the new file data
+	$new_file_data = implode( "\n", array_merge(
+		$pre_lines,
+		array( $start_marker ),
+		$insertion,
+		array( $end_marker ),
+		$post_lines
+	) );
+
+	// Write to the start of the file, and truncate it to that length
+	fseek( $fp, 0 );
+	$bytes = fwrite( $fp, $new_file_data );
+	if ( $bytes ) {
+		ftruncate( $fp, $bytes );
+	}
+
+	flock( $fp, LOCK_UN );
+	fclose( $fp );
+
+	return (bool) $bytes;
 }
 
 /**
@@ -153,6 +173,8 @@ function insert_with_markers( $filename, $marker, $insertion ) {
  * blank out old rules.
  *
  * @since 1.5.0
+ *
+ * @global WP_Rewrite $wp_rewrite
  */
 function save_mod_rewrite_rules() {
 	if ( is_multisite() )
@@ -183,6 +205,8 @@ function save_mod_rewrite_rules() {
  *
  * @since 2.8.0
  *
+ * @global WP_Rewrite $wp_rewrite
+ *
  * @return bool True if web.config was updated successfully
  */
 function iis7_save_url_rewrite_rules(){
@@ -207,7 +231,7 @@ function iis7_save_url_rewrite_rules(){
 }
 
 /**
- * {@internal Missing Short Description}}
+ * Update the "recently-edited" file for the plugin or theme editor.
  *
  * @since 1.5.0
  *
@@ -229,7 +253,7 @@ function update_recently_edited( $file ) {
 }
 
 /**
- * If siteurl, home or page_on_front changed, flush rewrite rules.
+ * Flushes rewrite rules if siteurl, home or page_on_front changed.
  *
  * @since 2.1.0
  *
@@ -240,13 +264,12 @@ function update_home_siteurl( $old_value, $value ) {
 	if ( defined( "WP_INSTALLING" ) )
 		return;
 
-	// If home changed, write rewrite rules to new location.
-	flush_rewrite_rules();
+	if ( is_multisite() && ms_is_switched() ) {
+		delete_option( 'rewrite_rules' );
+	} else {
+		flush_rewrite_rules();
+	}
 }
-
-add_action( 'update_option_home', 'update_home_siteurl', 10, 2 );
-add_action( 'update_option_siteurl', 'update_home_siteurl', 10, 2 );
-add_action( 'update_option_page_on_front', 'update_home_siteurl', 10, 2 );
 
 /**
  * Shorten an URL, to be used as link text
@@ -290,7 +313,7 @@ function wp_reset_vars( $vars ) {
 }
 
 /**
- * {@internal Missing Short Description}}
+ * Displays the given administration message.
  *
  * @since 2.1.0
  *
@@ -308,6 +331,12 @@ function show_message($message) {
 	flush();
 }
 
+/**
+ * @since 2.8.0
+ *
+ * @param string $content
+ * @return array
+ */
 function wp_doc_link_parse( $content ) {
 	if ( !is_string( $content ) || empty( $content ) )
 		return array();
@@ -446,8 +475,9 @@ function set_screen_options() {
 function iis7_rewrite_rule_exists($filename) {
 	if ( ! file_exists($filename) )
 		return false;
-	if ( ! class_exists('DOMDocument') )
+	if ( ! class_exists( 'DOMDocument', false ) ) {
 		return false;
+	}
 
 	$doc = new DOMDocument();
 	if ( $doc->load($filename) === false )
@@ -473,8 +503,9 @@ function iis7_delete_rewrite_rule($filename) {
 	if ( ! file_exists($filename) )
 		return true;
 
-	if ( ! class_exists('DOMDocument') )
+	if ( ! class_exists( 'DOMDocument', false ) ) {
 		return false;
+	}
 
 	$doc = new DOMDocument();
 	$doc->preserveWhiteSpace = false;
@@ -503,8 +534,9 @@ function iis7_delete_rewrite_rule($filename) {
  * @return bool
  */
 function iis7_add_rewrite_rule($filename, $rewrite_rule) {
-	if ( ! class_exists('DOMDocument') )
+	if ( ! class_exists( 'DOMDocument', false ) ) {
 		return false;
+	}
 
 	// If configuration file does not exist then we create one.
 	if ( ! file_exists($filename) ) {
@@ -593,6 +625,8 @@ function saveDomDocument($doc, $filename) {
  * Display the default admin color scheme picker (Used in user-edit.php)
  *
  * @since 3.0.0
+ *
+ * @global array $_wp_admin_css_colors
  */
 function admin_color_scheme_picker( $user_id ) {
 	global $_wp_admin_css_colors;
@@ -646,6 +680,10 @@ function admin_color_scheme_picker( $user_id ) {
 	<?php
 }
 
+/**
+ *
+ * @global array $_wp_admin_css_colors
+ */
 function wp_color_scheme_settings() {
 	global $_wp_admin_css_colors;
 
@@ -662,13 +700,15 @@ function wp_color_scheme_settings() {
 		$icon_colors = $_wp_admin_css_colors['fresh']->icon_colors;
 	} else {
 		// Fall back to the default set of icon colors if the default scheme is missing.
-		$icon_colors = array( 'base' => '#999', 'focus' => '#2ea2cc', 'current' => '#fff' );
+		$icon_colors = array( 'base' => '#999', 'focus' => '#00a0d2', 'current' => '#fff' );
 	}
 
 	echo '<script type="text/javascript">var _wpColorScheme = ' . wp_json_encode( array( 'icons' => $icon_colors ) ) . ";</script>\n";
 }
-add_action( 'admin_head', 'wp_color_scheme_settings' );
 
+/**
+ * @since 3.3.0
+ */
 function _ipad_meta() {
 	if ( wp_is_mobile() ) {
 		?>
@@ -676,7 +716,6 @@ function _ipad_meta() {
 		<?php
 	}
 }
-add_action('admin_head', '_ipad_meta');
 
 /**
  * Check lock status for posts displayed on the Posts screen
@@ -707,7 +746,6 @@ function wp_check_locked_posts( $response, $data, $screen_id ) {
 
 	return $response;
 }
-add_filter( 'heartbeat_received', 'wp_check_locked_posts', 10, 3 );
 
 /**
  * Check lock status on the New/Edit Post screen and refresh the lock
@@ -746,7 +784,6 @@ function wp_refresh_post_lock( $response, $data, $screen_id ) {
 
 	return $response;
 }
-add_filter( 'heartbeat_received', 'wp_refresh_post_lock', 10, 3 );
 
 /**
  * Check nonce expiration on the New/Edit Post screen and refresh if needed
@@ -758,34 +795,35 @@ function wp_refresh_post_nonces( $response, $data, $screen_id ) {
 		$received = $data['wp-refresh-post-nonces'];
 		$response['wp-refresh-post-nonces'] = array( 'check' => 1 );
 
-		if ( ! $post_id = absint( $received['post_id'] ) )
+		if ( ! $post_id = absint( $received['post_id'] ) ) {
 			return $response;
-
-		if ( ! current_user_can( 'edit_post', $post_id ) || empty( $received['post_nonce'] ) )
-			return $response;
-
-		if ( 2 === wp_verify_nonce( $received['post_nonce'], 'update-post_' . $post_id ) ) {
-			$response['wp-refresh-post-nonces'] = array(
-				'replace' => array(
-					'getpermalinknonce' => wp_create_nonce('getpermalink'),
-					'samplepermalinknonce' => wp_create_nonce('samplepermalink'),
-					'closedpostboxesnonce' => wp_create_nonce('closedpostboxes'),
-					'_ajax_linking_nonce' => wp_create_nonce( 'internal-linking' ),
-					'_wpnonce' => wp_create_nonce( 'update-post_' . $post_id ),
-				),
-				'heartbeatNonce' => wp_create_nonce( 'heartbeat-nonce' ),
-			);
 		}
+
+		if ( ! current_user_can( 'edit_post', $post_id ) ) {
+			return $response;
+		}
+
+		$response['wp-refresh-post-nonces'] = array(
+			'replace' => array(
+				'getpermalinknonce' => wp_create_nonce('getpermalink'),
+				'samplepermalinknonce' => wp_create_nonce('samplepermalink'),
+				'closedpostboxesnonce' => wp_create_nonce('closedpostboxes'),
+				'_ajax_linking_nonce' => wp_create_nonce( 'internal-linking' ),
+				'_wpnonce' => wp_create_nonce( 'update-post_' . $post_id ),
+			),
+			'heartbeatNonce' => wp_create_nonce( 'heartbeat-nonce' ),
+		);
 	}
 
 	return $response;
 }
-add_filter( 'heartbeat_received', 'wp_refresh_post_nonces', 10, 3 );
 
 /**
  * Disable suspension of Heartbeat on the Add/Edit Post screens.
  *
  * @since 3.8.0
+ *
+ * @global string $pagenow
  *
  * @param array $settings An array of Heartbeat settings.
  * @return array Filtered Heartbeat settings.
@@ -799,7 +837,6 @@ function wp_heartbeat_set_suspension( $settings ) {
 
 	return $settings;
 }
-add_filter( 'heartbeat_settings', 'wp_heartbeat_set_suspension' );
 
 /**
  * Autosave with heartbeat
@@ -824,8 +861,6 @@ function heartbeat_autosave( $response, $data ) {
 
 	return $response;
 }
-// Run later as we have to set DOING_AUTOSAVE for back-compat
-add_filter( 'heartbeat_received', 'heartbeat_autosave', 500, 2 );
 
 /**
  * Disables autocomplete on the 'post' form (Add/Edit Post screens) for WebKit browsers,
@@ -833,6 +868,9 @@ add_filter( 'heartbeat_received', 'heartbeat_autosave', 500, 2 );
  * when the user navigates to it with the browser's Back button. See #28037
  *
  * @since 4.0
+ *
+ * @global bool $is_safari
+ * @global bool $is_chrome
  */
 function post_form_autocomplete_off() {
 	global $is_safari, $is_chrome;
@@ -842,4 +880,30 @@ function post_form_autocomplete_off() {
 	}
 }
 
-add_action( 'post_edit_form_tag', 'post_form_autocomplete_off' );
+/**
+ * Remove single-use URL parameters and create canonical link based on new URL.
+ *
+ * Remove specific query string parameters from a URL, create the canonical link,
+ * put it in the admin header, and change the current URL to match.
+ *
+ * @since 4.2.0
+ */
+function wp_admin_canonical_url() {
+	$removable_query_args = wp_removable_query_args();
+
+	if ( empty( $removable_query_args ) ) {
+		return;
+	}
+
+	// Ensure we're using an absolute URL.
+	$current_url  = set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+	$filtered_url = remove_query_arg( $removable_query_args, $current_url );
+	?>
+	<link id="wp-admin-canonical" rel="canonical" href="<?php echo esc_url( $filtered_url ); ?>" />
+	<script>
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, document.getElementById( 'wp-admin-canonical' ).href + window.location.hash );
+		}
+	</script>
+<?php
+}

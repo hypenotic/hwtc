@@ -2,6 +2,8 @@
 .DS_Store
 .sass-cache/
 
+wordpress/
+wordpress/*
 wp-config.php
 uploads/
 blogs.dir/

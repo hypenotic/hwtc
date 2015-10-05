@@ -24,7 +24,6 @@ $title = __('Export');
 function export_add_js() {
 ?>
 <script type="text/javascript">
-//<![CDATA[
 	jQuery(document).ready(function($){
  		var form = $('#export-filters'),
  			filters = form.find('.export-filters');
@@ -32,12 +31,12 @@ function export_add_js() {
  		form.find('input:radio').change(function() {
 			filters.slideUp('fast');
 			switch ( $(this).val() ) {
+				case 'attachment': $('#attachment-filters').slideDown(); break;
 				case 'posts': $('#post-filters').slideDown(); break;
 				case 'pages': $('#page-filters').slideDown(); break;
 			}
  		});
 	});
-//]]>
 </script>
 <?php
 }
@@ -52,7 +51,7 @@ get_current_screen()->add_help_tab( array(
 
 get_current_screen()->set_help_sidebar(
 	'<p><strong>' . __('For more information:') . '</strong></p>' .
-	'<p>' . __('<a href="http://codex.wordpress.org/Tools_Export_Screen" target="_blank">Documentation on Export</a>') . '</p>' .
+	'<p>' . __('<a href="https://codex.wordpress.org/Tools_Export_Screen" target="_blank">Documentation on Export</a>') . '</p>' .
 	'<p>' . __('<a href="https://wordpress.org/support/" target="_blank">Support Forums</a>') . '</p>'
 );
 
@@ -62,7 +61,7 @@ if ( isset( $_GET['download'] ) ) {
 
 	if ( ! isset( $_GET['content'] ) || 'all' == $_GET['content'] ) {
 		$args['content'] = 'all';
-	} else if ( 'posts' == $_GET['content'] ) {
+	} elseif ( 'posts' == $_GET['content'] ) {
 		$args['content'] = 'post';
 
 		if ( $_GET['cat'] )
@@ -78,7 +77,7 @@ if ( isset( $_GET['download'] ) ) {
 
 		if ( $_GET['post_status'] )
 			$args['status'] = $_GET['post_status'];
-	} else if ( 'pages' == $_GET['content'] ) {
+	} elseif ( 'pages' == $_GET['content'] ) {
 		$args['content'] = 'page';
 
 		if ( $_GET['page_author'] )
@@ -91,7 +90,15 @@ if ( isset( $_GET['download'] ) ) {
 
 		if ( $_GET['page_status'] )
 			$args['status'] = $_GET['page_status'];
-	} else {
+	} elseif ( 'attachment' == $_GET['content'] ) {
+		$args['content'] = 'attachment';
+		
+		if ( $_GET['attachment_start_date'] || $_GET['attachment_end_date'] ) {
+			$args['start_date'] = $_GET['attachment_start_date'];
+			$args['end_date'] = $_GET['attachment_end_date'];
+		}
+	} 
+	else {
 		$args['content'] = $_GET['content'];
 	}
 
@@ -145,17 +152,17 @@ function export_date_options( $post_type = 'post' ) {
 ?>
 
 <div class="wrap">
-<h2><?php echo esc_html( $title ); ?></h2>
+<h1><?php echo esc_html( $title ); ?></h1>
 
 <p><?php _e('When you click the button below WordPress will create an XML file for you to save to your computer.'); ?></p>
 <p><?php _e('This format, which we call WordPress eXtended RSS or WXR, will contain your posts, pages, comments, custom fields, categories, and tags.'); ?></p>
 <p><?php _e('Once you&#8217;ve saved the download file, you can use the Import function in another WordPress installation to import the content from this site.'); ?></p>
 
-<h3><?php _e( 'Choose what to export' ); ?></h3>
-<form action="" method="get" id="export-filters">
+<h2><?php _e( 'Choose what to export' ); ?></h2>
+<form method="get" id="export-filters">
 <input type="hidden" name="download" value="true" />
 <p><label><input type="radio" name="content" value="all" checked="checked" /> <?php _e( 'All content' ); ?></label></p>
-<p class="description"><?php _e( 'This will contain all of your posts, pages, comments, custom fields, terms, navigation menus and custom posts.' ); ?></p>
+<p class="description"><?php _e( 'This will contain all of your posts, pages, comments, custom fields, terms, navigation menus, and custom posts.' ); ?></p>
 
 <p><label><input type="radio" name="content" value="posts" /> <?php _e( 'Posts' ); ?></label></p>
 <ul id="post-filters" class="export-filters">
@@ -227,7 +234,20 @@ function export_date_options( $post_type = 'post' ) {
 <?php foreach ( get_post_types( array( '_builtin' => false, 'can_export' => true ), 'objects' ) as $post_type ) : ?>
 <p><label><input type="radio" name="content" value="<?php echo esc_attr( $post_type->name ); ?>" /> <?php echo esc_html( $post_type->label ); ?></label></p>
 <?php endforeach; ?>
-
+<p><label><input type="radio" name="content" value="attachment" /> <?php _e( 'Media' ); ?></label></p>
+<ul id="attachment-filters" class="export-filters">
+	<li>
+		<label><?php _e( 'Date range:' ); ?></label>
+		<select name="attachment_start_date">
+			<option value="0"><?php _e( 'Start Date' ); ?></option>
+			<?php export_date_options( 'attachment' ); ?>
+		</select>
+		<select name="attachment_end_date">
+			<option value="0"><?php _e( 'End Date' ); ?></option>
+			<?php export_date_options( 'attachment' ); ?>
+		</select>
+	</li>
+</ul>
 <?php
 /**
  * Fires after the export filters form.
