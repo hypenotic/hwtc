@@ -46,8 +46,7 @@ if(!class_exists("Pdr_Bootstrap")){
 			define('PDR_APPLICATION_ENV', getenv('APPLICATION_ENV'));
 			define('PDR_ENV', strpos($_SERVER['HTTP_HOST'], '.tumblen') !== false ? 'development' : 'production');
 
-			define('PDR_URL', home_url() . '/custom/plugins/' . PDR_FOLDER);
-			//CHANGED FROM SITE_URL() - HYPENOTIC
+			define('PDR_URL', site_url() . '/wp-content/plugins/' . PDR_FOLDER);
 
 			// APP(lication) is a directory because we only ever want to include from here
 			define('PDR_APP', WP_PLUGIN_DIR . '/' . PDR_FOLDER . '/application');
@@ -248,13 +247,12 @@ if(!class_exists("Pdr_Bootstrap")){
 
 		/**
 		 * Add PhotoDropper mediabutton 
-		 * CHANGE ON LINE 257 - HYPENOTIC
 		 */
 		public function mediabutton()
 		{
 			$link_markup = '
 				<a href="#" title="Find the Right Photo with PhotoDropper" class="pdrp_open" title="Drop in a Flickr Image">
-					<img src="'.get_option('homeurl').'/custom/plugins/' . PDR_FOLDER . '/interface/images/photodropper_icon16.png" alt="Drop in a Flickr Image" />
+					<img src="'.get_option('siteurl').'/wp-content/plugins/' . PDR_FOLDER . '/interface/images/photodropper_icon16.png" alt="Drop in a Flickr Image" />
 				</a>
 			';
 			echo $link_markup;
