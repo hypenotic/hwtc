@@ -18,3 +18,6 @@ backups/
 sitemap.xml.gz
 node_modules/
 node_modules/*
+
+report2015/
+report2015/*
