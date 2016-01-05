@@ -1,71 +1,226 @@
 <?php
 
-function mc4wp_get_options($key = null) {
-	static $options;
+/**
+ * Get a service by its name
+ *
+ * _Example:_
+ *
+ * $forms = mc4wp('forms');
+ * $api = mc4wp('api');
+ *
+ * When no service parameter is given, the entire container will be returned.
+ *
+ * @param string $service (optional)
+ * @throws Exception when service is not found
+ * @return object
+ */
+function mc4wp( $service = null ) {
+	static $mc4wp;
 
-	if(!$options) {
-		$defaults = array(
-			'general' => array(
-				'api_key' => ''
-			),
-			'checkbox' => array(
-				'label' => 'Sign me up for the newsletter!',
-				'precheck' => 1,
-				'css' => 1,
-				'show_at_comment_form' => 0,
-				'show_at_registration_form' => 0,
-				'show_at_multisite_form' => 0,
-				'show_at_buddypress_form' => 0,
-				'show_at_bbpress_forms' => 0,
-				'lists' => array(),
-				'double_optin' => 1
-			),
-			'form' => array(
-				'css' => 'default',
-				'markup' => "<p>\n\t<label for=\"mc4wp_email\">Email address: </label>\n\t<input type=\"email\" id=\"mc4wp_email\" name=\"EMAIL\" required placeholder=\"Your email address\" />\n</p>\n\n<p>\n\t<input type=\"submit\" value=\"Sign up\" />\n</p>",
-				'text_success' => 'Thank you, your sign-up request was successful! Please check your e-mail inbox.',
-				'text_error' => 'Oops. Something went wrong. Please try again later.',
-				'text_invalid_email' => 'Please provide a valid email address.',
-				'text_already_subscribed' => "Given email address is already subscribed, thank you!",
-				'redirect' => '',
-				'lists' => array(),
-				'double_optin' => 1,
-				'hide_after_success' => 0
-			)
-		);
-
-		$db_keys_option_keys = array(
-			'mc4wp_lite' => 'general',
-			'mc4wp_lite_checkbox' => 'checkbox',
-			'mc4wp_lite_form' => 'form'
-		);
-
-		$options = array();
-		foreach ( $db_keys_option_keys as $db_key => $option_key ) {
-			$option = get_option( $db_key );
-
-			// add option to database to prevent query on every pageload
-			if ( $option == false ) { add_option( $db_key, $defaults[$option_key] ); }
-
-			$options[$option_key] = array_merge( $defaults[$option_key], (array) $option );
-		}
+	if( ! $mc4wp ) {
+		$mc4wp = new MC4WP_Container();
 	}
 
-	if($key) {
-		return $options[$key];
+	if( $service ) {
+		return $mc4wp->get( $service );
+	}
+
+	return $mc4wp;
+}
+
+/**
+ * Gets the MailChimp for WP options from the database
+ * Uses default values to prevent undefined index notices.
+ *
+ * @since 1.0
+ * @access public
+ * @staticvar array $options
+ * @return array
+ */
+function mc4wp_get_options() {
+	static $options;
+
+	if( ! $options ) {
+		$defaults = require MC4WP_PLUGIN_DIR . 'config/default-settings.php';
+		$options = (array) get_option( 'mc4wp', array() );
+		$options = array_merge( $defaults, $options );
 	}
 
 	return $options;
 }
 
-function mc4wp_get_api() {
-	static $api;
 
-	if(!$api) {
-		require_once MC4WP_LITE_PLUGIN_DIR . 'includes/class-api.php';
-		$opts = mc4wp_get_options();
-		$api = new MC4WP_Lite_API( $opts['general']['api_key'] );
+/**
+ * Gets the MailChimp for WP API class and injects it with the API key
+ *
+ * @staticvar $instance
+ *
+ * @since 1.0
+ * @access public
+ *
+ * @return MC4WP_API
+ */
+function mc4wp_get_api() {
+	$opts = mc4wp_get_options();
+	$instance = new MC4WP_API( $opts['api_key'] );
+	return $instance;
+}
+
+/**
+ * Retrieves the URL of the current WordPress page
+ *
+ * @access public
+ * @since 2.0
+ *
+ * @return  string  The current URL (escaped)
+ */
+function mc4wp_get_current_url() {
+
+	global $wp;
+
+	// get requested url from global $wp object
+	$site_request_uri = $wp->request;
+
+	// fix for IIS servers using index.php in the URL
+	if( false !== stripos( $_SERVER['REQUEST_URI'], '/index.php/' . $site_request_uri ) ) {
+		$site_request_uri = 'index.php/' . $site_request_uri;
 	}
 
-	return $api;
+	// concatenate request url to home url
+	$url = home_url( $site_request_uri );
+	$url = trailingslashit( $url );
+
+	return esc_url( $url );
+}
+
+/**
+ * Sanitizes all values in a mixed variable.
+ *
+ * @access public
+ *
+ * @param mixed $value
+ *
+ * @return mixed
+ */
+function mc4wp_sanitize_deep( $value ) {
+
+	if ( is_scalar( $value ) ) {
+		$value = sanitize_text_field( $value );
+	} elseif( is_array( $value ) ) {
+		$value = array_map( 'mc4wp_sanitize_deep', $value );
+	} elseif ( is_object($value) ) {
+		$vars = get_object_vars( $value );
+		foreach ( $vars as $key => $data ) {
+			$value->{$key} = mc4wp_sanitize_deep( $data );
+		}
+	}
+
+	return $value;
+}
+
+/**
+ * Guesses merge vars based on given data & current request.
+ *
+ * @since 3.0
+ * @access public
+ *
+ * @param array $merge_vars
+ *
+ * @return array
+ */
+function mc4wp_guess_merge_vars( $merge_vars = array() ) {
+
+	// maybe guess first and last name
+	if ( isset( $merge_vars['NAME'] ) ) {
+		if( ! isset( $merge_vars['FNAME'] ) && ! isset( $merge_vars['LNAME'] ) ) {
+			$strpos = strpos( $merge_vars['NAME'], ' ' );
+			if ( $strpos !== false ) {
+				$merge_vars['FNAME'] = trim( substr( $merge_vars['NAME'], 0, $strpos ) );
+				$merge_vars['LNAME'] = trim( substr( $merge_vars['NAME'], $strpos ) );
+			} else {
+				$merge_vars['FNAME'] = $merge_vars['NAME'];
+			}
+		}
+	}
+
+	// set ip address
+	if( empty( $merge_vars['OPTIN_IP'] ) ) {
+		$optin_ip = mc4wp('request')->get_client_ip();
+
+		if( ! empty( $optin_ip ) ) {
+			$merge_vars['OPTIN_IP'] = $optin_ip;
+		}
+	}
+
+	/**
+	 * Filters merge vars which are sent to MailChimp
+	 *
+	 * @param array $merge_vars
+	 */
+	$merge_vars = (array) apply_filters( 'mc4wp_merge_vars', $merge_vars );
+
+	return $merge_vars;
+}
+
+/**
+ * Gets the "email type" for new subscribers.
+ *
+ * Possible return values are either "html" or "text"
+ *
+ * @access public
+ * @since 3.0
+ *
+ * @return string
+ */
+function mc4wp_get_email_type() {
+
+	$email_type = 'html';
+
+	/**
+	 * Filters the email type preference for this new subscriber.
+	 *
+	 * @param string $email_type
+	 */
+	$email_type = apply_filters( 'mc4wp_email_type', $email_type );
+
+	return $email_type;
+}
+
+/**
+ *
+ * @ignore
+ * @return bool
+ */
+function __mc4wp_use_sslverify() {
+
+	// Disable for all transports other than CURL
+	if( ! function_exists( 'curl_version' ) ) {
+		return false;
+	}
+
+	$curl = curl_version();
+
+	// Disable if OpenSSL is not installed
+	if( empty( $curl['ssl_version'] ) ) {
+		return false;
+	}
+
+	$ssl_version = preg_replace( '/[^0-9\.]/', '', $curl['ssl_version'] );
+	$required_ssl_version = '1.0.1';
+
+	// Disable if OpenSSL is not at version 1.0.1
+	if( version_compare( $ssl_version, $required_ssl_version, '<' ) ) {
+		return false;
+	}
+
+	// Last character should be "f" or higher in alphabet.
+	// Example: 1.0.1f
+	$last_character = substr( $curl['ssl_version'], -1 );
+	if( is_string( $last_character ) ) {
+		if( ord( strtoupper( $last_character ) ) < ord( 'F' ) ) {
+			return false;
+		}
+	}
+
+	return true;
 }

@@ -5,11 +5,13 @@
 }
 
 #pagination {
+
     display: none;
     font-family: Arial,sans-serif;
     font-size: .75em;
     z-index: 1000;
     @include at-breakpoint($desktop) {
+
         display: block;
         /* Show For big screen*/
     }
@@ -17,12 +19,17 @@
 
 .mobile-pagination {
 
+
+
     display: block;
     @include at-breakpoint($desktop) {
+
         display: none;
         /* Hide For big screen*/
     }
     span {
+
+
         a {
             color: $black;
         }
@@ -36,6 +43,7 @@
 }
 
 #pagination a {
+
     @include transition(all 0.3s ease-in-out);
     color: #F5F5F5;
     display: block;
@@ -46,9 +54,11 @@
 }
 
 #pagination a.newer {
+
+
+    @extend %position;
     //background:#111 url(../img/icon-arrow-left.png) no-repeat right center;
     @include border-right-radius(3px);
-    @extend %position;
     left: 0;
     margin-left: -160px;
     padding-right: 40px;
@@ -56,9 +66,11 @@
 }
 
 #pagination a.older {
+
+
+    @extend %position;
     //background:#111 url(../img/icon-arrow-right.png) no-repeat left center;
     @include border-left-radius(3px);
-    @extend %position;
     margin-right: -160px;
     padding-left: 40px;
     right: 0;
@@ -71,10 +83,14 @@
 }
 
 .pagi {
+
+
+
     @include adjust-font-size-to(16px);
     border-top: 1px solid $light_gray;
     padding: 3em 0 3em 0;
     & .page-numbers {
+
         color: #666;
         margin: 0 .5em;
         text-decoration: none;
@@ -88,11 +104,15 @@
 }
 
 .pagination {
+
+
+
     @include adjust-font-size-to(16px);
     margin-top: 1.5em;
     padding: 1.5em 0 0.5em 0;
     text-align: center;
     & .page-numbers {
+
         color: #092148;
         margin: 0 .5em;
         text-decoration: none;
@@ -107,6 +127,11 @@
 
 .page-navigation {
 
+
+
+
+
+
     @include adjust-font-size-to(20px);
     font-family: $nixie_oneregular;
     overflow: hidden;
@@ -119,6 +144,7 @@
         text-decoration: none;
     }
     .alignleft {
+
         float: left;
         width: 100%;
         @include at-breakpoint($desktop) {
@@ -126,6 +152,7 @@
         }
     }
     .alignright {
+
         float: left;
         margin-left: 0%;
         width: 100%;

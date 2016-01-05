@@ -2,13 +2,19 @@
 
 #mobile-nav-button {
 
+
+
     position: absolute;
     right: 0px;
     @include at-breakpoint($desktop) {
+
         display: none;
         /* Hide For big screen*/
     }
     a {
+
+
+
         @include border-radius(50%);
         @include transition(width 1.1s ease-in-out);
         background: white;
@@ -34,20 +40,28 @@
 
 .main-menu-desktop {
 
+
+
     display: none;
     @include at-breakpoint($desktop) {
         display: block;
         text-align: right;
     }
     ul {
+
         list-style: none;
         margin: 10px 0 0;
         padding: 0;
         li {
+
+
+
+
             display: inline-block;
             padding: 0 15px;
             text-transform: uppercase;
             &:first-child {
+
                 padding-left: 0;
                 a {
                     color: $black;
@@ -60,6 +74,8 @@
                 }
             }
             a {
+
+
                 color: $white;
                 font-size: em(16);
                 font-weight: bold;
@@ -99,6 +115,7 @@ Nav Panel
 */
 
 .menu-panel {
+
     -webkit-overflow-scrolling: touch;
     background: #303030;
     height: 100%;
@@ -110,13 +127,18 @@ Nav Panel
     width: 15em;
     z-index: 9999;
     ul {
+
+
         margin: 0;
         padding: 0;
         li {
+
             list-style: none;
             margin: 0;
             padding: 0;
             a {
+
+
                 @include adjust-font-size-to(15px);
                 border-bottom: 1px solid #999;
                 color: $white;
@@ -141,6 +163,8 @@ Nav Panel
 }
 
 #nav-toggle {
+
+
 
     cursor: pointer;
     display: block;

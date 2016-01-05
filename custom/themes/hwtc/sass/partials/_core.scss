@@ -6,11 +6,13 @@ body {
 }
 
 img {
+
     max-width: 100%;
     //width: 100%;
 }
 
 .wrapper {
+
     @include transition(transform 500ms ease);
     background-color: #FAFAFA;
     position: relative;

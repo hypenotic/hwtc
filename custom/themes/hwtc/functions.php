@@ -179,12 +179,22 @@ add_action( 'save_post', 'prfx_meta_save' );
 
 	if ( function_exists('register_sidebar') )
 
-	register_sidebar(array('name'=>'Find Talent Page Bottom Content',
+	register_sidebar(array(
+    'name'=>'Find Talent Page Bottom Content',
 		'before_widget' => '<div class="">',
 		'after_widget' => '</div>',
 		'before_title' => '<h6>',
 		'after_title' => '</h6>',
 	));
+
+  register_sidebar(array(
+    'name'=>'Sign Up Form',
+    'id' => 'sign-up-form',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => '',
+  ));
 	
 #CUZTOM HELPER CLASS
 	$cuztom_inc = get_template_directory() . '/includes/wordpress-cuztom-helper-master/cuztom.php';
@@ -203,3 +213,6 @@ add_action( 'save_post', 'prfx_meta_save' );
 	if( file_exists( get_template_directory() . "/includes/cuztom-post-type_course.php" ) ) {
 		include_once( get_template_directory() . '/includes/cuztom-post-type_course.php' );
 	}
+
+
+

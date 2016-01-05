@@ -8,7 +8,6 @@
     src: url("sass/fonts/lato-black-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-black-webfont.woff") format("woff"), url("sass/fonts/lato-black-webfont.ttf") format("truetype"), url("sass/fonts/lato-black-webfont.svg#latoblack") format("svg");
 }
 
-
 $latoblack: "latoblack";
 
 @font-face {
@@ -18,7 +17,6 @@ $latoblack: "latoblack";
     src: url("sass/fonts/lato-blackitalic-webfont.eot");
     src: url("sass/fonts/lato-blackitalic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-blackitalic-webfont.woff") format("woff"), url("sass/fonts/lato-blackitalic-webfont.ttf") format("truetype"), url("sass/fonts/lato-blackitalic-webfont.svg#latoblack_italic") format("svg");
 }
-
 
 $latoblack_italic: "latoblack_italic";
 
@@ -30,7 +28,6 @@ $latoblack_italic: "latoblack_italic";
     src: url("sass/fonts/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-bold-webfont.woff") format("woff"), url("sass/fonts/lato-bold-webfont.ttf") format("truetype"), url("sass/fonts/lato-bold-webfont.svg#latobold") format("svg");
 }
 
-
 $latobold: "latobold";
 
 @font-face {
@@ -40,7 +37,6 @@ $latobold: "latobold";
     src: url("sass/fonts/lato-bolditalic-webfont.eot");
     src: url("sass/fonts/lato-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-bolditalic-webfont.woff") format("woff"), url("sass/fonts/lato-bolditalic-webfont.ttf") format("truetype"), url("sass/fonts/lato-bolditalic-webfont.svg#latobold_italic") format("svg");
 }
-
 
 $latobold_italic: "latobold_italic";
 
@@ -52,7 +48,6 @@ $latobold_italic: "latobold_italic";
     src: url("sass/fonts/lato-hairline-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-hairline-webfont.woff") format("woff"), url("sass/fonts/lato-hairline-webfont.ttf") format("truetype"), url("sass/fonts/lato-hairline-webfont.svg#latohairline") format("svg");
 }
 
-
 $latohairline: "latohairline";
 
 @font-face {
@@ -62,7 +57,6 @@ $latohairline: "latohairline";
     src: url("sass/fonts/lato-hairlineitalic-webfont.eot");
     src: url("sass/fonts/lato-hairlineitalic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-hairlineitalic-webfont.woff") format("woff"), url("sass/fonts/lato-hairlineitalic-webfont.ttf") format("truetype"), url("sass/fonts/lato-hairlineitalic-webfont.svg#latohairline_italic") format("svg");
 }
-
 
 $latohairline_italic: "latohairline_italic";
 
@@ -74,7 +68,6 @@ $latohairline_italic: "latohairline_italic";
     src: url("sass/fonts/lato-italic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-italic-webfont.woff") format("woff"), url("sass/fonts/lato-italic-webfont.ttf") format("truetype"), url("sass/fonts/lato-italic-webfont.svg#latoitalic") format("svg");
 }
 
-
 $latoitalic: "latoitalic";
 
 @font-face {
@@ -84,7 +77,6 @@ $latoitalic: "latoitalic";
     src: url("sass/fonts/lato-light-webfont.eot");
     src: url("sass/fonts/lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-light-webfont.woff") format("woff"), url("sass/fonts/lato-light-webfont.ttf") format("truetype"), url("sass/fonts/lato-light-webfont.svg#latolight") format("svg");
 }
-
 
 $latolight: "latolight";
 
@@ -96,7 +88,6 @@ $latolight: "latolight";
     src: url("sass/fonts/lato-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-lightitalic-webfont.woff") format("woff"), url("sass/fonts/lato-lightitalic-webfont.ttf") format("truetype"), url("sass/fonts/lato-lightitalic-webfont.svg#latolight_italic") format("svg");
 }
 
-
 $latolight_italic: "latolight_italic";
 
 @font-face {
@@ -107,7 +98,6 @@ $latolight_italic: "latolight_italic";
     src: url("sass/fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/lato-regular-webfont.woff") format("woff"), url("sass/fonts/lato-regular-webfont.ttf") format("truetype"), url("sass/fonts/lato-regular-webfont.svg#latoregular") format("svg");
 }
 
-
 $latoregular: "latoregular";
 
 @font-face {
@@ -117,7 +107,6 @@ $latoregular: "latoregular";
     src: url("sass/fonts/opensans-nixieone-regular.eot");
     src: url("sass/fonts/opensans-nixieone-regular.eot?#iefix") format("embedded-opentype"), url("sass/fonts/nixieone-regular.woff") format("woff"), url("sass/fonts/nixieone-regular.ttf") format("truetype"), url("sass/fonts/nixieone-regular.svg#nixie_oneregular") format("svg");
 }
-
 
 $nixie_oneregular: "nixie_oneregular";
 
@@ -154,70 +143,94 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
     font-family: $latoregular;
     font-weight: normal;
     a {
+
         text-decoration: none;
         &:hover {}
     }
 }
 h1 {
+
+
     @include adjust-font-size-to(26px);
     margin: 0 auto rhythm(1, 26px);
     @include at-breakpoint($desktop) {
+
         @include adjust-font-size-to(63px);
         margin: 0 auto rhythm(1, 63px);
     }
 }
 h2 {
+
+
     @include adjust-font-size-to(24px);
     margin: 0 auto rhythm(0, 24px);
     @include at-breakpoint($desktop) {
+
         @include adjust-font-size-to(41px);
         margin: 0 auto rhythm(0, 41px);
     }
 }
 h3 {
+
+
     @include adjust-font-size-to(22px);
     margin: 0 auto rhythm(0, 22px);
     @include at-breakpoint($desktop) {
+
         @include adjust-font-size-to(38px);
         margin: 0 auto rhythm(0, 38px);
     }
 }
 h4 {
+
+
     @include adjust-font-size-to(20px);
     margin: 0 auto rhythm(0, 20px);
     @include at-breakpoint($desktop) {
+
         @include adjust-font-size-to(32px);
         margin: 0 auto rhythm(0, 32px);
     }
 }
 h5 {
+
+
     @include adjust-font-size-to(18px);
     margin: 0 auto rhythm(0, 18px);
     @include at-breakpoint($desktop) {
+
         @include adjust-font-size-to(26px);
         margin: 0 auto rhythm(0, 26px);
     }
 }
 h6 {
+
+
     @include adjust-font-size-to(16px);
     margin: 0 auto rhythm(0.5, 16px);
     @include at-breakpoint($desktop) {
+
         @include adjust-font-size-to(24px);
         margin: 0 auto rhythm(0.5, 24px);
     }
 }
 p, ul, ol {
+
+
     @include adjust-font-size-to(16px);
     margin: 0 auto rhythm(1, 20px);
     @include at-breakpoint($desktop) {
+
         @include adjust-font-size-to(18px);
         margin: 0 auto rhythm(1, 26px);
     }
 }
 strong {
+
     font-family: $latobold;
     padding-bottom: 20px;
     @include at-breakpoint($desktop) {
@@ -228,16 +241,19 @@ ul li {
     margin: 0 auto rhythm(0.5, 24px);
 }
 .columns-1 ol {
+
     border-top: 1px solid #c5c9c9;
     counter-reset: ordered-list;
     margin: 50px 0 50px 0;
     padding-left: 0px;
     & li {
+
         border-bottom: 1px solid #c5c9c9;
         color: #323232;
         list-style: none;
         padding: 20px 20px 20px 75px;
         &:before {
+
             @include adjust-font-size-to(18px);
             color: #03a2ca;
             content: counter(ordered-list);
@@ -250,6 +266,8 @@ ul li {
     }
 }
 .front-headline {
+
+
     @include adjust-font-size-to(40px);
     color: $white;
     text-align: center;
@@ -261,10 +279,12 @@ ul li {
     }
 }
 .meta {
+
     //@include adjust-font-size-to(14px);
     font-size: 14px;
     text-transform: uppercase;
     & a {
+
         color: gray;
         text-decoration: none;
         &:hover {
@@ -276,9 +296,15 @@ ul li {
     @include adjust-font-size-to(14px);
 }
 footer {
+
+
+
+
+
     color: $white;
     font-family: $latolight;
     & h1, h2, h3, h4, h5, h6 {
+
         @include adjust-font-size-to(32px);
         font-family: $nixie_oneregular;
         font-weight: normal;
@@ -286,6 +312,7 @@ footer {
         margin: 0 auto rhythm(1, 40px);
     }
     & p {
+
         @include adjust-font-size-to(16px);
         line-height: 1.6em;
     }
@@ -298,6 +325,7 @@ footer {
         padding-left: 0px;
     }
     & a {
+
         color: $white;
         text-decoration: underline;
         &:hover {
@@ -319,6 +347,8 @@ hr {
 }
 .social-media {
 
+
+
     left: 165px;
     position: absolute;
     top: 60px;
@@ -326,21 +356,26 @@ hr {
         left: 210px;
     }
     li {
+
         float: left;
         margin: 5px 5px;
         a {
+
+
             background: url("images/social-media.png") no-repeat;
             display: block;
             height: 23px;
             text-indent: -9999px;
             width: 23px;
             &#facebook {
+
                 background-position: 0 0;
                 &:hover {
                     background-position: -25px 0px;
                 }
             }
             &#twitter {
+
                 background-position: 0 -24px;
                 height: 24px;
                 width: 24px;
@@ -352,6 +387,7 @@ hr {
     }
 }
 blockquote {
+
     font-weight: bold;
     line-height: 1.45;
     margin: 0.25em auto;

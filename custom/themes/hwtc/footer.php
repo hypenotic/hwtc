@@ -6,7 +6,8 @@
                 <h4>Sign up to get the latest news from HWTC</h4>
             </div>
             <div class="columns-2">
-                <?php echo do_shortcode('[mc4wp_form]');?>
+                <?php dynamic_sidebar( 'sign-up-form' ); ?>
+                <?php //echo do_shortcode('[mc4wp_form id="1149"]');?>
            </div>       	
         </div>   
     </div>

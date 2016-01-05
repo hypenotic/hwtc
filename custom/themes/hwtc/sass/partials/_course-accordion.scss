@@ -1,7 +1,13 @@
 .course-accordion {
+
+
     //background: red;
     margin-top: 30px;
     h3 {
+
+
+
+
 
         @include adjust-font-size-to(22px);
         border-top: 2px solid #E5E5E5;
@@ -21,13 +27,18 @@
         }
     }
     .course-accodion-content {
+
         display: none;
         padding: 50px 20px;
         .accordion-item {
+
+
             margin-bottom: 15px;
             overflow: hidden;
             position: relative;
             .title {
+
+
                 @include adjust-font-size-to(18px);
                 float: left;
                 font-family: $latobold;
@@ -39,6 +50,10 @@
                 }
             }
             .detail {
+
+
+
+
                 @include adjust-font-size-to(16px);
                 float: left;
                 width: 100%;
@@ -59,10 +74,14 @@
 
 .single-course {
     .accordion-item {
+
+
         margin-bottom: 15px;
         overflow: hidden;
         position: relative;
         .title {
+
+
             @include adjust-font-size-to(18px);
             float: left;
             font-family: $latobold;
@@ -74,6 +93,9 @@
             }
         }
         .detail {
+
+
+
             @include adjust-font-size-to(18px);
             float: left;
             width: 100%;

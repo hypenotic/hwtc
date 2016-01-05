@@ -5,24 +5,43 @@
 .content {
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     color: #092148;
     padding-bottom: 35px;
     @include at-breakpoint($desktop) {
         padding-top: 60px;
     }
     .author &, .blog &, .category &, .single & {
+
         padding-bottom: 35px;
         @include at-breakpoint($desktop) {
             padding-top: 50px;
         }
     }
     .home & {
+
         padding-top: 40px;
         @include at-breakpoint($desktop) {
             padding-top: 100px;
         }
     }
     .content-box {
+
         padding-bottom: 50px;
         padding-top: 25px;
         & p:last-child {
@@ -38,6 +57,10 @@
     }
     & h1, h2, h3, h4 {
 
+
+
+
+
         @include adjust-font-size-to(32px);
         @include text-shadow(0px 0px 1px rgba(71, 101, 181, 1));
         color: #2c65b5;
@@ -52,6 +75,7 @@
             padding: 25px 0 10px;
         }
         a {
+
             color: #2c65b5;
             &:hover {
                 border-bottom: 1px solid #6588c9;
@@ -60,21 +84,25 @@
         }
     }
     h3 {
+
         font-weight: bold;
         @include at-breakpoint($desktop) {
             @include adjust-font-size-to(24px);
         }
     }
     h4 {
+
         font-family: $latobold;
         @include at-breakpoint($desktop) {
             font-size: 1.5em;
         }
     }
     & h1:first-child {
+
         padding-bottom: 45px;
         padding-top: 0px;
         .home & {
+
             font-size: 1.5em;
             @include at-breakpoint($desktop) {
                 font-size: 2.75em;
@@ -82,6 +110,8 @@
         }
     }
     h6 {
+
+
         @include adjust-font-size-to(16px);
         color: #2c65b5;
         font-family: $latolight;
@@ -92,6 +122,8 @@
     }
     h5 {
 
+
+
         color: #092148;
         font-family: $latoregular;
         padding: 10px 0 10px;
@@ -100,6 +132,7 @@
             padding: 30px 0 30px;
         }
         &.title {
+
             @include adjust-font-size-to(18px);
             color: $black;
             font-family: $latoblack;
@@ -109,6 +142,7 @@
     }
     @include at-breakpoint($desktop) {
         .columns-2 {
+
             &:nth-child(2n + 2) {
                 margin-left: 0;
             }
@@ -119,8 +153,11 @@
         }
     }
     a {
+
         color: #2c65b5;
         &.button {
+
+
             @include sassy-button("flat", 5px, 14px, #fafafa);
             border: 2px solid #9b59b6;
             color: #9b59b6;
@@ -137,12 +174,15 @@
         }
     }
     .our-people-title {
+
         padding-bottom: 50px;
         h1 {
             padding-top: 0;
         }
     }
     ul {
+
+
         list-style: none;
         padding-bottom: 0px;
         li {
@@ -153,11 +193,18 @@
             }
         }
         &.our-people {
+
             list-style: none;
             margin-bottom: 0;
             padding-bottom: 0;
             padding-left: 0;
             li {
+
+
+
+
+
+
                 margin-bottom: 30px;
                 overflow: hidden;
                 padding-bottom: 10px;
@@ -166,6 +213,8 @@
                     padding-bottom: 0px;
                 }
                 img {
+
+
                     @include border-radius(50%);
                     background: #999;
                     float: left;
@@ -177,6 +226,7 @@
                     }
                 }
                 h3 {
+
                     @include adjust-font-size-to(26px);
                     color: #2c65b5;
                     margin: 0;
@@ -187,6 +237,7 @@
                     margin: 0;
                 }
                 &:last-child {
+
                     margin-bottom: 0;
                     padding-bottom: 0;
                     @include at-breakpoint($desktop) {
@@ -196,6 +247,7 @@
                     }
                 }
                 p {
+
                     font-size: 1em;
                     &:first-child {
                         margin-bottom: 0;
@@ -205,9 +257,14 @@
         }
     }
     .blog-lists {
+
         list-style: none;
         padding-left: 0;
         li {
+
+
+
+
             overflow: hidden;
             padding-top: 50px;
             &:before {
@@ -215,6 +272,7 @@
                 margin: 0;
             }
             h3 {
+
                 padding-bottom: 10px;
                 padding-top: 20px;
                 @include at-breakpoint($desktop) {
@@ -223,6 +281,8 @@
                 }
             }
             .blog-icon {
+
+
 
                 background-color: #cecfd1;
                 background-position: center center;
@@ -241,6 +301,8 @@
             }
             .blog-content {
 
+
+
                 width: 100%;
                 @include at-breakpoint($desktop) {
                     float: left;
@@ -248,10 +310,12 @@
                     width: 68%;
                 }
                 .meta {
+
                     color: #2d5cb3;
                     font-family: $latobold;
                     text-transform: none;
                     a {
+
                         border-bottom: 1px solid #2d5cb3;
                         text-decoration: none;
                         text-transform: uppercase;
@@ -267,8 +331,13 @@
 }
 
 .single {
+
     .content {
+
+
         & p, ul, ol {
+
+
             @include adjust-font-size-to(22px);
             line-height: 1.5em;
             @include at-breakpoint($desktop) {
@@ -279,12 +348,15 @@
             @include adjust-font-size-to(18px);
         }
         .meta {
+
+
             @include adjust-font-size-to(14px);
             color: #2d5cb3;
             font-family: $latobold;
             margin-bottom: 30px;
             text-transform: none;
             a {
+
                 border-bottom: 1px solid #2d5cb3;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -296,6 +368,8 @@
         }
     }
     & h1.title {
+
+
         @include adjust-font-size-to(30px);
         margin-bottom: 25px;
         margin: 0;
@@ -333,6 +407,10 @@
 
 .overlay-content {
 
+
+
+
+
     margin: 120px auto;
     overflow: hidden;
     padding: 30px 20px;
@@ -345,6 +423,9 @@
         width: 70%;
     }
     &:before {
+
+
+
         @include background(linear-gradient(164deg, $white, $white));
         @include opacity(0.9);
         @include transition(opacity 1s linear);
@@ -358,11 +439,13 @@
         z-index: -1;
     }
     h6 {
+
         @include adjust-font-size-to(30px);
         color: #555;
     }
     .textwidget {
         p {
+
             margin-bottom: 1em;
             @include at-breakpoint($desktop) {
                 margin-bottom: 0em;
@@ -376,6 +459,8 @@
 }
 
 .filters {
+
+
     margin-bottom: 20px;
     text-align: center;
     .single & {
@@ -384,6 +469,10 @@
         }
     }
     a {
+
+
+
+
         @include adjust-font-size-to(21px);
         border-bottom: 1px solid #eff5ff;
         display: inline-block;

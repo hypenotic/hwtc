@@ -1,5 +1,7 @@
 .bx-wrapper {
 
+
+
     *zoom: 1;
     margin: 0 auto 0px;
     padding: 0;
@@ -10,6 +12,15 @@
         max-width: 100%;
     }
     .bx-viewport {}
+
+
+
+
+
+
+
+
+
     .bx-loading {
         background: url(images/slider/bx_loader.gif) center center no-repeat white;
         height: 100%;
@@ -21,6 +32,8 @@
         z-index: 2000;
     }
     .bx-pager {
+
+
         bottom: -30px;
         color: #666;
         font-family: Arial;
@@ -36,6 +49,9 @@
             display: inline-block;
         }
         &.bx-default-pager a {
+
+
+
             @include border-radius(5px);
             background: #000;
             display: block;
@@ -53,6 +69,9 @@
         }
     }
     .bx-controls-auto {
+
+
+
         bottom: -30px;
         position: absolute;
         text-align: center;
@@ -63,6 +82,7 @@
             display: inline-block;
         }
         .bx-start {
+
             background: url(images/slider/controls.png) -86px -11px no-repeat;
             display: block;
             height: 11px;
@@ -75,6 +95,7 @@
             }
         }
         .bx-stop {
+
             background: url(images/slider/controls.png) -86px -44px no-repeat;
             display: block;
             height: 11px;
@@ -88,6 +109,7 @@
         }
     }
     .bx-prev {
+
         background: url(images/slider/controls.png) no-repeat 0 -32px;
         left: 10px;
         &:hover {
@@ -95,6 +117,7 @@
         }
     }
     .bx-next {
+
         background: url(images/slider/controls.png) no-repeat -43px -32px;
         right: 10px;
         &:hover {
@@ -102,6 +125,10 @@
         }
     }
     .bx-caption {
+
+
+
+
 
         @include opacity(0.9);
         @include transition(opacity 1s linear);
@@ -119,6 +146,8 @@
             display: block;
         }
         span {
+
+
             @include adjust-font-size-to(16px);
             display: block;
             font-family: $latobold;
@@ -128,6 +157,7 @@
         }
     }
     & .bx-controls-direction a {
+
         height: 32px;
         margin-top: -16px;
         outline: 0;
@@ -141,6 +171,7 @@
         }
     }
     & .bx-controls.bx-has-controls-auto.bx-has-pager {
+
         .bx-pager {
             text-align: left;
             width: 80%;
@@ -151,6 +182,8 @@
         }
     }
     .bannertext {
+
+
 
         bottom: 50px;
         display: none;

@@ -20,6 +20,7 @@
 }
 
 @-webkit-keyframes fadeIn {
+
     0% {
         opacity: 0;
     }
@@ -27,9 +28,9 @@
         opacity: 1;
     }
 }
-
 
 @-moz-keyframes fadeIn {
+
     0% {
         opacity: 0;
     }
@@ -37,9 +38,9 @@
         opacity: 1;
     }
 }
-
 
 @-o-keyframes fadeIn {
+
     0% {
         opacity: 0;
     }
@@ -47,9 +48,9 @@
         opacity: 1;
     }
 }
-
 
 @keyframes fadeIn {
+
     0% {
         opacity: 0;
     }
@@ -57,7 +58,6 @@
         opacity: 1;
     }
 }
-
 
 .fadeIn {
     -moz-animation-name: fadeIn;

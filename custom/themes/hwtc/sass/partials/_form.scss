@@ -1,7 +1,9 @@
 fieldset {
+
     border: 0;
     padding: 0;
     ol {
+
         @include no-bullets;
         li {
             display: block;
@@ -12,14 +14,24 @@ fieldset {
 }
 
 footer {
+
+
+
+
+    input {
+        color: rgb(54, 116, 187);
+    }
     input[type="text"], input[type="email"] {
+
+
+
         @include border-radius(5px);
         border: 1px solid rgb(202, 203, 193);
+        color: rgb(54, 116, 187);
         line-height: 1.2em;
         padding: 0.66em;
         width: 100%;
         background: {
-            color: white;
             position: 95% -55px;
         };
         &:focus {
@@ -33,12 +45,16 @@ footer {
         }
     }
     input[type="email"] {
-        background-position: 95% -142px + 17px;
+
+        background-position: 95% (-142px + 17px);
+        color: rgb(54, 116, 187);
         &:focus {
             background-position: 95.5% -195px;
         }
     }
     input[type="submit"] {
+
+
         @include sassy-button("flat", 5px, 14px, #9b59b6);
         font-family: $latoregular;
         &:hover {
@@ -47,6 +63,8 @@ footer {
         }
     }
     .confirmation {
+
+
         display: none;
         left: 0px;
         padding: 0px 0.9375em;
@@ -63,8 +81,16 @@ footer {
     }
 }
 
+input#first-name-input {
+    background-color: #ffffff;
+    color: rgb(54, 116, 187);
+}
+
 #respond {
+
     input[type="submit"] {
+
+
         @include sassy-button("flat", 5px, 14px, #9b59b6);
         font-family: $latoregular;
         &:hover {
@@ -73,6 +99,11 @@ footer {
         }
     }
     input[type="text"], textarea {
+
+
+
+
+
 
         @include border-radius(5px);
         border: 1px solid rgb(202, 203, 193);
@@ -98,8 +129,11 @@ footer {
 }
 
 .gform_wrapper {
+
+
     font-family: $latoregular;
     .button {
+
         @include sassy-button("flat", 5px, 14px, #9b59b6);
         &:hover {
             background: $white;
@@ -107,6 +141,7 @@ footer {
         }
     }
     select {
+
         font-size: 1em !important;
         padding: 0;
         option {

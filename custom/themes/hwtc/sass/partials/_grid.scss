@@ -1,9 +1,13 @@
 .container {
+
     @include container($total-columns, $desktop);
     overflow: hidden;
 }
 
 header {
+
+
+
     @include transition(transform 500ms ease);
     background: rgba(44, 99, 176, 0.95);
     padding-bottom: 10px;
@@ -12,6 +16,7 @@ header {
     width: 100%;
     z-index: 9999;
     .container {
+
         overflow: visible;
         @media (max-width: 879px) {
             max-width: 100%;
@@ -19,6 +24,8 @@ header {
     }
     &.active-header {
         &:before {
+
+
             @include opacity(0.98);
             @include transition(opacity 1s linear);
             background: #2c65b5;
@@ -32,8 +39,11 @@ header {
 }
 
 .logo {
+
     @include span-columns(6);
     @include at-breakpoint($desktop) {
+
+
         @include adjust-font-size-to(20px);
         @include span-columns(6.5);
         display: block;
@@ -43,6 +53,7 @@ header {
 }
 
 .nav {
+
     display: none;
     @include at-breakpoint($desktop) {
         display: block;
@@ -51,6 +62,8 @@ header {
 
 .second-nav {
 
+
+
     display: block;
     margin-top: 0.8em;
     padding-top: 4px;
@@ -58,6 +71,7 @@ header {
         //display: none;
     }
     a {
+
         color: $white;
         text-decoration: none;
         &:hover {
@@ -67,6 +81,7 @@ header {
 }
 
 nav {
+
     @include span-columns(3 omega);
     @include at-breakpoint($desktop) {
         @include span-columns(10 omega);
@@ -74,16 +89,21 @@ nav {
 }
 
 aside {
+
     @include span-columns(7);
     @include at-breakpoint($desktop) {
+
         @include span-columns(4);
         margin-bottom: 4em;
     }
 }
 
 article {
+
     @include span-columns(7);
     @include at-breakpoint($desktop) {
+
+
         @include span-columns(10 omega);
         @include suffix(0.9);
         margin-bottom: 4em;
@@ -97,11 +117,17 @@ section {
 
 footer {
 
+
+
+
+
     @include span-columns(7);
     @include at-breakpoint($desktop) {
         @include span-columns(15);
     }
     .footer-top {
+
+
         background: #38434e;
         overflow: hidden;
         padding-bottom: 90px;
@@ -116,11 +142,14 @@ footer {
         }
     }
     .footer-bottom {
+
         background: #1f5783;
         overflow: hidden;
         .columns-2 {
+
             position: relative;
             &:last-child {
+
                 padding-left: 1.5em;
                 padding-right: 50px;
                 padding-top: 50px;
@@ -131,6 +160,9 @@ footer {
         }
     }
     .footer-copyright {
+
+
+
         background: #eeeeee;
         color: #555555;
         font-family: $latoregular;
@@ -140,6 +172,7 @@ footer {
             margin-bottom: 0px;
         }
         .text-right {
+
             text-align: left;
             @include at-breakpoint($desktop) {
                 text-align: right;
@@ -152,18 +185,25 @@ footer {
 }
 
 .columns-wide {
+
+
     @include span-columns(7);
     text-align: center;
     @include at-breakpoint($desktop) {
+
         @include pad(0.6, 0.6);
         @include span-columns(15);
     }
 }
 
 .columns-1 {
+
+
     @include span-columns(7);
     margin: 1.5em 0 1.5em 0;
     @include at-breakpoint($desktop) {
+
+
         @include pad(2.5, 2.5);
         @include span-columns(15);
         margin: 1.5em 0 2.5em 0;
@@ -171,6 +211,7 @@ footer {
 }
 
 .columns-2 {
+
     @include isolate-grid(7);
     @include at-breakpoint($desktop) {
         @include isolate-grid(6.5);
@@ -178,9 +219,12 @@ footer {
 }
 
 .columns-3 {
+
+
     @include isolate-grid(7);
     margin-top: 3em;
     @include at-breakpoint($desktop) {
+
         @include isolate-grid(5);
         &:nth-child(2) {
             @include pad(0, 1);
@@ -189,6 +233,7 @@ footer {
 }
 
 .box-fifty {
+
     position: relative;
     width: 100%;
     @include at-breakpoint($desktop) {
@@ -198,9 +243,11 @@ footer {
 }
 
 .full-width {
+
     overflow: hidden;
     position: relative;
     .author &, .blog &, .category &, .single & {
+
         background: #eff5ff;
         &.content {
             padding-top: 40px;
@@ -209,6 +256,7 @@ footer {
 }
 
 .show-for-mobile {
+
     display: block;
     @include at-breakpoint($desktop) {
         display: none;
@@ -216,6 +264,7 @@ footer {
 }
 
 .show-for-desktop {
+
     display: none;
     @include at-breakpoint($desktop) {
         display: block;
@@ -223,6 +272,7 @@ footer {
 }
 
 .center-content {
+
     margin-left: auto;
     margin-right: auto;
     position: relative;
