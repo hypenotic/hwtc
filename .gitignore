@@ -16,3 +16,5 @@ sitemap.xml
 cache/
 backups/
 sitemap.xml.gz
+node_modules/
+node_modules/*
