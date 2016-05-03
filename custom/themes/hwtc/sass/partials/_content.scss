@@ -509,3 +509,39 @@ h4.team--title {
         line-height: 20px;
     }
 }
+
+// HOME
+.call-to-action {
+
+    background-color: #1F5783;
+    margin-top: 0;
+    // min-height: 400px;
+    .container {
+        .content.columns-1 {
+
+
+
+
+
+            color: $white;
+            padding: 30px;
+            text-align: center;
+            @include at-breakpoint($desktop) {
+                padding: 0 20%;
+            }
+            h3 {
+                color: $white;
+                font-size: 2.5em;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+            }
+            div, p {
+                font-size: 18px;
+                line-height: 25px;
+            }
+            a.button {
+                margin-top: 30px;
+            }
+        }
+    }
+}
