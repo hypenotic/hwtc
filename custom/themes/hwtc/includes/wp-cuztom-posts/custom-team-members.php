@@ -39,10 +39,10 @@ $team->add_meta_box(
                     'type'          => 'text'
                  ),
                   array(
-                    'name'          => 'fax',
-                    'label'         => 'Fax',
+                    'name'          => 'bio',
+                    'label'         => 'Bio',
                     'description'   => '',
-                    'type'          => 'text'
+                    'type'          => 'wysiwyg'
                  ),
                  array(
                     'name'          => 'image',
