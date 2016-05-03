@@ -145,18 +145,29 @@ ul li:hover ul.sub-menu {
     background-color: $white;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     height: auto;
-    left: 0px;
+    left: 10px;
     position: absolute;
     text-align: center;
     top: 0;
     img {
         height: auto;
-        max-width: 120px;
+        max-width: 150px;
         padding: 20px 10px 10px;
     }
+}
+
+.mobile-logo-wrap {
+    background-color: $white;
+    padding: 10px 7px 4px;
+    text-align: center;
+    width: 80px;
 }
 
 #mobile-logo {
     height: 60px;
     width: auto;
+}
+
+#mobile-nav-button {
+    margin-top: 15px;
 }

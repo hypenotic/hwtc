@@ -47,7 +47,9 @@
            <!--  <a href="<?php// bloginfo('url' ); ?>" class="">HOSPITALITY WORKERS TRAINING CENTRE</a> -->
 		</div>
 		<div class="logo second-nav show-for-mobile">
-            <a href="<?php bloginfo('url' ); ?>" class="mobile-title"><img id="mobile-logo" src="<?php bloginfo('template_url');?>/images/HWTC_Logo_white.png" alt="HOSPITALITY WORKERS TRAINING CENTRE"></a>
+            <div class="mobile-logo-wrap">
+              <a href="<?php bloginfo('url' ); ?>"><img id="mobile-logo" src="<?php bloginfo('template_url');?>/images/HWTC_Logo_2c_blue.png" alt="HOSPITALITY WORKERS TRAINING CENTRE"></a>
+            </div>
         </div>
         <nav id="box">
         	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
