@@ -64,6 +64,7 @@
                     </aside>
                     <article>
                         <h3><?php echo $name;?></h3>
+                        <h4><?php echo $title;?></h4>
                         <?php echo $bio;?>
                     </article>
                </li>
