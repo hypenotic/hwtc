@@ -35,14 +35,19 @@
 <div class="site-overlay"></div>
 <header class="wrap push">
 	<div class="container">
-        <?php /*<div class="logo nav">
-            <a href="<?php bloginfo('url' ); ?>"><img src="<?php bloginfo('template_url');?>/images/logo.png" /></a>
-        </div> */?>
-        <div class="logo second-nav show-for-desktop">
-            <a href="<?php bloginfo('url' ); ?>" class="">HOSPITALITY WORKERS TRAINING CENTRE</a>
+      <!-- <div class="logo nav">
+            <a href="<?php bloginfo('url' ); ?>"><img src="<?php bloginfo('template_url');?>/images/HWTC_Logo_white.png" /></a>
+      </div>  -->
+    <div class="logo second-nav show-for-desktop">
+    <div class="logo-wrapper">
+      <div id="logo-tab">
+        <img src="<?php bloginfo('template_url');?>/images/HWTC_Logo_2c_blue.png" alt="HOSPITALITY WORKERS TRAINING CENTRE">
+      </div>
+    </div>
+           <!--  <a href="<?php// bloginfo('url' ); ?>" class="">HOSPITALITY WORKERS TRAINING CENTRE</a> -->
 		</div>
 		<div class="logo second-nav show-for-mobile">
-            <a href="<?php bloginfo('url' ); ?>" class="mobile-title">HWTC</a>
+            <a href="<?php bloginfo('url' ); ?>" class="mobile-title"><img id="mobile-logo" src="<?php bloginfo('template_url');?>/images/HWTC_Logo_white.png" alt="HOSPITALITY WORKERS TRAINING CENTRE"></a>
         </div>
         <nav id="box">
         	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
