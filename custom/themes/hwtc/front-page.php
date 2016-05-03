@@ -58,7 +58,7 @@ $ctatext   = get_post_meta($post->ID,'_cta_blurb',true);
 $ctabtn     = get_post_meta($post->ID,'_cta_btext',true);
 $ctalink    = get_post_meta($post->ID,'_cta_blink',true);
 
-if ($ctatitle) { ?>
+if ($ctatext) { ?>
 
 <section class="call-to-action">
 <div class="container">
