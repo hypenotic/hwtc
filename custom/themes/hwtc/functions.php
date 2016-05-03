@@ -196,23 +196,29 @@ add_action( 'save_post', 'prfx_meta_save' );
     'after_title' => '',
   ));
 	
-#CUZTOM HELPER CLASS
-	$cuztom_inc = get_template_directory() . '/includes/wordpress-cuztom-helper-master/cuztom.php';
-	if( file_exists($cuztom_inc) ) {
-		include_once( $cuztom_inc );
-	}
+// #CUZTOM HELPER CLASS
+// 	$cuztom_inc = get_template_directory() . '/includes/wordpress-cuztom-helper-master/cuztom.php';
+// 	if( file_exists($cuztom_inc) ) {
+// 		include_once( $cuztom_inc );
+// 	}
 
 
-#CUSTOM POST TYPE 
-	// Include code for creating slider post type
-	if( file_exists( get_template_directory() . "/includes/cuztom-post-type_slider.php" ) ) {
-		include_once( get_template_directory() . '/includes/cuztom-post-type_slider.php' );
-	}
+// #CUSTOM POST TYPE 
+// 	// Include code for creating slider post type
+// 	if( file_exists( get_template_directory() . "/includes/cuztom-post-type_slider.php" ) ) {
+// 		include_once( get_template_directory() . '/includes/cuztom-post-type_slider.php' );
+// 	}
 	
-	// Include code for creating course post type
-	if( file_exists( get_template_directory() . "/includes/cuztom-post-type_course.php" ) ) {
-		include_once( get_template_directory() . '/includes/cuztom-post-type_course.php' );
-	}
+// 	// Include code for creating course post type
+// 	if( file_exists( get_template_directory() . "/includes/cuztom-post-type_course.php" ) ) {
+// 		include_once( get_template_directory() . '/includes/cuztom-post-type_course.php' );
+// 	}
 
-
+include('includes/wp-cuztom-helper/cuztom.php');
+//Include post custom posts type. Dependent on /wp-cuztom-helper classes.
+// include('includes/wp-cuztom-posts/custom-generic.php');
+// include('includes/wp-cuztom-posts/custom-generic-post.php');
+include('includes/wp-cuztom-posts/cuztom-post-type_course.php');
+include('includes/wp-cuztom-posts/cuztom-post-type_slider.php');
+include('includes/wp-cuztom-posts/custom-team-members.php');
 
