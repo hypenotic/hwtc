@@ -63,7 +63,9 @@ if ($ctatext) { ?>
 <section class="call-to-action">
 <div class="container">
     <div class="columns-1 content">
-    <h3><?php echo $ctatitle; ?></h3>
+    <?php if ($ctatitle) { ?>
+         <h3><?php echo $ctatitle; ?></h3>
+    <?php } ?>
     <div><?php echo $ctatext; ?></div>
     <a href="<?php echo $ctalink; ?>" class="button"><?php echo $ctabtn; ?></a>
     </div>
