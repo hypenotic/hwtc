@@ -26,24 +26,24 @@ $team->add_meta_box(
                     'description'   => '',
                     'type'          => 'text',          
                 ),
+                // array(
+                //     'name'          => 'email',
+                //     'label'         => 'Email',
+                //     'description'   => '',
+                //     'type'          => 'text'
+                //  ),
+                //  array(
+                //     'name'          => 'phone',
+                //     'label'         => 'Phone',
+                //     'description'   => '',
+                //     'type'          => 'text'
+                //  ),
                 array(
-                    'name'          => 'email',
-                    'label'         => 'Email',
-                    'description'   => '',
-                    'type'          => 'text'
-                 ),
-                 array(
-                    'name'          => 'phone',
-                    'label'         => 'Phone',
-                    'description'   => '',
-                    'type'          => 'text'
-                 ),
-                  array(
                     'name'          => 'bio',
                     'label'         => 'Bio',
                     'description'   => '',
                     'type'          => 'wysiwyg'
-                 ),
+                ),
                  array(
                     'name'          => 'image',
                     'label'         => 'Image',
