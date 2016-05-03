@@ -63,8 +63,8 @@
                         ?>
                     </aside>
                     <article>
-                        <h3><?php echo $name;?></h3>
-                        <h4><?php echo $title;?></h4>
+                        <h3 class="team--name"><?php echo $name;?></h3>
+                        <h4 class="team--title"><?php echo $title;?></h4>
                         <?php echo $bio;?>
                     </article>
                </li>

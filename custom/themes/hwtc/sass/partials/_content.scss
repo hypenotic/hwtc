@@ -492,3 +492,20 @@
         }
     }
 }
+
+h4.team--title {
+
+    color: $black;
+    font-family: "latoitalic";
+    font-size: 11px;
+    line-height: 11px;
+    line-height: 14px;
+    margin: 15px 0 25px;
+    padding: 0;
+    text-shadow: none;
+    text-transform: none;
+    @include at-breakpoint($desktop) {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
