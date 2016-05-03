@@ -46,7 +46,7 @@
         </div>
 </div>
 <div class="container">
-    <div class="columns-wide content">
+    <div class="columns-wide content front-page-content">
 	    <?php the_content();?>    
     </div>
 </div>
@@ -67,7 +67,7 @@ if ($ctatext) { ?>
          <h3><?php echo $ctatitle; ?></h3>
     <?php } ?>
     <div><?php echo $ctatext; ?></div>
-    <a href="<?php echo $ctalink; ?>" class="button"><?php echo $ctabtn; ?></a>
+    <a href="<?php echo $ctalink; ?>" class="button" target="_blank"><?php echo $ctabtn; ?></a>
     </div>
     </div>
 </section>

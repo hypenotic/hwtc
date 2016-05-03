@@ -161,10 +161,12 @@
             @include sassy-button("flat", 5px, 14px, #fafafa);
             border: 2px solid #9b59b6;
             color: #9b59b6;
+            letter-spacing: 1px;
             line-height: 1.5em;
             margin-bottom: 4em;
             margin-top: 10px;
             padding-top: 10px;
+            padding: 20px 50px;
             text-decoration: none;
             text-transform: uppercase;
             &:hover {
@@ -538,7 +540,7 @@ h4.team--title {
             }
             div, p {
                 font-size: 18px;
-                line-height: 25px;
+                line-height: 1.8em;
             }
             a.button {
                 margin-top: 40px;
@@ -549,5 +551,19 @@ h4.team--title {
                 max-width: 100%;
             }
         }
+    }
+}
+
+.front-page-content {
+
+
+    padding-left: 10%;
+    padding-right: 10%;
+    h1 {
+        line-height: 1.2em;
+        margin-bottom: 0;
+    }
+    p {
+        padding: 0 10% 20px;
     }
 }

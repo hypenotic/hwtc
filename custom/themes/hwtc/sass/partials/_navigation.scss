@@ -91,11 +91,11 @@ nav ul li a {
 
 
 
-
     @include adjust-font-size-to(14px);
-    @include text-shadow(1px 0px 1px black);
+    // @include text-shadow(1px 0px 1px black);
     color: $white;
     font-family: $latoregular;
+    letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase;
     &:hover {
