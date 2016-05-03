@@ -3,5 +3,6 @@ $column-width: 3.5em;
 $gutter-width: 1.5em;
 $grid-padding: $gutter-width;
 $desktop: 55em 15;
+$mobile: 450px 7;
 
 @include border-box-sizing;

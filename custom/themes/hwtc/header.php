@@ -33,7 +33,7 @@
 
 <!-- Site Overlay for Pushy offcanvas to work -->
 <div class="site-overlay"></div>
-<header class="wrap push">
+<header class="wrap push" id="push-mobile">
 	<div class="container">
       <!-- <div class="logo nav">
             <a href="<?php bloginfo('url' ); ?>"><img src="<?php bloginfo('template_url');?>/images/HWTC_Logo_white.png" /></a>

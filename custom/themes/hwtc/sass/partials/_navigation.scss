@@ -158,16 +158,25 @@ ul li:hover ul.sub-menu {
 
 .mobile-logo-wrap {
     background-color: $white;
+    left: 20px;
     padding: 10px 7px 4px;
+    position: absolute;
     text-align: center;
-    width: 80px;
+    top: 0;
+    width: 100px;
 }
 
 #mobile-logo {
-    height: 60px;
+    height: 90px;
     width: auto;
 }
 
+header#push-mobile {
+    @media (max-width: 450px) {
+        height: 90px;
+    }
+}
+
 #mobile-nav-button {
-    margin-top: 15px;
+    margin-top: 0px;
 }
