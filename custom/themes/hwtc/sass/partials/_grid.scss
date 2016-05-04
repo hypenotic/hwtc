@@ -111,6 +111,12 @@ article {
     }
 }
 
+article.team-member {
+    @include at-breakpoint($desktop) {
+        margin-bottom: 2em;
+    }
+}
+
 section {
     margin-top: 95px;
     padding-top: 80px;

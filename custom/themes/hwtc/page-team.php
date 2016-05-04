@@ -62,7 +62,7 @@
                             }
                         ?>
                     </aside>
-                    <article>
+                    <article class="team-member">
                         <h3 class="team--name"><?php echo $name;?></h3>
                         <h4 class="team--title"><?php echo $title;?></h4>
                         <?php echo $bio;?>
