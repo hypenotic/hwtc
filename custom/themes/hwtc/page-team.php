@@ -49,7 +49,9 @@
                 $name   = $teammate['_name'];
                 $title  = $teammate['_title'];
                 $email  = $teammate['_email'];
+                $emaild  = $teammate['_emaild'];
                 $phone  = $teammate['_phone'];
+                $phoned  = $teammate['_phoned'];
                 $bio    = $teammate['_bio'];
                 $image  = $teammate['_image'];
             ?>       
@@ -65,6 +67,15 @@
                     <article class="team-member">
                         <h3 class="team--name"><?php echo $name;?></h3>
                         <h4 class="team--title"><?php echo $title;?></h4>
+                        <div class="team-member--contact">
+                            <?php if ($email) { ?>
+                            <a href="mailto:<?php echo $email;?>"><i class="fa fa-envelope-o" aria-hidden="true"></i><?php echo $email;?></a>
+                            <?php } ?>
+                            <?php if ($phone) { ?>
+                            <a href="tel:<?php echo $phone;?>"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $phoned;?></a>
+                            <?php } ?>
+                        </div>
+                       
                         <?php echo $bio;?>
                     </article>
                </li>

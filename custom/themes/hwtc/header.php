@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo('name') ?></title>	
 <?php wp_head(); ?>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 <script type='text/javascript'>
 (function (d, t) {
   var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];

@@ -26,18 +26,30 @@ $team->add_meta_box(
                     'description'   => '',
                     'type'          => 'text',          
                 ),
+                array(
+                    'name'          => 'email',
+                    'label'         => 'Email',
+                    'description'   => '',
+                    'type'          => 'text'
+                ),
                 // array(
-                //     'name'          => 'email',
-                //     'label'         => 'Email',
+                //     'name'          => 'emaild',
+                //     'label'         => 'Email to display',
                 //     'description'   => '',
                 //     'type'          => 'text'
-                //  ),
-                //  array(
-                //     'name'          => 'phone',
-                //     'label'         => 'Phone',
-                //     'description'   => '',
-                //     'type'          => 'text'
-                //  ),
+                // ),
+                array(
+                    'name'          => 'phone',
+                    'label'         => 'Phone',
+                    'description'   => 'Numbers only.',
+                    'type'          => 'text'
+                ),
+                array(
+                    'name'          => 'phoned',
+                    'label'         => 'Number to display',
+                    'description'   => '',
+                    'type'          => 'text'
+                ),
                 array(
                     'name'          => 'bio',
                     'label'         => 'Bio',

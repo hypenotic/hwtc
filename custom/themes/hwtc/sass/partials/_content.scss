@@ -502,13 +502,25 @@ h4.team--title {
     font-size: 11px;
     line-height: 11px;
     line-height: 14px;
-    margin: 15px 0 25px;
+    margin: 10px 0;
     padding: 0;
     text-shadow: none;
     text-transform: none;
     @include at-breakpoint($desktop) {
         font-size: 20px;
         line-height: 20px;
+    }
+}
+
+.team-member--contact {
+
+
+    margin-bottom: 25px;
+    a {
+        margin-right: 20px;
+    }
+    i {
+        margin-right: 10px;
     }
 }
 
@@ -565,6 +577,10 @@ h4.team--title {
             }
         }
     }
+}
+
+.content.columns-1.calendar-page {
+    padding: 0;
 }
 
 .front-page-content {
