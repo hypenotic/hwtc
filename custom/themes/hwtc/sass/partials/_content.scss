@@ -515,10 +515,18 @@ h4.team--title {
 // HOME
 .call-to-action {
 
+
     background-color: $white;
     margin-top: 0;
+    @media (max-width: 450px) {
+        padding: 30px;
+    }
     // min-height: 400px;
     .container {
+
+        @media (max-width: 450px) {
+            padding: 0px;
+        }
         .content.columns-1 {
 
 
@@ -527,7 +535,7 @@ h4.team--title {
 
 
             // color: $white;
-            padding: 30px;
+            padding: 0px 20px;
             text-align: center;
             @include at-breakpoint($desktop) {
                 padding: 0 20%;
@@ -539,8 +547,13 @@ h4.team--title {
                 margin-bottom: 10px;
             }
             div, p {
+
                 font-size: 18px;
                 line-height: 1.8em;
+                @media (max-width: 450px) {
+                    font-size: 1em;
+                    line-height: 1.8em;
+                }
             }
             a.button {
                 margin-top: 40px;
@@ -557,13 +570,21 @@ h4.team--title {
 .front-page-content {
 
 
+
     padding-left: 10%;
     padding-right: 10%;
+    @media (max-width: 450px) {
+        padding: 0;
+    }
     h1 {
         line-height: 1.2em;
         margin-bottom: 0;
     }
     p {
+
         padding: 0 10% 20px;
+        @media (max-width: 450px) {
+            padding: 0;
+        }
     }
 }

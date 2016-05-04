@@ -29,7 +29,7 @@
 <div class="container">
     <div class="columns-1 content">
 	    <?php the_content();?>    
-        <!-- <div class="our-people-title"><h1>Our People</h1></div>
+        <div class="our-people-title"><h1>Our People</h1></div>
         <?php query_posts('cat=3');
 		if(have_posts()):
 		echo "<ul class='our-people'>";
@@ -46,7 +46,7 @@
         </li>
         <?php endwhile;
 		echo "</ul>";
-		endif;wp_reset_query();?> -->
+		endif;wp_reset_query();?>
     </div>
 </div>
 <?php endwhile; endif; wp_reset_query();?>
