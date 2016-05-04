@@ -68,14 +68,13 @@
                         <?php echo $bio;?>
                     </article>
                </li>
-            </ul>
-
           
             <?php
                     }
                 }
             ?>
         <!-- end loop -->
+        </ul>
             
         <?php 
         endforeach; 
