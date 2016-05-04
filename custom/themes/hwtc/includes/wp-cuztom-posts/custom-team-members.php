@@ -10,7 +10,7 @@ $team = register_cuztom_post_type( 'team', $args);
 
 $team->add_meta_box(
     'teammate',
-    'teammate',    
+    'Members',    
     array(
         'bundle',    
             array( 
