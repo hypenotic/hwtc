@@ -40,12 +40,24 @@ $team->add_meta_box(
                 // ),
                 array(
                     'name'          => 'phone',
-                    'label'         => 'Phone',
+                    'label'         => 'Primary Number',
                     'description'   => 'Numbers only.',
                     'type'          => 'text'
                 ),
                 array(
                     'name'          => 'phoned',
+                    'label'         => 'Number to display',
+                    'description'   => '',
+                    'type'          => 'text'
+                ),
+                array(
+                    'name'          => 'cell',
+                    'label'         => 'Secondary Number',
+                    'description'   => 'Numbers only.',
+                    'type'          => 'text'
+                ),
+                array(
+                    'name'          => 'celld',
                     'label'         => 'Number to display',
                     'description'   => '',
                     'type'          => 'text'

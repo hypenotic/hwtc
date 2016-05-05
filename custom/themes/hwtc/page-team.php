@@ -52,6 +52,8 @@
                 $emaild  = $teammate['_emaild'];
                 $phone  = $teammate['_phone'];
                 $phoned  = $teammate['_phoned'];
+                $cell  = $teammate['_cell'];
+                $celld  = $teammate['_celld'];
                 $bio    = $teammate['_bio'];
                 $image  = $teammate['_image'];
             ?>       
@@ -69,10 +71,13 @@
                         <h4 class="team--title"><?php echo $title;?></h4>
                         <div class="team-member--contact">
                             <?php if ($email) { ?>
-                            <a href="mailto:<?php echo $email;?>"><i class="fa fa-envelope-o" aria-hidden="true"></i><?php echo $email;?></a>
+                            <a href="mailto:<?php echo $email;?>"><i class="fa fa-envelope-o" aria-hidden="true"></i><?php echo $email;?></a><br/>
                             <?php } ?>
                             <?php if ($phone) { ?>
-                            <a href="tel:<?php echo $phone;?>"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $phoned;?></a>
+                            <a href="tel:<?php echo $phone;?>"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $phoned;?></a><br/>
+                            <?php } ?>
+                            <?php if ($cell) { ?>
+                            <a href="tel:<?php echo $cell;?>"><i class="fa fa-mobile" aria-hidden="true"></i><?php echo $celld;?></a>
                             <?php } ?>
                         </div>
                        
