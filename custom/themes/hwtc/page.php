@@ -25,6 +25,30 @@
 	    <?php the_content();?>    
     </div>
 </div>
+
+<?php 
+
+$ctatitle   = get_post_meta($post->ID,'_cta_heading',true);
+$ctatext   = get_post_meta($post->ID,'_cta_blurb',true);
+$ctabtn     = get_post_meta($post->ID,'_cta_btext',true);
+$ctalink    = get_post_meta($post->ID,'_cta_blink',true);
+
+if ($ctatext) { ?>
+
+<section class="call-to-action">
+<div class="container">
+    <div class="columns-1 content">
+    <?php if ($ctatitle) { ?>
+         <h3><?php echo $ctatitle; ?></h3>
+    <?php } ?>
+    <div><?php echo $ctatext; ?></div>
+    <a href="<?php echo $ctalink; ?>" class="button" target="_blank"><?php echo $ctabtn; ?></a>
+    </div>
+    </div>
+</section>
+    
+<?php } ?>
+
 <?php if(is_page(18)) {?>
 	<div class="full-width skilled-banner">
     	<div class="overlay-content">

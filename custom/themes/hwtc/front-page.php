@@ -60,7 +60,7 @@ $ctalink    = get_post_meta($post->ID,'_cta_blink',true);
 
 if ($ctatext) { ?>
 
-<section class="call-to-action">
+<section class="call-to-action front-cta">
 <div class="container">
     <div class="columns-1 content">
     <?php if ($ctatitle) { ?>

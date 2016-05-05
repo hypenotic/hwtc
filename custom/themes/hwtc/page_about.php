@@ -29,25 +29,30 @@
 <div class="container">
     <div class="columns-1 content">
 	    <?php the_content();?>    
-       <!--  <div class="our-people-title"><h1>Our People</h1></div>
-        <?php query_posts('cat=3');
-		if(have_posts()):
-		echo "<ul class='our-people'>";
-		while(have_posts()):the_post();
-		?>
-        <li>
-        	<?php $img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(150,150), false, ''); if($img_src[0]) { ?>
-        	<aside><img src="<?php echo $img_src[0];?>" /></aside>
-            <?php } ?>
-            <article>
-                <h3><?php the_title();?></h3>
-                <?php the_content();?>
-            </article>
-        </li>
-        <?php endwhile;
-		echo "</ul>";
-		endif;wp_reset_query();?> -->
     </div>
 </div>
+
+<?php 
+
+$ctatitle   = get_post_meta($post->ID,'_cta_heading',true);
+$ctatext   = get_post_meta($post->ID,'_cta_blurb',true);
+$ctabtn     = get_post_meta($post->ID,'_cta_btext',true);
+$ctalink    = get_post_meta($post->ID,'_cta_blink',true);
+
+if ($ctatext) { ?>
+
+<section class="call-to-action">
+<div class="container">
+    <div class="columns-1 content">
+    <?php if ($ctatitle) { ?>
+         <h3><?php echo $ctatitle; ?></h3>
+    <?php } ?>
+    <div><?php echo $ctatext; ?></div>
+    <a href="<?php echo $ctalink; ?>" class="button" target="_blank"><?php echo $ctabtn; ?></a>
+    </div>
+    </div>
+</section>
+    
+<?php } ?>
 <?php endwhile; endif; wp_reset_query();?>
 <?php get_footer();?>
