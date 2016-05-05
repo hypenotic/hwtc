@@ -58,21 +58,75 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="container" style="max-width:100%;">
     <div class="columns-1 content calendar-page">
     <div class="content">
+	    <div class="social-share">
+	        <?php
+
+	        $page_object = get_queried_object();
+	        $page_id     = get_queried_object_id();
+
+	        if ($page_id == 107) {
+	            $theurl = get_term_link(107);
+	        } else if ($page_id == 106) {
+	            $theurl = get_term_link(106);
+	        } else {
+	        	$theurl = 'http://hospitalitytrainingcentre.com/our-courses';
+	        }
+
+	        if ($page_id == 107) {
+	            $thetitle = 'Training - Hospitality Workers';
+	        } else if ($page_id == 107) {
+	            $thetitle = 'Training - New to Hospitality';
+	        } else {
+	        	$thetitle = 'Get Training';
+	        }
+
+	        $post_title= $thetitle;
+	        $post_link= $theurl;
+	        $post_description= strip_tags($course_description);
+	        $post_img = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );
+	        $twitter_url ='http://twitter.com/home?status='.$post_link.'+'.$post_title;
+	        $fb_url = 'https://www.facebook.com/sharer.php?s=100&amp;p[title]='.$post_title.'&amp;p[summary]='.$post_description.'&amp;p[url]='.$post_link.'&amp;p[images][0]='.$post_img;
+	        $pintrest_url='http://pinterest.com/pin/create/bookmarklet/?media='.$post_img.'&amp;url='.$post_link.'&amp;is_video=false&amp;description='.$post_description;
+	        $gplus_url='https://plus.google.com/share?url='.$post_link;
+	        $linkedin_url='http://www.linkedin.com/shareArticle?mini=true&amp;url='.$post_link.'&amp;title='.$post_title.'&amp;source='.$post_link;
+	        //$mail_url='mailto:?subject='.$post_title.'&amp;body='.$post_description .'-'.$post_link;
+	        $mail_url='http://www.sharethis.com/share?url='.$post_link.'&title='.$post_title.'&summary='.$post_description.'&img='.$post_img;
+	        ?>
+	        <ul>
+	            <li><b>Share this: </b></li>
+	            <li><a id="facebook" href="<?php echo $fb_url;?>" rel="nofollow" target="_blank">Facebook</a></li>
+	            <li><a id="twitter"  href="<?php echo $twitter_url;?>" rel="nofollow" target="_blank">Twitter</a></li>
+	            <li><a id="mail" href="<?php echo $mail_url;?>" rel="nofollow" target="_blank">Email</a></li>
+	            <li><a id="pinterest" href="<?php echo $pintrest_url;?>" rel="nofollow" target="_blank">Pinterest</a></li>
+	        </ul>
+	    </div>
+	<!-- Social Share Ends -->
 
 			<?php 
 
-				$terms = get_the_terms(get_the_ID(), 'tribe_events_cat');
-					$count = count($terms);
-					if ( $count > 0 ){
-						foreach ( $terms as $term ) {
-					    		$name  = $term->slug;
+				
+
+
+				if (tribe_is_month() && !is_tax()) {
+					$name == 'course-calendar';
+				} else {
+
+					$terms = get_the_terms(get_the_ID(), 'tribe_events_cat');
+						$count = count($terms);
+						if ( $count > 0 ){
+							foreach ( $terms as $term ) {
+						    		$name  = $term->slug;
+							}
 						}
-					}
+					
+				}	
 
 				if ($name == 'new-to-hospitality') {
 					$theid = 302;
-				} else {
+				} else if ($name == 'hospitality-workers') {
 					$theid = 299;
+				} else {
+					$theid = 0;
 				}	
 
 				$query=new WP_Query(
@@ -132,7 +186,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			<?php endif;wp_reset_query();?>
 			
-		<?php } else  { ?>
+		<?php } else if ($name == 'hospitality-workers')  { ?>
 
 			<h5>Courses:</h5>
 			<div class="course-accordion">
@@ -178,6 +232,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 			</div>
 			<?php endif;wp_reset_query();?>
+		<?php }  else  { ?>
 		<?php } ?>
 
 			

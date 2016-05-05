@@ -27,11 +27,15 @@ do_action( 'tribe_events_before_template' );
 			}
 		}
 
-	if ($name == 'new-to-hospitality') {
-		$theid = 302;
+	if (tribe_is_month() && !is_tax()) {
+		$theid = 1334;
 	} else {
-		$theid = 299;
-	}	
+		if ($name == 'new-to-hospitality') {
+			$theid = 302;
+		} else {
+			$theid = 299;
+		} 
+	}
 
 	$thecontent=new WP_Query(
 		array(

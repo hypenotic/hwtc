@@ -7,7 +7,7 @@
 
 <?php
 if( tribe_is_month() && !is_tax() ) { // The Main Calendar Page
-    echo 'Course Calendar';
+    echo 'Get Training';
 } elseif( tribe_is_month() && is_tax() ) { // Calendar Category Pages
     echo 'Training' . ' &raquo; ' . single_term_title('', false);
 } elseif( tribe_is_event() && !tribe_is_day() && !is_single() ) { // The Main Events List
