@@ -48,7 +48,9 @@ if ($ctatext) { ?>
          <h3><?php echo $ctatitle; ?></h3>
     <?php } ?>
     <div><?php echo $ctatext; ?></div>
+    <?php if ($ctalink) { ?>
     <a href="<?php echo $ctalink; ?>" class="button" target="_blank"><?php echo $ctabtn; ?></a>
+    <?php } ?>
     </div>
     </div>
 </section>
