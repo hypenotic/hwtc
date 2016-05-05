@@ -41,17 +41,18 @@ do_action( 'tribe_events_before_template' );
 
 ?>
 
+
 <?php 
 if($thecontent->have_posts()):while($thecontent->have_posts()):$thecontent->the_post(); 
 ?>
-
+	<!-- Social Share Ends -->
 	<div>
 		<?php the_content();?> 
 	</div>
 
 <?php endwhile; endif;wp_reset_query();?>
 
-<h2 style="text-align: center;">Course Calendar</h2>
+<h2 style="text-align: center;margin-bottom: 20px;">Course Calendar</h2>
 
 <?php
 

@@ -11,27 +11,7 @@
 		<img src="<?php echo $img;?>" />
         <div class="bannertext">
             <div class="bannertext-content">
-                <div class="banner-title-big">
-                    <?php
-
-                        if( tribe_is_month() && !is_tax() ) { // The Main Calendar Page
-                            echo 'Course Calendar';
-                        } elseif( tribe_is_month() && is_tax() ) { // Calendar Category Pages
-                            echo 'Training' . ' &raquo; ' . single_term_title('', false);
-                        } elseif( tribe_is_event() && !tribe_is_day() && !is_single() ) { // The Main Events List
-                            echo 'Course List';
-                        } elseif( tribe_is_event() && is_single() ) { // Single Events
-                            echo get_the_title();
-                        } elseif( tribe_is_day() ) { // Single Event Days
-                            echo 'Courses on: ' . date('F j, Y', strtotime($wp_query->query_vars['eventDate']));
-                        } elseif( tribe_is_venue() ) { // Single Venues
-                            echo get_the_title();
-                        } else {
-                            echo get_the_title();
-                        }
-
-                    ?>
-                </div>
+                <div class="banner-title-big"><?php the_title();?></div>
                 <?php $sub_title = get_post_meta(get_the_ID(),'second-title',true); 
 					  if($sub_title) {
 				?>
