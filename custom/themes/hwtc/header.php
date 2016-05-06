@@ -3,27 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>
-
-<?php
-if( tribe_is_month() && !is_tax() ) { // The Main Calendar Page
-    echo 'Get Training';
-} elseif( tribe_is_month() && is_tax() ) { // Calendar Category Pages
-    echo 'Training' . ' &raquo; ' . single_term_title('', false);
-} elseif( tribe_is_event() && !tribe_is_day() && !is_single() ) { // The Main Events List
-    echo 'Course List';
-} elseif( tribe_is_event() && is_single() ) { // Single Events
-    echo get_the_title();
-} elseif( tribe_is_day() ) { // Single Event Days
-    echo 'Courses on: ' . date('F j, Y', strtotime($wp_query->query_vars['eventDate']));
-} elseif( tribe_is_venue() ) { // Single Venues
-    echo get_the_title();
-} else {
-    echo wp_title( '|', true, 'right' ) . bloginfo('name');
-}
-?>
-
-</title>	
+<title><?php echo wp_title( '|', true, 'right' ) . bloginfo('name'); ?></title>	
 <?php wp_head(); ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 <script type='text/javascript'>
