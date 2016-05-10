@@ -46,7 +46,7 @@ function slider_register_post_type() {
 		'has_archive' 			=> true, 
 		'hierarchical' 			=> false,
 		'menu_position' 		=> null,
-		'menu_icon'         	=> get_template_directory_uri() . '/images/slider/icon.png',
+		'menu_icon'         	=> 'dashicons-format-gallery',
 		'supports' 				=> array( 'title','thumbnail' ),
 		'taxonomies'			=> array( '' )
 	);
