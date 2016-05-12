@@ -101,14 +101,17 @@
 			<?php if($post->post_type =='course'){ ?>
 			<?php get_template_part( 'template-part', 'single-course' ); ?>
 			<?php } ?>
-			<div class="page-navigation">
-				<div class="alignleft">
-					<?php previous_post('&lsaquo; %', '', 'yes','','','8 and 3'); ?>
-				</div>
-				<div class="alignright">
-					<?php next_post('% &rsaquo;', '', 'yes','','','8 and 3'); ?>
-				</div>
-			</div> <!-- end navigation -->	
+
+			<?php if($post->post_type !=='course'){ ?>
+				<div class="page-navigation">
+					<div class="alignleft">
+						<?php previous_post('&lsaquo; %', '', 'yes','','','8 and 3'); ?>
+					</div>
+					<div class="alignright">
+						<?php next_post('% &rsaquo;', '', 'yes','','','8 and 3'); ?>
+					</div>
+				</div> <!-- end navigation -->	
+			<?php } ?>
 			<div class="span-8 center">
 				<?php comments_template();?>
 			</div>			
