@@ -111,10 +111,10 @@
 						<?php next_post('% &rsaquo;', '', 'yes','','','8 and 3'); ?>
 					</div>
 				</div> <!-- end navigation -->	
-			<?php } ?>
-			<div class="span-8 center">
-				<?php comments_template();?>
-			</div>			
+				<div class="span-8 center">
+					<?php comments_template();?>
+				</div>	
+			<?php } ?>		
 		</div>
 	</div>
 </div>
