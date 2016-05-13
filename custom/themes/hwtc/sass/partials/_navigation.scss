@@ -152,13 +152,38 @@ ul li:hover ul.sub-menu {
     img {
         height: auto;
         max-width: 150px;
-        padding: 20px 10px 10px;
+        padding: 20px 10px 7px;
     }
+}
+
+#logo-tab:after, #logo-tab:before {
+
+
+    border-top: 25px solid $white;
+    content: '';
+    // angle degree, reduce to reduce degree of angles
+    height: 0;
+    position: absolute;
+    top: 100%;
+    // no height, no content, just border
+    width: 0;
+}
+
+#logo-tab:after {
+    // right angle
+    border-left: 75px solid transparent;
+    right: 0;
+}
+
+#logo-tab:before {
+    // left angle
+    border-right: 75px solid transparent;
+    left: 0;
 }
 
 .mobile-logo-wrap {
     background-color: $white;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     left: 20px;
     max-width: 120px;
     padding: 10px 7px 4px;
@@ -170,6 +195,31 @@ ul li:hover ul.sub-menu {
 #mobile-logo {
     height: auto;
     max-width: 90px;
+}
+
+.mobile-logo-wrap:after, .mobile-logo-wrap:before {
+
+
+    border-top: 15px solid $white;
+    content: '';
+    // angle degree, reduce to reduce degree of angles
+    height: 0;
+    position: absolute;
+    top: 100%;
+    // no height, no content, just border
+    width: 0;
+}
+
+.mobile-logo-wrap:after {
+    // right angle
+    border-left: 50px solid transparent;
+    right: 0;
+}
+
+.mobile-logo-wrap:before {
+    // left angle
+    border-right: 50px solid transparent;
+    left: 0;
 }
 
 header#push-mobile {
