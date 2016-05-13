@@ -61,10 +61,6 @@
                 	<li><a id="pinterest" href="<?php echo $pintrest_url;?>" rel="nofollow" target="_blank" onclick="ga('send', 'event', 'Share', 'Pinterest', '<? echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>');">Pinterest</a></li>
                 </ul>
             </div>
-			<p class="meta">
-				<span>Posted <?php the_time('m-d-y');?></span> 
-				<span>by <?php the_author_posts_link();?> <?php echo " In ".get_the_category_list(',');?></span>
-			</p>
 			
 			<?php
 			$img = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
