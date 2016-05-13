@@ -156,29 +156,30 @@ ul li:hover ul.sub-menu {
     }
 }
 
-// #logo-tab:after, #logo-tab:before {
+#logo-tab:after, #logo-tab:before {
 
-//     border-top: 18px solid $white;
-//     content: '';
-//     // angle degree, reduce to reduce degree of angles
-//     height: 0;
-//     position: absolute;
-//     top: 100%;
-//     // no height, no content, just border
-//     width: 0;
-// }
 
-// #logo-tab:after {
-//     // right angle
-//     border-left: 75px solid transparent;
-//     right: 0;
-// }
+    border-top: 18px solid $white;
+    content: '';
+    // angle degree, reduce to reduce degree of angles
+    height: 0;
+    position: absolute;
+    top: 100%;
+    // no height, no content, just border
+    width: 0;
+}
 
-// #logo-tab:before {
-//     // left angle
-//     border-right: 75px solid transparent;
-//     left: 0;
-// }
+#logo-tab:after {
+    // right angle
+    border-left: 75px solid transparent;
+    right: 0;
+}
+
+#logo-tab:before {
+    // left angle
+    border-right: 75px solid transparent;
+    left: 0;
+}
 
 .mobile-logo-wrap {
     background-color: $white;
@@ -196,29 +197,30 @@ ul li:hover ul.sub-menu {
     max-width: 90px;
 }
 
-// .mobile-logo-wrap:after, .mobile-logo-wrap:before {
+.mobile-logo-wrap:after, .mobile-logo-wrap:before {
 
-//     border-top: 15px solid $white;
-//     content: '';
-//     // angle degree, reduce to reduce degree of angles
-//     height: 0;
-//     position: absolute;
-//     top: 100%;
-//     // no height, no content, just border
-//     width: 0;
-// }
 
-// .mobile-logo-wrap:after {
-//     // right angle
-//     border-left: 50px solid transparent;
-//     right: 0;
-// }
+    border-top: 15px solid $white;
+    content: '';
+    // angle degree, reduce to reduce degree of angles
+    height: 0;
+    position: absolute;
+    top: 100%;
+    // no height, no content, just border
+    width: 0;
+}
 
-// .mobile-logo-wrap:before {
-//     // left angle
-//     border-right: 50px solid transparent;
-//     left: 0;
-// }
+.mobile-logo-wrap:after {
+    // right angle
+    border-left: 50px solid transparent;
+    right: 0;
+}
+
+.mobile-logo-wrap:before {
+    // left angle
+    border-right: 50px solid transparent;
+    left: 0;
+}
 
 header#push-mobile {
     @media (max-width: 450px) {
