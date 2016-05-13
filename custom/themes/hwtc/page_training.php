@@ -34,7 +34,7 @@
 					$post_description= strip_tags($course_description);
 					$post_img = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );
 					$twitter_url ='http://twitter.com/home?status='.$post_link.'+'.$post_title;
-					$fb_url = 'https://www.facebook.com/sharer.php?s=100&amp;p[title]='.$post_title.'&amp;p[summary]='.$post_description.'&amp;p[url]='.$post_link.'&amp;p[images][0]='.$post_img;
+					$fb_url = 'https://www.facebook.com/sharer.php?s=100&amp;p[title]='.$post_title.'&amp;p[summary]='.$post_description.'&amp;p[url]='.$post_link;
 					$pintrest_url='http://pinterest.com/pin/create/bookmarklet/?media='.$post_img.'&amp;url='.$post_link.'&amp;is_video=false&amp;description='.$post_description;
 					$gplus_url='https://plus.google.com/share?url='.$post_link;
 					$linkedin_url='http://www.linkedin.com/shareArticle?mini=true&amp;url='.$post_link.'&amp;title='.$post_title.'&amp;source='.$post_link;
