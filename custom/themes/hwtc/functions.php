@@ -106,8 +106,8 @@ function hype_scripts() {
 		wp_enqueue_script( 'map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array('jquery'), '', true);
 		//wp_enqueue_script( 'widowFix', get_template_directory_uri() . '/js/jquery.widowFix-1.3.2.js', array('jquery'), '1.3.2', true);
 		wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array('jquery'), '1.0', true);
-		// wp_enqueue_script( 'bxslider-script', get_template_directory_uri() . '/js/bxslider.js', array('jquery'), '1.0', true);
-		// wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/slider.js', array('jquery'), '1.0', true);
+		wp_enqueue_script( 'bxslider-script', get_template_directory_uri() . '/js/bxslider.js', array('jquery'), '1.0', true);
+		wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/slider.js', array('jquery'), '1.0', true);
 		wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js', array('jquery'), '1.0', true);
 		wp_enqueue_script( 'menu-function', get_template_directory_uri() . '/js/menu-function.js', array('jquery'), '1.0', true);
 }
