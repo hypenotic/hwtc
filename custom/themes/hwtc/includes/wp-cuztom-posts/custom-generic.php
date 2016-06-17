@@ -33,5 +33,18 @@ $pages->add_meta_box(
     )
 );
 
+$pages->add_meta_box(
+    'social',
+    'Social Share', 
+    array(
+        array(
+            'name'          => 'share',
+            'label'         => 'Share Button',
+            'description'   => '(appear just above post content)',
+            'type'          => 'yesno',
+        )    
+    )
+);
+
 
 ?>
