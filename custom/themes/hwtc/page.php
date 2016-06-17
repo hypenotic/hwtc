@@ -26,7 +26,6 @@
         <?php 
 
         $shares   = get_post_meta($post->ID,'_social_share',true);
-        print_r($shares);
 
         if ($shares == 'yes') { ?>
         <div class="social-share">
