@@ -90,12 +90,6 @@
 				<span>by <?php the_author_posts_link();?> <?php echo " In ".get_the_category_list(',');?></span>
 			</p>
 			
-			<?php
-			$img = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-				if($img) {
-					echo "<p><img src='".$img."' /></p>";
-				}
-			?>
 			<?php the_content();?>    
 			
 			<?php if($post->post_type =='course'){ ?>
