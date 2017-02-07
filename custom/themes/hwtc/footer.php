@@ -26,8 +26,14 @@
 	            <li><a id="facebook" href="https://www.facebook.com/pages/Hospitality-Workers-Training-Centre/152350521594605" target="_blank">Facebook</a></li>
                 <li><a id="twitter" href="https://twitter.com/Hospitalitywrks" target="_blank">Twitter</a></li>
             </ul>
+            <?php 
+            if (is_page(18)) { ?>
+            <p><a href="mailto:talent@hospitalitytrainingcentre.com">talent@hospitalitytrainingcentre.com</a></p>
+            <p><a href="tel:6479309518">647 930 9518</a></p>
+            <?php  } else { ?>
             <p><a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a></p>
-            <p>647 930 9518</p>
+            <p><a href="tel:6479309518">647 930 9518</a></p>
+            <?php } ?>
 			<p>Hospitality Workers Training Centre<br />
             60 Richmond Street East<br />
             Toronto, Ontario, Canada M5C 1N8</p>
