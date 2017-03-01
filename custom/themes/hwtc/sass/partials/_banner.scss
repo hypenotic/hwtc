@@ -144,6 +144,21 @@
     }
 }
 
+.banner.blog-banner {
+
+
+
+    height: 300px;
+    position: relative;
+    @include at-breakpoint($desktop) {
+        height: 500px;
+    }
+    .bannertext {
+        bottom: 0;
+        position: absolute;
+    }
+}
+
 .bannertext {
 
 

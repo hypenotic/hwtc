@@ -9,8 +9,8 @@
 	}
 	//$img="http://hospitalitytrainingcentre.com/wordpress/wp-content/uploads/2015/01/Training_030-e1421859852208.jpg";
 ?>
-<div class="banner">
-		<img src="<?php echo $img;?>" />
+<div class="banner blog-banner" style="background-image: url(<?php echo $img;?>);">
+		<!-- <img src="<?php //echo $img;?>" /> -->
         <div class="bannertext">
             <div class="bannertext-content">
                 <div class="banner-title-big">
