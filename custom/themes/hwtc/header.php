@@ -41,7 +41,7 @@
     <div class="logo second-nav show-for-desktop">
     <div class="logo-wrapper">
       <div id="logo-tab">
-        <a href="<?php bloginfo('url' ); ?>"><img src="<?php bloginfo('template_url');?>/images/HWTC_Logo_2c_blue.png" alt="HOSPITALITY WORKERS TRAINING CENTRE"></a>
+        <a href="<?php bloginfo('url' ); ?>"><img src="<?php bloginfo('template_url');?>/images/HWTC_squarelogo.png" alt="HOSPITALITY WORKERS TRAINING CENTRE"></a>
       </div>
     </div>
            <!--  <a href="<?php// bloginfo('url' ); ?>" class="">HOSPITALITY WORKERS TRAINING CENTRE</a> -->
