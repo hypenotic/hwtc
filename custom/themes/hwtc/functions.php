@@ -110,6 +110,7 @@ function hype_scripts() {
 		wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/slider.js', array('jquery'), '1.0', true);
 		wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js', array('jquery'), '1.0', true);
 		wp_enqueue_script( 'menu-function', get_template_directory_uri() . '/js/menu-function.js', array('jquery'), '1.0', true);
+    wp_enqueue_script( 'datepicker', get_template_directory_uri() . '/js/datetimepicker.js', array('jquery'), '1.0', true);
 }
 //Enqueue styles
 function hype_styles() {
