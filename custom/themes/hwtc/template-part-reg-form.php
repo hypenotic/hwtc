@@ -3,7 +3,7 @@
 <!--  ----------------------------------------------------------------------  -->
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 <input type=hidden name="oid" value="00Dj00000028Fao">
-<input type=hidden name="retURL" value="http://hospitalitytrainingcentre.com/submission-complete">
+<input type=hidden name="retURL" value="http://hospitalitytrainingcentre.com/registration-submission-thanks">
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
 <!--  these lines if you wish to test in debug mode.                          -->
