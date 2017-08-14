@@ -11,6 +11,7 @@
 <!--  <input type="hidden" name="debugEmail" value="j.r.s.murph@gmail.com">   -->
 <!--  ----------------------------------------------------------------------  -->
 
+<p style="margin-bottom: 0;"><font color="red">*</font> = required</p>
 
 <H2>Eligibility</H2>
 
@@ -55,12 +56,12 @@ Are you eligible to work in Canada (check box if 'yes')? <input  id="00N0a00000C
 	If 'other', please provide further details:<input  id="00N0a00000C0TSw" maxlength="255" name="00N0a00000C0TSw" size="20" type="text" /><br><br>
 	
 	<strong>Please tell us about your physical abilty to work in the hospitality industry:</strong> <br><br>
-	Are you able to be on your feet and active for up to 8 hours consistently?
+	Are you able to be on your feet and active for up to 8 hours consistently? <font color="red">*</font>
 <input  id="00N0a00000C0TTB" name="00N0a00000C0TTB" type="checkbox" value="1" style="margin-left: 10px;" required/><br>
 	If you cannot be on your feet for 8 hour, provide details:<textarea  id="00N0a00000C0TTG" name="00N0a00000C0TTG" type="text" wrap="soft"></textarea><br>
-	Are you comfortable lifting up to 30 lbs? <input  id="00N0a00000C0TTL" name="00N0a00000C0TTL" type="checkbox" value="1" style="margin-left: 10px;" required /><br>
+	Are you comfortable lifting up to 30 lbs? <font color="red">*</font> <input  id="00N0a00000C0TTL" name="00N0a00000C0TTL" type="checkbox" value="1" style="margin-left: 10px;" required /><br>
 	If you are not comfortable lifting up to 30lbs, provide details:<textarea  id="00N0a00000C0TTQ" name="00N0a00000C0TTQ" type="text" wrap="soft"></textarea><br>
-	Do you have any restrictions to bend, reach, push, and twist? <input  id="00N0a00000C0TTV" name="00N0a00000C0TTV" type="checkbox" value="1" style="margin-left: 10px;" required/><br>
+	Do you have any restrictions to bend, reach, push, and twist? <font color="red">*</font> <input  id="00N0a00000C0TTV" name="00N0a00000C0TTV" type="checkbox" value="1" style="margin-left: 10px;" required/><br>
 	If so, please provide details:<textarea  id="00N0a00000C0TTa" name="00N0a00000C0TTa" type="text" wrap="soft"></textarea><br>
 
 
