@@ -319,6 +319,21 @@ jQuery(document).ready(function($){
 		
 		return false;
 	});
+
+	var checkbox = document.getElementById('00N0a00000C0TSX');
+	var reveal_div = document.getElementById('form-reveal');
+	var reveal_note = document.getElementById('reveal-note');
+	var showHiddenDiv = function(){
+	   if(checkbox.checked) {
+	     reveal_div.style['display'] = 'block';
+	     reveal_note.style['display'] = 'none';
+	   } else {
+	     reveal_div.style['display'] = 'none';
+	     reveal_note.style['display'] = 'block';
+	   } 
+	}
+	checkbox.onclick = showHiddenDiv;
+	showHiddenDiv();
 });
 
 /*
