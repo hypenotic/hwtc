@@ -9,6 +9,12 @@ $course->add_meta_box(
     'course_details',
 	array(
 		array(
+			'name'          => 'course_pause',
+			'label'         => 'Course Cancelled/Postponed?',
+			'description'   => '',
+			'type'          => 'checkbox'
+		),
+		array(
 			'name'          => 'assign_page',
 			'label'         => 'Select Page',
 			'description'   => 'Please select at least a page to assign course',

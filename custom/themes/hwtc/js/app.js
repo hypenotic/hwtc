@@ -324,16 +324,28 @@ jQuery(document).ready(function($){
 	var reveal_div = document.getElementById('form-reveal');
 	var reveal_note = document.getElementById('reveal-note');
 	var showHiddenDiv = function(){
-	   if(checkbox.checked) {
+	   	if(checkbox.checked) {
 	     reveal_div.style['display'] = 'block';
 	     reveal_note.style['display'] = 'none';
-	   } else {
+	   	} else {
 	     reveal_div.style['display'] = 'none';
 	     reveal_note.style['display'] = 'block';
-	   } 
+	   	} 
 	}
 	checkbox.onclick = showHiddenDiv;
 	showHiddenDiv();
+
+	var agree_check = document.getElementById('agree_check');
+	var reveal_agree = document.getElementById('form_agree_block');
+	var showForm = function(){
+	   	if(agree_check.checked) {
+	     reveal_agree.style['display'] = 'block';
+	   	} else {
+	     reveal_agree.style['display'] = 'none';
+	   	} 
+	}
+	agree_check.onclick = showForm;
+	showForm();
 });
 
 /*
