@@ -162,8 +162,9 @@ input#first-name-input {
     textarea,
     select {
         border-radius: 5px;
-        border: 1px solid #e3e3e3;
+        border: 2px solid #d6d6d6;
         display: block;
+        min-width: 50%;
     }
     input[type='text'] {
         padding: 10px 15px;
@@ -186,5 +187,25 @@ input#first-name-input {
 #form-employment-history {
     tr {
         margin-bottom: 20px;
+    }
+}
+
+.course-hold {
+
+
+
+    background-color: #ffdbdb;
+    border-radius: 10px;
+    color: red;
+    margin-bottom: 15px;
+    padding: 20px;
+    p {
+        margin-bottom: 5px;
+    }
+    ul, li, li:before {
+        color: red !important;
+    }
+    ul, li {
+        margin: 0;
     }
 }

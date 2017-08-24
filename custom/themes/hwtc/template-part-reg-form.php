@@ -14,15 +14,15 @@
 <input  id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;"/>You must check this box indicating you have read the terms and conditions noted above to continue.
 
 <div id="form_agree_block">
-	<p style="margin-bottom: 0;"><font color="red">*</font> = required</p>
+	<p style="margin-bottom: 0; margin-top: 20px;"><font color="red">*</font> = Required to fill out field</p>
 	
 	<H2>Eligibility</H2>
 	
 	Birthdate:<font color="red">*</font><input  id="00N0a00000C0TSS" name="00N0a00000C0TSS" size="12" type="text" required /><a href="javascript:NewCal('00N0a00000C0TSS','ddmmyyyy')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a><br><br>
 	
 	Are you eligible to work in Canada?<br/>
-	<input type="radio" id="00N0a00000C0TSX" name="00N0a00000C0TSX" value="1" checked> Yes<br>
-	<input type="radio" id="00N0a00000C0TSX" name="00N0a00000C0TSX" value="0"> No<br>
+	<input type="radio" id="00N0a00000C0TSX-1" name="00N0a00000C0TSX" value="1"> Yes<br>
+	<input type="radio" id="00N0a00000C0TSX-2" name="00N0a00000C0TSX" value="0"> No<br>
 
 	<!-- <input id="00N0a00000C0TSX" name="00N0a00000C0TSX" type="checkbox" value="1" style="margin-left: 10px;"/><br> --><br>
 	<p id="reveal-note"><strong>If you are not eligible to work in Canada, please contact HWTC directly for further information at <a href="tel:6479309518">647-930-9518</a> ext 305.</strong>
@@ -65,29 +65,35 @@
 
 		Are you able to be on your feet and work for up to 8 hours?<font color="red">*</font><br/>
 		<!-- <input  id="00N0a00000C0TTB" name="00N0a00000C0TTB" type="checkbox" value="1" style="margin-left: 10px;" required/><br> -->
-		<input type="radio" id="00N0a00000C0TTB" name="00N0a00000C0TTB" value="1" checked> Yes<br>
-		<input type="radio" id="00N0a00000C0TTB" name="00N0a00000C0TTB" value="0" checked> No<br>
-		<input type="radio" id="00N0a00000C0TTB" name="00N0a00000C0TTB" value="0" checked> Not sure<br>
+		<input type="radio" id="00N0a00000C0TTB-1" name="00N0a00000C0TTB" value="1"> Yes<br>
+		<input type="radio" id="00N0a00000C0TTB-2" name="00N0a00000C0TTB" value="0"> No<br>
+		<input type="radio" id="00N0a00000C0TTB-3" name="00N0a00000C0TTB" value="0"> Not sure<br><br>
 
-		If you cannot be on your feet for 8 hours, provide details:<textarea  id="00N0a00000C0TTG" name="00N0a00000C0TTG" type="text" wrap="soft"></textarea><br>
+		<div id="phys_one_block">
+			Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTG" name="00N0a00000C0TTG" type="text" wrap="soft"></textarea><br>
+		</div>
 
 
 		Are you comfortable lifting up to 30lbs? <font color="red">*</font><br/>
 		<!-- <input  id="00N0a00000C0TTL" name="00N0a00000C0TTL" type="checkbox" value="1" style="margin-left: 10px;" required /><br> -->
-		<input type="radio" id="00N0a00000C0TTL" name="00N0a00000C0TTL" value="1" checked> Yes<br>
-		<input type="radio" id="00N0a00000C0TTL" name="00N0a00000C0TTL" value="0" checked> No<br>
-		<input type="radio" id="00N0a00000C0TTL" name="00N0a00000C0TTL" value="0" checked> Not sure<br>
+		<input type="radio" id="00N0a00000C0TTL-1" name="00N0a00000C0TTL" value="1"> Yes<br>
+		<input type="radio" id="00N0a00000C0TTL-2" name="00N0a00000C0TTL" value="0"> No<br>
+		<input type="radio" id="00N0a00000C0TTL-3" name="00N0a00000C0TTL" value="0"> Not sure<br><br>
 
-		If you are not comfortable lifting up to 30lbs, provide details:<textarea  id="00N0a00000C0TTQ" name="00N0a00000C0TTQ" type="text" wrap="soft"></textarea><br>
+		<div id="phys_two_block">
+			Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTQ" name="00N0a00000C0TTQ" type="text" wrap="soft"></textarea><br>
+		</div>
 
 
-		Do you have any restrictions to bend, reach, push, and twist? <font color="red">*</font> <br/>
+		Are you able to bend, reach, push, and twist? <font color="red">*</font> <br/>
 		<!-- <input  id="00N0a00000C0TTV" name="00N0a00000C0TTV" type="checkbox" value="1" style="margin-left: 10px;" required/><br> -->
-		<input type="radio" id="00N0a00000C0TTV" name="00N0a00000C0TTV" value="1" checked> Yes<br>
-		<input type="radio" id="00N0a00000C0TTV" name="00N0a00000C0TTV" value="0" checked> No<br>
-		<input type="radio" id="00N0a00000C0TTV" name="00N0a00000C0TTV" value="0" checked> Not sure<br>
+		<input type="radio" id="00N0a00000C0TTV-1" name="00N0a00000C0TTV" value="1"> Yes<br>
+		<input type="radio" id="00N0a00000C0TTV-2" name="00N0a00000C0TTV" value="0"> No<br>
+		<input type="radio" id="00N0a00000C0TTV-3" name="00N0a00000C0TTV" value="0"> Not sure<br><br>
 		
-		If so, please provide details:<textarea  id="00N0a00000C0TTa" name="00N0a00000C0TTa" type="text" wrap="soft"></textarea><br>
+		<div id="phys_three_block">
+			Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTa" name="00N0a00000C0TTa" type="text" wrap="soft"></textarea><br>
+		</div>
 	
 	
 		<H2>Contact Information</H2>
@@ -99,7 +105,45 @@
 		<label for="city">City<font color="red">*</font></label><input  id="city" maxlength="40" name="city" size="20" type="text" required /><br> 
 	
 	
-		<H2>Screening questionnaire</h2>
+		<H2>Screening questionnaire</h2>		
+		<?php 
+		$args = array(
+			'post_type'  => 'course',
+			'meta_query' => array(
+			    array(
+			        'key' => '_course_details_course_pause',
+			        'value'   => 'on',
+			        'compare' => '='
+			    )
+			)
+		);
+		// the query
+		$the_query = new WP_Query( $args ); ?>
+
+		<?php if ( $the_query->have_posts() ) : ?>
+			
+			<div class="course-hold">
+				<p>These following courses are currently postponed. You can still select them, but please note that they are on hold.</p>
+				
+				<ul>
+
+			<!-- pagination here -->
+
+			<!-- the loop -->
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+				<li><?php the_title();?></li>
+			<?php endwhile; ?>
+			<!-- end of the loop -->
+
+			<!-- pagination here -->
+				</ul>
+			</div>
+
+			<?php wp_reset_postdata(); ?>
+
+		<?php else : ?>
+		<?php endif; ?>
+
 		Which course(s) are you interested in (press control to select multiple options)?:<font color="red">*</font><select  id="00N0a00000C0TTf" multiple="multiple" name="00N0a00000C0TTf" title="Which courses are you interested in?" required><option value="Banquet Server">Banquet Server</option>
 		<option value="Culinary Pre-Apprentice">Culinary Pre-Apprentice</option>
 		<option value="Guest Services">Guest Services</option>

@@ -320,32 +320,86 @@ jQuery(document).ready(function($){
 		return false;
 	});
 
-	var checkbox = document.getElementById('00N0a00000C0TSX');
-	var reveal_div = document.getElementById('form-reveal');
-	var reveal_note = document.getElementById('reveal-note');
-	var showHiddenDiv = function(){
-	   	if(checkbox.checked) {
-	     reveal_div.style['display'] = 'block';
-	     reveal_note.style['display'] = 'none';
-	   	} else {
-	     reveal_div.style['display'] = 'none';
-	     reveal_note.style['display'] = 'block';
-	   	} 
-	}
-	checkbox.onclick = showHiddenDiv;
-	showHiddenDiv();
+	if ($('#agree_check').length) {
+		var checkbox = document.getElementById('00N0a00000C0TSX-1');
+		var checkbox_n = document.getElementById('00N0a00000C0TSX-2');
+		var reveal_div = document.getElementById('form-reveal');
+		var reveal_note = document.getElementById('reveal-note');
+		var showHiddenDiv = function(){
+		   	if(checkbox.checked) {
+		     reveal_div.style['display'] = 'block';
+		     reveal_note.style['display'] = 'none';
+		   	} else {
+		     reveal_div.style['display'] = 'none';
+		     reveal_note.style['display'] = 'block';
+		   	} 
+		}
+		checkbox.onclick = showHiddenDiv;
+		checkbox_n.onclick = showHiddenDiv;
+		showHiddenDiv();
 
-	var agree_check = document.getElementById('agree_check');
-	var reveal_agree = document.getElementById('form_agree_block');
-	var showForm = function(){
-	   	if(agree_check.checked) {
-	     reveal_agree.style['display'] = 'block';
-	   	} else {
-	     reveal_agree.style['display'] = 'none';
-	   	} 
+		var agree_check = document.getElementById('agree_check');
+		var reveal_agree = document.getElementById('form_agree_block');
+		var showForm = function(){
+		   	if(agree_check.checked) {
+		     reveal_agree.style['display'] = 'block';
+		   	} else {
+		     reveal_agree.style['display'] = 'none';
+		   	} 
+		}
+		agree_check.onclick = showForm;
+		showForm();
+
+		var phys1_check = document.getElementById('00N0a00000C0TTB-2');
+		var phys1_check_y = document.getElementById('00N0a00000C0TTB-1');
+		var phys1_check_ns = document.getElementById('00N0a00000C0TTB-3');
+		var phys1_box = document.getElementById('phys_one_block');
+		var phys1 = function(){
+		   	if(phys1_check.checked) {
+		     phys1_box.style['display'] = 'block';
+		   	} else {
+		     phys1_box.style['display'] = 'none';
+		   	} 
+		}
+		phys1_check.onclick = phys1;
+		phys1_check_y.onclick = phys1;
+		phys1_check_ns.onclick = phys1;
+		phys1();
+
+		var phys2_check = document.getElementById('00N0a00000C0TTL-2');
+		var phys2_check_y = document.getElementById('00N0a00000C0TTL-1');
+		var phys2_check_ns = document.getElementById('00N0a00000C0TTL-3');
+		var phys2_box = document.getElementById('phys_two_block');
+		var phys2 = function(){
+		   	if(phys2_check.checked) {
+		     phys2_box.style['display'] = 'block';
+		   	} else {
+		     phys2_box.style['display'] = 'none';
+		   	} 
+		}
+		phys2_check.onclick = phys2;
+		phys2_check_y.onclick = phys2;
+		phys2_check_ns.onclick = phys2;
+		phys2();
+
+		var phys3_check = document.getElementById('00N0a00000C0TTV-2');
+		var phys3_check_y = document.getElementById('00N0a00000C0TTV-1');
+		var phys3_check_ns = document.getElementById('00N0a00000C0TTV-3');
+		var phys3_box = document.getElementById('phys_three_block');
+		var phys3 = function(){
+		   	if(phys3_check.checked) {
+		     phys3_box.style['display'] = 'block';
+		   	} else {
+		     phys3_box.style['display'] = 'none';
+		   	} 
+		}
+		phys3_check.onclick = phys3;
+		phys3_check_y.onclick = phys3;
+		phys3_check_ns.onclick = phys3;
+		phys3();
 	}
-	agree_check.onclick = showForm;
-	showForm();
+
+	
 });
 
 /*
