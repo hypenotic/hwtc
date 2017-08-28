@@ -183,6 +183,14 @@ jQuery(document).ready(function($) {
       if(isLargeViewport()) {
         slidingTitle();
       }
+      var st = $(this).scrollTop();
+      if (st > 50) {
+          $('#logo-tab').addClass('shrink-logo');
+          // console.log('heyyy');
+      } else {
+          $('#logo-tab').removeClass('shrink-logo');
+          // console.log('hidden');
+      }
     });
   }else {
 		var b_img_height=$('.banner img').height();
@@ -397,6 +405,23 @@ jQuery(document).ready(function($){
 		phys3_check_y.onclick = phys3;
 		phys3_check_ns.onclick = phys3;
 		phys3();
+
+		var ec_box = document.getElementById('employment-status-check');
+		var ec_note = document.getElementById('reveal-note-ec');
+		var ec = function(){
+			ec_note.style['display'] = 'none';
+			// ec_box.style['display'] = 'none';
+		}
+		ec();
+		$("#00N0a00000C0TT6").change(function(){
+			if($(this).val() == "Employed Full-time" || $(this).val() == "Student") {
+				ec_note.style['display'] = 'block';
+				ec_box.style['display'] = 'none';
+			} else {
+				ec_note.style['display'] = 'none';
+				ec_box.style['display'] = 'block';
+			}
+		});
 	}
 
 	

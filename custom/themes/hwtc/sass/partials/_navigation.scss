@@ -149,9 +149,27 @@ ul li:hover ul.sub-menu {
     position: absolute;
     text-align: center;
     top: 0;
+    transition: all 0.5s ease;
     img {
         height: auto;
         max-width: 150px;
+        padding: 10px 10px 7px;
+        transition: all 0.5s ease;
+    }
+}
+
+#logo-tab.shrink-logo {
+
+    background-color: $white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    height: auto;
+    left: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    img {
+        height: auto;
+        max-width: 100px;
         padding: 10px 10px 7px;
     }
 }

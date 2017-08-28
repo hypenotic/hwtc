@@ -158,13 +158,24 @@ input#first-name-input {
 .registration-container {
 
 
+
+
+
     input[type='text'],
     textarea,
     select {
+        background: $white;
         border-radius: 5px;
         border: 2px solid #d6d6d6;
         display: block;
         min-width: 50%;
+        padding: 10px 15px;
+    }
+    select {
+        height: 40px;
+    }
+    select[multiple="multiple"] {
+        height: 150px;
     }
     input[type='text'] {
         padding: 10px 15px;
@@ -180,6 +191,11 @@ input#first-name-input {
             background: $white;
             border: 3px solid $blue;
             color: $blue;
+        }
+    }
+    #form-employment-history {
+        td {
+            padding: 0 20px 20px 0;
         }
     }
 }
