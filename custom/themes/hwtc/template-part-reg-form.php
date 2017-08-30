@@ -186,6 +186,7 @@
 			<option value="Kitchen Porter">Kitchen Porter</option>
 			<option value="Restaurant Front of House">Restaurant Front of House</option>
 			<option value="Room Attendant">Room Attendant</option>
+			<option value="Not sure">Not sure</option>
 			</select><br>
 			How did you hear about HWTC? (<em>press control to select multiple options</em>):<font color="red">*</font><select  id="00N0a00000C0TTk" multiple="multiple" name="00N0a00000C0TTk" title="How did you hear about HWTC?" required><option value="Caseworker">Caseworker</option>
 			<option value="Family or friends">Family or friends</option>
@@ -225,105 +226,55 @@
 				<div>
 					<p>Mon</p>
 					<div class="availability-a">
-						<input id="00N0a00000C0TVg" type="checkbox" value="1" required>
-						<select id="00N0a00000C0TVg" name="00N0a00000C0TVg" title="Monday Availability - Start" required>
-							<option value="">--None--</option>
-							<option value="Not available">Not available</option>
-							<option value="4:00">4:00</option>
-						</select>
+						<input id="00N0a00000C0TVg" type="checkbox" value="1">
 					</div>
 				
 					<div class="availability-b">
-						<input id="00N0a00000C0TVl" type="checkbox" value="1" required>
-						<select id="00N0a00000C0TVl" name="00N0a00000C0TVl" title="Monday Availability - End">
-							<option value="">--None--</option>
-							<option value="4:00">4:00</option>
-							<option value="5:00">5:00</option>
-						</select>
+						<input id="00N0a00000C0TVl" type="checkbox" value="1">
 					</div>
 				</div>
 				
 				<div>
 					<p>Tues</p>
 					<div class="availability-a">
-						<input id="00N0a00000C0TVq" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TVq" name="00N0a00000C0TVq" title="Tuesday Availability - Start" required>
-							<option value="">--None--</option>
-							<option value="Not available">Not available</option>
-							<option value="4:00">4:00</option>
-						</select>
+						<input id="00N0a00000C0TVq" type="checkbox" value="1">
 					</div>
 				
 					<div class="availability-b">
-						<input id="00N0a00000C0TVv" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TVv" name="00N0a00000C0TVv" title="Tuesday Availability - End">
-							<option value="">--None--</option>
-							<option value="4:00">4:00</option>
-							<option value="5:00">5:00</option>
-						</select>
+						<input id="00N0a00000C0TVv" type="checkbox" value="1">
 					</div>
 				</div>
 				
 				<div>
 					<p>Wed</p>
 					<div class="availability-a">
-						<input id="00N0a00000C0TW0" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TW0" name="00N0a00000C0TW0" title="Wednesday Availability - Start" required>
-							<option value="">--None--</option>
-							<option value="Not available">Not available</option>
-							<option value="4:00">4:00</option>
-						</select>
+						<input id="00N0a00000C0TW0" type="checkbox" value="1">
 					</div>
 				
 					<div class="availability-b">
-						<input id="00N0a00000C0TW5" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TW5" name="00N0a00000C0TW5" title="Wednesday Availability - End">
-							<option value="">--None--</option>
-							<option value="4:00">4:00</option>
-							<option value="5:00">5:00</option>
-						</select>
+						<input id="00N0a00000C0TW5" type="checkbox" value="1">
 					</div>
 				</div>
 				
 				<div>
 					<p>Thurs</p>
 					<div class="availability-a">
-						<input id="00N0a00000C0TWA" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TWA" name="00N0a00000C0TWA" title="Thursday Availability - Start" required>
-							<option value="">--None--</option>
-							<option value="Not available">Not available</option>
-							<option value="4:00">4:00</option>
-						</select>
+						<input id="00N0a00000C0TWA" type="checkbox" value="1">
 					</div>
 				
 					<div class="availability-b">
-						<input id="00N0a00000C0TWF" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TWF" name="00N0a00000C0TWF" title="Thursday Availability - End">
-							<option value="">--None--</option>
-							<option value="4:00">4:00</option>
-							<option value="5:00">5:00</option>
-						</select>
+						<input id="00N0a00000C0TWF" type="checkbox" value="1">
 					</div>
 				</div>
 				
 				<div>
 					<p>Fri</p>
 					<div class="availability-a">
-						<input id="00N0a00000C0TWK" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TWK" name="00N0a00000C0TWK" title="Friday Availability - Start" required>
-							<option value="">--None--</option>
-							<option value="Not available">Not available</option>
-							<option value="4:00">4:00</option>
-						</select>
+						<input id="00N0a00000C0TWK" type="checkbox" value="1">
 					</div>
 				
 					<div class="availability-b">
-						<input id="00N0a00000C0TWP" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TWP" name="00N0a00000C0TWP" title="Friday Availability - End">
-							<option value="">--None--</option>
-							<option value="4:00">4:00</option>
-							<option value="5:00">5:00</option>
-						</select>
+						<input id="00N0a00000C0TWP" type="checkbox" value="1">
 					</div>
 				
 				</div>
@@ -331,42 +282,22 @@
 				<div>
 					<p>Sat</p>
 					<div class="availability-a">
-						<input id="00N0a00000C0TWZ" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TWZ" name="00N0a00000C0TWZ" title="Saturday Availability - Start" required>
-							<option value="">--None--</option>
-							<option value="Not available">Not available</option>
-							<option value="4:00">4:00</option>
-						</select>
+						<input id="00N0a00000C0TWZ" type="checkbox" value="1">
 					</div>
 				
 					<div class="availability-b">
-						<input id="00N0a00000C0TWe" type="checkbox" value="1" required>
-						<select id="00N0a00000C0TWe" name="00N0a00000C0TWe" title="Saturday Availability - End">
-							<option value="">--None--</option>
-							<option value="4:00">4:00</option>
-							<option value="5:00">5:00</option>
-						</select>
+						<input id="00N0a00000C0TWe" type="checkbox" value="1">
 					</div>
 				</div>
 				
 				<div>
 					<p>Sun</p>
 					<div class="availability-a">
-						<input id="00N0a00000C0TWj" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TWj" name="00N0a00000C0TWj" title="Sunday Availability - Start" required>
-							<option value="">--None--</option>
-							<option value="Not available">Not available</option>
-							<option value="4:00">4:00</option>
-						</select>
+						<input id="00N0a00000C0TWj" type="checkbox" value="1">
 					</div>
 					
 					<div class="availability-b">
-						<input id="00N0a00000C0TWo" type="checkbox" value="1" required>
-						<select  id="00N0a00000C0TWo" name="00N0a00000C0TWo" title="Sunday Availability - End">
-							<option value="">--None--</option>
-							<option value="4:00">4:00</option>
-							<option value="5:00">5:00</option>
-						</select>
+						<input id="00N0a00000C0TWo" type="checkbox" value="1">
 					</div>
 				</div>
 			</div>
