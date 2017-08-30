@@ -38,18 +38,25 @@
 	</p>
 	<div id="form-reveal">
 
-		Status in Canada:<select  id="00N0a00000C0TSr" name="00N0a00000C0TSr" title="Status in Canada"><option value="">--None--</option><option value="Canadian Citizen">Canadian Citizen</option>
-		<option value="Permanent Resident">Permanent Resident</option>
-		<option value="New Immigrant/Refugee (&lt;5 Years)">New Immigrant/Refugee (&lt;5 Years)</option>
-		<option value="Immigrant/Refugee (&gt;5 Years)">Immigrant/Refugee (&gt;5 Years)</option>
-		<option value="Working Visa">Working Visa</option>
-		<option value="Refugee">Refugee</option>
-		<option value="Other">Other</option>
+		Please select your current status:<font color="red">*</font>
+		<select  id="00N0a00000C0TSr" name="00N0a00000C0TSr" title="Status in Canada">
+			<option value="">Select Option</option>
+			<option value="Canadian Citizen">Canadian Citizen</option>
+			<option value="Permanent Resident">Permanent Resident</option>
+			<option value="New Immigrant/Refugee (&lt;5 Years)">New Immigrant/Refugee (&lt;5 Years)</option>
+			<option value="Immigrant/Refugee (&gt;5 Years)">Immigrant/Refugee (&gt;5 Years)</option>
+			<option value="Working Visa">Working Visa</option>
+			<option value="Refugee">Refugee</option>
+			<option value="Other">Other</option>
 		</select><br>
-		If 'other', please provide further details:<input  id="00N0a00000C0TSw" maxlength="255" name="00N0a00000C0TSw" size="20" type="text" /><br><br>
+		<div id="status-other-box">
+			Please provide further details:
+			<textarea id="00N0a00000C0TSw" maxlength="255" name="00N0a00000C0TSw" size="20" type="text"></textarea>
+			<br>
+		</div>
+		<br/>
 
-
-		What is your employment status?<font color="red">*</font><select  id="00N0a00000C0TT6" name="00N0a00000C0TT6" title="Current labor force status" required><option value="">--None--</option><option value="Employed Full-time">Employed Full-time (20+ hours a week)</option>
+		What is your employment status?<font color="red">*</font><select  id="00N0a00000C0TT6" name="00N0a00000C0TT6" title="Current labor force status" required><option value="">Select Option</option><option value="Employed Full-time">Employed Full-time (20+ hours a week)</option>
 		<option value="Employed Part-time">Employed Part-time (less than 20 hours per week)</option>
 		<option value="Unemployed">Unemployed - looking for work</option>
 		<option value="Student">College/University Student</option>
@@ -62,11 +69,13 @@
 
 
 		<div id="employment-status-check">
-			Are you currently receiving any of the following services? (press control to select multiple options): <font color="red">*</font><select multiple="multiple" id="00N0a00000C0TT1" name="00N0a00000C0TT1" title="Primary Source of Income" required><option value="">--None--</option><option value="Employment Insurance (EI)">Employment Insurance (EI)</option>
-			<option value="Ontario Works (OW)">Ontario Works (OW)</option>
-			<option value="Ontario Disabilities Support Program (ODSP)">Ontario Disabilities Support Program (ODSP)</option>
-			<option value="None">None</option>
-			<option value="Other">Other</option>
+			Are you currently receiving any of the following services? (<em>press control to select multiple options</em>): <font color="red">*</font>
+			<select multiple="multiple" id="00N0a00000C0TT1" name="00N0a00000C0TT1" title="Primary Source of Income" required>
+				<option value="Employment Insurance (EI)">Employment Insurance (EI)</option>
+				<option value="Ontario Works (OW)">Ontario Works (OW)</option>
+				<option value="Ontario Disabilities Support Program (ODSP)">Ontario Disabilities Support Program (ODSP)</option>
+				<option value="None">None</option>
+				<option value="Other">Other</option>
 			</select><br>
 			
 			<br>
@@ -189,11 +198,14 @@
 				Please provide details:<textarea  id="00N0a00000C0TTp" name="00N0a00000C0TTp" type="text" wrap="soft"></textarea>
 			</div>
 			<br>
-			Employment goals:<font color="red">*</font><select  id="00N0a00000C0TTu" name="00N0a00000C0TTu" title="Employment goals" required><option value="">--None--</option><option value="Full-time employment in hospitality industry">Full-time employment in hospitality industry</option>
-			<option value="Part-time employment in hospitality industry">Part-time employment in hospitality industry</option>
-			<option value="Full-time employment in any industry">Full-time employment in any industry</option>
-			<option value="Part-time employment in any industry">Part-time employment in any industry</option>
-			<option value="Other">Other</option>
+			Employment goals:<font color="red">*</font>
+			<select id="00N0a00000C0TTu" name="00N0a00000C0TTu" title="Employment goals" required>
+				<option value="">Select Option</option>
+				<option value="Full-time employment in hospitality industry">Full-time employment in hospitality industry</option>
+				<option value="Part-time employment in hospitality industry">Part-time employment in hospitality industry</option>
+				<option value="Full-time employment in any industry">Full-time employment in any industry</option>
+				<option value="Part-time employment in any industry">Part-time employment in any industry</option>
+				<option value="Other">Other</option>
 			</select><br>
 			<div id="goals-other-box">
 				Please provide details:<textarea  id="00N0a00000C0TTz" name="00N0a00000C0TTz" type="text" wrap="soft"></textarea>

@@ -480,6 +480,19 @@ jQuery(document).ready(function($){
 				goal_box.style['display'] = 'none';
 			}
 		});
+		// status
+		var status_box = document.getElementById('status-other-box');
+		var status = function(){
+			status_box.style['display'] = 'none';
+		}
+		status();
+		$("#00N0a00000C0TSr").change(function(){
+			if($(this).val() == "Other") {
+				status_box.style['display'] = 'block';
+			} else {
+				status_box.style['display'] = 'none';
+			}
+		});
 
 
 	}
