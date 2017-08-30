@@ -452,6 +452,36 @@ jQuery(document).ready(function($){
 				ec_box.style['display'] = 'block';
 			}
 		});
+
+		// How did you hear about HWTC?
+		var hear_box = document.getElementById('hear-other-box');
+		var hear = function(){
+			hear_box.style['display'] = 'none';
+		}
+		hear();
+		$("#00N0a00000C0TTk").change(function(){
+			$arr = $(this).val();
+			if($.inArray("Other", $arr) !== -1) {
+				hear_box.style['display'] = 'block';
+			} else {
+				hear_box.style['display'] = 'none';
+			}
+		});
+		// Employment goals
+		var goal_box = document.getElementById('goals-other-box');
+		var goal = function(){
+			goal_box.style['display'] = 'none';
+		}
+		goal();
+		$("#00N0a00000C0TTu").change(function(){
+			if($(this).val() == "Other") {
+				goal_box.style['display'] = 'block';
+			} else {
+				goal_box.style['display'] = 'none';
+			}
+		});
+
+
 	}
 });
 

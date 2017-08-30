@@ -231,8 +231,6 @@ input#first-name-input {
 
 
 
-
-
     // border: 1px solid rgba(0, 0, 0, 0.7);
     display: flex;
     // flex-direction: column;
@@ -252,9 +250,9 @@ input#first-name-input {
         font-weight: bold;
         margin: 0;
         width: 14%;
-        p {
-            border-right: 1px solid rgba(0, 0, 0, 0.7);
-        }
+        p {}
+
+
         p:first-child {
             margin: 0;
         }
@@ -273,19 +271,20 @@ input#first-name-input {
 
 
 
+
         width: 12%;
         div {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid #d6d6d6;
             height: 80px;
             padding-top: 25px;
         }
         p, div {
-            border-right: 1px solid rgba(0, 0, 0, 0.7);
+            border-right: 2px solid #d6d6d6;
         }
         > p {
 
-            border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-            border-top: 1px solid rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid #d6d6d6;
+            border-top: 2px solid #d6d6d6;
             // display: inline-block;
             // width: 100px;
             margin: 0;
@@ -297,5 +296,8 @@ input#first-name-input {
             // width: 250px;
        
         }
+    }
+    > div:nth-child(2) {
+        border-left: 2px solid #d6d6d6;
     }
 }

@@ -11,7 +11,7 @@
 <!--  <input type="hidden" name="debugEmail" value="j.r.s.murph@gmail.com">   -->
 <!--  ----------------------------------------------------------------------  -->
 
-<input id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;"/>You must check this box indicating you have read the terms and conditions noted above to continue.
+<input id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;"/><strong>You must check this box indicating you have read the terms and conditions noted above to continue.</strong>
 
 <div id="form_agree_block">
 	<p style="margin-bottom: 0; margin-top: 20px;"><font color="red">*</font> = Required to fill out field</p>
@@ -150,7 +150,7 @@
 			<?php if ( $the_query->have_posts() ) : ?>
 				
 				<div class="course-hold">
-					<p>These following courses are currently postponed. You can still select them, but please note that they are on hold.</p>
+					<p>The following courses are currently postponed.<br/>You can still select them, but please note that they are on hold.</p>
 					
 					<ul>
 			
@@ -171,32 +171,38 @@
 			<?php else : ?>
 			<?php endif; ?>
 			
-			Which course(s) are you interested in (press control to select multiple options)?:<font color="red">*</font><select  id="00N0a00000C0TTf" multiple="multiple" name="00N0a00000C0TTf" title="Which courses are you interested in?" required><option value="Banquet Server">Banquet Server</option>
+			Which course(s) are you interested in? (<em>press control to select multiple options</em>):<font color="red">*</font><select  id="00N0a00000C0TTf" multiple="multiple" name="00N0a00000C0TTf" title="Which courses are you interested in?" required><option value="Banquet Server">Banquet Server</option>
 			<option value="Culinary Pre-Apprentice">Culinary Pre-Apprentice</option>
 			<option value="Guest Services">Guest Services</option>
 			<option value="Kitchen Porter">Kitchen Porter</option>
 			<option value="Restaurant Front of House">Restaurant Front of House</option>
 			<option value="Room Attendant">Room Attendant</option>
 			</select><br>
-			How did you hear about HWTC?(press control to select multiple options):<font color="red">*</font><select  id="00N0a00000C0TTk" multiple="multiple" name="00N0a00000C0TTk" title="How did you hear about HWTC?" required><option value="Caseworker">Caseworker</option>
+			How did you hear about HWTC? (<em>press control to select multiple options</em>):<font color="red">*</font><select  id="00N0a00000C0TTk" multiple="multiple" name="00N0a00000C0TTk" title="How did you hear about HWTC?" required><option value="Caseworker">Caseworker</option>
 			<option value="Family or friends">Family or friends</option>
 			<option value="Someone who has taken a training course">Someone who has taken a training course</option>
 			<option value="Website">Website</option>
 			<option value="Social Media (Facebook, Twitter, Instagram)">Social Media (Facebook, Twitter, Instagram)</option>
 			<option value="Other">Other</option>
 			</select><br>
-			How did you hear about HWTC - if other, provide details:<textarea  id="00N0a00000C0TTp" name="00N0a00000C0TTp" type="text" wrap="soft"></textarea><br>
+			<div id="hear-other-box">
+				Please provide details:<textarea  id="00N0a00000C0TTp" name="00N0a00000C0TTp" type="text" wrap="soft"></textarea>
+			</div>
+			<br>
 			Employment goals:<font color="red">*</font><select  id="00N0a00000C0TTu" name="00N0a00000C0TTu" title="Employment goals" required><option value="">--None--</option><option value="Full-time employment in hospitality industry">Full-time employment in hospitality industry</option>
 			<option value="Part-time employment in hospitality industry">Part-time employment in hospitality industry</option>
 			<option value="Full-time employment in any industry">Full-time employment in any industry</option>
 			<option value="Part-time employment in any industry">Part-time employment in any industry</option>
 			<option value="Other">Other</option>
 			</select><br>
-			Employment goals if other:<textarea  id="00N0a00000C0TTz" name="00N0a00000C0TTz" type="text" wrap="soft"></textarea><br>	
+			<div id="goals-other-box">
+				Please provide details:<textarea  id="00N0a00000C0TTz" name="00N0a00000C0TTz" type="text" wrap="soft"></textarea>
+			</div>
+			<br>	
 			
 			<H2>Availability</H2>
 
-			<p>Check the box if you are avaialble on the days and at the times ranges stated below:</p>
+			<p>Check the box if you are available on the days and at the times ranges stated below:</p>
 
 			<div id="availability-section">
 				<div>
