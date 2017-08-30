@@ -5,13 +5,13 @@
 <input type=hidden name="oid" value="00Dj00000028Fao">
 <input type=hidden name="retURL" value="http://hospitalitytrainingcentre.com/registration-submission-thanks">
 <!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-<!--  these lines if you wish to test in debug mode.                          -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment -->
+<!--  these lines if you wish to test in debug mode. -->
 <!--  <input type="hidden" name="debug" value=1>                              -->
 <!--  <input type="hidden" name="debugEmail" value="j.r.s.murph@gmail.com">   -->
 <!--  ----------------------------------------------------------------------  -->
 
-<input  id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;"/>You must check this box indicating you have read the terms and conditions noted above to continue.
+<input id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;"/>You must check this box indicating you have read the terms and conditions noted above to continue.
 
 <div id="form_agree_block">
 	<p style="margin-bottom: 0; margin-top: 20px;"><font color="red">*</font> = Required to fill out field</p>
@@ -29,8 +29,8 @@
 	</select><br>
 	
 	Are you eligible to work in Canada?<br/>
-	<input type="radio" id="00N0a00000C0TSX-1" name="00N0a00000C0TSX" value="1"> Yes<br>
-	<input type="radio" id="00N0a00000C0TSX-2" name="00N0a00000C0TSX" value="0"> No<br>
+	<input type="radio" id="00N0a00000C0TSX-1" name="00N0a00000C0TSX-1" value="1"> Yes<br>
+	<input type="radio" id="00N0a00000C0TSX-2" name="00N0a00000C0TSX-2" value="0"> No<br>
 
 	<!-- <input id="00N0a00000C0TSX" name="00N0a00000C0TSX" type="checkbox" value="1" style="margin-left: 10px;"/><br> -->
 	<br>
@@ -74,20 +74,32 @@
 			
 			Are you able to be on your feet and work for up to 8 hours?<font color="red">*</font><br/>
 			<!-- <input  id="00N0a00000C0TTB" name="00N0a00000C0TTB" type="checkbox" value="1" style="margin-left: 10px;" required/><br> -->
-			<input type="radio" id="00N0a00000C0TTB-1" name="00N0a00000C0TTB" value="1"> Yes<br>
-			<input type="radio" id="00N0a00000C0TTB-2" name="00N0a00000C0TTB" value="0"> No<br>
-			<input type="radio" id="00N0a00000C0TTB-3" name="00N0a00000C0TTB" value="0"> Not sure<br><br>
+			<input type="radio" id="00N0a00000C0TTB-1" name="on-your-feet" value="1"> Yes<br>
+			<input type="radio" id="00N0a00000C0TTB-2" name="on-your-feet" value="0"> No<br>
+			<input type="radio" id="00N0a00000C0TTB-3" name="on-your-feet" value="0"> Not sure<br><br>
+
+			<select  id="00N0a00000C0TTB" name="00N0a00000C0TTB" required style="position:absolute;left: -1000px;">
+			<option value="Yes">Yes</option>
+			<option value="No">No</option>
+			<option value="Not sure">Not sure</option>
+			</select><br>
 			
 			<div id="phys_one_block">
 				Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTG" name="00N0a00000C0TTG" type="text" wrap="soft"></textarea><br>
 			</div>
 			
 			
-			Are you comfortable lifting up to 30lbs? <font color="red">*</font><br/>
+			Are you comfortable lifting up to 30lbs? <font color="red">*</font><br/> 
 			<!-- <input  id="00N0a00000C0TTL" name="00N0a00000C0TTL" type="checkbox" value="1" style="margin-left: 10px;" required /><br> -->
-			<input type="radio" id="00N0a00000C0TTL-1" name="00N0a00000C0TTL" value="1"> Yes<br>
-			<input type="radio" id="00N0a00000C0TTL-2" name="00N0a00000C0TTL" value="0"> No<br>
-			<input type="radio" id="00N0a00000C0TTL-3" name="00N0a00000C0TTL" value="0"> Not sure<br><br>
+			<input type="radio" id="00N0a00000C0TTL-1" name="lift-check" value="1"> Yes<br>
+			<input type="radio" id="00N0a00000C0TTL-2" name="lift-check" value="0"> No<br>
+			<input type="radio" id="00N0a00000C0TTL-3" name="lift-check" value="0"> Not sure<br><br>
+
+			<select id="00N0a00000C0TTL" name="00N0a00000C0TTL" required style="position:absolute;left: -1000px;">
+			<option value="Yes">Yes</option>
+			<option value="No">No</option>
+			<option value="Not sure">Not sure</option>
+			</select><br>
 			
 			<div id="phys_two_block">
 				Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTQ" name="00N0a00000C0TTQ" type="text" wrap="soft"></textarea><br>
@@ -96,9 +108,15 @@
 			
 			Are you able to bend, reach, push, and twist? <font color="red">*</font> <br/>
 			<!-- <input  id="00N0a00000C0TTV" name="00N0a00000C0TTV" type="checkbox" value="1" style="margin-left: 10px;" required/><br> -->
-			<input type="radio" id="00N0a00000C0TTV-1" name="00N0a00000C0TTV" value="1"> Yes<br>
-			<input type="radio" id="00N0a00000C0TTV-2" name="00N0a00000C0TTV" value="0"> No<br>
-			<input type="radio" id="00N0a00000C0TTV-3" name="00N0a00000C0TTV" value="0"> Not sure<br><br>
+			<input type="radio" id="00N0a00000C0TTV-1" name="move-check" value="1"> Yes<br>
+			<input type="radio" id="00N0a00000C0TTV-2" name="move-check" value="0"> No<br>
+			<input type="radio" id="00N0a00000C0TTV-3" name="move-check" value="0"> Not sure<br><br>
+
+			<select id="00N0a00000C0TTV" name="00N0a00000C0TTV" required style="position:absolute;left: -1000px;">
+			<option value="Yes">Yes</option>
+			<option value="No">No</option>
+			<option value="Not sure">Not sure</option>
+			</select><br>
 			
 			<div id="phys_three_block">
 				Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTa" name="00N0a00000C0TTa" type="text" wrap="soft"></textarea><br>
@@ -177,342 +195,164 @@
 			Employment goals if other:<textarea  id="00N0a00000C0TTz" name="00N0a00000C0TTz" type="text" wrap="soft"></textarea><br>	
 			
 			<H2>Availability</H2>
-			<Table>
-			<TR>
-			<TD>Monday</TD>
-			<TD>Start:<font color="red">*</font><select  id="00N0a00000C0TVg" name="00N0a00000C0TVg" title="Monday Availability - Start" required><option value="">--None--</option><option value="Not available">Not available</option>
-			<option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			<TD>End:<select  id="00N0a00000C0TVl" name="00N0a00000C0TVl" title="Monday Availability - End"><option value="">--None--</option><option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			</TR>
-			<TD>Tuesday</TD>
-			<TD>Start:<font color="red">*</font><select  id="00N0a00000C0TVq" name="00N0a00000C0TVq" title="Tuesday Availability - Start" required><option value="">--None--</option><option value="Not available">Not available</option>
-			<option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			<TD>End:<select  id="00N0a00000C0TVv" name="00N0a00000C0TVv" title="Tuesday Availability - End"><option value="">--None--</option><option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			</TR>
-			<TR>
-			<TD>Wednesday</TD>
-			<TD>Start:<font color="red">*</font><select  id="00N0a00000C0TW0" name="00N0a00000C0TW0" title="Wednesday Availability - Start" required><option value="">--None--</option><option value="Not available">Not available</option>
-			<option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			<TD>End:<select  id="00N0a00000C0TW5" name="00N0a00000C0TW5" title="Wednesday Availability - End"><option value="">--None--</option><option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			</TR>
-			<TD>Thursday</TD>
-			<TD>Start:<font color="red">*</font><select  id="00N0a00000C0TWA" name="00N0a00000C0TWA" title="Thursday Availability - Start" required><option value="">--None--</option><option value="Not available">Not available</option>
-			<option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			<TD>End:<select  id="00N0a00000C0TWF" name="00N0a00000C0TWF" title="Thursday Availability - End"><option value="">--None--</option><option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			</TR>
-			<TR>
-			<TD>Friday</TD>
-			<TD>Start:<font color="red">*</font><select  id="00N0a00000C0TWK" name="00N0a00000C0TWK" title="Friday Availability - Start" required><option value="">--None--</option><option value="Not available">Not available</option>
-			<option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			<TD>End:<select  id="00N0a00000C0TWP" name="00N0a00000C0TWP" title="Friday Availability - End"><option value="">--None--</option><option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			</TR>
-			<TR>
-			<TD>Saturday</TD>
-			<TD>Start:<font color="red">*</font><select  id="00N0a00000C0TWZ" name="00N0a00000C0TWZ" title="Saturday Availability - Start" required><option value="">--None--</option><option value="Not available">Not available</option>
-			<option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			<TD>End:<select id="00N0a00000C0TWe" name="00N0a00000C0TWe" title="Saturday Availability - End"><option value="">--None--</option><option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			</TR>
-			<TR>
-			<TD>Sunday</TD>
-			<TD>Start:<font color="red">*</font><select  id="00N0a00000C0TWj" name="00N0a00000C0TWj" title="Sunday Availability - Start" required><option value="">--None--</option><option value="Not available">Not available</option>
-			<option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			<TD>End:<select  id="00N0a00000C0TWo" name="00N0a00000C0TWo" title="Sunday Availability - End"><option value="">--None--</option><option value="4:00">4:00</option>
-			<option value="5:00">5:00</option>
-			<option value="6:00">6:00</option>
-			<option value="7:00">7:00</option>
-			<option value="8:00">8:00</option>
-			<option value="9:00">9:00</option>
-			<option value="10:00">10:00</option>
-			<option value="11:00">11:00</option>
-			<option value="12:00">12:00</option>
-			<option value="13:00">13:00</option>
-			<option value="14:00">14:00</option>
-			<option value="15:00">15:00</option>
-			<option value="16:00">16:00</option>
-			<option value="17:00">17:00</option>
-			<option value="18:00">18:00</option>
-			<option value="19:00">19:00</option>
-			<option value="20:00">20:00</option>
-			<option value="21:00">21:00</option>
-			<option value="22:00">22:00</option>
-			<option value="23:00">23:00</option>
-			</select><br>
-			</TD>
-			</TR>
-			</TABLE>
+
+			<p>Check the box if you are avaialble on the days and at the times ranges stated below:</p>
+
+			<div id="availability-section">
+				<div>
+					<p>Day</p>
+					<p>Available 6am-6pm</p>
+					<p>Available 12pm-3am</p>
+				</div>
+				<div>
+					<p>Mon</p>
+					<div class="availability-a">
+						<input id="00N0a00000C0TVg" type="checkbox" value="1" required>
+						<select id="00N0a00000C0TVg" name="00N0a00000C0TVg" title="Monday Availability - Start" required>
+							<option value="">--None--</option>
+							<option value="Not available">Not available</option>
+							<option value="4:00">4:00</option>
+						</select>
+					</div>
+				
+					<div class="availability-b">
+						<input id="00N0a00000C0TVl" type="checkbox" value="1" required>
+						<select id="00N0a00000C0TVl" name="00N0a00000C0TVl" title="Monday Availability - End">
+							<option value="">--None--</option>
+							<option value="4:00">4:00</option>
+							<option value="5:00">5:00</option>
+						</select>
+					</div>
+				</div>
+				
+				<div>
+					<p>Tues</p>
+					<div class="availability-a">
+						<input id="00N0a00000C0TVq" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TVq" name="00N0a00000C0TVq" title="Tuesday Availability - Start" required>
+							<option value="">--None--</option>
+							<option value="Not available">Not available</option>
+							<option value="4:00">4:00</option>
+						</select>
+					</div>
+				
+					<div class="availability-b">
+						<input id="00N0a00000C0TVv" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TVv" name="00N0a00000C0TVv" title="Tuesday Availability - End">
+							<option value="">--None--</option>
+							<option value="4:00">4:00</option>
+							<option value="5:00">5:00</option>
+						</select>
+					</div>
+				</div>
+				
+				<div>
+					<p>Wed</p>
+					<div class="availability-a">
+						<input id="00N0a00000C0TW0" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TW0" name="00N0a00000C0TW0" title="Wednesday Availability - Start" required>
+							<option value="">--None--</option>
+							<option value="Not available">Not available</option>
+							<option value="4:00">4:00</option>
+						</select>
+					</div>
+				
+					<div class="availability-b">
+						<input id="00N0a00000C0TW5" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TW5" name="00N0a00000C0TW5" title="Wednesday Availability - End">
+							<option value="">--None--</option>
+							<option value="4:00">4:00</option>
+							<option value="5:00">5:00</option>
+						</select>
+					</div>
+				</div>
+				
+				<div>
+					<p>Thurs</p>
+					<div class="availability-a">
+						<input id="00N0a00000C0TWA" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TWA" name="00N0a00000C0TWA" title="Thursday Availability - Start" required>
+							<option value="">--None--</option>
+							<option value="Not available">Not available</option>
+							<option value="4:00">4:00</option>
+						</select>
+					</div>
+				
+					<div class="availability-b">
+						<input id="00N0a00000C0TWF" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TWF" name="00N0a00000C0TWF" title="Thursday Availability - End">
+							<option value="">--None--</option>
+							<option value="4:00">4:00</option>
+							<option value="5:00">5:00</option>
+						</select>
+					</div>
+				</div>
+				
+				<div>
+					<p>Fri</p>
+					<div class="availability-a">
+						<input id="00N0a00000C0TWK" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TWK" name="00N0a00000C0TWK" title="Friday Availability - Start" required>
+							<option value="">--None--</option>
+							<option value="Not available">Not available</option>
+							<option value="4:00">4:00</option>
+						</select>
+					</div>
+				
+					<div class="availability-b">
+						<input id="00N0a00000C0TWP" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TWP" name="00N0a00000C0TWP" title="Friday Availability - End">
+							<option value="">--None--</option>
+							<option value="4:00">4:00</option>
+							<option value="5:00">5:00</option>
+						</select>
+					</div>
+				
+				</div>
+				
+				<div>
+					<p>Sat</p>
+					<div class="availability-a">
+						<input id="00N0a00000C0TWZ" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TWZ" name="00N0a00000C0TWZ" title="Saturday Availability - Start" required>
+							<option value="">--None--</option>
+							<option value="Not available">Not available</option>
+							<option value="4:00">4:00</option>
+						</select>
+					</div>
+				
+					<div class="availability-b">
+						<input id="00N0a00000C0TWe" type="checkbox" value="1" required>
+						<select id="00N0a00000C0TWe" name="00N0a00000C0TWe" title="Saturday Availability - End">
+							<option value="">--None--</option>
+							<option value="4:00">4:00</option>
+							<option value="5:00">5:00</option>
+						</select>
+					</div>
+				</div>
+				
+				<div>
+					<p>Sun</p>
+					<div class="availability-a">
+						<input id="00N0a00000C0TWj" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TWj" name="00N0a00000C0TWj" title="Sunday Availability - Start" required>
+							<option value="">--None--</option>
+							<option value="Not available">Not available</option>
+							<option value="4:00">4:00</option>
+						</select>
+					</div>
+					
+					<div class="availability-b">
+						<input id="00N0a00000C0TWo" type="checkbox" value="1" required>
+						<select  id="00N0a00000C0TWo" name="00N0a00000C0TWo" title="Sunday Availability - End">
+							<option value="">--None--</option>
+							<option value="4:00">4:00</option>
+							<option value="5:00">5:00</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
 			<input type="submit" name="submit">
 		</div> <!-- end of employment check block-->
 	</div>

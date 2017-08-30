@@ -364,10 +364,20 @@ jQuery(document).ready(function($){
 		var phys1_box = document.getElementById('phys_one_block');
 		var phys1 = function(){
 		   	if(phys1_check.checked) {
-		     phys1_box.style['display'] = 'block';
+		    	phys1_box.style['display'] = 'block';
+		    	$('#00N0a00000C0TTB').val('No').trigger('change');
+		    	$("#00N0a00000C0TTG").prop('required',true);
+		   	} else if (phys1_check_y.checked) {
+		   		$("#00N0a00000C0TTG").prop('required',false);
+		     	phys1_box.style['display'] = 'none';
+		     	$('#00N0a00000C0TTB').val('Yes').trigger('change');
+		   	} else if (phys1_check_ns.checked) {
+		   		$("#00N0a00000C0TTG").prop('required',false);
+		   		phys1_box.style['display'] = 'none';
+		   		$('#00N0a00000C0TTB').val('Not sure').trigger('change');
 		   	} else {
-		     phys1_box.style['display'] = 'none';
-		   	} 
+		   		phys1_box.style['display'] = 'none';
+		   	}
 		}
 		phys1_check.onclick = phys1;
 		phys1_check_y.onclick = phys1;
@@ -379,11 +389,21 @@ jQuery(document).ready(function($){
 		var phys2_check_ns = document.getElementById('00N0a00000C0TTL-3');
 		var phys2_box = document.getElementById('phys_two_block');
 		var phys2 = function(){
-		   	if(phys2_check.checked) {
-		     phys2_box.style['display'] = 'block';
-		   	} else {
-		     phys2_box.style['display'] = 'none';
-		   	} 
+	   		if(phys2_check.checked) {
+		   	 	phys2_box.style['display'] = 'block';
+		   	 	$('#00N0a00000C0TTL').val('No').trigger('change');
+		   	 	$("#00N0a00000C0TTQ").prop('required',true);
+	   		} else if (phys2_check_y.checked) {
+	   			$("#00N0a00000C0TTQ").prop('required',false);
+	   	  		phys2_box.style['display'] = 'none';
+	   	  		$('#00N0a00000C0TTL').val('Yes').trigger('change');
+	   		} else if (phys2_check_ns.checked) {
+	   			$("#00N0a00000C0TTQ").prop('required',false);
+	   			phys2_box.style['display'] = 'none';
+	   			$('#00N0a00000C0TTL').val('Not sure').trigger('change');
+	   		} else {
+	   			phys2_box.style['display'] = 'none';
+	   		}
 		}
 		phys2_check.onclick = phys2;
 		phys2_check_y.onclick = phys2;
@@ -396,10 +416,20 @@ jQuery(document).ready(function($){
 		var phys3_box = document.getElementById('phys_three_block');
 		var phys3 = function(){
 		   	if(phys3_check.checked) {
-		     phys3_box.style['display'] = 'block';
-		   	} else {
-		     phys3_box.style['display'] = 'none';
-		   	} 
+		   	 	phys3_box.style['display'] = 'block';
+		   	 	$('#00N0a00000C0TTV').val('No').trigger('change');
+		   	 	$("#00N0a00000C0TTa").prop('required',true);
+	   		} else if (phys3_check_y.checked) {
+	   			$("#00N0a00000C0TTa").prop('required',false);
+	   	  		phys3_box.style['display'] = 'none';
+	   	  		$('#00N0a00000C0TTV').val('Yes').trigger('change');
+	   		} else if (phys3_check_ns.checked) {
+	   			$("#00N0a00000C0TTa").prop('required',false);
+	   			phys3_box.style['display'] = 'none';
+	   			$('#00N0a00000C0TTV').val('Not sure').trigger('change');
+	   		} else {
+	   			phys3_box.style['display'] = 'none';
+	   		}
 		}
 		phys3_check.onclick = phys3;
 		phys3_check_y.onclick = phys3;
@@ -423,8 +453,6 @@ jQuery(document).ready(function($){
 			}
 		});
 	}
-
-	
 });
 
 /*
