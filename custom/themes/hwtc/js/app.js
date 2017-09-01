@@ -373,13 +373,16 @@ jQuery(document).ready(function($){
 		var checkbox_n = document.getElementById('00N0a00000C0TSX-2');
 		var reveal_div = document.getElementById('form-reveal');
 		var reveal_note = document.getElementById('reveal-note');
+		var real_check = document.getElementById('00N0a00000C0TSX');
 		var showHiddenDiv = function(){
 		   	if(checkbox.checked) {
 		     reveal_div.style['display'] = 'block';
 		     reveal_note.style['display'] = 'none';
+		     real_check.checked = true;
 		   	} else {
 		     reveal_div.style['display'] = 'none';
 		     reveal_note.style['display'] = 'block';
+		     real_check.checked = false;
 		   	} 
 		}
 		checkbox.onclick = showHiddenDiv;

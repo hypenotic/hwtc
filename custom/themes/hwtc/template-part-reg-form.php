@@ -27,11 +27,10 @@
 	
 	<div id="date-check-block">
 		Are you eligible to work in Canada?<br/>
-		<input type="radio" id="00N0a00000C0TSX-1" name="00N0a00000C0TSX-1" value="1"> Yes<br>
-		<input type="radio" id="00N0a00000C0TSX-2" name="00N0a00000C0TSX-2" value="0"> No<br>
+		<input type="radio" id="00N0a00000C0TSX-1" name="eli-check" value="1"> Yes<br>
+		<input type="radio" id="00N0a00000C0TSX-2" name="eli-check" value="0"> No<br>
 		
-		<!-- <input id="00N0a00000C0TSX" name="00N0a00000C0TSX" type="checkbox" value="1" style="margin-left: 10px;"/><br> -->
-		<br>
+		<input id="00N0a00000C0TSX" name="00N0a00000C0TSX" type="checkbox" required style="position:absolute;left: -1000px;" /><br>
 		<p id="reveal-note"><strong>If you are not eligible to work in Canada, please contact HWTC directly for further information at <a href="tel:6479309518">647-930-9518</a> ext 305.</strong>
 		</p>
 		<div id="form-reveal">
