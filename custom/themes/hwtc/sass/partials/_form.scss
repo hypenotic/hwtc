@@ -246,6 +246,7 @@ input#first-name-input {
 
 
 
+
         font-family: 'latoblack';
         font-weight: bold;
         margin: 0;
@@ -300,4 +301,10 @@ input#first-name-input {
     > div:nth-child(2) {
         border-left: 2px solid #d6d6d6;
     }
+}
+#date-check {
+    border-radius: 5px;
+    border: 2px solid #d6d6d6;
+    margin-top: 10px;
+    padding: 5px 10px;
 }

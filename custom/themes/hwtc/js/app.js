@@ -328,7 +328,47 @@ jQuery(document).ready(function($){
 		return false;
 	});
 
+	// Registration Form
 	if ($('#agree_check').length) {
+		// Agree - Terms and Conditions
+		var agree_check = document.getElementById('agree_check');
+		var reveal_agree = document.getElementById('form_agree_block');
+		var showForm = function(){
+		   	if(agree_check.checked) {
+		     reveal_agree.style['display'] = 'block';
+		   	} else {
+		     reveal_agree.style['display'] = 'none';
+		   	} 
+		}
+		agree_check.onclick = showForm;
+		showForm();
+
+		// Age Check
+		var age_check = document.getElementById('00N0a00000C0TSS');
+		var reveal_age = document.getElementById('date-check-block');
+		var age_note = document.getElementById('reveal-age-note');
+		var showDateDiv = function(){
+		   	age_note.style['display'] = 'none';
+		   	reveal_age.style['display'] = 'none';
+		}
+		showDateDiv();
+		$("#date-check").change(function(){
+			thedate = $(this).val();
+			console.log(thedate);
+			dob = new Date(thedate);
+			var today = new Date();
+			var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+			if (age >= 18) {
+				reveal_age.style['display'] = 'block';
+				age_note.style['display'] = 'none';
+				age_check.value = thedate;
+			} else {
+				reveal_age.style['display'] = 'none';
+				age_note.style['display'] = 'block';
+			}
+		});
+
+		// Are you eligible to work in Canada?
 		var checkbox = document.getElementById('00N0a00000C0TSX-1');
 		var checkbox_n = document.getElementById('00N0a00000C0TSX-2');
 		var reveal_div = document.getElementById('form-reveal');
@@ -346,18 +386,39 @@ jQuery(document).ready(function($){
 		checkbox_n.onclick = showHiddenDiv;
 		showHiddenDiv();
 
-		var agree_check = document.getElementById('agree_check');
-		var reveal_agree = document.getElementById('form_agree_block');
-		var showForm = function(){
-		   	if(agree_check.checked) {
-		     reveal_agree.style['display'] = 'block';
-		   	} else {
-		     reveal_agree.style['display'] = 'none';
-		   	} 
+		// Citizenship Status
+		var status_box = document.getElementById('status-other-box');
+		var status = function(){
+			status_box.style['display'] = 'none';
 		}
-		agree_check.onclick = showForm;
-		showForm();
+		status();
+		$("#00N0a00000C0TSr").change(function(){
+			if($(this).val() == "Other") {
+				status_box.style['display'] = 'block';
+			} else {
+				status_box.style['display'] = 'none';
+			}
+		});
 
+		// What is your employment status?
+		var ec_box = document.getElementById('employment-status-check');
+		var ec_note = document.getElementById('reveal-note-ec');
+		var ec = function(){
+			ec_note.style['display'] = 'none';
+			// ec_box.style['display'] = 'none';
+		}
+		ec();
+		$("#00N0a00000C0TT6").change(function(){
+			if($(this).val() == "Employed Full-time" || $(this).val() == "Student") {
+				ec_note.style['display'] = 'block';
+				ec_box.style['display'] = 'none';
+			} else {
+				ec_note.style['display'] = 'none';
+				ec_box.style['display'] = 'block';
+			}
+		});
+
+		// Are you able to be on your feet and work for up to 8 hours?
 		var phys1_check = document.getElementById('00N0a00000C0TTB-2');
 		var phys1_check_y = document.getElementById('00N0a00000C0TTB-1');
 		var phys1_check_ns = document.getElementById('00N0a00000C0TTB-3');
@@ -384,6 +445,7 @@ jQuery(document).ready(function($){
 		phys1_check_ns.onclick = phys1;
 		phys1();
 
+		// Are you comfortable lifting up to 30lbs?
 		var phys2_check = document.getElementById('00N0a00000C0TTL-2');
 		var phys2_check_y = document.getElementById('00N0a00000C0TTL-1');
 		var phys2_check_ns = document.getElementById('00N0a00000C0TTL-3');
@@ -410,6 +472,7 @@ jQuery(document).ready(function($){
 		phys2_check_ns.onclick = phys2;
 		phys2();
 
+		// Are you able to bend, reach, push, and twist?
 		var phys3_check = document.getElementById('00N0a00000C0TTV-2');
 		var phys3_check_y = document.getElementById('00N0a00000C0TTV-1');
 		var phys3_check_ns = document.getElementById('00N0a00000C0TTV-3');
@@ -436,23 +499,6 @@ jQuery(document).ready(function($){
 		phys3_check_ns.onclick = phys3;
 		phys3();
 
-		var ec_box = document.getElementById('employment-status-check');
-		var ec_note = document.getElementById('reveal-note-ec');
-		var ec = function(){
-			ec_note.style['display'] = 'none';
-			// ec_box.style['display'] = 'none';
-		}
-		ec();
-		$("#00N0a00000C0TT6").change(function(){
-			if($(this).val() == "Employed Full-time" || $(this).val() == "Student") {
-				ec_note.style['display'] = 'block';
-				ec_box.style['display'] = 'none';
-			} else {
-				ec_note.style['display'] = 'none';
-				ec_box.style['display'] = 'block';
-			}
-		});
-
 		// How did you hear about HWTC?
 		var hear_box = document.getElementById('hear-other-box');
 		var hear = function(){
@@ -467,6 +513,7 @@ jQuery(document).ready(function($){
 				hear_box.style['display'] = 'none';
 			}
 		});
+
 		// Employment goals
 		var goal_box = document.getElementById('goals-other-box');
 		var goal = function(){
@@ -480,20 +527,6 @@ jQuery(document).ready(function($){
 				goal_box.style['display'] = 'none';
 			}
 		});
-		// status
-		var status_box = document.getElementById('status-other-box');
-		var status = function(){
-			status_box.style['display'] = 'none';
-		}
-		status();
-		$("#00N0a00000C0TSr").change(function(){
-			if($(this).val() == "Other") {
-				status_box.style['display'] = 'block';
-			} else {
-				status_box.style['display'] = 'none';
-			}
-		});
-
 
 	}
 });
