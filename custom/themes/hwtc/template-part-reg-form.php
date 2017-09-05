@@ -302,15 +302,13 @@
 				<h2>Next Steps</h2>
 				<p style="margin-bottom: 0;">The next step of the screening process requires that you attend an information session located at:<br><br>
 
-				<a href="https://goo.gl/maps/MCEnQRJme5N2" target="_blank">60 Richmond St East,<br>
-					Toronto, ON M5C 1N8<br><br></a>
+				<a href="https://goo.gl/maps/MCEnQRJme5N2" target="_blank"><strong>60 Richmond St East,<br>Toronto, ON M5C 1N8</strong><br><br></a>
 
-				Every Tuesday, 10am – 11:30am<br>
-				Second Floor Meeting Room<br><br>
+				They take place every <strong>Tuesday (10am – 11:30am)</strong> in the <strong>Second Floor Meeting Room</strong>.<br>
 
-				Please bring a resume if you have one.<br><br>
+				<em>Please bring a resume if you have one.</em><br><br>
 
-				Select a date from the dropdown list below: <font color="red">*</font></p>
+				<strong>Select a date from the dropdown list below</strong>: <font color="red">*</font></p>
 				<select  id="tuesday-pick" name="tuesdays" title="Tuesday Picker" required>
 					<option value="">Select Option</option>
 					<?php 
@@ -322,7 +320,7 @@
 					    echo '<option value='.date('Y-m-d', $i).'>'.date('l, F j, Y', $i).'</option>';
 					?>
 				</select><br>
-				<p style="margin-bottom: 30px;">If you have any question or are unable to attend the selected date you chose, please call HWTC directly <a href="tel:647930951">647-930-9518</a> ext. 305 or email at <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a>.</p>
+				<p style="margin-bottom: 30px;">If you have any questions or are unable to attend the selected date you chose, please call HWTC directly <a href="tel:647930951">647-930-9518</a> ext. 305 or email at <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a>.</p>
 		
 				<input type="submit" name="submit">
 			</div> <!-- end of employment check block-->
