@@ -72,7 +72,7 @@
 					<option value="Ontario Works (OW)">Ontario Works (OW)</option>
 					<option value="Ontario Disabilities Support Program (ODSP)">Ontario Disabilities Support Program (ODSP)</option>
 					<option value="None">None</option>
-					<option value="Other">Other</option>
+					<!-- <option value="Other">Other</option> -->
 				</select><br>
 				
 				<br>
@@ -298,6 +298,30 @@
 						</div>
 					</div>
 				</div>
+
+				<h2>Next Steps</h2>
+				<p style="margin-bottom: 0;">The next step of the screening process requires that you attend an information session located at:<br><br>
+
+				<a href="https://goo.gl/maps/MCEnQRJme5N2" target="_blank">60 Richmond St East,<br>
+					Toronto, ON M5C 1N8<br><br></a>
+
+				Every Tuesday, 10am – 11:30am<br>
+				Second Floor Meeting Room<br><br>
+
+				Please bring a resume if you have one.<br><br>
+
+				Please select a Tuesday from the dropdown list below:</p>
+				<select  id="tuesday-pick" name="tuesdays" title="Tuesday Picker" required>
+					<option value="">Select Option</option>
+					<?php 
+					$date = date('Y-m-d');
+					$weekLater = date("Y-m-d", strtotime($date)) . " +1 week";
+					$laterDate = strtotime(date("Y-m-d", strtotime($date)) . " +2 month");
+					// echo date('l Y-m-d', $laterDate);
+					for($i = strtotime('Tuesday', strtotime($weekLater)); $i <= $laterDate; $i = strtotime('+1 week', $i))
+					    echo '<option value='.date('Y-m-d', $i).'>'.date('l, F j, Y', $i).'</option>';
+					?>
+				</select><br>
 		
 				<input type="submit" name="submit">
 			</div> <!-- end of employment check block-->
