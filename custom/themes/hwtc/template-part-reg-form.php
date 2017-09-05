@@ -310,7 +310,7 @@
 
 				Please bring a resume if you have one.<br><br>
 
-				Please select a Tuesday from the dropdown list below:</p>
+				Select a date from the dropdown list below: <font color="red">*</font></p>
 				<select  id="tuesday-pick" name="tuesdays" title="Tuesday Picker" required>
 					<option value="">Select Option</option>
 					<?php 
@@ -322,6 +322,7 @@
 					    echo '<option value='.date('Y-m-d', $i).'>'.date('l, F j, Y', $i).'</option>';
 					?>
 				</select><br>
+				<p style="margin-bottom: 30px;">If you have any question or are unable to attend the selected date you chose, please call HWTC directly <a href="tel:647930951">647-930-9518</a> ext. 305 or email at <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a>.</p>
 		
 				<input type="submit" name="submit">
 			</div> <!-- end of employment check block-->
