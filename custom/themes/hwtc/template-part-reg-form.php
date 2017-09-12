@@ -79,16 +79,10 @@
 				<strong>Please tell us about your physical abilty to work in the hospitality industry:</strong> <br><br>
 				
 				Are you able to be on your feet and work for up to 8 hours?<font color="red">*</font><br/>
-				<!-- <input  id="00N0a00000C0TTB" name="00N0a00000C0TTB" type="checkbox" value="1" style="margin-left: 10px;" required/><br> -->
-				<input type="radio" id="00N0a00000C0TTB-1" name="on-your-feet" value="1"> Yes<br>
-				<input type="radio" id="00N0a00000C0TTB-2" name="on-your-feet" value="0"> No<br>
-				<input type="radio" id="00N0a00000C0TTB-3" name="on-your-feet" value="0"> Not sure<br><br>
-		
-				<select  id="00N0a00000C0TTB" name="00N0a00000C0TTB" required style="position:absolute;left: -1000px;">
-				<option value="Yes">Yes</option>
-				<option value="No">No</option>
-				<option value="Not sure">Not sure</option>
-				</select><br>
+				<input type="radio" id="00N0a00000C0TTB-1" name="00N0a00000C0TTB" value="Yes">Yes<br>
+				<input type="radio" id="00N0a00000C0TTB-2" name="00N0a00000C0TTB" value="No">No<br><br>
+				<input type="radio" id="00N0a00000C0TTB-3" name="00N0a00000C0TTB" value="Not sure">Not sure<br><br>
+				<br>
 				
 				<div id="phys_one_block">
 					Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTG" name="00N0a00000C0TTG" type="text" wrap="soft"></textarea><br>
@@ -96,16 +90,10 @@
 				
 				
 				Are you comfortable lifting up to 30lbs? <font color="red">*</font><br/> 
-				<!-- <input  id="00N0a00000C0TTL" name="00N0a00000C0TTL" type="checkbox" value="1" style="margin-left: 10px;" required /><br> -->
-				<input type="radio" id="00N0a00000C0TTL-1" name="lift-check" value="1"> Yes<br>
-				<input type="radio" id="00N0a00000C0TTL-2" name="lift-check" value="0"> No<br>
-				<input type="radio" id="00N0a00000C0TTL-3" name="lift-check" value="0"> Not sure<br><br>
-		
-				<select id="00N0a00000C0TTL" name="00N0a00000C0TTL" required style="position:absolute;left: -1000px;">
-				<option value="Yes">Yes</option>
-				<option value="No">No</option>
-				<option value="Not sure">Not sure</option>
-				</select><br>
+				<input type="radio" id="00N0a00000C0TTL-1" name="00N0a00000C0TTL" value="Yes">Yes<br>
+				<input type="radio" id="00N0a00000C0TTL-2" name="00N0a00000C0TTL" value="No">No<br><br>
+				<input type="radio" id="00N0a00000C0TTL-3" name="00N0a00000C0TTL" value="Not sure">Not sure<br><br>
+				<br>
 				
 				<div id="phys_two_block">
 					Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTQ" name="00N0a00000C0TTQ" type="text" wrap="soft"></textarea><br>
@@ -113,16 +101,10 @@
 				
 				
 				Are you able to bend, reach, push, and twist? <font color="red">*</font> <br/>
-				<!-- <input  id="00N0a00000C0TTV" name="00N0a00000C0TTV" type="checkbox" value="1" style="margin-left: 10px;" required/><br> -->
-				<input type="radio" id="00N0a00000C0TTV-1" name="move-check" value="1"> Yes<br>
-				<input type="radio" id="00N0a00000C0TTV-2" name="move-check" value="0"> No<br>
-				<input type="radio" id="00N0a00000C0TTV-3" name="move-check" value="0"> Not sure<br><br>
-		
-				<select id="00N0a00000C0TTV" name="00N0a00000C0TTV" required style="position:absolute;left: -1000px;">
-				<option value="Yes">Yes</option>
-				<option value="No">No</option>
-				<option value="Not sure">Not sure</option>
-				</select><br>
+				<input type="radio" id="00N0a00000C0TTV-1" name="00N0a00000C0TTV" value="Yes">Yes<br>
+				<input type="radio" id="00N0a00000C0TTV-2" name="00N0a00000C0TTV" value="No">No<br><br>
+				<input type="radio" id="00N0a00000C0TTV-3" name="00N0a00000C0TTV" value="Not sure">Not sure<br><br>
+				<br>
 				
 				<div id="phys_three_block">
 					Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTa" name="00N0a00000C0TTa" type="text" wrap="soft"></textarea><br>
@@ -309,7 +291,7 @@
 				<em>Please bring a resume if you have one.</em><br><br>
 
 				<strong>Select a date from the dropdown list below</strong>: <font color="red">*</font></p>
-				<select  id="tuesday-pick" name="tuesdays" title="Tuesday Picker" required>
+				<select id="tuesday-pick" name="00N0a00000BpW2z" title="Tuesday Picker" required>
 					<option value="">Select Option</option>
 					<?php 
 					$date = date('Y-m-d');
@@ -317,9 +299,10 @@
 					$laterDate = strtotime(date("Y-m-d", strtotime($date)) . " +2 month");
 					// echo date('l Y-m-d', $laterDate);
 					for($i = strtotime('Tuesday', strtotime($weekLater)); $i <= $laterDate; $i = strtotime('+1 week', $i))
-					    echo '<option value='.date('Y-m-d', $i).'>'.date('l, F j, Y', $i).'</option>';
+					    echo '<option value='.date('d/m/Y', $i).'>'.date('l, F j, Y', $i).'</option>';
 					?>
 				</select><br>
+				<input id="00N0a00000BpW2z" maxlength="100" name="00N0a00000BpW2z" size="20" type="text" required/ style="position:absolute;left: -1000px;"><br>
 				<p style="margin-bottom: 30px;">If you have any questions or are unable to attend the selected date you chose, please call HWTC directly <a href="tel:647930951">647-930-9518</a> ext. 305 or email at <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a>.</p>
 		
 				<input type="submit" name="submit">
