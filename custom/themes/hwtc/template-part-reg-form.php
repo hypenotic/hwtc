@@ -80,7 +80,7 @@
 				
 				Are you able to be on your feet and work for up to 8 hours?<font color="red">*</font><br/>
 				<input type="radio" id="00N0a00000C0TTB-1" name="00N0a00000C0TTB" value="Yes">Yes<br>
-				<input type="radio" id="00N0a00000C0TTB-2" name="00N0a00000C0TTB" value="No">No<br><br>
+				<input type="radio" id="00N0a00000C0TTB-2" name="00N0a00000C0TTB" value="No">No<br>
 				<input type="radio" id="00N0a00000C0TTB-3" name="00N0a00000C0TTB" value="Not sure">Not sure<br><br>
 				<br>
 				
@@ -91,7 +91,7 @@
 				
 				Are you comfortable lifting up to 30lbs? <font color="red">*</font><br/> 
 				<input type="radio" id="00N0a00000C0TTL-1" name="00N0a00000C0TTL" value="Yes">Yes<br>
-				<input type="radio" id="00N0a00000C0TTL-2" name="00N0a00000C0TTL" value="No">No<br><br>
+				<input type="radio" id="00N0a00000C0TTL-2" name="00N0a00000C0TTL" value="No">No<br>
 				<input type="radio" id="00N0a00000C0TTL-3" name="00N0a00000C0TTL" value="Not sure">Not sure<br><br>
 				<br>
 				
@@ -99,10 +99,9 @@
 					Please provide details <font color="red">*</font>:<textarea  id="00N0a00000C0TTQ" name="00N0a00000C0TTQ" type="text" wrap="soft"></textarea><br>
 				</div>
 				
-				
-				Are you able to bend, reach, push, and twist? <font color="red">*</font> <br/>
+				Do you have any restrictions to bend, reach, push, and twist? <font color="red">*</font> <br/>
 				<input type="radio" id="00N0a00000C0TTV-1" name="00N0a00000C0TTV" value="Yes">Yes<br>
-				<input type="radio" id="00N0a00000C0TTV-2" name="00N0a00000C0TTV" value="No">No<br><br>
+				<input type="radio" id="00N0a00000C0TTV-2" name="00N0a00000C0TTV" value="No">No<br>
 				<input type="radio" id="00N0a00000C0TTV-3" name="00N0a00000C0TTV" value="Not sure">Not sure<br><br>
 				<br>
 				
@@ -183,8 +182,8 @@
 					<option value="">Select Option</option>
 					<option value="Full-time employment in hospitality industry">Full-time employment in hospitality industry</option>
 					<option value="Part-time employment in hospitality industry">Part-time employment in hospitality industry</option>
-					<option value="Full-time employment in any industry">Full-time employment in any industry</option>
-					<option value="Part-time employment in any industry">Part-time employment in any industry</option>
+					<option value="Full-time employment in any industry">I just want a full-time job</option>
+					<option value="Part-time employment in any industry">I just want a part-time job</option>
 					<option value="Other">Other</option>
 				</select><br>
 				<div id="goals-other-box">
