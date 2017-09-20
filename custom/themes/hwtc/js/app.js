@@ -393,18 +393,35 @@ jQuery(document).ready(function($){
 		showHiddenDiv();
 
 		// Citizenship Status
+		// var status_box = document.getElementById('status-other-box');
 		var status_box = document.getElementById('status-other-box');
 		var status = function(){
 			status_box.style['display'] = 'none';
 		}
 		status();
-		$("#00N0a00000C0TSr").change(function(){
+		$("input[name='00N0a00000C0TSr']").click(function(){
 			if($(this).val() == "Other") {
 				status_box.style['display'] = 'block';
 			} else {
 				status_box.style['display'] = 'none';
 			}
 		});
+
+		// if(phys1_check.checked) {
+	 //    	phys1_box.style['display'] = 'block';
+	 //    	// $('#00N0a00000C0TTB').val('No').trigger('change');
+	 //    	$("#00N0a00000C0TTG").prop('required',true);
+	 //   	} else if (phys1_check_y.checked) {
+	 //   		$("#00N0a00000C0TTG").prop('required',false);
+	 //     	phys1_box.style['display'] = 'none';
+	 //     	// $('#00N0a00000C0TTB').val('Yes').trigger('change');
+	 //   	} else if (phys1_check_ns.checked) {
+	 //   		$("#00N0a00000C0TTG").prop('required',false);
+	 //   		phys1_box.style['display'] = 'none';
+	 //   		// $('#00N0a00000C0TTB').val('Not sure').trigger('change');
+	 //   	} else {
+	 //   		phys1_box.style['display'] = 'none';
+	 //   	}
 
 		// What is your employment status?
 		var ec_box = document.getElementById('employment-status-check');
@@ -414,7 +431,7 @@ jQuery(document).ready(function($){
 			// ec_box.style['display'] = 'none';
 		}
 		ec();
-		$("#00N0a00000C0TT6").change(function(){
+		$("input[name='00N0a00000C0TT6']").click(function(){
 			if($(this).val() == "Employed Full-time" || $(this).val() == "Student") {
 				ec_note.style['display'] = 'block';
 				ec_box.style['display'] = 'none';
@@ -526,7 +543,7 @@ jQuery(document).ready(function($){
 			goal_box.style['display'] = 'none';
 		}
 		goal();
-		$("#00N0a00000C0TTu").change(function(){
+		$("input[name='00N0a00000C0TTu']").click(function(){
 			if($(this).val() == "Other") {
 				goal_box.style['display'] = 'block';
 			} else {

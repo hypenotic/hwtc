@@ -231,18 +231,45 @@ input#first-name-input {
 
 
 
+
+
     // border: 1px solid rgba(0, 0, 0, 0.7);
-    display: flex;
-    // flex-direction: column;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+    // display: flex;
+    // // flex-direction: column;
+    // flex-wrap: wrap;
+    // margin-bottom: 40px;
+    display: block;
+    @include at-breakpoint($desktop) {
+
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
     select {
         display: none;
     }
     > div {
+
+
+
+        // display: inline-block;
         text-align: center;
+        @include at-breakpoint($desktop) {
+            display: block;
+        }
+        > div, > p {
+
+            display: inline-block;
+            width: 32%;
+            @include at-breakpoint($desktop) {
+                display: block;
+                width: auto;
+            }
+        }
     }
     > div:first-child {
+
 
 
 
@@ -250,10 +277,18 @@ input#first-name-input {
         font-family: 'latoblack';
         font-weight: bold;
         margin: 0;
-        width: 14%;
-        p {}
+        @include at-breakpoint($desktop) {
+            width: 14%;
+        }
+        p {
 
-
+            display: inline-block;
+            width: 32%;
+            @include at-breakpoint($desktop) {
+                display: block;
+                width: auto;
+            }
+        }
         p:first-child {
             margin: 0;
         }
@@ -273,22 +308,34 @@ input#first-name-input {
 
 
 
-        width: 12%;
+
+
+
+
+        @include at-breakpoint($desktop) {
+            width: 12%;
+        }
         div {
-            border-bottom: 2px solid #d6d6d6;
-            height: 80px;
-            padding-top: 25px;
+            @include at-breakpoint($desktop) {
+                border-bottom: 2px solid #d6d6d6;
+                height: 80px;
+                padding-top: 25px;
+            }
         }
         p, div {
-            border-right: 2px solid #d6d6d6;
+            @include at-breakpoint($desktop) {
+                border-right: 2px solid #d6d6d6;
+            }
         }
         > p {
+            @include at-breakpoint($desktop) {
 
-            border-bottom: 2px solid #d6d6d6;
-            border-top: 2px solid #d6d6d6;
-            // display: inline-block;
-            // width: 100px;
-            margin: 0;
+                border-bottom: 2px solid #d6d6d6;
+                border-top: 2px solid #d6d6d6;
+                // display: inline-block;
+                // width: 100px;
+                margin: 0;
+            }
         }
         > p:first-child {}
 
@@ -299,8 +346,11 @@ input#first-name-input {
         }
     }
     > div:nth-child(2) {
-        border-left: 2px solid #d6d6d6;
+        @include at-breakpoint($desktop) {
+            border-left: 2px solid #d6d6d6;
+        }
     }
+    input[name="00N0a00000C0TTB"] {}
 }
 #date-check {
     border-radius: 5px;

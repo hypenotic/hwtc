@@ -18,7 +18,7 @@
 	
 	<H2>Eligibility</H2>
 	
-	1.	Are you 18+ or older?  Please enter your birthdate: <font color="red">*</font><br/>
+	Are you 18+ or older?  Please enter your birthdate: <font color="red">*</font><br/>
 	<input id="date-check" type="date"><br/>
 	<input id="00N0a00000C0TSS" name="00N0a00000C0TSS" type="text" required style="position:absolute;left: -1000px;" /><br/>
 
@@ -35,8 +35,15 @@
 		</p>
 		<div id="form-reveal">
 		
-			Please select your current status:<font color="red">*</font>
-			<select  id="00N0a00000C0TSr" name="00N0a00000C0TSr" title="Status in Canada">
+			Please select your current status:<font color="red">*</font><br>
+			<input type="radio" id="00N0a00000C0TSr-1" name="00N0a00000C0TSr" value="Canadian Citizen" style="margin-bottom: 5px;margin-right: 5px;"> Canadian Citizen<br/>
+			<input type="radio" id="00N0a00000C0TSr-2" name="00N0a00000C0TSr" value="Permanent Resident" style="margin-bottom: 5px;margin-right: 5px;"> Permanent Resident<br/>
+			<input type="radio" id="00N0a00000C0TSr-3" name="00N0a00000C0TSr" value="New Immigrant/Refugee (&lt;5 Years)" style="margin-bottom: 5px;margin-right: 5px;"> New Immigrant/Refugee (&lt;5 Years)<br/>
+			<input type="radio" id="00N0a00000C0TSr-4" name="00N0a00000C0TSr" value="Immigrant/Refugee (&gt;5 Years)" style="margin-bottom: 5px;margin-right: 5px;"> Immigrant/Refugee (&gt;5 Years)<br/>
+			<input type="radio" id="00N0a00000C0TSr-5" name="00N0a00000C0TSr" value="Working Visa" style="margin-bottom: 5px;margin-right: 5px;"> Working Visa<br/>
+			<input type="radio" id="00N0a00000C0TSr-6" name="00N0a00000C0TSr" value="Refugee" style="margin-bottom: 5px;margin-right: 5px;"> Refugee<br/>
+			<input type="radio" id="00N0a00000C0TSr-7" name="00N0a00000C0TSr" value="Other" style="margin-bottom: 5px;margin-right: 5px;"> Other<br>
+		<!-- 	<select  id="00N0a00000C0TSr" name="00N0a00000C0TSr" title="Status in Canada">
 				<option value="">Select Option</option>
 				<option value="Canadian Citizen">Canadian Citizen</option>
 				<option value="Permanent Resident">Permanent Resident</option>
@@ -45,7 +52,7 @@
 				<option value="Working Visa">Working Visa</option>
 				<option value="Refugee">Refugee</option>
 				<option value="Other">Other</option>
-			</select><br>
+			</select><br> -->
 			<div id="status-other-box">
 				Please provide further details:
 				<textarea id="00N0a00000C0TSw" maxlength="255" name="00N0a00000C0TSw" size="20" type="text"></textarea>
@@ -53,11 +60,16 @@
 			</div>
 			<br/>
 		
-			What is your employment status?<font color="red">*</font><select  id="00N0a00000C0TT6" name="00N0a00000C0TT6" title="Current labor force status" required><option value="">Select Option</option><option value="Employed Full-time">Employed Full-time (20+ hours a week)</option>
+			What is your employment status?<font color="red">*</font><br/>
+			<input type="radio" id="00N0a00000C0TT6-1" name="00N0a00000C0TT6" value="Employed Full-time" style="margin-bottom: 5px;margin-right: 5px;"> Employed Full-time (20+ hours a week)<br/>
+			<input type="radio" id="00N0a00000C0TT6-2" name="00N0a00000C0TT6" value="Employed Part-time" style="margin-bottom: 5px;margin-right: 5px;"> Employed Part-time (less than 20 hours per week)<br/>
+			<input type="radio" id="00N0a00000C0TT6-3" name="00N0a00000C0TT6" value="Unemployed" style="margin-bottom: 5px;margin-right: 5px;"> Unemployed - looking for work<br/>
+			<input type="radio" id="00N0a00000C0TT6-4" name="00N0a00000C0TT6" value="Student" style="margin-bottom: 5px;margin-right: 5px;"> College/University Student<br/>
+			<!-- <select  id="00N0a00000C0TT6" name="00N0a00000C0TT6" title="Current labor force status" required><option value="">Select Option</option><option value="Employed Full-time">Employed Full-time (20+ hours a week)</option>
 			<option value="Employed Part-time">Employed Part-time (less than 20 hours per week)</option>
 			<option value="Unemployed">Unemployed - looking for work</option>
 			<option value="Student">College/University Student</option>
-			</select><br>
+			</select><br> -->
 		
 			<br>
 			<p id="reveal-note-ec"><strong>Please contact HWTC directly for further information at <a href="tel:6479309518">647-930-9518</a> ext 305.</strong>
@@ -79,9 +91,9 @@
 				<strong>Please tell us about your physical abilty to work in the hospitality industry:</strong> <br><br>
 				
 				Are you able to be on your feet and work for up to 8 hours?<font color="red">*</font><br/>
-				<input type="radio" id="00N0a00000C0TTB-1" name="00N0a00000C0TTB" value="Yes">Yes<br>
-				<input type="radio" id="00N0a00000C0TTB-2" name="00N0a00000C0TTB" value="No">No<br>
-				<input type="radio" id="00N0a00000C0TTB-3" name="00N0a00000C0TTB" value="Not sure">Not sure<br><br>
+				<input type="radio" id="00N0a00000C0TTB-1" name="00N0a00000C0TTB" value="Yes" style="margin-bottom: 5px;margin-right: 5px;"> Yes<br>
+				<input type="radio" id="00N0a00000C0TTB-2" name="00N0a00000C0TTB" value="No" style="margin-bottom: 5px;margin-right: 5px;"> No<br>
+				<input type="radio" id="00N0a00000C0TTB-3" name="00N0a00000C0TTB" value="Not sure" style="margin-bottom: 5px;margin-right: 5px;"> Not sure<br><br>
 				<br>
 				
 				<div id="phys_one_block">
@@ -90,9 +102,9 @@
 				
 				
 				Are you comfortable lifting up to 30lbs? <font color="red">*</font><br/> 
-				<input type="radio" id="00N0a00000C0TTL-1" name="00N0a00000C0TTL" value="Yes">Yes<br>
-				<input type="radio" id="00N0a00000C0TTL-2" name="00N0a00000C0TTL" value="No">No<br>
-				<input type="radio" id="00N0a00000C0TTL-3" name="00N0a00000C0TTL" value="Not sure">Not sure<br><br>
+				<input type="radio" id="00N0a00000C0TTL-1" name="00N0a00000C0TTL" value="Yes" style="margin-bottom: 5px;margin-right: 5px;"> Yes<br>
+				<input type="radio" id="00N0a00000C0TTL-2" name="00N0a00000C0TTL" value="No" style="margin-bottom: 5px;margin-right: 5px;"> No<br>
+				<input type="radio" id="00N0a00000C0TTL-3" name="00N0a00000C0TTL" value="Not sure" style="margin-bottom: 5px;margin-right: 5px;"> Not sure<br><br>
 				<br>
 				
 				<div id="phys_two_block">
@@ -100,9 +112,9 @@
 				</div>
 				
 				Do you have any restrictions to bend, reach, push, and twist? <font color="red">*</font> <br/>
-				<input type="radio" id="00N0a00000C0TTV-1" name="00N0a00000C0TTV" value="Yes">Yes<br>
-				<input type="radio" id="00N0a00000C0TTV-2" name="00N0a00000C0TTV" value="No">No<br>
-				<input type="radio" id="00N0a00000C0TTV-3" name="00N0a00000C0TTV" value="Not sure">Not sure<br><br>
+				<input type="radio" id="00N0a00000C0TTV-1" name="00N0a00000C0TTV" value="Yes" style="margin-bottom: 5px;margin-right: 5px;"> Yes<br>
+				<input type="radio" id="00N0a00000C0TTV-2" name="00N0a00000C0TTV" value="No" style="margin-bottom: 5px;margin-right: 5px;"> No<br>
+				<input type="radio" id="00N0a00000C0TTV-3" name="00N0a00000C0TTV" value="Not sure" style="margin-bottom: 5px;margin-right: 5px;"> Not sure<br><br>
 				<br>
 				
 				<div id="phys_three_block">
@@ -178,14 +190,21 @@
 				</div>
 				<br>
 				Employment goals:<font color="red">*</font>
-				<select id="00N0a00000C0TTu" name="00N0a00000C0TTu" title="Employment goals" required>
+				<br/>
+					<input type="radio" id="00N0a00000C0TTu-1" name="00N0a00000C0TTu" value="Full-time employment in hospitality industry" style="margin-bottom: 5px;margin-right: 5px;"> Full-time employment in hospitality industry<br/>
+					<input type="radio" id="00N0a00000C0TTu-2" name="00N0a00000C0TTu" value="Part-time employment in hospitality industry" style="margin-bottom: 5px;margin-right: 5px;"> Part-time employment in hospitality industry<br/>
+					<input type="radio" id="00N0a00000C0TTu-3" name="00N0a00000C0TTu" value="Full-time employment in any industry" style="margin-bottom: 5px;margin-right: 5px;"> I just want a full-time job<br/>
+					<input type="radio" id="00N0a00000C0TTu-4" name="00N0a00000C0TTu" value="Part-time employment in any industry" style="margin-bottom: 5px;margin-right: 5px;"> I just want a part-time job<br/>
+					<input type="radio" id="00N0a00000C0TTu-5" name="00N0a00000C0TTu" value="Other" style="margin-bottom: 5px;margin-right: 5px;"> Other<br/>
+				</select><br>
+				<!-- <select id="00N0a00000C0TTu" name="00N0a00000C0TTu" title="Employment goals" required>
 					<option value="">Select Option</option>
 					<option value="Full-time employment in hospitality industry">Full-time employment in hospitality industry</option>
 					<option value="Part-time employment in hospitality industry">Part-time employment in hospitality industry</option>
 					<option value="Full-time employment in any industry">I just want a full-time job</option>
 					<option value="Part-time employment in any industry">I just want a part-time job</option>
 					<option value="Other">Other</option>
-				</select><br>
+				</select><br> -->
 				<div id="goals-other-box">
 					Please provide details:<textarea  id="00N0a00000C0TTz" name="00N0a00000C0TTz" type="text" wrap="soft"></textarea>
 				</div>
@@ -193,7 +212,7 @@
 				
 				<H2>Availability</H2>
 		
-				<p>Check the box if you are available on the days and at the times ranges stated below:</p>
+				<p>Check the box if you are available on the days and at the times ranges stated below for both training and employment:</p>
 		
 				<div id="availability-section">
 					<div>
