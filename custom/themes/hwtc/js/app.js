@@ -502,13 +502,14 @@ jQuery(document).ready(function($){
 		var phys3_box = document.getElementById('phys_three_block');
 		var phys3 = function(){
 		   	if(phys3_check.checked) {
-		   	 	phys3_box.style['display'] = 'block';
+					$("#00N0a00000C0TTa").prop('required',false);
+					phys3_box.style['display'] = 'none';
+					// $('#00N0a00000C0TTV').val('Yes').trigger('change');
+	   		} else if (phys3_check_y.checked) {
+	   			
+					phys3_box.style['display'] = 'block';
 		   	 	// $('#00N0a00000C0TTV').val('No').trigger('change');
 		   	 	$("#00N0a00000C0TTa").prop('required',true);
-	   		} else if (phys3_check_y.checked) {
-	   			$("#00N0a00000C0TTa").prop('required',false);
-	   	  		phys3_box.style['display'] = 'none';
-	   	  		// $('#00N0a00000C0TTV').val('Yes').trigger('change');
 	   		} else if (phys3_check_ns.checked) {
 	   			$("#00N0a00000C0TTa").prop('required',false);
 	   			phys3_box.style['display'] = 'none';

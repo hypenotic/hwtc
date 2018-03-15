@@ -7,6 +7,18 @@
 <title><?php echo wp_title( '|', true, 'right' ) . bloginfo('name'); ?></title>	
 <?php wp_head(); ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+<style>
+  .registration-container form,
+  .registration-container form p,
+  .registration-container form label {
+		color: black;
+		font-size: 18px;
+  }
+  
+  .registration-container form input[type="radio"] {
+    margin-left: 8px;
+  }
+</style>
 <script type='text/javascript'>
 (function (d, t) {
   var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];

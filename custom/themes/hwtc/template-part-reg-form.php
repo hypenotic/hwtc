@@ -148,7 +148,7 @@
 				
 				<?php if ( $the_query->have_posts() ) : ?>
 					
-					<div class="course-hold">
+					<div class="course-hold" style="display: none;">
 						<p>The following courses are currently postponed.<br/>You can still select them, but please note that they are on hold.</p>
 						
 						<ul>
@@ -176,12 +176,14 @@
 				<option value="Kitchen Porter">Kitchen Porter</option>
 				<option value="Restaurant Front of House">Restaurant Front of House</option>
 				<option value="Room Attendant">Room Attendant</option>
+				<option value="Culinary Skills Launch at MLSE">Culinary Skills Launch at MLSE</option>
 				<option value="Not sure">Not sure</option>
 				</select><br>
 				How did you hear about HWTC? (<em>press control to select multiple options</em>):<font color="red">*</font><select  id="00N0a00000C0TTk" multiple="multiple" name="00N0a00000C0TTk" title="How did you hear about HWTC?" required><option value="Caseworker">Caseworker</option>
 				<option value="Family or friends">Family or friends</option>
 				<option value="Someone who has taken a training course">Someone who has taken a training course</option>
 				<option value="Website">Website</option>
+				<option value="TTC Ad">TTC Ad</option>
 				<option value="Social Media (Facebook, Twitter, Instagram)">Social Media (Facebook, Twitter, Instagram)</option>
 				<option value="Other">Other</option>
 				</select><br>
@@ -304,7 +306,9 @@
 
 				<a href="https://goo.gl/maps/MCEnQRJme5N2" target="_blank"><strong>60 Richmond St East,<br>Toronto, ON M5C 1N8</strong><br><br></a>
 
-				They take place every <strong>Tuesday (10am – 11:30am)</strong> in the <strong>Second Floor Meeting Room</strong>.<br>
+				They take place every <strong>Tuesday (10am – 11:30am)</strong> in the <strong>Second Floor Meeting Room</strong>.<br><br>
+
+				<strong>Note: We will be moving our info session starting April 10th to <a href="https://www.google.ca/maps/place/489+Queen+St+E,+Toronto,+ON+M5A+1V1/@43.6567321,-79.3607424,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb400f533053:0xfc069597dda4047b!8m2!3d43.6567321!4d-79.3585537" target="_blank">489 Queen St. East, suite 301, Toronto, ON M5A 1V1</a> from 10:30am-12pm</strong><br><br>
 
 				<em>Please bring a resume if you have one.</em><br><br>
 
