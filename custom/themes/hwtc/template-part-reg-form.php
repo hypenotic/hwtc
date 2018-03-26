@@ -225,55 +225,55 @@
 					<div>
 						<p>Mon</p>
 						<div class="availability-a">
-							<input id="00N0a00000C0TVg" type="checkbox" value="1">
+							<input id="00N0a00000C0TVg" name="00N0a00000C0TVg" type="checkbox" value="1">
 						</div>
 					
 						<div class="availability-b">
-							<input id="00N0a00000C0TVl" type="checkbox" value="1">
+							<input id="00N0a00000C0TVl" name="00N0a00000C0TVl" type="checkbox" value="1">
 						</div>
 					</div>
 					
 					<div>
 						<p>Tues</p>
 						<div class="availability-a">
-							<input id="00N0a00000C0TVq" type="checkbox" value="1">
+							<input id="00N0a00000C0TVq" name="00N0a00000C0TVq" type="checkbox" value="1">
 						</div>
 					
 						<div class="availability-b">
-							<input id="00N0a00000C0TVv" type="checkbox" value="1">
+							<input id="00N0a00000C0TVv" name="00N0a00000C0TVv" type="checkbox" value="1">
 						</div>
 					</div>
 					
 					<div>
 						<p>Wed</p>
 						<div class="availability-a">
-							<input id="00N0a00000C0TW0" type="checkbox" value="1">
+							<input id="00N0a00000C0TW0" name="00N0a00000C0TW0" type="checkbox" value="1">
 						</div>
 					
 						<div class="availability-b">
-							<input id="00N0a00000C0TW5" type="checkbox" value="1">
+							<input id="00N0a00000C0TW5" name="00N0a00000C0TW5" type="checkbox" value="1">
 						</div>
 					</div>
 					
 					<div>
 						<p>Thurs</p>
 						<div class="availability-a">
-							<input id="00N0a00000C0TWA" type="checkbox" value="1">
+							<input id="00N0a00000C0TWA" name="00N0a00000C0TWA" type="checkbox" value="1">
 						</div>
 					
 						<div class="availability-b">
-							<input id="00N0a00000C0TWF" type="checkbox" value="1">
+							<input id="00N0a00000C0TWF" name="00N0a00000C0TWF" type="checkbox" value="1">
 						</div>
 					</div>
 					
 					<div>
 						<p>Fri</p>
 						<div class="availability-a">
-							<input id="00N0a00000C0TWK" type="checkbox" value="1">
+							<input id="00N0a00000C0TWK" name="00N0a00000C0TWK" type="checkbox" value="1">
 						</div>
 					
 						<div class="availability-b">
-							<input id="00N0a00000C0TWP" type="checkbox" value="1">
+							<input id="00N0a00000C0TWP" name="00N0a00000C0TWP" type="checkbox" value="1">
 						</div>
 					
 					</div>
@@ -281,22 +281,22 @@
 					<div>
 						<p>Sat</p>
 						<div class="availability-a">
-							<input id="00N0a00000C0TWZ" type="checkbox" value="1">
+							<input id="00N0a00000C0TWZ" name="00N0a00000C0TWZ" type="checkbox" value="1">
 						</div>
 					
 						<div class="availability-b">
-							<input id="00N0a00000C0TWe" type="checkbox" value="1">
+							<input id="00N0a00000C0TWe" name="00N0a00000C0TWe" type="checkbox" value="1">
 						</div>
 					</div>
 					
 					<div>
 						<p>Sun</p>
 						<div class="availability-a">
-							<input id="00N0a00000C0TWj" type="checkbox" value="1">
+							<input id="00N0a00000C0TWj" name="00N0a00000C0TWj" type="checkbox" value="1">
 						</div>
 						
 						<div class="availability-b">
-							<input id="00N0a00000C0TWo" type="checkbox" value="1">
+							<input id="00N0a00000C0TWo" name="00N0a00000C0TWo" type="checkbox" value="1">
 						</div>
 					</div>
 				</div>
@@ -321,7 +321,7 @@
 					$laterDate = strtotime(date("Y-m-d", strtotime($date)) . " +2 month");
 					// echo date('l Y-m-d', $laterDate);
 					for($i = strtotime('Tuesday', strtotime($weekLater)); $i <= $laterDate; $i = strtotime('+1 week', $i))
-					    echo '<option value='.date('d/m/Y', $i).'>'.date('l, F j, Y', $i).'</option>';
+					    echo "<option value='".date('d/m/Y', $i)."'>".date('l, F j, Y', $i)."</option>";
 					?>
 				</select><br>
 				<input id="00N0a00000BpW2z" maxlength="100" name="00N0a00000BpW2z" size="20" type="text" required/ style="position:absolute;left: -1000px;"><br>
