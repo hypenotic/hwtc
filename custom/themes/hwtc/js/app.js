@@ -337,7 +337,8 @@ jQuery(document).ready(function($){
 		   	if(agree_check.checked) {
 		     reveal_agree.style['display'] = 'block';
 		   	} else {
-		     reveal_agree.style['display'] = 'none';
+				//  reveal_agree.style['display'] = 'none';
+				 reveal_agree.style['display'] = 'block';
 		   	} 
 		}
 		agree_check.onclick = showForm;
@@ -348,8 +349,10 @@ jQuery(document).ready(function($){
 		var reveal_age = document.getElementById('date-check-block');
 		var age_note = document.getElementById('reveal-age-note');
 		var showDateDiv = function(){
-		   	age_note.style['display'] = 'none';
-		   	reveal_age.style['display'] = 'none';
+		   	// age_note.style['display'] = 'none';
+				 // reveal_age.style['display'] = 'none';
+				 age_note.style['display'] = 'block';
+		   	reveal_age.style['display'] = 'block';
 		}
 		showDateDiv();
 		$("#date-check").change(function(){
@@ -366,8 +369,11 @@ jQuery(document).ready(function($){
 				age_note.style['display'] = 'none';
 				age_check.value = MyDateString;
 			} else {
-				reveal_age.style['display'] = 'none';
-				age_note.style['display'] = 'block';
+				// reveal_age.style['display'] = 'none';
+				// age_note.style['display'] = 'block';
+				reveal_age.style['display'] = 'block';
+				age_note.style['display'] = 'none';
+				age_check.value = MyDateString;
 			}
 		});
 
@@ -383,9 +389,12 @@ jQuery(document).ready(function($){
 		     reveal_note.style['display'] = 'none';
 		     real_check.checked = true;
 		   	} else {
-		     reveal_div.style['display'] = 'none';
-		     reveal_note.style['display'] = 'block';
-		     real_check.checked = false;
+		    //  reveal_div.style['display'] = 'none';
+		    //  reveal_note.style['display'] = 'block';
+				//  real_check.checked = false;
+				reveal_div.style['display'] = 'block';
+		     reveal_note.style['display'] = 'none';
+		     real_check.checked = true;
 		   	} 
 		}
 		checkbox.onclick = showHiddenDiv;

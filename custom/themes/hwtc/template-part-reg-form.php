@@ -11,7 +11,7 @@
 <!--  <input type="hidden" name="debugEmail" value="j.r.s.murph@gmail.com">   -->
 <!--  ----------------------------------------------------------------------  -->
 
-<input id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;"/><strong>You must check this box indicating you have read the terms and conditions noted above to continue.</strong>
+<!-- <input id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;"/><strong>You must check this box indicating you have read the terms and conditions noted above to continue.</strong> -->
 
 <div id="form_agree_block">
 	<p style="margin-bottom: 0; margin-top: 20px;"><font color="red">*</font> = Required to fill out field</p>
@@ -326,6 +326,12 @@
 				</select><br>
 				<input id="00N0a00000BpW2z" maxlength="100" name="00N0a00000BpW2z" size="20" type="text" required/ style="position:absolute;left: -1000px;"><br>
 				<p style="margin-bottom: 30px;">If you have any questions or are unable to attend the selected date you chose, please call HWTC directly <a href="tel:647930951">647-930-9518</a> ext. 305 or email at <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a>.</p>
+
+				<p>By submitting this form, you consent to the collection of this information by HWTC in accordance with our Personal Information Protection Policy. Information collected will only be used to gather background information and completion of this form does not guarantee acceptance into our training programs.</p>
+
+				<input id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;"/><strong>You must check this box indicating you have read the terms and conditions noted above to continue.</strong>
+
+				<br/><br/>
 		
 				<input type="submit" name="submit">
 			</div> <!-- end of employment check block-->
