@@ -22,6 +22,8 @@
                 ?>
                 <div class="banner-title-small"><?php echo $sub_title;?></div>
                 <?php } ?>
+
+                <a class="button" style="display: inline-block;text-decoration:none;margin-top: 16px;font-size: 18px;padding: 20px 35px;background: rgb(154, 93, 180);color:white;" href="http://hospitalitytrainingcentre.com/registration-form/">Register for Training Courses Now</a>
             </div>
         </div>
         <div class="banner-bottom">
