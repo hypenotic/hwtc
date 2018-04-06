@@ -63,7 +63,7 @@
               <a href="<?php bloginfo('url' ); ?>"><img id="mobile-logo" src="<?php bloginfo('template_url');?>/images/HWTC_Logo_2c_blue.png" alt="HOSPITALITY WORKERS TRAINING CENTRE"></a>
             </div>
         </div>
-        <nav id="box">
+        <nav id="box" style="width: auto;">
         	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
         </nav>
         <div id="mobile-nav-button">
