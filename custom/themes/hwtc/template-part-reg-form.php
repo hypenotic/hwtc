@@ -304,11 +304,9 @@
 				<h2>Next Steps</h2>
 				<p style="margin-bottom: 0;">The next step of the screening process requires that you attend an information session located at:<br><br>
 
-				<a href="https://goo.gl/maps/MCEnQRJme5N2" target="_blank"><strong>60 Richmond St East,<br>Toronto, ON M5C 1N8</strong><br><br></a>
+				<strong><a href="https://www.google.ca/maps/place/489+Queen+St+E,+Toronto,+ON+M5A+1V1/@43.6567321,-79.3607424,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb400f533053:0xfc069597dda4047b!8m2!3d43.6567321!4d-79.3585537" target="_blank">489 Queen St. East, suite 301, Toronto, ON M5A 1V1</a> from 10:30am-12pm</strong>
 
-				They take place every <strong>Tuesday (10am – 11:30am)</strong> in the <strong>Second Floor Meeting Room</strong>.<br><br>
-
-				<strong>Note: We will be moving our info session starting April 10th to <a href="https://www.google.ca/maps/place/489+Queen+St+E,+Toronto,+ON+M5A+1V1/@43.6567321,-79.3607424,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb400f533053:0xfc069597dda4047b!8m2!3d43.6567321!4d-79.3585537" target="_blank">489 Queen St. East, suite 301, Toronto, ON M5A 1V1</a> from 10:30am-12pm</strong><br><br>
+				<br><br>
 
 				<em>Please bring a resume if you have one.</em><br><br>
 
