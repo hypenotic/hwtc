@@ -304,7 +304,7 @@
 				<h2>Next Steps</h2>
 				<p style="margin-bottom: 0;">The next step of the screening process requires that you attend an information session located at:<br><br>
 
-				<strong><a href="https://www.google.ca/maps/place/489+Queen+St+E,+Toronto,+ON+M5A+1V1/@43.6567321,-79.3607424,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb400f533053:0xfc069597dda4047b!8m2!3d43.6567321!4d-79.3585537" target="_blank">489 Queen St. East, suite 301, Toronto, ON M5A 1V1</a> from 10:30am-12pm</strong>
+				<strong><a href="https://www.google.ca/maps/place/489+Queen+St+E,+Toronto,+ON+M5A+1V1/@43.6567321,-79.3607424,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb400f533053:0xfc069597dda4047b!8m2!3d43.6567321!4d-79.3585537" target="_blank">489 Queen St. East, suite 301, Toronto, ON M5A 1V1</a>. They run from 10:30am-12pm every Tuesday.</strong>
 
 				<br><br>
 
