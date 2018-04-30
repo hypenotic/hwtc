@@ -26,8 +26,8 @@
 	</p>
 	
 	<div id="date-check-block">
-		Are you eligible to work in Canada?<br/>
-		<input type="radio" id="00N0a00000C0TSX-1" name="00N0a00000C0TSX" value="1"> Yes<br>
+		Are you eligible to work in Canada? <font color="red">*</font><br/>
+		<input type="radio" id="00N0a00000C0TSX-1" name="00N0a00000C0TSX" value="1" required> Yes<br>
 		<input type="radio" id="00N0a00000C0TSX-2" name="00N0a00000C0TSX" value="0"> No<br>
 		
 		<input id="00N0a00000C0TSX" name="00N0a00000C0TSX" type="checkbox" required style="position:absolute;left: -1000px;" /><br>
@@ -125,9 +125,9 @@
 				<H2>Contact Information</H2>
 				<label for="first_name">First Name<font color="red">*</font></label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required /><br>
 				<label for="last_name">Last Name<font color="red">*</font></label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required /><br>
-				<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+				<label for="email">Email<font color="red">*</font></label><input  id="email" maxlength="80" name="email" size="20" type="text" required /><br>
 				<label for="phone">Phone<font color="red">*</font></label><input  id="phone" maxlength="40" name="phone" size="20" type="text" required /><br>
-				<label for="street">Street</label><textarea name="street"></textarea><br>
+				<label for="street">Address<font color="red">*</font></label><textarea name="street" required></textarea><br>
 				<label for="city">City<font color="red">*</font></label><input  id="city" maxlength="40" name="city" size="20" type="text" required /><br> 
 					
 					
@@ -214,7 +214,7 @@
 				
 				<H2>Availability</H2>
 		
-				<p>Check the box if you are available on the days and at the times ranges stated below for both training and employment:</p>
+				<p>Check the box if you are available on the days and at the times ranges stated below for employment:</p>
 		
 				<div id="availability-section">
 					<div>
@@ -312,9 +312,8 @@
 
 				<strong>Select a date from the dropdown list below</strong>: <font color="red">*</font></p>
 				<select id="tuesday-pick" name="00N0a00000BpW2z" title="Tuesday Picker" required>
-					<option value="">Select Option</option>
 					<?php 
-					$date = date('Y-m-d');
+					$date = date('Y-m-d') . " -1 week";
 					$weekLater = date("Y-m-d", strtotime($date)) . " +1 week";
 					$laterDate = strtotime(date("Y-m-d", strtotime($date)) . " +2 month");
 					// echo date('l Y-m-d', $laterDate);
@@ -322,12 +321,12 @@
 					    echo "<option value='".date('d/m/Y', $i)."'>".date('l, F j, Y', $i)."</option>";
 					?>
 				</select><br>
-				<input id="00N0a00000BpW2z" maxlength="100" name="00N0a00000BpW2z" size="20" type="text" required/ style="position:absolute;left: -1000px;"><br>
+				<input id="00N0a00000BpW2z" maxlength="100" name="00N0a00000BpW2z" size="20" type="text" required style="position:absolute;left: -1000px;"><br>
 				<p style="margin-bottom: 30px;">If you have any questions or are unable to attend the selected date you chose, please call HWTC directly <a href="tel:647930951">647-930-9518</a> ext. 305 or email at <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a>.</p>
 
 				<p>By submitting this form, you consent to the collection of this information by HWTC in accordance with our Personal Information Protection Policy. Information collected will only be used to gather background information and completion of this form does not guarantee acceptance into our training programs.</p>
 
-				<input id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;"/><strong>You must check this box indicating you have read the terms and conditions noted above to continue.</strong>
+				<input id="agree_check" name="agree_check" type="checkbox" value="1" style="margin-right: 10px;" required/><strong>You must check this box indicating you have read the terms and conditions noted above to continue.</strong>
 
 				<br/><br/>
 		
