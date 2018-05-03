@@ -562,11 +562,11 @@ jQuery(document).ready(function($){
 		});
 
 		// Tuesday Session
-		var tues_select = document.getElementById('00N0a00000BpW2z');
-		$("#tuesday-pick").change(function(){
-			var pick = $(this).val();
-			$('#00N0a00000BpW2z').val(pick);
-		});
+		// var tues_select = document.getElementById('00N0a00000BpW2z');
+		// $("#tuesday-pick").change(function(){
+		// 	var pick = $(this).val();
+		// 	$('#00N0a00000BpW2z').val(pick);
+		// });
 	}
 });
 

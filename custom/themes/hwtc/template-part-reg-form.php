@@ -321,7 +321,8 @@
 					    echo "<option value='".date('d/m/Y', $i)."'>".date('l, F j, Y', $i)."</option>";
 					?>
 				</select><br>
-				<input id="00N0a00000BpW2z" maxlength="100" name="00N0a00000BpW2z" size="20" type="text" required style="position:absolute;left: -1000px;"><br>
+				<!-- <input id="00N0a00000BpW2z" maxlength="100" name="00N0a00000BpW2z" size="20" type="text" required style="position:absolute;left: -1000px;"> -->
+				<br>
 				<p style="margin-bottom: 30px;">If you have any questions or are unable to attend the selected date you chose, please call HWTC directly <a href="tel:647930951">647-930-9518</a> ext. 305 or email at <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a>.</p>
 
 				<p>By submitting this form, you consent to the collection of this information by HWTC in accordance with our Personal Information Protection Policy. Information collected will only be used to gather background information and completion of this form does not guarantee acceptance into our training programs.</p>
