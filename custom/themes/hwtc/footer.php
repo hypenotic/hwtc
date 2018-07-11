@@ -32,7 +32,7 @@
             60 Richmond Street East<br />
             Toronto, Ontario, Canada M5C 1N8</p>
             
-            <h5 style="margin-bottom: 0; font-size: 20px;"><a style="text-decoration: none;border-bottom: 1px solid white;" href="https://goo.gl/maps/vTFNDWMQfYB2">Information Sessions</a></h5>
+            <h5 style="margin-bottom: 0; font-size: 20px;"><a style="text-decoration: none;border-bottom: 1px solid white;" href="https://goo.gl/maps/vTFNDWMQfYB2" target="_blank">Information Sessions</a></h5>
             <p style="margin-bottom: 5px;">489 Queen Street East Suite 301<br />
             Toronto, Ontario, Canada M5A 1V1</p>
             <p style="margin-top: 0px;margin-bottom: 0px;"><a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a></p>
