@@ -27,7 +27,7 @@
                 <li><a id="twitter" href="https://twitter.com/Hospitalitywrks" target="_blank">Twitter</a></li>
             </ul>
             
-            <h5 style="margin-bottom: 0; font-size: 20px;">Mailing Address</h5>
+            <h5 style="margin-bottom: 0; font-size: 20px;"><a style="text-decoration: none;border-bottom: 1px solid white;" href="https://goo.gl/maps/JkQgcuR2Ffz" target="_blank">Mailing Address</a></h5>
 			<p>Hospitality Workers Training Centre<br />
             60 Richmond Street East<br />
             Toronto, Ontario, Canada M5C 1N8</p>
