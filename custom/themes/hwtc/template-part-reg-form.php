@@ -22,7 +22,7 @@
 	<input id="date-check" type="date"><br/>
 	<input id="00N0a00000C0TSS" name="00N0a00000C0TSS" type="text" required style="position:absolute;left: -1000px;" /><br/>
 
-	<p id="reveal-age-note"><strong>If you are not over 18, please contact HWTC directly for further information at <a href="tel:6479309518">647-930-9518</a> ext 305.</strong>
+	<p id="reveal-age-note"><strong>If you are not over 18, please contact HWTC directly for further information at <a href="tel:6479309518">647-930-9518</a></strong>
 	</p>
 	
 	<div id="date-check-block">
@@ -31,7 +31,7 @@
 		<input type="radio" id="00N0a00000C0TSX-2" name="00N0a00000C0TSX" value="0"> No<br>
 		
 		<input id="00N0a00000C0TSX" name="00N0a00000C0TSX" type="checkbox" required style="position:absolute;left: -1000px;" /><br>
-		<p id="reveal-note"><strong>If you are not eligible to work in Canada, please contact HWTC directly for further information at <a href="tel:6479309518">647-930-9518</a> ext 305.</strong>
+		<p id="reveal-note"><strong>If you are not eligible to work in Canada, please contact HWTC directly for further information at <a href="tel:6479309518">647-930-9518</a></strong>
 		</p>
 		<div id="form-reveal">
 		
@@ -72,7 +72,7 @@
 			</select><br> -->
 		
 			<br>
-			<p id="reveal-note-ec"><strong>Please contact HWTC directly for further information at <a href="tel:6479309518">647-930-9518</a> ext 305.</strong>
+			<p id="reveal-note-ec"><strong>Please contact HWTC directly for further information at <a href="tel:6479309518">647-930-9518</a></strong>
 			</p>
 		
 		
@@ -323,7 +323,7 @@
 				</select><br>
 				<!-- <input id="00N0a00000BpW2z" maxlength="100" name="00N0a00000BpW2z" size="20" type="text" required style="position:absolute;left: -1000px;"> -->
 				<br>
-				<p style="margin-bottom: 30px;">If you have any questions or are unable to attend the selected date you chose, please call HWTC directly <a href="tel:647930951">647-930-9518</a> ext. 305 or email at <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a>.</p>
+				<p style="margin-bottom: 30px;">If you have any questions or are unable to attend the selected date you chose, please call HWTC directly <a href="tel:647930951">647-930-9518</a> or email at <a href="mailto:training@hospitalitytrainingcentre.com">training@hospitalitytrainingcentre.com</a>.</p>
 
 				<p>By submitting this form, you consent to the collection of this information by HWTC in accordance with our Personal Information Protection Policy. Information collected will only be used to gather background information and completion of this form does not guarantee acceptance into our training programs.</p>
 
